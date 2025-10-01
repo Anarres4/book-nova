@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-color: #6C63FF;
+            --secondary-color: #4FACFE;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6C63FF 0%, #4FACFE 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.8) 0%, rgba(79, 172, 254, 0.8) 100%) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 1px 3px rgba(0,0,0,.1);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            transition: opacity 0.3s;
+        }
+
+        .navbar-brand:hover {
+            opacity: 0.8;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95) !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 0.375rem;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white !important;
+        }
+
+        .hero-section {
+            color: white;
+            padding: 80px 0;
+        }
+
+        .hero-tagline {
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .btn-download {
+            background-color: #000;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-download:hover {
+            background-color: #333;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-download i {
+            font-size: 1.25rem;
+        }
+
+        .hero-image {
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .hero-image i {
+            font-size: 8rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        @media (min-width: 768px) {
+            .hero-image {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        .features-section {
+            padding: 80px 0;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+        }
+
+        .screenshots-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+        }
+
+        .screenshots-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .screenshots-scroll {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 0 1rem;
+            justify-content: flex-start;
+        }
+
+        @media (min-width: 768px) {
+            .screenshots-scroll {
+                justify-content: center;
+            }
+        }
+
+        .screenshots-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .screenshot-item {
+            height: 350px;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        @media (min-width: 768px) {
+            .screenshot-item {
+                height: 500px;
+            }
+        }
+
+        .features-section .section-title {
+            color: white;
+        }
+
+        .cta-section h2,
+        .cta-section p {
+            color: white !important;
+        }
+
+        .features-section .feature-card h3 {
+            color: #333;
+        }
+
+        .features-section .feature-card p {
+            color: #666;
+        }
+
+
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,.1);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        footer {
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.95) 0%, rgba(79, 172, 254, 0.95) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 0;
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .store-badge {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .store-badge:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .store-badge i {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container-fluid px-3 px-md-5">
+            <a class="navbar-brand" href="/">{{ site.title }}</a>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-md-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Fonctionnalités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">Télécharger</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    {{ content }}
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                <div class="mb-4 mb-sm-0">
+                    <h5>{{ site.title }}</h5>
+                    <p class="mt-1">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Tous droits réservés.</p>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-4 align-items-center">
+                    <a href="#features">Fonctionnalités</a>
+                    <a href="#download">Télécharger</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
