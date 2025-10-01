@@ -41,6 +41,65 @@ fr:
     copyright: "Tous droits réservés."
   languageSwitcher:
     change: "Changer de langue"
+  privacyPage:
+    title: "Politique de Confidentialité"
+    intro:
+      title: "Introduction"
+      content: "Bienvenue dans la politique de confidentialité de BookNova. Nous accordons une grande importance à la protection de vos données personnelles."
+    dataCollected:
+      title: "Données collectées"
+      content: "Notre application collecte uniquement les informations que vous fournissez lors de l'installation et de votre utilisation :"
+      items:
+        - "Vos préférences de lecture"
+        - "Les paramètres personnalisés que vous activez"
+        - "Les statistiques d'utilisation anonymisées"
+      note: "Aucune donnée d'identification personnelle n'est collectée sans votre consentement explicite."
+    dataUse:
+      title: "Utilisation des données"
+      content: "Toutes les données collectées sont anonymisées et utilisées exclusivement pour :"
+      items:
+        - "Améliorer votre expérience au sein de l'application"
+        - "Personnaliser le contenu et les recommandations"
+        - "Analyser l'utilisation globale de l'application"
+        - "Optimiser nos actions marketing"
+        - "Surveiller les performances et corriger les bugs"
+    analytics:
+      title: "Outils d'analyse et de surveillance"
+      content: "Nous utilisons certains services tiers pour améliorer BookNova et comprendre son utilisation :"
+      items:
+        mixpanel: "Mixpanel : analyse produit et suivi du comportement utilisateur. Les données sont anonymisées."
+        sentry: "Sentry : suivi des performances et des crashs afin de corriger rapidement les problèmes techniques."
+        appsflyer: "AppsFlyer : analyses marketing et attribution pour mesurer l'efficacité de nos campagnes."
+      note: "Ces services respectent des normes strictes de protection des données et traitent les informations conformément aux lois applicables."
+    storage:
+      title: "Stockage et sécurité"
+      content: "Vos données sont stockées de manière sécurisée via Supabase, avec des protocoles conformes aux standards de l'industrie."
+    sharing:
+      title: "Partage des données"
+      content: "Nous ne vendons ni ne partageons vos informations anonymisées, sauf dans les cas suivants :"
+      items:
+        - "Lorsque cela est nécessaire pour fournir un service que vous avez demandé"
+        - "Pour respecter une obligation légale"
+    purchases:
+      title: "Achats in-app"
+      content: "Lorsque vous effectuez des achats via RevenueCat, nous recevons uniquement les informations de transaction, jamais vos détails de paiement."
+    rights:
+      title: "Vos droits"
+      content: "Vous disposez des droits suivants concernant vos données :"
+      items:
+        - "Accéder aux données que nous détenons"
+        - "Demander leur rectification ou suppression"
+        - "Vous opposer à leur traitement"
+        - "Retirer votre consentement à tout moment"
+    changes:
+      title: "Modifications de cette politique"
+      content: "Nous pouvons mettre à jour cette politique. Toute modification sera publiée dans l'application et sur le site."
+    contact:
+      title: "Contact"
+      content: "Pour toute question, écrivez-nous à :"
+      email: "support@booknova.com"
+    lastUpdated: "Dernière mise à jour : 01/10/2025"
+    backToHome: "Retour à l'accueil"
 
 en:
   nav:
@@ -85,6 +144,65 @@ en:
     copyright: "All rights reserved."
   languageSwitcher:
     change: "Change language"
+  privacyPage:
+    title: "Privacy Policy"
+    intro:
+      title: "Introduction"
+      content: "Welcome to BookNova's privacy policy. We take the protection of your personal data very seriously."
+    dataCollected:
+      title: "Data Collected"
+      content: "The app only gathers the information you provide during onboarding and through your usage:"
+      items:
+        - "Your reading preferences"
+        - "Any personalization settings you enable"
+        - "Anonymized usage statistics"
+      note: "No personally identifiable information is collected without your explicit consent."
+    dataUse:
+      title: "How We Use Data"
+      content: "All collected data is anonymized and used exclusively to:"
+      items:
+        - "Improve your in-app experience"
+        - "Personalize content and recommendations"
+        - "Analyze overall product usage"
+        - "Optimize our marketing efforts"
+        - "Monitor performance and fix bugs"
+    analytics:
+      title: "Analytics & Monitoring"
+      content: "We rely on a few third-party services to improve BookNova and understand how it is used:"
+      items:
+        mixpanel: "Mixpanel: product analytics and behavior tracking. All data is anonymized."
+        sentry: "Sentry: performance and crash monitoring so we can quickly address technical issues."
+        appsflyer: "AppsFlyer: marketing analytics and attribution to measure campaign effectiveness."
+      note: "These partners follow strict data-protection standards and process information in line with applicable laws."
+    storage:
+      title: "Storage & Security"
+      content: "Your data is securely stored via Supabase with industry-standard safeguards in place."
+    sharing:
+      title: "Data Sharing"
+      content: "We never sell or trade your anonymized information, except when:"
+      items:
+        - "It is required to deliver a service you requested"
+        - "We must comply with a legal obligation"
+    purchases:
+      title: "In-App Purchases"
+      content: "When you make purchases through RevenueCat we only receive transaction details, never your payment information."
+    rights:
+      title: "Your Rights"
+      content: "You have the following rights regarding your data:"
+      items:
+        - "Access the information we hold about you"
+        - "Request corrections or deletion"
+        - "Object to data processing"
+        - "Withdraw your consent at any time"
+    changes:
+      title: "Changes to This Policy"
+      content: "We may update this policy. Any changes will be published in the app and on the website."
+    contact:
+      title: "Contact"
+      content: "If you have questions, reach us at:"
+      email: "support@booknova.com"
+    lastUpdated: "Last updated: 01/10/2025"
+    backToHome: "Back to home"
 
 es:
   nav:
@@ -129,3 +247,62 @@ es:
     copyright: "Todos los derechos reservados."
   languageSwitcher:
     change: "Cambiar idioma"
+  privacyPage:
+    title: "Política de Privacidad"
+    intro:
+      title: "Introducción"
+      content: "Bienvenido a la política de privacidad de BookNova. Nos tomamos muy en serio la protección de tus datos personales."
+    dataCollected:
+      title: "Datos recopilados"
+      content: "La aplicación solo recoge la información que proporcionas durante la instalación y el uso:"
+      items:
+        - "Tus preferencias de lectura"
+        - "Los ajustes de personalización que activas"
+        - "Estadísticas de uso anonimizadas"
+      note: "No recopilamos información personal identificable sin tu consentimiento explícito."
+    dataUse:
+      title: "Uso de los datos"
+      content: "Todos los datos recopilados se anonimizan y se utilizan exclusivamente para:"
+      items:
+        - "Mejorar tu experiencia dentro de la aplicación"
+        - "Personalizar el contenido y las recomendaciones"
+        - "Analizar el uso general del producto"
+        - "Optimizar nuestros esfuerzos de marketing"
+        - "Supervisar el rendimiento y corregir errores"
+    analytics:
+      title: "Análisis y monitoreo"
+      content: "Utilizamos algunos servicios de terceros para mejorar BookNova y comprender cómo se utiliza:"
+      items:
+        mixpanel: "Mixpanel: analítica de producto y seguimiento del comportamiento. Todos los datos están anonimizados."
+        sentry: "Sentry: monitoreo de rendimiento y fallos para corregir rápidamente los problemas técnicos."
+        appsflyer: "AppsFlyer: analítica de marketing y atribución para medir la eficacia de nuestras campañas."
+      note: "Estos servicios cumplen normas estrictas de protección de datos y tratan la información según las leyes aplicables."
+    storage:
+      title: "Almacenamiento y seguridad"
+      content: "Tus datos se almacenan de forma segura en Supabase con medidas que cumplen los estándares del sector."
+    sharing:
+      title: "Compartir datos"
+      content: "No vendemos ni compartimos tu información anonimizada, salvo en los siguientes casos:"
+      items:
+        - "Cuando es necesario para prestar un servicio que has solicitado"
+        - "Para cumplir con una obligación legal"
+    purchases:
+      title: "Compras dentro de la app"
+      content: "Cuando realizas compras mediante RevenueCat solo recibimos detalles de la transacción, nunca tu información de pago."
+    rights:
+      title: "Tus derechos"
+      content: "Tienes los siguientes derechos respecto a tus datos:"
+      items:
+        - "Acceder a la información que conservamos sobre ti"
+        - "Solicitar su rectificación o eliminación"
+        - "Oponerte a su tratamiento"
+        - "Retirar tu consentimiento en cualquier momento"
+    changes:
+      title: "Cambios en esta política"
+      content: "Podemos actualizar esta política. Cualquier cambio se publicará en la aplicación y en el sitio web."
+    contact:
+      title: "Contacto"
+      content: "Si tienes preguntas, escríbenos a:"
+      email: "support@booknova.com"
+    lastUpdated: "Última actualización: 01/10/2025"
+    backToHome: "Volver al inicio"

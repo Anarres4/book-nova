@@ -274,6 +274,113 @@
             border-radius: 1.5rem;
         }
 
+        .privacy-section {
+            padding: 80px 0;
+        }
+
+        .privacy-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        .privacy-card {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+            padding: 2.5rem 1.75rem;
+            color: #1a1a1a;
+        }
+
+        @media (min-width: 768px) {
+            .privacy-card {
+                padding: 3rem;
+            }
+        }
+
+        .privacy-header {
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+        }
+
+        .privacy-title {
+            font-size: clamp(1.875rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .privacy-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .privacy-section-content h2 {
+            font-size: 1.45rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.75rem;
+        }
+
+        .privacy-block {
+            margin-bottom: 2rem;
+        }
+
+        .privacy-block:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .privacy-section-content p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .privacy-list {
+            list-style: disc;
+            padding-left: 1.25rem;
+            color: #4a5568;
+        }
+
+        .privacy-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-analytics li {
+            margin-bottom: 0.75rem;
+        }
+
+        .privacy-pill {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .privacy-note {
+            margin-top: 1rem;
+            color: #4a5568;
+        }
+
+        .privacy-meta {
+            font-size: 0.875rem;
+            color: #718096;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(26, 26, 26, 0.1);
+        }
+
+        .privacy-back-link {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .privacy-back-link a {
+            color: #4FACFE;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .privacy-back-link a:hover {
+            text-decoration: underline;
+        }
+
         @media (min-width: 768px) {
             .hero-image {
                 width: 16rem;
@@ -467,7 +574,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features" data-i18n="nav.features">Fonctionnalités</a>
+                        <a class="nav-link" href="{{ '/privacy.html' | relative_url }}" data-i18n="nav.privacy">Confidentialité</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#download" data-i18n="nav.download">Télécharger</a>
@@ -477,7 +584,7 @@
                     </li>
                     <li class="nav-item d-md-none w-100">
                         <div class="mobile-nav-panel">
-                            <a href="privacy.html" class="mobile-nav-link touch-target" data-i18n="nav.privacy">Confidentialité</a>
+                            <a href="{{ '/privacy.html' | relative_url }}" class="mobile-nav-link touch-target" data-i18n="nav.privacy">Confidentialité</a>
                             <a href="terms.html" class="mobile-nav-link touch-target" data-i18n="nav.terms">Conditions</a>
                             <a href="support.html" class="mobile-nav-link touch-target" data-i18n="nav.support">Support</a>
                             <div class="mobile-nav-divider"></div>
@@ -520,7 +627,7 @@
                 </div>
 
                 <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-4 align-items-center">
-                    <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
+                    <a href="{{ '/privacy.html' | relative_url }}" data-i18n="nav.privacy">Confidentialité</a>
                     <a href="#download" data-i18n="nav.download">Télécharger</a>
                     <a href="#contact" data-i18n="nav.contact">Contact</a>
                 </div>
