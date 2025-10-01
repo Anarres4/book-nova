@@ -25,6 +25,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   partager vos livres préférés. Disponible sur iOS et Android.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Languages
+languages: ["fr", "en", "es"]
+default_lang: "fr"
+exclude_from_localization: ["assets"]
 twitter_username: jekyllrb
 github_username:  jekyll
 

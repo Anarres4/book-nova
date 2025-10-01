@@ -1,0 +1,116 @@
+fr:
+  nav:
+    features: "Fonctionnalités"
+    download: "Télécharger"
+    contact: "Contact"
+  hero:
+    tagline: "Découvrez votre prochaine lecture"
+    title: "Organisez votre bibliothèque, transformez votre lecture."
+    subtitle: "BookNova vous aide à gérer votre collection de livres, suivre vos lectures et découvrir de nouvelles histoires passionnantes."
+    app_store: "App Store"
+    google_play: "Google Play"
+  features:
+    title: "Fonctionnalités"
+    library:
+      title: "Bibliothèque Personnalisée"
+      description: "Organisez votre collection de livres avec des étagères virtuelles personnalisables et des catégories intelligentes."
+    search:
+      title: "Recherche Avancée"
+      description: "Trouvez rapidement n'importe quel livre grâce à notre moteur de recherche intelligent et nos filtres avancés."
+    reviews:
+      title: "Notes et Avis"
+      description: "Notez vos lectures, écrivez des critiques et partagez vos découvertes avec la communauté."
+    tracking:
+      title: "Suivi de Lecture"
+      description: "Suivez votre progression, définissez des objectifs de lecture et consultez vos statistiques détaillées."
+    community:
+      title: "Communauté"
+      description: "Connectez-vous avec d'autres lecteurs, rejoignez des clubs de lecture et participez à des discussions."
+    sync:
+      title: "Synchronisation Cloud"
+      description: "Accédez à votre bibliothèque depuis tous vos appareils grâce à la synchronisation automatique."
+  screenshots:
+    title: "Découvrez l'application"
+  cta:
+    title: "Prêt à commencer ?"
+    subtitle: "Téléchargez BookNova dès maintenant et transformez votre expérience de lecture"
+  footer:
+    copyright: "Tous droits réservés."
+
+en:
+  nav:
+    features: "Features"
+    download: "Download"
+    contact: "Contact"
+  hero:
+    tagline: "Discover your next read"
+    title: "Organize your library, transform your reading."
+    subtitle: "BookNova helps you manage your book collection, track your readings and discover exciting new stories."
+    app_store: "App Store"
+    google_play: "Google Play"
+  features:
+    title: "Features"
+    library:
+      title: "Personal Library"
+      description: "Organize your book collection with customizable virtual shelves and smart categories."
+    search:
+      title: "Advanced Search"
+      description: "Quickly find any book with our intelligent search engine and advanced filters."
+    reviews:
+      title: "Notes & Reviews"
+      description: "Rate your readings, write reviews and share your discoveries with the community."
+    tracking:
+      title: "Reading Tracking"
+      description: "Track your progress, set reading goals and view your detailed statistics."
+    community:
+      title: "Community"
+      description: "Connect with other readers, join book clubs and participate in discussions."
+    sync:
+      title: "Cloud Sync"
+      description: "Access your library from all your devices with automatic synchronization."
+  screenshots:
+    title: "Discover the app"
+  cta:
+    title: "Ready to start?"
+    subtitle: "Download BookNova now and transform your reading experience"
+  footer:
+    copyright: "All rights reserved."
+
+es:
+  nav:
+    features: "Características"
+    download: "Descargar"
+    contact: "Contacto"
+  hero:
+    tagline: "Descubre tu próxima lectura"
+    title: "Organiza tu biblioteca, transforma tu lectura."
+    subtitle: "BookNova te ayuda a gestionar tu colección de libros, seguir tus lecturas y descubrir nuevas historias emocionantes."
+    app_store: "App Store"
+    google_play: "Google Play"
+  features:
+    title: "Características"
+    library:
+      title: "Biblioteca Personal"
+      description: "Organiza tu colección de libros con estanterías virtuales personalizables y categorías inteligentes."
+    search:
+      title: "Búsqueda Avanzada"
+      description: "Encuentra rápidamente cualquier libro con nuestro motor de búsqueda inteligente y filtros avanzados."
+    reviews:
+      title: "Notas y Reseñas"
+      description: "Califica tus lecturas, escribe reseñas y comparte tus descubrimientos con la comunidad."
+    tracking:
+      title: "Seguimiento de Lectura"
+      description: "Sigue tu progreso, establece objetivos de lectura y consulta tus estadísticas detalladas."
+    community:
+      title: "Comunidad"
+      description: "Conéctate con otros lectores, únete a clubes de lectura y participa en discusiones."
+    sync:
+      title: "Sincronización en la Nube"
+      description: "Accede a tu biblioteca desde todos tus dispositivos con sincronización automática."
+  screenshots:
+    title: "Descubre la aplicación"
+  cta:
+    title: "¿Listo para empezar?"
+    subtitle: "Descarga BookNova ahora y transforma tu experiencia de lectura"
+  footer:
+    copyright: "Todos los derechos reservados."
