@@ -28,7 +28,7 @@ layout: default
             <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
                 <div class="hero-image">
                     {% if site.hero_image %}
-                    <img src="{{ site.hero_image }}" alt="{{ site.title }}" class="hero-logo">
+                    <img src="{{ site.hero_image | relative_url }}" alt="{{ site.title }}" class="hero-logo">
                     {% else %}
                     <i class="bi bi-book-fill"></i>
                     {% endif %}

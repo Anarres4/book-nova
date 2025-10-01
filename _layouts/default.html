@@ -559,7 +559,7 @@
     <!-- Header/Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark sticky-top">
         <div class="container-fluid px-3 px-md-5">
-            <a class="navbar-brand font-marker" href="/">{{ site.title }}</a>
+            <a class="navbar-brand font-marker" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -580,13 +580,13 @@
                             <li><button onclick="changeLanguage('es')" data-lang="es">Español</button></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-md-block">
                         <a class="nav-link" href="{{ '/privacy.html' | relative_url }}" data-i18n="nav.privacy">Confidentialité</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-md-block">
                         <a class="nav-link" href="{{ '/terms.html' | relative_url }}" data-i18n="nav.terms">Conditions</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-md-block">
                         <a class="nav-link" href="{{ '/support.html' | relative_url }}" data-i18n="nav.support">Support</a>
                     </li>
                     <li class="nav-item d-md-none w-100">
