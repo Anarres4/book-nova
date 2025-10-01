@@ -37,6 +37,10 @@ fr:
   cta:
     title: "Prêt à commencer ?"
     subtitle: "Téléchargez BookNova dès maintenant et transformez votre expérience de lecture"
+  storeModal:
+    title: "Disponible bientôt"
+    message: "Les versions iOS et Android arrivent très bientôt. Restez à l'écoute !"
+    close: "Fermer"
   footer:
     copyright: "Tous droits réservés."
   languageSwitcher:
@@ -361,6 +365,10 @@ en:
   cta:
     title: "Ready to start?"
     subtitle: "Download BookNova now and transform your reading experience"
+  storeModal:
+    title: "Coming soon"
+    message: "Both iOS and Android versions are on their way. Stay tuned!"
+    close: "Close"
   footer:
     copyright: "All rights reserved."
   languageSwitcher:
@@ -685,6 +693,10 @@ es:
   cta:
     title: "¿Listo para empezar?"
     subtitle: "Descarga BookNova ahora y transforma tu experiencia de lectura"
+  storeModal:
+    title: "Próximamente"
+    message: "Las versiones para iOS y Android llegarán muy pronto. ¡Mantente atento!"
+    close: "Cerrar"
   footer:
     copyright: "Todos los derechos reservados."
   languageSwitcher:
