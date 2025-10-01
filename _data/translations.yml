@@ -100,6 +100,35 @@ fr:
       email: "support@booknova.com"
     lastUpdated: "Dernière mise à jour : 01/10/2025"
     backToHome: "Retour à l'accueil"
+  termsPage:
+    title: "Conditions d'Utilisation"
+    acceptance:
+      title: "Acceptation des Conditions"
+      content: "En utilisant BookNova, vous acceptez d'être lié par les présentes Conditions d'Utilisation. Si vous refusez ces conditions, veuillez ne pas utiliser l'application."
+    use:
+      title: "Utilisation de l'Application"
+      content: "Vous vous engagez à utiliser BookNova uniquement dans le respect des lois et de ces conditions. Toute utilisation pouvant endommager, désactiver ou surcharger le service est interdite."
+    content:
+      title: "Contenu de l'Utilisateur"
+      content: "Vous conservez vos droits sur le contenu que vous ajoutez, mais nous accordez une licence mondiale, non exclusive et sans redevance pour l'utiliser dans le cadre du service."
+    accounts:
+      title: "Comptes"
+      content: "Vous êtes responsable de la confidentialité de vos identifiants et de toute activité effectuée avec votre compte."
+    purchases:
+      title: "Achats In-App"
+      content: "Les achats sont traités par les stores (App Store ou Google Play) et soumis à leurs conditions générales."
+    liability:
+      title: "Limitation de Responsabilité"
+      content: "BookNova est fourni \"en l'état\" sans garantie. Nous ne garantissons pas l'absence d'erreurs ni la disponibilité continue de l'application."
+    changes:
+      title: "Modifications des Conditions"
+      content: "Nous pouvons modifier ces conditions à tout moment. Les mises à jour seront publiées dans l'application et sur le site."
+    contact:
+      title: "Contact"
+      content: "Pour toute question concernant ces conditions, contactez-nous à :"
+      email: "support@booknova.com"
+    lastUpdated: "Dernière mise à jour : 01/10/2025"
+    backToHome: "Retour à l'accueil"
 
 en:
   nav:
@@ -203,6 +232,35 @@ en:
       email: "support@booknova.com"
     lastUpdated: "Last updated: 01/10/2025"
     backToHome: "Back to home"
+  termsPage:
+    title: "Terms of Use"
+    acceptance:
+      title: "Acceptance of Terms"
+      content: "By using BookNova, you agree to be bound by these Terms of Use. If you do not agree, please refrain from using the app."
+    use:
+      title: "App Usage"
+      content: "You agree to use BookNova lawfully and in compliance with these terms. Any use that could damage, disable, or overload the service is prohibited."
+    content:
+      title: "User Content"
+      content: "You retain rights to any content you add, while granting us a worldwide, non-exclusive, royalty-free license to use it as part of the service."
+    accounts:
+      title: "Accounts"
+      content: "You are responsible for keeping your credentials confidential and for all activity under your account."
+    purchases:
+      title: "In-App Purchases"
+      content: "Purchases are processed by the respective stores (App Store or Google Play) and subject to their terms."
+    liability:
+      title: "Limitation of Liability"
+      content: "BookNova is provided \"as is\" without warranties. We do not guarantee it will be error-free or always available."
+    changes:
+      title: "Changes to Terms"
+      content: "We may update these terms at any time. Updates will be published in the app and on the website."
+    contact:
+      title: "Contact"
+      content: "If you have questions about these terms, reach us at:"
+      email: "support@booknova.com"
+    lastUpdated: "Last updated: 01/10/2025"
+    backToHome: "Back to home"
 
 es:
   nav:
@@ -303,6 +361,35 @@ es:
     contact:
       title: "Contacto"
       content: "Si tienes preguntas, escríbenos a:"
+      email: "support@booknova.com"
+    lastUpdated: "Última actualización: 01/10/2025"
+    backToHome: "Volver al inicio"
+  termsPage:
+    title: "Términos de Uso"
+    acceptance:
+      title: "Aceptación de los Términos"
+      content: "Al utilizar BookNova, aceptas estas Condiciones de Uso. Si no estás de acuerdo, no utilices la aplicación."
+    use:
+      title: "Uso de la Aplicación"
+      content: "Te comprometes a utilizar BookNova de forma legal y conforme a estos términos. Está prohibido cualquier uso que pueda dañar, desactivar o sobrecargar el servicio."
+    content:
+      title: "Contenido del Usuario"
+      content: "Conservas los derechos sobre el contenido que agregas, pero nos concedes una licencia mundial, no exclusiva y libre de regalías para usarlo dentro del servicio."
+    accounts:
+      title: "Cuentas"
+      content: "Eres responsable de mantener la confidencialidad de tus credenciales y de toda actividad realizada con tu cuenta."
+    purchases:
+      title: "Compras dentro de la App"
+      content: "Las compras son procesadas por las tiendas correspondientes (App Store o Google Play) y están sujetas a sus condiciones."
+    liability:
+      title: "Limitación de Responsabilidad"
+      content: "BookNova se proporciona \"tal cual\" sin garantías. No garantizamos que esté libre de errores ni disponible permanentemente."
+    changes:
+      title: "Cambios en los Términos"
+      content: "Podemos actualizar estos términos en cualquier momento. Las actualizaciones se publicarán en la app y en el sitio web."
+    contact:
+      title: "Contacto"
+      content: "Si tienes preguntas sobre estos términos, escríbenos a:"
       email: "support@booknova.com"
     lastUpdated: "Última actualización: 01/10/2025"
     backToHome: "Volver al inicio"
