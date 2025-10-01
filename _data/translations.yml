@@ -41,6 +41,10 @@ fr:
     copyright: "Tous droits réservés."
   languageSwitcher:
     change: "Changer de langue"
+  notFound:
+    title: "Page introuvable"
+    message: "Nous n'avons pas pu trouver la page que vous cherchez."
+    cta: "Retour à l'accueil"
   privacyPage:
     title: "Politique de Confidentialité"
     intro:
@@ -184,6 +188,10 @@ en:
     copyright: "All rights reserved."
   languageSwitcher:
     change: "Change language"
+  notFound:
+    title: "Page not found"
+    message: "We couldn't find the page you're looking for."
+    cta: "Back to home"
   privacyPage:
     title: "Privacy Policy"
     intro:
@@ -327,6 +335,10 @@ es:
     copyright: "Todos los derechos reservados."
   languageSwitcher:
     change: "Cambiar idioma"
+  notFound:
+    title: "Página no encontrada"
+    message: "No pudimos encontrar la página que buscas."
+    cta: "Volver al inicio"
   privacyPage:
     title: "Política de Privacidad"
     intro:
