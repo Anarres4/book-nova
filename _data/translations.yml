@@ -7,31 +7,31 @@ fr:
     terms: "Conditions"
     support: "Support"
   hero:
-    tagline: "Découvrez votre prochaine lecture"
-    title: "Organisez votre bibliothèque, transformez votre lecture."
-    subtitle: "BookNova vous aide à gérer votre collection de livres, suivre vos lectures et découvrir de nouvelles histoires passionnantes."
+    tagline: "Lisez à votre propre hauteur."
+    title: "Choisissez un objectif personnel, choisissez la motivation."
+    subtitle: "Book Nova transforme votre bibliothèque en un jeu captivant où chaque livre terminé est une victoire qui vous rapproche de votre but."
     app_store: "App Store"
     google_play: "Google Play"
   features:
-    title: "Fonctionnalités"
+    title: "Ta bibliothèque personnelle qui t'accompagne"
     library:
-      title: "Bibliothèque Personnalisée"
-      description: "Organisez votre collection de livres avec des étagères virtuelles personnalisables et des catégories intelligentes."
-    search:
-      title: "Recherche Avancée"
-      description: "Trouvez rapidement n'importe quel livre grâce à notre moteur de recherche intelligent et nos filtres avancés."
-    reviews:
-      title: "Notes et Avis"
-      description: "Notez vos lectures, écrivez des critiques et partagez vos découvertes avec la communauté."
+      title: "Gestion intelligente"
+      description: "Scanne, organise et visualise ta collection de livres avec une précision millimétrique."
+    badges:
+      title: "Badges & progression"
+      description: "Des défis qui t'encouragent à lire plus et à diversifier tes lectures."
     tracking:
-      title: "Suivi de Lecture"
-      description: "Suivez votre progression, définissez des objectifs de lecture et consultez vos statistiques détaillées."
-    community:
-      title: "Communauté"
-      description: "Connectez-vous avec d'autres lecteurs, rejoignez des clubs de lecture et participez à des discussions."
-    sync:
-      title: "Synchronisation Cloud"
-      description: "Accédez à votre bibliothèque depuis tous vos appareils grâce à la synchronisation automatique."
+      title: "Suivi de lecture"
+      description: "Garde une trace de ta progression et célèbre chaque page tournée."
+    loans:
+      title: "Prêts simplifiés"
+      description: "Ne perds plus jamais un livre : suis tes prêts et reçois des rappels automatiques."
+    languages:
+      title: "Multilingue"
+      description: "Français, anglais, espagnol : lis dans la langue de ton choix."
+    stats:
+      title: "Statistiques détaillées"
+      description: "Visualise ton évolution de lecteur et découvre tes habitudes de lecture."
   screenshots:
     title: "Découvrez l'application"
   cta:
@@ -154,31 +154,31 @@ en:
     terms: "Terms"
     support: "Support"
   hero:
-    tagline: "Discover your next read"
-    title: "Organize your library, transform your reading."
-    subtitle: "BookNova helps you manage your book collection, track your readings and discover exciting new stories."
+    tagline: "Read at your own pace."
+    title: "Pick a personal goal, pick the motivation."
+    subtitle: "Book Nova turns your library into a compelling game where every finished book is a victory that brings you closer to your goal."
     app_store: "App Store"
     google_play: "Google Play"
   features:
-    title: "Features"
+    title: "Your personal library that stays with you"
     library:
-      title: "Personal Library"
-      description: "Organize your book collection with customizable virtual shelves and smart categories."
-    search:
-      title: "Advanced Search"
-      description: "Quickly find any book with our intelligent search engine and advanced filters."
-    reviews:
-      title: "Notes & Reviews"
-      description: "Rate your readings, write reviews and share your discoveries with the community."
+      title: "Smart management"
+      description: "Scan, organize, and visualise your book collection with pinpoint precision."
+    badges:
+      title: "Badges & progress"
+      description: "Challenges that encourage you to read more and diversify your reading."
     tracking:
-      title: "Reading Tracking"
-      description: "Track your progress, set reading goals and view your detailed statistics."
-    community:
-      title: "Community"
-      description: "Connect with other readers, join book clubs and participate in discussions."
-    sync:
-      title: "Cloud Sync"
-      description: "Access your library from all your devices with automatic synchronization."
+      title: "Reading tracker"
+      description: "Keep track of your progress and celebrate every page you turn."
+    loans:
+      title: "Simplified loans"
+      description: "Never lose a book again: track your loans and receive automatic reminders."
+    languages:
+      title: "Multilingual"
+      description: "French, English, Spanish—read in the language that fits you best."
+    stats:
+      title: "Detailed statistics"
+      description: "Visualise your evolution as a reader and discover your reading habits."
   screenshots:
     title: "Discover the app"
   cta:
@@ -301,31 +301,31 @@ es:
     terms: "Condiciones"
     support: "Soporte"
   hero:
-    tagline: "Descubre tu próxima lectura"
-    title: "Organiza tu biblioteca, transforma tu lectura."
-    subtitle: "BookNova te ayuda a gestionar tu colección de libros, seguir tus lecturas y descubrir nuevas historias emocionantes."
+    tagline: "Lee a tu propio ritmo."
+    title: "Elige un objetivo personal, elige la motivación."
+    subtitle: "Book Nova convierte tu biblioteca en un juego cautivador donde cada libro terminado es una victoria que te acerca a tu meta."
     app_store: "App Store"
     google_play: "Google Play"
   features:
-    title: "Características"
+    title: "Tu biblioteca personal que te acompaña"
     library:
-      title: "Biblioteca Personal"
-      description: "Organiza tu colección de libros con estanterías virtuales personalizables y categorías inteligentes."
-    search:
-      title: "Búsqueda Avanzada"
-      description: "Encuentra rápidamente cualquier libro con nuestro motor de búsqueda inteligente y filtros avanzados."
-    reviews:
-      title: "Notas y Reseñas"
-      description: "Califica tus lecturas, escribe reseñas y comparte tus descubrimientos con la comunidad."
+      title: "Gestión inteligente"
+      description: "Escanea, organiza y visualiza tu colección de libros con precisión milimétrica."
+    badges:
+      title: "Insignias y progreso"
+      description: "Retos que te animan a leer más y a diversificar tus lecturas."
     tracking:
-      title: "Seguimiento de Lectura"
-      description: "Sigue tu progreso, establece objetivos de lectura y consulta tus estadísticas detalladas."
-    community:
-      title: "Comunidad"
-      description: "Conéctate con otros lectores, únete a clubes de lectura y participa en discusiones."
-    sync:
-      title: "Sincronización en la Nube"
-      description: "Accede a tu biblioteca desde todos tus dispositivos con sincronización automática."
+      title: "Seguimiento de lectura"
+      description: "Lleva registro de tu progreso y celebra cada página que pasas."
+    loans:
+      title: "Préstamos simplificados"
+      description: "No vuelvas a perder un libro: controla tus préstamos y recibe recordatorios automáticos."
+    languages:
+      title: "Multilingüe"
+      description: "Francés, inglés, español: lee en el idioma que prefieras."
+    stats:
+      title: "Estadísticas detalladas"
+      description: "Visualiza tu evolución como lector y descubre tus hábitos de lectura."
   screenshots:
     title: "Descubre la aplicación"
   cta:
