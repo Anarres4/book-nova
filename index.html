@@ -27,7 +27,11 @@ layout: default
             <!-- Right side with app logo -->
             <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
                 <div class="hero-image">
+                    {% if site.hero_image %}
+                    <img src="{{ site.hero_image }}" alt="{{ site.title }}" class="hero-logo">
+                    {% else %}
                     <i class="bi bi-book-fill"></i>
+                    {% endif %}
                 </div>
             </div>
         </div>

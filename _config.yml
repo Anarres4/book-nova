@@ -26,6 +26,9 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+# Branding
+hero_image: "/assets/images/hero-logo.png"
+
 # Languages
 languages: ["fr", "en", "es"]
 default_lang: "fr"

@@ -249,14 +249,15 @@
         }
 
         .hero-image {
-            width: 250px;
-            height: 250px;
+            width: 10rem;
+            height: 10rem;
             background: rgba(255, 255, 255, 0.15);
             border-radius: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
         }
 
         .hero-image i {
@@ -265,10 +266,18 @@
             opacity: 0.9;
         }
 
+        .hero-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            border-radius: 1.5rem;
+        }
+
         @media (min-width: 768px) {
             .hero-image {
-                width: 300px;
-                height: 300px;
+                width: 16rem;
+                height: 16rem;
             }
         }
 
