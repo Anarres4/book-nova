@@ -7,8 +7,8 @@ fr:
     terms: "Conditions"
     support: "Support"
   hero:
-    tagline: "Lisez à votre propre hauteur."
-    title: "Choisissez un objectif personnel, choisissez la motivation."
+    tagline: "Lisez jusqu'à votre propre hauteur"
+    title: "Et si votre prochain défi était votre taille ?"
     subtitle: "Book Nova transforme votre bibliothèque en un jeu captivant où chaque livre terminé est une victoire qui vous rapproche de votre but."
     app_store: "App Store"
     google_play: "Google Play"
@@ -331,8 +331,8 @@ en:
     terms: "Terms"
     support: "Support"
   hero:
-    tagline: "Read at your own pace."
-    title: "Pick a personal goal, pick the motivation."
+    tagline: "Read up to your own height"
+    title: "What if your next reading challenge matched your height?"
     subtitle: "Book Nova turns your library into a compelling game where every finished book is a victory that brings you closer to your goal."
     app_store: "App Store"
     google_play: "Google Play"
@@ -655,8 +655,8 @@ es:
     terms: "Condiciones"
     support: "Soporte"
   hero:
-    tagline: "Lee a tu propio ritmo."
-    title: "Elige un objetivo personal, elige la motivación."
+    tagline: "Lee hasta tu propia altura"
+    title: "¿Y si tu próximo reto lector midiera lo que tú mides?"
     subtitle: "Book Nova convierte tu biblioteca en un juego cautivador donde cada libro terminado es una victoria que te acerca a tu meta."
     app_store: "App Store"
     google_play: "Google Play"
