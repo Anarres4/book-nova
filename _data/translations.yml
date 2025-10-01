@@ -43,6 +43,10 @@ fr:
     close: "Fermer"
   footer:
     copyright: "Tous droits réservés."
+  footerLinks:
+    privacy: "Politique de confidentialité"
+    terms: "Conditions d'utilisation"
+    thanks: "Remerciements"
   languageSwitcher:
     change: "Changer de langue"
   notFound:
@@ -325,6 +329,10 @@ fr:
       button: "book-nova@outlook.fr"
     response: "Nous répondons généralement sous 1 à 2 jours ouvrés."
     backToHome: "Retour à l'accueil"
+  thanksPage:
+    title: "Remerciements"
+    message: "Cette page de remerciements est encore en préparation. Revenez bientôt pour découvrir les partenaires et soutiens de Book Nova."
+    backToHome: "Retour à l'accueil"
 
 en:
   nav:
@@ -371,6 +379,10 @@ en:
     close: "Close"
   footer:
     copyright: "All rights reserved."
+  footerLinks:
+    privacy: "Privacy Policy"
+    terms: "Terms of Use"
+    thanks: "Acknowledgements"
   languageSwitcher:
     change: "Change language"
   notFound:
@@ -653,6 +665,10 @@ en:
       button: "book-nova@outlook.fr"
     response: "We usually respond within 1 to 2 business days."
     backToHome: "Back to home"
+  thanksPage:
+    title: "Acknowledgements"
+    message: "This acknowledgements page is still in progress. Check back soon to discover Book Nova's partners and supporters."
+    backToHome: "Back to home"
 
 es:
   nav:
@@ -699,6 +715,10 @@ es:
     close: "Cerrar"
   footer:
     copyright: "Todos los derechos reservados."
+  footerLinks:
+    privacy: "Política de privacidad"
+    terms: "Condiciones de uso"
+    thanks: "Agradecimientos"
   languageSwitcher:
     change: "Cambiar idioma"
   notFound:
@@ -807,6 +827,10 @@ es:
       content: "Envíanos un correo y te responderemos lo antes posible:"
       button: "book-nova@outlook.fr"
     response: "Solemos responder en un plazo de 1 a 2 días hábiles."
+    backToHome: "Volver al inicio"
+  thanksPage:
+    title: "Agradecimientos"
+    message: "Esta página de agradecimientos todavía está en construcción. Vuelve pronto para descubrir a los socios y colaboradores de Book Nova."
     backToHome: "Volver al inicio"
   termsPage:
     title: "Términos de Uso"
