@@ -125,7 +125,7 @@ fr:
     contact:
       title: "Contact"
       content: "Pour toute question relative à vos données ou à cette politique, écrivez-nous :"
-      email: "support@booknova.com"
+      email: "book-nova@outlook.fr"
     summary:
       title: "Résumé simplifié"
       items:
@@ -297,7 +297,7 @@ fr:
       contact:
         title: "13. Contact"
         body: "Pour toute question concernant ces Conditions d'Utilisation, veuillez nous contacter à :"
-        email: "support@booknova.com"
+        email: "book-nova@outlook.fr"
     summary:
       title: "Résumé Simplifié"
       items:
@@ -318,7 +318,7 @@ fr:
     contact:
       title: "Contactez-nous"
       content: "Envoyez-nous un e-mail et nous vous répondrons dès que possible :"
-      button: "support@booknova.com"
+      button: "book-nova@outlook.fr"
     response: "Nous répondons généralement sous 1 à 2 jours ouvrés."
     backToHome: "Retour à l'accueil"
 
@@ -449,7 +449,7 @@ en:
     contact:
       title: "Contact"
       content: "Questions about your data or this policy? Reach us at:"
-      email: "support@booknova.com"
+      email: "book-nova@outlook.fr"
     summary:
       title: "Quick summary"
       items:
@@ -621,7 +621,7 @@ en:
       contact:
         title: "13. Contact"
         body: "If you have any questions about these Terms of Use, contact us at:"
-        email: "support@booknova.com"
+        email: "book-nova@outlook.fr"
     summary:
       title: "Quick Summary"
       items:
@@ -642,7 +642,7 @@ en:
     contact:
       title: "Contact us"
       content: "Send us an email and we'll reply as quickly as possible:"
-      button: "support@booknova.com"
+      button: "book-nova@outlook.fr"
     response: "We usually respond within 1 to 2 business days."
     backToHome: "Back to home"
 
@@ -773,7 +773,7 @@ es:
     contact:
       title: "Contacto"
       content: "Si tienes dudas sobre tus datos o esta política, escríbenos a:"
-      email: "support@booknova.com"
+      email: "book-nova@outlook.fr"
     summary:
       title: "Resumen rápido"
       items:
@@ -793,7 +793,7 @@ es:
     contact:
       title: "Contáctanos"
       content: "Envíanos un correo y te responderemos lo antes posible:"
-      button: "support@booknova.com"
+      button: "book-nova@outlook.fr"
     response: "Solemos responder en un plazo de 1 a 2 días hábiles."
     backToHome: "Volver al inicio"
   termsPage:
@@ -956,7 +956,7 @@ es:
       contact:
         title: "13. Contacto"
         body: "Si tienes preguntas sobre estas Condiciones de Uso, contáctanos en:"
-        email: "support@booknova.com"
+        email: "book-nova@outlook.fr"
     summary:
       title: "Resumen rápido"
       items:
