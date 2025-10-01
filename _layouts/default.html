@@ -6,6 +6,10 @@
     <title>{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}">
 
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon-rounded.svg' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/hero-logo.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/images/hero-logo.png' | relative_url }}">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -259,7 +263,7 @@
             width: 10rem;
             height: 10rem;
             background: rgba(255, 255, 255, 0.15);
-            border-radius: 2rem;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -278,7 +282,7 @@
             height: 100%;
             object-fit: contain;
             display: block;
-            border-radius: 1.5rem;
+            border-radius: 50%;
         }
 
         .privacy-section {
