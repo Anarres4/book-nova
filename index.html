@@ -6,8 +6,19 @@ layout: default
 <section class="hero-section">
     <div class="container">
         <div class="row align-items-center g-4 g-md-5">
-            <!-- Left side with text -->
-            <div class="col-md-6 text-center text-md-start">
+            <!-- Left side with app logo -->
+            <div class="col-md-6 d-flex justify-content-center justify-content-md-end order-md-2">
+                <div class="hero-image">
+                    {% if site.hero_image %}
+                    <img src="{{ site.hero_image | relative_url }}" alt="{{ site.title }}" class="hero-logo">
+                    {% else %}
+                    <i class="bi bi-book-fill"></i>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Right side with text -->
+            <div class="col-md-6 text-center text-md-start order-md-1">
                 <p class="hero-tagline text-uppercase fw-bold tracking-wider mb-3" data-i18n="hero.tagline">Découvrez votre prochaine lecture</p>
                 <h1 class="hero-title fw-bold mb-4" data-i18n="hero.title">Organisez votre bibliothèque, transformez votre lecture.</h1>
                 <p class="hero-subtitle mb-4 mb-md-5" data-i18n="hero.subtitle">BookNova vous aide à gérer votre collection de livres, suivre vos lectures et découvrir de nouvelles histoires passionnantes.</p>
@@ -21,17 +32,6 @@ layout: default
                         <i class="bi bi-google-play me-2"></i>
                         <span data-i18n="hero.google_play">Google Play</span>
                     </a>
-                </div>
-            </div>
-
-            <!-- Right side with app logo -->
-            <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
-                <div class="hero-image">
-                    {% if site.hero_image %}
-                    <img src="{{ site.hero_image | relative_url }}" alt="{{ site.title }}" class="hero-logo">
-                    {% else %}
-                    <i class="bi bi-book-fill"></i>
-                    {% endif %}
                 </div>
             </div>
         </div>
