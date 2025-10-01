@@ -3,6 +3,9 @@ fr:
     features: "Fonctionnalités"
     download: "Télécharger"
     contact: "Contact"
+    privacy: "Confidentialité"
+    terms: "Conditions"
+    support: "Support"
   hero:
     tagline: "Découvrez votre prochaine lecture"
     title: "Organisez votre bibliothèque, transformez votre lecture."
@@ -36,12 +39,17 @@ fr:
     subtitle: "Téléchargez BookNova dès maintenant et transformez votre expérience de lecture"
   footer:
     copyright: "Tous droits réservés."
+  languageSwitcher:
+    change: "Changer de langue"
 
 en:
   nav:
     features: "Features"
     download: "Download"
     contact: "Contact"
+    privacy: "Privacy"
+    terms: "Terms"
+    support: "Support"
   hero:
     tagline: "Discover your next read"
     title: "Organize your library, transform your reading."
@@ -75,12 +83,17 @@ en:
     subtitle: "Download BookNova now and transform your reading experience"
   footer:
     copyright: "All rights reserved."
+  languageSwitcher:
+    change: "Change language"
 
 es:
   nav:
     features: "Características"
     download: "Descargar"
     contact: "Contacto"
+    privacy: "Privacidad"
+    terms: "Condiciones"
+    support: "Soporte"
   hero:
     tagline: "Descubre tu próxima lectura"
     title: "Organiza tu biblioteca, transforma tu lectura."
@@ -114,3 +127,5 @@ es:
     subtitle: "Descarga BookNova ahora y transforma tu experiencia de lectura"
   footer:
     copyright: "Todos los derechos reservados."
+  languageSwitcher:
+    change: "Cambiar idioma"

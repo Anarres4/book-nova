@@ -124,6 +124,81 @@
             font-weight: 600;
         }
 
+        .mobile-nav-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            color: #1a1a1a;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .mobile-nav-link:hover {
+            background-color: rgba(108, 99, 255, 0.1);
+            color: #1a1a1a;
+        }
+
+        .mobile-nav-divider {
+            height: 1px;
+            background-color: rgba(26, 26, 26, 0.1);
+            margin: 0.5rem 0;
+        }
+
+        .mobile-nav-heading {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: rgba(26, 26, 26, 0.6);
+            padding: 0.25rem 1rem;
+        }
+
+        .touch-target {
+            min-height: 44px;
+        }
+
+        .mobile-language-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: transparent;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .mobile-language-option:hover {
+            background-color: rgba(108, 99, 255, 0.1);
+            color: #1a1a1a;
+        }
+
+        .mobile-language-option[aria-selected="true"] {
+            background-color: rgba(108, 99, 255, 0.15);
+            color: #1a1a1a;
+        }
+
+        .mobile-lang-checkmark {
+            color: var(--primary-color);
+        }
+
         .hero-section {
             color: white;
             padding: 80px 0;
@@ -391,6 +466,33 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
                     </li>
+                    <li class="nav-item d-md-none w-100">
+                        <div class="mobile-nav-panel">
+                            <a href="privacy.html" class="mobile-nav-link touch-target" data-i18n="nav.privacy">Confidentialité</a>
+                            <a href="terms.html" class="mobile-nav-link touch-target" data-i18n="nav.terms">Conditions</a>
+                            <a href="support.html" class="mobile-nav-link touch-target" data-i18n="nav.support">Support</a>
+                            <div class="mobile-nav-divider"></div>
+                            <div class="mobile-nav-heading" data-i18n="languageSwitcher.change">Changer de langue</div>
+                            <button data-lang="en" class="mobile-language-option touch-target" aria-selected="false">
+                                <span>English</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark d-none" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </button>
+                            <button data-lang="fr" class="mobile-language-option touch-target" aria-selected="true">
+                                <span>Français</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </button>
+                            <button data-lang="es" class="mobile-language-option touch-target" aria-selected="false">
+                                <span>Español</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark d-none" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -446,7 +548,9 @@
             localStorage.setItem('language', lang);
             updateContent();
             updateCurrentLanguage();
-            langDropdown.classList.remove('show');
+            if (langDropdown) {
+                langDropdown.classList.remove('show');
+            }
         }
 
         // Update content
@@ -478,6 +582,16 @@
                     btn.classList.add('active');
                 }
             });
+
+            // Update mobile language options state
+            document.querySelectorAll('.mobile-language-option').forEach(btn => {
+                const isActive = btn.getAttribute('data-lang') === currentLang;
+                btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                const checkmark = btn.querySelector('.mobile-lang-checkmark');
+                if (checkmark) {
+                    checkmark.classList.toggle('d-none', !isActive);
+                }
+            });
         }
 
         // Update current language display
@@ -497,6 +611,13 @@
         document.addEventListener('DOMContentLoaded', () => {
             updateContent();
             updateCurrentLanguage();
+
+            document.querySelectorAll('.mobile-language-option').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    changeLanguage(lang);
+                });
+            });
         });
     </script>
 </body>
