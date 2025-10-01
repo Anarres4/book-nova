@@ -642,7 +642,46 @@
     <script type="application/json" id="translationsData">{{ site.data.translations | jsonify }}</script>
     <script>
         const translations = JSON.parse(document.getElementById('translationsData').textContent);
-        let currentLang = localStorage.getItem('language') || '{{ site.default_lang }}';
+        const availableLangs = Object.keys(translations);
+
+        const storedLang = localStorage.getItem('language');
+
+        function isValidLang(lang) {
+            return availableLangs.includes(lang);
+        }
+
+        function getLangFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const queryLang = params.get('lang');
+            if (isValidLang(queryLang)) {
+                return queryLang;
+            }
+
+            const hashMatch = window.location.hash.match(/lang=([a-z]{2})/i);
+            if (hashMatch && isValidLang(hashMatch[1])) {
+                return hashMatch[1];
+            }
+            return null;
+        }
+
+        function setLangInUrl(lang) {
+            const params = new URLSearchParams(window.location.search);
+            params.set('lang', lang);
+            const newUrl = `${window.location.pathname}?${params.toString()}${window.location.hash}`;
+            window.history.replaceState({}, '', newUrl);
+        }
+
+        let currentLang = getLangFromUrl() || storedLang || '{{ site.default_lang }}';
+
+        if (!isValidLang(currentLang)) {
+            currentLang = '{{ site.default_lang }}';
+        }
+
+        if (storedLang !== currentLang) {
+            localStorage.setItem('language', currentLang);
+        }
+
+        setLangInUrl(currentLang);
 
         // Toggle dropdown
         const langButton = document.getElementById('languageButton');
@@ -661,8 +700,12 @@
 
         // Change language
         function changeLanguage(lang) {
+            if (!isValidLang(lang)) {
+                return;
+            }
             currentLang = lang;
             localStorage.setItem('language', lang);
+            setLangInUrl(lang);
             updateContent();
             updateCurrentLanguage();
             if (langDropdown) {
