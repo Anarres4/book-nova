@@ -17,95 +17,128 @@ permalink: /privacy.html
             <div class="privacy-section-content">
                 <section class="privacy-block">
                     <h2 data-i18n="privacyPage.intro.title">Introduction</h2>
-                    <p data-i18n="privacyPage.intro.content">Bienvenue dans la politique de confidentialité de BookNova. Nous accordons une grande importance à la protection de vos données personnelles.</p>
+                    <p data-i18n="privacyPage.intro.content">Bienvenue dans la politique de confidentialité de Book Nova. Nous accordons une grande importance à la protection de votre vie privée. L'application fonctionne principalement hors ligne avec un stockage 100 % local.</p>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.dataCollected.title">Données collectées</h2>
-                    <p data-i18n="privacyPage.dataCollected.content">Notre application collecte uniquement les informations que vous fournissez lors de l'installation et de votre utilisation :</p>
+                    <h2 data-i18n="privacyPage.dataLocal.title">Données stockées localement sur votre appareil</h2>
+                    <p data-i18n="privacyPage.dataLocal.intro">Toutes les données suivantes sont conservées exclusivement sur votre appareil :</p>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.dataCollected.items.0">Vos préférences de lecture</li>
-                        <li data-i18n="privacyPage.dataCollected.items.1">Les paramètres personnalisés que vous activez</li>
-                        <li data-i18n="privacyPage.dataCollected.items.2">Les statistiques d'utilisation anonymisées</li>
+                        <li data-i18n="privacyPage.dataLocal.items.0">Informations de bibliothèque : titres, auteurs, nombre de pages, images de couverture, descriptions et progression de lecture</li>
+                        <li data-i18n="privacyPage.dataLocal.items.1">Paramètres personnels : taille, unité d'affichage (cm/m), système métrique (métrique/impérial), avatar, langues de lecture préférées, genres favoris, préférence pour les livres audio</li>
+                        <li data-i18n="privacyPage.dataLocal.items.2">Défis et badges : défi sélectionné (solaire/galaxie/univers), badges débloqués et progression</li>
+                        <li data-i18n="privacyPage.dataLocal.items.3">Prêts de livres : livres prêtés ou empruntés, avec dates et contacts</li>
+                        <li data-i18n="privacyPage.dataLocal.items.4">Préférences d'interface : langue de l'application (FR/EN/ES), thème (clair/sombre), type de vue de bibliothèque</li>
+                        <li data-i18n="privacyPage.dataLocal.items.5">Identifiant d'appareil : UUID généré aléatoirement et stocké localement</li>
                     </ul>
-                    <p class="privacy-note" data-i18n="privacyPage.dataCollected.note">Aucune donnée d'identification personnelle n'est collectée sans votre consentement explicite.</p>
+                    <p class="privacy-note" data-i18n="privacyPage.dataLocal.note">Aucune donnée d'identification personnelle n'est collectée sans votre consentement explicite.</p>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.dataUse.title">Utilisation des données</h2>
-                    <p data-i18n="privacyPage.dataUse.content">Toutes les données collectées sont anonymisées et utilisées exclusivement pour :</p>
+                    <h2 data-i18n="privacyPage.usage.title">Stockage et traitement</h2>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.dataUse.items.0">Améliorer votre expérience au sein de l'application</li>
-                        <li data-i18n="privacyPage.dataUse.items.1">Personnaliser le contenu et les recommandations</li>
-                        <li data-i18n="privacyPage.dataUse.items.2">Analyser l'utilisation globale de l'application</li>
-                        <li data-i18n="privacyPage.dataUse.items.3">Optimiser nos actions marketing</li>
-                        <li data-i18n="privacyPage.dataUse.items.4">Surveiller les performances et corriger les bugs</li>
+                        <li data-i18n="privacyPage.usage.items.0">100 % local : données enregistrées dans AsyncStorage et SecureStore (pour votre taille et l'UUID)</li>
+                        <li data-i18n="privacyPage.usage.items.1">Pas de serveur distant : aucune donnée n'est envoyée à Book Nova ni à des tiers</li>
                     </ul>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.analytics.title">Outils d'analyse et de surveillance</h2>
-                    <p data-i18n="privacyPage.analytics.content">Nous utilisons certains services tiers pour améliorer BookNova et comprendre son utilisation :</p>
-                    <ul class="privacy-list privacy-analytics">
-                        <li>
-                            <span class="privacy-pill">Mixpanel:</span>
-                            <span data-i18n="privacyPage.analytics.items.mixpanel">Analyse produit et suivi du comportement utilisateur. Les données sont anonymisées.</span>
-                        </li>
-                        <li>
-                            <span class="privacy-pill">Sentry:</span>
-                            <span data-i18n="privacyPage.analytics.items.sentry">Suivi des performances et des crashs afin de corriger rapidement les problèmes techniques.</span>
-                        </li>
-                        <li>
-                            <span class="privacy-pill">AppsFlyer:</span>
-                            <span data-i18n="privacyPage.analytics.items.appsflyer">Analyses marketing et attribution pour mesurer l'efficacité de nos campagnes.</span>
-                        </li>
+                    <h2 data-i18n="privacyPage.api.title">API externe : ISBNdb</h2>
+                    <p data-i18n="privacyPage.api.intro">Book Nova utilise ISBNdb pour récupérer les métadonnées publiques des livres lorsque vous :</p>
+                    <ul class="privacy-list">
+                        <li data-i18n="privacyPage.api.items.0">Scannez un code-barres ISBN</li>
+                        <li data-i18n="privacyPage.api.items.1">Effectuez une recherche par titre ou auteur</li>
+                        <li data-i18n="privacyPage.api.items.2">Validez manuellement un ISBN</li>
                     </ul>
-                    <p class="privacy-note" data-i18n="privacyPage.analytics.note">Ces services respectent des normes strictes de protection des données et traitent les informations conformément aux lois applicables.</p>
+                    <p data-i18n="privacyPage.api.data">Données envoyées à ISBNdb : ISBN, titre recherché, auteur recherché, langue de recherche et clé API (la vôtre ou celle de Book Nova).</p>
+                    <p data-i18n="privacyPage.api.limits">Utilisateurs gratuits : jusqu'à 3 livres enrichis par jour. Utilisateurs premium : aucune limite.</p>
+                    <p class="privacy-note" data-i18n="privacyPage.api.note">ISBNdb ne reçoit aucune information personnelle vous concernant.</p>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.storage.title">Stockage et sécurité</h2>
-                    <p data-i18n="privacyPage.storage.content">Vos données sont stockées de manière sécurisée via Supabase, avec des protocoles conformes aux standards de l'industrie.</p>
+                    <h2 data-i18n="privacyPage.notifications.title">Notifications locales</h2>
+                    <p data-i18n="privacyPage.notifications.intro">Les notifications sont programmées localement sur votre appareil pour :</p>
+                    <ul class="privacy-list">
+                        <li data-i18n="privacyPage.notifications.items.0">Rappeler les livres prêtés (30 jours après le prêt)</li>
+                        <li data-i18n="privacyPage.notifications.items.1">Vous encourager à lire (rappel mensuel optionnel)</li>
+                    </ul>
+                    <p class="privacy-note" data-i18n="privacyPage.notifications.note">Aucune connexion Internet n'est nécessaire.</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2 data-i18n="privacyPage.premium.title">Version premium - RevenueCat</h2>
+                    <p data-i18n="privacyPage.premium.intro">Lors d'achats in-app, RevenueCat gère vos abonnements. Nous transmettons uniquement :</p>
+                    <ul class="privacy-list">
+                        <li data-i18n="privacyPage.premium.items.0">UUID de votre appareil (identifiant anonyme)</li>
+                        <li data-i18n="privacyPage.premium.items.1">Statut d'abonnement (actif/inactif)</li>
+                        <li data-i18n="privacyPage.premium.items.2">Informations de transaction fournies par l'App Store ou Google Play</li>
+                    </ul>
+                    <p class="privacy-note" data-i18n="privacyPage.premium.note">Book Nova n'accède jamais à vos informations de paiement. RevenueCat respecte le RGPD et le CCPA.</p>
                 </section>
 
                 <section class="privacy-block">
                     <h2 data-i18n="privacyPage.sharing.title">Partage des données</h2>
-                    <p data-i18n="privacyPage.sharing.content">Nous ne vendons ni ne partageons vos informations anonymisées, sauf dans les cas suivants :</p>
+                    <p data-i18n="privacyPage.sharing.intro">Nous ne vendons, n'échangeons ni ne transférons vos données, sauf :</p>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.sharing.items.0">Lorsque cela est nécessaire pour fournir un service que vous avez demandé</li>
-                        <li data-i18n="privacyPage.sharing.items.1">Pour respecter une obligation légale</li>
+                        <li data-i18n="privacyPage.sharing.items.0">ISBNdb : pour récupérer les métadonnées publiques de livres</li>
+                        <li data-i18n="privacyPage.sharing.items.1">RevenueCat : pour gérer la version premium</li>
+                        <li data-i18n="privacyPage.sharing.items.2">Obligations légales : si la loi l'exige</li>
                     </ul>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.purchases.title">Achats in-app</h2>
-                    <p data-i18n="privacyPage.purchases.content">Lorsque vous effectuez des achats via RevenueCat, nous recevons uniquement les informations de transaction, jamais vos détails de paiement.</p>
+                    <h2 data-i18n="privacyPage.security.title">Sécurité et stockage</h2>
+                    <ul class="privacy-list">
+                        <li data-i18n="privacyPage.security.items.0">SecureStore protège votre taille et l'UUID avec le chiffrement natif iOS/Android</li>
+                        <li data-i18n="privacyPage.security.items.1">Vos livres, prêts et paramètres restent uniquement sur votre appareil</li>
+                        <li data-i18n="privacyPage.security.items.2">Les sauvegardes iCloud ou Google Drive s'appliquent selon vos réglages système</li>
+                    </ul>
+                    <p class="privacy-note" data-i18n="privacyPage.security.warning">Important : supprimer l'application sans sauvegarde système efface définitivement vos données.</p>
                 </section>
 
                 <section class="privacy-block">
                     <h2 data-i18n="privacyPage.rights.title">Vos droits</h2>
-                    <p data-i18n="privacyPage.rights.content">Vous disposez des droits suivants concernant vos données :</p>
+                    <p data-i18n="privacyPage.rights.intro">Vous pouvez à tout moment :</p>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.rights.items.0">Accéder aux données que nous détenons</li>
-                        <li data-i18n="privacyPage.rights.items.1">Demander leur rectification ou suppression</li>
-                        <li data-i18n="privacyPage.rights.items.2">Vous opposer à leur traitement</li>
-                        <li data-i18n="privacyPage.rights.items.3">Retirer votre consentement à tout moment</li>
+                        <li data-i18n="privacyPage.rights.items.0">Consulter vos données directement dans l'application</li>
+                        <li data-i18n="privacyPage.rights.items.1">Modifier vos informations par l'interface</li>
+                        <li data-i18n="privacyPage.rights.items.2">Retirer votre consentement aux notifications dans les réglages de votre appareil</li>
                     </ul>
                 </section>
 
                 <section class="privacy-block">
+                    <h2 data-i18n="privacyPage.permissions.title">Permissions demandées</h2>
+                    <ul class="privacy-list">
+                        <li data-i18n="privacyPage.permissions.items.0">Caméra : scanner les codes-barres ISBN</li>
+                        <li data-i18n="privacyPage.permissions.items.1">Notifications : programmer des rappels locaux</li>
+                        <li data-i18n="privacyPage.permissions.items.2">Stockage : enregistrer vos livres et paramètres</li>
+                    </ul>
+                    <p class="privacy-note" data-i18n="privacyPage.permissions.note">Ces permissions ne servent jamais à collecter des données à votre insu.</p>
+                </section>
+
+                <section class="privacy-block">
                     <h2 data-i18n="privacyPage.changes.title">Modifications de cette politique</h2>
-                    <p data-i18n="privacyPage.changes.content">Nous pouvons mettre à jour cette politique. Toute modification sera publiée dans l'application et sur le site.</p>
+                    <p data-i18n="privacyPage.changes.content">Nous pouvons mettre à jour cette politique à tout moment. Consultez-la régulièrement. Dernière mise à jour : 1er octobre 2025.</p>
                 </section>
 
                 <section class="privacy-block">
                     <h2 data-i18n="privacyPage.contact.title">Contact</h2>
-                    <p data-i18n="privacyPage.contact.content">Pour toute question, écrivez-nous à :</p>
+                    <p data-i18n="privacyPage.contact.content">Pour toute question relative à vos données ou à cette politique, écrivez-nous :</p>
                     <p class="privacy-pill" data-i18n="privacyPage.contact.email">support@booknova.com</p>
                 </section>
-            </div>
 
-            <p class="privacy-meta" data-i18n="privacyPage.lastUpdated">Dernière mise à jour : 01/10/2025</p>
+                <section class="privacy-block">
+                    <h2 data-i18n="privacyPage.summary.title">Résumé simplifié</h2>
+                    <ul class="privacy-list">
+                        <li data-i18n="privacyPage.summary.items.0">Vos données restent sur votre appareil</li>
+                        <li data-i18n="privacyPage.summary.items.1">Aucune collecte d'informations personnelles</li>
+                        <li data-i18n="privacyPage.summary.items.2">ISBNdb uniquement pour les métadonnées publiques</li>
+                        <li data-i18n="privacyPage.summary.items.3">RevenueCat gère la version premium (données anonymisées)</li>
+                        <li data-i18n="privacyPage.summary.items.4">Notifications 100 % locales</li>
+                        <li data-i18n="privacyPage.summary.items.5">Vous gardez le contrôle total sur vos données</li>
+                    </ul>
+                </section>
+            </div>
 
             <div class="privacy-back-link">
                 <a href="{{ '/' | relative_url }}" data-i18n="privacyPage.backToHome">Retour à l'accueil</a>
