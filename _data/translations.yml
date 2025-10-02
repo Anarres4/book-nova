@@ -81,7 +81,7 @@ fr:
         - "Scannez un code-barres ISBN"
         - "Effectuez une recherche par titre ou auteur"
         - "Validez manuellement un ISBN"
-      data: "Données envoyées à ISBNdb : ISBN, titre recherché, auteur recherché, langue de recherche et clé API (la vôtre ou celle de Book Nova)."
+      data: "Données envoyées à ISBNdb : ISBN, titre recherché, auteur recherché et langue de recherche."
       limits: "Utilisateurs gratuits : jusqu'à 3 livres enrichis par jour. Utilisateurs premium : aucune limite."
       note: "ISBNdb ne reçoit aucune information personnelle vous concernant."
     notifications:
@@ -98,7 +98,7 @@ fr:
         - "UUID de votre appareil (identifiant anonyme)"
         - "Statut d'abonnement (actif/inactif)"
         - "Informations de transaction fournies par l'App Store ou Google Play"
-      note: "Book Nova n'accède jamais à vos informations de paiement. RevenueCat respecte le RGPD et le CCPA."
+      note: "Book Nova n'accède jamais à vos informations de paiement."
     sharing:
       title: "Partage des données"
       intro: "Nous ne vendons, n'échangeons ni ne transférons vos données, sauf :"
@@ -129,7 +129,7 @@ fr:
       note: "Ces permissions ne servent jamais à collecter des données à votre insu."
     changes:
       title: "Modifications de cette politique"
-      content: "Nous pouvons mettre à jour cette politique à tout moment. Consultez-la régulièrement. Dernière mise à jour : 1er octobre 2025."
+      content: "Nous pouvons mettre à jour cette politique à tout moment. Consultez-la régulièrement. Dernière mise à jour : 02/10/2025."
     contact:
       title: "Contact"
       content: "Pour toute question relative à vos données ou à cette politique, écrivez-nous :"
@@ -143,7 +143,7 @@ fr:
         - "RevenueCat gère la version premium (données anonymisées)"
         - "Notifications 100 % locales"
         - "Vous gardez le contrôle total sur vos données"
-    lastUpdated: "Dernière mise à jour : 01/10/2025"
+    lastUpdated: "Dernière mise à jour : 02/10/2025"
     backToHome: "Retour à l'accueil"
   termsPage:
     title: "Conditions d'Utilisation"
@@ -210,7 +210,6 @@ fr:
         limits:
           title: "5.2 Limitations de la Version Gratuite"
           body: "Les utilisateurs de la version gratuite sont limités à 3 validations de livres enrichies de métadonnées par jour. Les utilisateurs premium ne sont pas soumis à cette limite."
-          note: "Vous pouvez ajouter des livres manuellement, sans métadonnées, de manière illimitée même avec la version gratuite."
       accounts:
         title: "6. Comptes et Authentification"
         noAccount:
@@ -232,6 +231,8 @@ fr:
             - "Validations illimitées avec métadonnées via ISBNdb"
             - "Ajout de livres sans limite quotidienne"
             - "Exports avancés (statistiques)"
+            - "Accès à des challenges et médailles exclusifs."
+            - "Accès au calendrier de lecture détaillé avec ton historique complet."
         processing:
           title: "7.2 Traitement des Achats"
           body: "Les achats in-app sont traités par :"
@@ -316,7 +317,7 @@ fr:
         - "Achats via Apple/Google, remboursements via ces plateformes"
         - "Application fournie 'en l'état', responsabilité limitée"
         - "Pas de compte requis, UUID anonyme pour le premium"
-    lastUpdated: "Dernière mise à jour : 01/10/2025"
+    lastUpdated: "Dernière mise à jour : 02/10/2025"
     backToHome: "Retour à l'accueil"
   supportPage:
     title: "Support"
@@ -417,7 +418,7 @@ en:
         - "Scan an ISBN barcode"
         - "Search by title or author"
         - "Enter an ISBN manually"
-      data: "Data sent to ISBNdb: ISBN, searched title, searched author, search language, and API key (yours or Book Nova's)."
+      data: "Data sent to ISBNdb: ISBN, searched title, searched author, and search language."
       limits: "Free users: up to 3 enriched books per day. Premium users: no limit."
       note: "ISBNdb never receives personal information about you."
     notifications:
@@ -434,7 +435,7 @@ en:
         - "Your device UUID (anonymous identifier)"
         - "Subscription status (active/inactive)"
         - "Purchase transaction details handled by the App Store or Google Play"
-      note: "Book Nova never accesses your payment information. RevenueCat complies with GDPR and CCPA."
+      note: "Book Nova never accesses your payment information."
     sharing:
       title: "Data sharing"
       intro: "We do not sell or trade your data, except:"
@@ -465,7 +466,7 @@ en:
       note: "Permissions are never used to collect data without your knowledge."
     changes:
       title: "Changes to this policy"
-      content: "We may update this policy at any time. Please review it regularly. Last update: October 1, 2025."
+      content: "We may update this policy at any time. Please review it regularly. Last update: 02/10/2025."
     contact:
       title: "Contact"
       content: "Questions about your data or this policy? Reach us at:"
@@ -479,7 +480,7 @@ en:
         - "RevenueCat handles premium (anonymised data)"
         - "Notifications are 100% local"
         - "You control your data at all times"
-    lastUpdated: "Last updated: 01/10/2025"
+    lastUpdated: "Last updated: 02/10/2025"
     backToHome: "Back to home"
   termsPage:
     title: "Terms of Use"
@@ -546,7 +547,6 @@ en:
         limits:
           title: "5.2 Free Plan Limits"
           body: "Free users are limited to 3 metadata-enriched validations per day. Premium subscribers are not subject to this limit."
-          note: "You can always add books manually without metadata as often as you like, even on the free plan."
       accounts:
         title: "6. Accounts and Authentication"
         noAccount:
@@ -568,6 +568,8 @@ en:
             - "Unlimited metadata validations via ISBNdb"
             - "Unlimited book additions each day"
             - "Advanced exports (statistics)"
+            - "Access to exclusive challenges and badges."
+            - "Access to the detailed reading calendar with your full history."
         processing:
           title: "7.2 Purchase Processing"
           body: "In-app purchases are processed by:"
@@ -652,7 +654,7 @@ en:
         - "Purchases handled by Apple/Google; refunds handled by them"
         - "App provided 'as is' with limited liability"
         - "No account required, anonymous UUID powers premium"
-    lastUpdated: "Last updated: 01/10/2025"
+    lastUpdated: "Last updated: 02/10/2025"
     backToHome: "Back to home"
   supportPage:
     title: "Support"
@@ -753,7 +755,7 @@ es:
         - "Escaneas un código de barras ISBN"
         - "Buscas por título o autor"
         - "Introduces un ISBN manualmente"
-      data: "Datos enviados a ISBNdb: ISBN, título buscado, autor buscado, idioma de búsqueda y clave API (tuya o de Book Nova)."
+      data: "Datos enviados a ISBNdb: ISBN, título buscado, autor buscado e idioma de búsqueda."
       limits: "Usuarios gratuitos: hasta 3 libros enriquecidos al día. Usuarios premium: sin límite."
       note: "ISBNdb no recibe información personal sobre ti."
     notifications:
@@ -770,7 +772,7 @@ es:
         - "UUID de tu dispositivo (identificador anónimo)"
         - "Estado de la suscripción (activa/inactiva)"
         - "Detalles de la transacción gestionados por App Store o Google Play"
-      note: "Book Nova nunca accede a tus datos de pago. RevenueCat cumple con RGPD y CCPA."
+      note: "Book Nova nunca accede a tus datos de pago."
     sharing:
       title: "Compartir datos"
       intro: "No vendemos ni compartimos tus datos, salvo:"
@@ -801,7 +803,7 @@ es:
       note: "Estos permisos no se usan para recopilar datos sin tu conocimiento."
     changes:
       title: "Cambios en esta política"
-      content: "Podemos actualizar esta política en cualquier momento. Revísala con frecuencia. Última actualización: 1 de octubre de 2025."
+      content: "Podemos actualizar esta política en cualquier momento. Revísala con frecuencia. Última actualización: 02/10/2025."
     contact:
       title: "Contacto"
       content: "Si tienes dudas sobre tus datos o esta política, escríbenos a:"
@@ -815,7 +817,7 @@ es:
         - "RevenueCat gestiona la versión premium (datos anonimizados)"
         - "Notificaciones 100 % locales"
         - "Tú controlas tus datos en todo momento"
-    lastUpdated: "Última actualización: 01/10/2025"
+    lastUpdated: "Última actualización: 02/10/2025"
     backToHome: "Volver al inicio"
   supportPage:
     title: "Soporte"
@@ -897,7 +899,6 @@ es:
         limits:
           title: "5.2 Límites de la Versión Gratuita"
           body: "Los usuarios de la versión gratuita están limitados a 3 validaciones de libros con metadatos por día. Los usuarios premium no tienen esta limitación."
-          note: "Puedes añadir libros manualmente, sin metadatos, de forma ilimitada incluso con la versión gratuita."
       accounts:
         title: "6. Cuentas y Autenticación"
         noAccount:
@@ -919,6 +920,8 @@ es:
             - "Validaciones ilimitadas con metadatos a través de ISBNdb"
             - "Añadir libros sin límite diario"
             - "Exportaciones avanzadas (estadísticas)"
+            - "Acceso a desafíos e insignias exclusivos."
+            - "Acceso al calendario de lectura detallado con tu historial completo."
         processing:
           title: "7.2 Procesamiento de Compras"
           body: "Las compras in-app se procesan por:"
@@ -1003,5 +1006,5 @@ es:
         - "Compras gestionadas por Apple/Google; reembolsos a través de ellos"
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
         - "Sin cuenta obligatoria, UUID anónimo para la versión premium"
-    lastUpdated: "Última actualización: 01/10/2025"
+    lastUpdated: "Última actualización: 02/10/2025"
     backToHome: "Volver al inicio"
