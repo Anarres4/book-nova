@@ -595,41 +595,41 @@
             }
         }
 
-        /* Classes pour les animations au scroll */
-        .animate-on-scroll {
+        /* Classes pour les animations au scroll - seulement sur la page d'accueil */
+        body.home-page .animate-on-scroll {
             opacity: 0;
         }
 
-        .animate-on-scroll.animated {
+        body.home-page .animate-on-scroll.animated {
             animation: fadeInUp 0.8s ease-out forwards;
         }
 
         /* Animation pour les cartes de features avec délais */
-        .feature-card.animate-on-scroll {
+        body.home-page .feature-card.animate-on-scroll {
             opacity: 0;
         }
 
-        .feature-card.animate-on-scroll.animated:nth-child(1) {
+        body.home-page .feature-card.animate-on-scroll.animated:nth-child(1) {
             animation-delay: 0.1s;
         }
 
-        .feature-card.animate-on-scroll.animated:nth-child(2) {
+        body.home-page .feature-card.animate-on-scroll.animated:nth-child(2) {
             animation-delay: 0.2s;
         }
 
-        .feature-card.animate-on-scroll.animated:nth-child(3) {
+        body.home-page .feature-card.animate-on-scroll.animated:nth-child(3) {
             animation-delay: 0.3s;
         }
 
-        .feature-card.animate-on-scroll.animated:nth-child(4) {
+        body.home-page .feature-card.animate-on-scroll.animated:nth-child(4) {
             animation-delay: 0.4s;
         }
 
-        .feature-card.animate-on-scroll.animated:nth-child(5) {
+        body.home-page .feature-card.animate-on-scroll.animated:nth-child(5) {
             animation-delay: 0.5s;
         }
 
-        .feature-card.animate-on-scroll.animated:nth-child(6) {
+        body.home-page .feature-card.animate-on-scroll.animated:nth-child(6) {
             animation-delay: 0.6s;
         }
 
@@ -640,12 +640,18 @@
 
         /* Animation pour les screenshots */
         .screenshot-item {
-            opacity: 0;
-            transform: translateY(20px);
+            opacity: 1;
+            transform: translateY(0);
             transition: all 0.5s ease;
         }
 
-        .screenshot-item.visible {
+        /* Seulement sur la page d'accueil, cacher les screenshots initialement */
+        body.home-page .screenshot-item {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        body.home-page .screenshot-item.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -924,10 +930,16 @@
                 });
             });
 
-            // Animation au scroll - seulement sur la page d'accueil
-            const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+            // Détecter si on est sur la page d'accueil et ajouter la classe
+            const path = window.location.pathname;
+            const isHomePage = path === '/' || path === '/index.html' || path.endsWith('/');
 
             if (isHomePage) {
+                document.body.classList.add('home-page');
+            }
+
+            // Animation au scroll - se déclenche automatiquement si body a la classe 'home-page'
+            if (document.body.classList.contains('home-page')) {
                 const observerOptions = {
                     threshold: 0.1,
                     rootMargin: '0px 0px -50px 0px'
