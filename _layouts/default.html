@@ -924,46 +924,50 @@
                 });
             });
 
-            // Animation au scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+            // Animation au scroll - seulement sur la page d'accueil
+            const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animated');
-                        // Pour les screenshots, ajouter la classe 'visible'
-                        if (entry.target.classList.contains('screenshot-item')) {
-                            entry.target.classList.add('visible');
+            if (isHomePage) {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animated');
+                            // Pour les screenshots, ajouter la classe 'visible'
+                            if (entry.target.classList.contains('screenshot-item')) {
+                                entry.target.classList.add('visible');
+                            }
                         }
-                    }
+                    });
+                }, observerOptions);
+
+                // Observer toutes les sections
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.add('animate-on-scroll');
+                    observer.observe(section);
                 });
-            }, observerOptions);
 
-            // Observer toutes les sections
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.add('animate-on-scroll');
-                observer.observe(section);
-            });
+                // Observer toutes les cartes de features individuellement
+                document.querySelectorAll('.feature-card').forEach(card => {
+                    card.classList.add('animate-on-scroll');
+                    observer.observe(card);
+                });
 
-            // Observer toutes les cartes de features individuellement
-            document.querySelectorAll('.feature-card').forEach(card => {
-                card.classList.add('animate-on-scroll');
-                observer.observe(card);
-            });
+                // Observer les screenshots
+                document.querySelectorAll('.screenshot-item').forEach(screenshot => {
+                    observer.observe(screenshot);
+                });
 
-            // Observer les screenshots
-            document.querySelectorAll('.screenshot-item').forEach(screenshot => {
-                observer.observe(screenshot);
-            });
-
-            // Observer les titres de section
-            document.querySelectorAll('.section-title').forEach(title => {
-                title.classList.add('animate-on-scroll');
-                observer.observe(title);
-            });
+                // Observer les titres de section
+                document.querySelectorAll('.section-title').forEach(title => {
+                    title.classList.add('animate-on-scroll');
+                    observer.observe(title);
+                });
+            }
         });
     </script>
 </body>
