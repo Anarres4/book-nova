@@ -865,19 +865,26 @@
 
             // Fermer le menu burger mobile si ouvert
             const navbarCollapse = document.getElementById('navbarNav');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+
             if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                // Essayer d'utiliser l'API Bootstrap
-                if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
-                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                    if (bsCollapse) {
-                        bsCollapse.hide();
-                    } else {
-                        // Créer une instance et fermer
-                        new bootstrap.Collapse(navbarCollapse, { toggle: false }).hide();
-                    }
+                // Méthode 1: Cliquer sur le bouton toggle (le plus fiable)
+                if (navbarToggler && !navbarToggler.classList.contains('collapsed')) {
+                    navbarToggler.click();
                 } else {
-                    // Fallback manuel
-                    navbarCollapse.classList.remove('show');
+                    // Méthode 2: Utiliser l'API Bootstrap
+                    if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        } else {
+                            // Créer une instance et fermer
+                            new bootstrap.Collapse(navbarCollapse, { toggle: false }).hide();
+                        }
+                    } else {
+                        // Méthode 3: Fallback manuel
+                        navbarCollapse.classList.remove('show');
+                    }
                 }
             }
         }
