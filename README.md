@@ -5,7 +5,7 @@ Merci d'avoir pris le temps de découvrir Book Nova jusqu'au README. Ton intér�
 
 ## Ce que propose ce site
 - Une landing page multilingue (FR, EN, ES), les fonctionnalités clé et un carrousel de screenshots pour montrer l'application.
-- Des pages légales dédiées (privacy.html, terms.html, support.html, thanks.html) alimentées par les mêmes traductions afin de garder un ton cohérent.
+- Des pages légales dédiées (privacy.html, terms.html, support.html) alimentées par les mêmes traductions afin de garder un ton cohérent.
 - Un thème personnalisé dans _layouts/default.html qui applique le gradient signature Book Nova et un menu responsive avec bascule de langue.
 
 ## L'application mobile Book Nova
