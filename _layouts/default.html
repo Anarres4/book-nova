@@ -884,6 +884,10 @@
             document.querySelectorAll('[data-screenshot]').forEach(img => {
                 const screenshotNum = img.getAttribute('data-screenshot');
                 img.src = `assets/screenshots/${currentLang}/${screenshotNum.padStart(2, '0')}.png`;
+                // S'assurer que les screenshots restent visibles après changement de langue
+                if (!document.body.classList.contains('home-page') || img.classList.contains('visible')) {
+                    img.classList.add('visible');
+                }
             });
 
             // Update active language in dropdown
