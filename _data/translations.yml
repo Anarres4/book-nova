@@ -39,8 +39,12 @@ fr:
     subtitle: "Téléchargez BookNova dès maintenant et transformez votre expérience de lecture"
   storeModal:
     title: "Disponible bientôt"
-    message: "Les versions iOS et Android arrivent très bientôt. Restez à l'écoute !"
+    message: "La version Android arrive très bientôt. Restez à l'écoute !"
     close: "Fermer"
+    betaTitle: "Application en bêta"
+    betaMessage: "Vous pouvez déjà essayer BookNova sur iOS via TestFlight. La version finale arrivera bientôt sur l'App Store."
+    betaButton: "Rejoindre la bêta TestFlight"
+    betaNote: "Cette version est encore en bêta : vos retours sont précieux."
   footer:
     copyright: "Tous droits réservés."
   footerLinks:
@@ -376,8 +380,12 @@ en:
     subtitle: "Download BookNova now and transform your reading experience"
   storeModal:
     title: "Coming soon"
-    message: "Both iOS and Android versions are on their way. Stay tuned!"
+    message: "The Android version is on its way. Stay tuned!"
     close: "Close"
+    betaTitle: "App in beta"
+    betaMessage: "You can already try BookNova on iOS through TestFlight. The final App Store release is coming soon."
+    betaButton: "Join the TestFlight beta"
+    betaNote: "This build is still in beta—your feedback is invaluable."
   footer:
     copyright: "All rights reserved."
   footerLinks:
@@ -713,8 +721,12 @@ es:
     subtitle: "Descarga BookNova ahora y transforma tu experiencia de lectura"
   storeModal:
     title: "Próximamente"
-    message: "Las versiones para iOS y Android llegarán muy pronto. ¡Mantente atento!"
+    message: "La versión para Android llegará muy pronto. ¡Mantente atento!"
     close: "Cerrar"
+    betaTitle: "Aplicación en beta"
+    betaMessage: "Ya puedes probar BookNova en iOS a través de TestFlight. La versión final en la App Store llegará en breve."
+    betaButton: "Unirse a la beta en TestFlight"
+    betaNote: "Esta versión aún está en beta; tus comentarios son muy valiosos."
   footer:
     copyright: "Todos los derechos reservados."
   footerLinks:
