@@ -862,6 +862,17 @@
             if (langDropdown) {
                 langDropdown.classList.remove('show');
             }
+
+            // Fermer le menu burger mobile si ouvert
+            const navbarCollapse = document.getElementById('navbarNav');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                } else {
+                    navbarCollapse.classList.remove('show');
+                }
+            }
         }
 
         // Update content
