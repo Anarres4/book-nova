@@ -3,6 +3,7 @@ fr:
     features: "Fonctionnalités"
     download: "Télécharger"
     contact: "Contact"
+    about: "À propos"
     privacy: "Confidentialité"
     terms: "Conditions"
     support: "Support"
@@ -53,6 +54,18 @@ fr:
     terms: "Conditions d'utilisation"
   languageSwitcher:
     change: "Changer de langue"
+  faq:
+    title: "Questions fréquentes"
+    q1: "Book Nova est-elle gratuite ?"
+    a1: "Oui, Book Nova est entièrement gratuite. Vous pouvez créer votre bibliothèque, suivre vos lectures et utiliser toutes les fonctionnalités sans frais."
+    q2: "Comment scanner mes livres ?"
+    a2: "Utilisez l'appareil photo de votre téléphone pour scanner le code-barres ISBN de vos livres. Book Nova récupérera automatiquement les informations du livre."
+    q3: "Mes données sont-elles sauvegardées ?"
+    a3: "Vos données sont sauvegardées localement sur votre appareil. Nous respectons votre vie privée et ne collectons pas vos informations personnelles."
+    q4: "L'application fonctionne-t-elle hors ligne ?"
+    a4: "Oui, une fois vos livres ajoutés, vous pouvez consulter votre bibliothèque et suivre votre progression sans connexion internet."
+    q5: "Puis-je exporter ma bibliothèque ?"
+    a5: "Cette fonctionnalité est en cours de développement et sera bientôt disponible dans une prochaine mise à jour."
   notFound:
     title: "Page introuvable"
     message: "Nous n'avons pas pu trouver la page que vous cherchez."
@@ -334,12 +347,49 @@ fr:
       button: "book-nova@outlook.fr"
     response: "Nous répondons généralement sous 1 à 2 jours ouvrés."
     backToHome: "Retour à l'accueil"
+  aboutPage:
+    title: "À propos de Book Nova"
+    mission:
+      title: "Notre Mission"
+      content: "Book Nova est née d'une passion simple : aider les lecteurs à mieux organiser et profiter de leur bibliothèque personnelle. Nous croyons que la lecture doit être une expérience agréable et enrichissante, et c'est pourquoi nous avons créé une application qui facilite la gestion de vos livres, le suivi de vos progrès et la découverte de nouvelles lectures."
+    vision:
+      title: "Notre Vision"
+      content: "Nous voulons créer la meilleure application de gestion de bibliothèque personnelle au monde. Une application qui respecte votre vie privée, qui fonctionne hors ligne, et qui vous aide vraiment à lire plus et mieux."
+    values:
+      title: "Nos Valeurs"
+      privacy: "Respect de la vie privée - Vos données vous appartiennent et restent sur votre appareil"
+      simplicity: "Simplicité - Une interface intuitive accessible à tous les lecteurs"
+      accessibility: "Accessibilité - Application gratuite et disponible en plusieurs langues"
+      innovation: "Innovation - Amélioration continue basée sur vos retours"
+      quality: "Qualité - Une application stable, rapide et fiable"
+    features:
+      title: "Fonctionnalités Principales"
+      isbn: "Scan de code-barres ISBN - Ajoutez rapidement vos livres à votre bibliothèque"
+      collection: "Gestion de collection - Organisez vos livres par catégories, auteurs, statuts"
+      tracking: "Suivi de lecture - Suivez votre progression page par page"
+      loans: "Système de prêts - Ne perdez plus jamais de vue vos livres prêtés"
+      badges: "Badges et défis - Gamification pour encourager la lecture"
+      stats: "Statistiques détaillées - Visualisez vos habitudes de lecture"
+      multilingual: "Mode multilingue - Disponible en français, anglais et espagnol"
+    development:
+      title: "Développement"
+      intro: "Book Nova est actuellement en version bêta sur iOS via TestFlight. Nous travaillons activement sur :"
+      ios: "La version finale pour l'App Store"
+      android: "La version Android pour Google Play"
+      features: "De nouvelles fonctionnalités basées sur vos retours"
+      improvement: "L'amélioration continue de l'expérience utilisateur"
+    contact:
+      title: "Contact"
+      content: "Vous avez des questions, suggestions ou vous souhaitez simplement nous dire bonjour ? N'hésitez pas à nous contacter à"
+    lastUpdated: "Dernière mise à jour : Octobre 2025"
+    backToHome: "Retour à l'accueil"
 
 en:
   nav:
     features: "Features"
     download: "Download"
     contact: "Contact"
+    about: "About"
     privacy: "Privacy"
     terms: "Terms"
     support: "Support"
@@ -390,6 +440,18 @@ en:
     terms: "Terms of Use"
   languageSwitcher:
     change: "Change language"
+  faq:
+    title: "Frequently Asked Questions"
+    q1: "Is Book Nova free?"
+    a1: "Yes, Book Nova is completely free. You can create your library, track your reading, and use all features at no cost."
+    q2: "How do I scan my books?"
+    a2: "Use your phone's camera to scan the ISBN barcode on your books. Book Nova will automatically retrieve the book information."
+    q3: "Is my data backed up?"
+    a3: "Your data is saved locally on your device. We respect your privacy and do not collect your personal information."
+    q4: "Does the app work offline?"
+    a4: "Yes, once your books are added, you can browse your library and track your progress without an internet connection."
+    q5: "Can I export my library?"
+    a5: "This feature is currently in development and will be available in an upcoming update."
   notFound:
     title: "Page not found"
     message: "We couldn't find the page you're looking for."
@@ -671,11 +733,48 @@ en:
       button: "book-nova@outlook.fr"
     response: "We usually respond within 1 to 2 business days."
     backToHome: "Back to home"
+  aboutPage:
+    title: "About Book Nova"
+    mission:
+      title: "Our Mission"
+      content: "Book Nova was born from a simple passion: helping readers better organize and enjoy their personal library. We believe reading should be a pleasant and enriching experience, which is why we created an app that makes it easy to manage your books, track your progress, and discover new reads."
+    vision:
+      title: "Our Vision"
+      content: "We want to create the best personal library management app in the world. An app that respects your privacy, works offline, and truly helps you read more and better."
+    values:
+      title: "Our Values"
+      privacy: "Privacy respect - Your data belongs to you and stays on your device"
+      simplicity: "Simplicity - An intuitive interface accessible to all readers"
+      accessibility: "Accessibility - Free app available in multiple languages"
+      innovation: "Innovation - Continuous improvement based on your feedback"
+      quality: "Quality - A stable, fast, and reliable app"
+    features:
+      title: "Key Features"
+      isbn: "ISBN barcode scanning - Quickly add books to your library"
+      collection: "Collection management - Organize books by categories, authors, statuses"
+      tracking: "Reading tracking - Follow your progress page by page"
+      loans: "Loan system - Never lose track of your lent books again"
+      badges: "Badges and challenges - Gamification to encourage reading"
+      stats: "Detailed statistics - Visualize your reading habits"
+      multilingual: "Multilingual mode - Available in French, English, and Spanish"
+    development:
+      title: "Development"
+      intro: "Book Nova is currently in beta on iOS via TestFlight. We are actively working on:"
+      ios: "The final version for the App Store"
+      android: "The Android version for Google Play"
+      features: "New features based on your feedback"
+      improvement: "Continuous improvement of the user experience"
+    contact:
+      title: "Contact"
+      content: "Have questions, suggestions, or just want to say hello? Feel free to contact us at"
+    lastUpdated: "Last updated: October 2025"
+    backToHome: "Back to home"
 es:
   nav:
     features: "Características"
     download: "Descargar"
     contact: "Contacto"
+    about: "Acerca de"
     privacy: "Privacidad"
     terms: "Condiciones"
     support: "Soporte"
@@ -726,6 +825,18 @@ es:
     terms: "Condiciones de uso"
   languageSwitcher:
     change: "Cambiar idioma"
+  faq:
+    title: "Preguntas frecuentes"
+    q1: "¿Book Nova es gratuita?"
+    a1: "Sí, Book Nova es completamente gratuita. Puedes crear tu biblioteca, seguir tus lecturas y utilizar todas las funciones sin coste."
+    q2: "¿Cómo escaneo mis libros?"
+    a2: "Usa la cámara de tu teléfono para escanear el código de barras ISBN de tus libros. Book Nova recuperará automáticamente la información del libro."
+    q3: "¿Mis datos están respaldados?"
+    a3: "Tus datos se guardan localmente en tu dispositivo. Respetamos tu privacidad y no recopilamos tu información personal."
+    q4: "¿La aplicación funciona sin conexión?"
+    a4: "Sí, una vez añadidos tus libros, puedes consultar tu biblioteca y seguir tu progreso sin conexión a internet."
+    q5: "¿Puedo exportar mi biblioteca?"
+    a5: "Esta funcionalidad está en desarrollo y estará disponible en una próxima actualización."
   notFound:
     title: "Página no encontrada"
     message: "No pudimos encontrar la página que buscas."
@@ -832,6 +943,42 @@ es:
       content: "Envíanos un correo y te responderemos lo antes posible:"
       button: "book-nova@outlook.fr"
     response: "Solemos responder en un plazo de 1 a 2 días hábiles."
+    backToHome: "Volver al inicio"
+  aboutPage:
+    title: "Acerca de Book Nova"
+    mission:
+      title: "Nuestra Misión"
+      content: "Book Nova nació de una pasión simple: ayudar a los lectores a organizar mejor y disfrutar de su biblioteca personal. Creemos que la lectura debe ser una experiencia agradable y enriquecedora, por eso creamos una app que facilita la gestión de tus libros, el seguimiento de tu progreso y el descubrimiento de nuevas lecturas."
+    vision:
+      title: "Nuestra Visión"
+      content: "Queremos crear la mejor aplicación de gestión de biblioteca personal del mundo. Una app que respete tu privacidad, funcione sin conexión y te ayude realmente a leer más y mejor."
+    values:
+      title: "Nuestros Valores"
+      privacy: "Respeto a la privacidad - Tus datos te pertenecen y permanecen en tu dispositivo"
+      simplicity: "Simplicidad - Una interfaz intuitiva accesible para todos los lectores"
+      accessibility: "Accesibilidad - Aplicación gratuita y disponible en varios idiomas"
+      innovation: "Innovación - Mejora continua basada en tus comentarios"
+      quality: "Calidad - Una aplicación estable, rápida y confiable"
+    features:
+      title: "Funciones Principales"
+      isbn: "Escaneo de código de barras ISBN - Añade libros rápidamente a tu biblioteca"
+      collection: "Gestión de colección - Organiza tus libros por categorías, autores, estados"
+      tracking: "Seguimiento de lectura - Sigue tu progreso página a página"
+      loans: "Sistema de préstamos - No pierdas nunca más de vista tus libros prestados"
+      badges: "Insignias y desafíos - Gamificación para fomentar la lectura"
+      stats: "Estadísticas detalladas - Visualiza tus hábitos de lectura"
+      multilingual: "Modo multilingüe - Disponible en francés, inglés y español"
+    development:
+      title: "Desarrollo"
+      intro: "Book Nova está actualmente en versión beta en iOS a través de TestFlight. Estamos trabajando activamente en:"
+      ios: "La versión final para la App Store"
+      android: "La versión Android para Google Play"
+      features: "Nuevas funcionalidades basadas en tus comentarios"
+      improvement: "La mejora continua de la experiencia de usuario"
+    contact:
+      title: "Contacto"
+      content: "¿Tienes preguntas, sugerencias o simplemente quieres saludarnos? No dudes en contactarnos en"
+    lastUpdated: "Última actualización: Octubre 2025"
     backToHome: "Volver al inicio"
   termsPage:
     title: "Términos de Uso"

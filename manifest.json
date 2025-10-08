@@ -1,0 +1,34 @@
+{
+  "name": "Book Nova - Gestion de bibliothèque",
+  "short_name": "Book Nova",
+  "description": "Votre compagnon de lecture intelligent pour découvrir, organiser et partager vos livres préférés",
+  "start_url": "/book-nova/",
+  "display": "standalone",
+  "background_color": "#6C63FF",
+  "theme_color": "#6C63FF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/book-nova/assets/images/hero-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/book-nova/assets/images/hero-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["books", "lifestyle", "productivity"],
+  "lang": "fr",
+  "dir": "ltr",
+  "scope": "/book-nova/",
+  "related_applications": [
+    {
+      "platform": "ios",
+      "url": "https://testflight.apple.com/join/MsKQAWfj"
+    }
+  ]
+}
