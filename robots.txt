@@ -1,0 +1,7 @@
+{% assign site_root = site.url | default: "https://anarres4.github.io/book-nova" %}
+{% assign sitemap_url = site_root | append: site.baseurl | append: "/sitemap.xml" %}
+
+User-agent: *
+Allow: /
+
+Sitemap: {{ sitemap_url | replace: "//sitemap", "/sitemap" }}
