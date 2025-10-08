@@ -14,7 +14,12 @@ permalink: "/"
             <div class="col-md-6 d-flex justify-content-center justify-content-md-end order-md-2">
                 <div class="hero-image">
                     {% if site.hero_image %}
-                    <img src="{{ site.hero_image | relative_url }}" alt="{{ site.title }}" class="hero-logo">
+                    <picture class="hero-logo-wrapper">
+                        {% if site.hero_image_webp %}
+                        <source srcset="{{ site.hero_image_webp | relative_url }}" type="image/webp">
+                        {% endif %}
+                        <img src="{{ site.hero_image | relative_url }}" alt="{{ site.title }}" class="hero-logo">
+                    </picture>
                     {% else %}
                     <i class="bi bi-book-fill"></i>
                     {% endif %}
@@ -111,12 +116,30 @@ permalink: "/"
     <!-- Carousel de screenshots (full width) -->
     <div class="screenshots-container">
         <div class="screenshots-scroll d-flex gap-3 gap-md-4 pb-4" id="screenshotsContainer">
-            <img src="{{ 'assets/screenshots/fr/01.png' | relative_url }}" alt="Capture d'écran Book Nova montrant le tableau de bord de lecture" class="screenshot-item" data-screenshot="1" loading="lazy" decoding="async">
-            <img src="{{ 'assets/screenshots/fr/02.png' | relative_url }}" alt="Capture d'écran Book Nova présentant les statistiques de lecture" class="screenshot-item" data-screenshot="2" loading="lazy" decoding="async">
-            <img src="{{ 'assets/screenshots/fr/03.png' | relative_url }}" alt="Capture d'écran Book Nova détaillant une fiche livre" class="screenshot-item" data-screenshot="3" loading="lazy" decoding="async">
-            <img src="{{ 'assets/screenshots/fr/04.png' | relative_url }}" alt="Capture d'écran Book Nova illustrant le suivi des prêts" class="screenshot-item" data-screenshot="4" loading="lazy" decoding="async">
-            <img src="{{ 'assets/screenshots/fr/05.png' | relative_url }}" alt="Capture d'écran Book Nova affichant les défis et badges" class="screenshot-item" data-screenshot="5" loading="lazy" decoding="async">
-            <img src="{{ 'assets/screenshots/fr/06.png' | relative_url }}" alt="Capture d'écran Book Nova indiquant les paramètres multilingues" class="screenshot-item" data-screenshot="6" loading="lazy" decoding="async">
+            <picture class="screenshot-picture" data-screenshot="1">
+                <source srcset="{{ 'assets/screenshots/fr/01.webp' | relative_url }}" type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/01.png' | relative_url }}" alt="Capture d'écran Book Nova montrant le tableau de bord de lecture" class="screenshot-item" loading="lazy" decoding="async">
+            </picture>
+            <picture class="screenshot-picture" data-screenshot="2">
+                <source srcset="{{ 'assets/screenshots/fr/02.webp' | relative_url }}" type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/02.png' | relative_url }}" alt="Capture d'écran Book Nova présentant les statistiques de lecture" class="screenshot-item" loading="lazy" decoding="async">
+            </picture>
+            <picture class="screenshot-picture" data-screenshot="3">
+                <source srcset="{{ 'assets/screenshots/fr/03.webp' | relative_url }}" type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/03.png' | relative_url }}" alt="Capture d'écran Book Nova détaillant une fiche livre" class="screenshot-item" loading="lazy" decoding="async">
+            </picture>
+            <picture class="screenshot-picture" data-screenshot="4">
+                <source srcset="{{ 'assets/screenshots/fr/04.webp' | relative_url }}" type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/04.png' | relative_url }}" alt="Capture d'écran Book Nova illustrant le suivi des prêts" class="screenshot-item" loading="lazy" decoding="async">
+            </picture>
+            <picture class="screenshot-picture" data-screenshot="5">
+                <source srcset="{{ 'assets/screenshots/fr/05.webp' | relative_url }}" type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/05.png' | relative_url }}" alt="Capture d'écran Book Nova affichant les défis et badges" class="screenshot-item" loading="lazy" decoding="async">
+            </picture>
+            <picture class="screenshot-picture" data-screenshot="6">
+                <source srcset="{{ 'assets/screenshots/fr/06.webp' | relative_url }}" type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/06.png' | relative_url }}" alt="Capture d'écran Book Nova indiquant les paramètres multilingues" class="screenshot-item" loading="lazy" decoding="async">
+            </picture>
         </div>
     </div>
 </section>

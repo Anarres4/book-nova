@@ -28,6 +28,7 @@ url: "https://anarres4.github.io/book-nova" # Update with the production domain
 
 # Branding
 hero_image: "/assets/images/hero-logo.png"
+hero_image_webp: "/assets/images/hero-logo.webp"
 logo: "/assets/images/hero-logo.png"
 
 # Business
