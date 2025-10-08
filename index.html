@@ -1,9 +1,13 @@
 ---
 layout: default
+title: "Book Nova — Application mobile pour organiser vos lectures"
+description: "Book Nova vous aide à gérer votre bibliothèque, suivre votre progression et découvrir de nouveaux livres sur iOS et Android."
+lang: "fr"
+permalink: "/"
 ---
 
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="hero-section" id="download">
     <div class="container">
         <div class="row align-items-center g-4 g-md-5">
             <!-- Left side with app logo -->
@@ -23,7 +27,7 @@ layout: default
                 <h1 class="hero-title fw-bold mb-4" data-i18n="hero.title">Organisez votre bibliothèque, transformez votre lecture.</h1>
                 <p class="hero-subtitle mb-4 mb-md-5" data-i18n="hero.subtitle">BookNova vous aide à gérer votre collection de livres, suivre vos lectures et découvrir de nouvelles histoires passionnantes.</p>
 
-                <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3 mb-4 mb-md-0" id="download">
+                <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3 mb-4 mb-md-0" id="download-buttons">
                     <a href="#" class="btn-download" data-bs-toggle="modal" data-bs-target="#appStoreBetaModal" role="button">
                         <i class="bi bi-apple me-2"></i>
                         <span data-i18n="hero.app_store">App Store</span>
@@ -96,7 +100,7 @@ layout: default
 </section>
 
 <!-- Screenshots Section -->
-<section class="screenshots-section">
+<section class="screenshots-section" id="screenshots">
     <!-- Titre centré -->
     <div class="container">
         <div class="text-center mb-5">
@@ -107,12 +111,12 @@ layout: default
     <!-- Carousel de screenshots (full width) -->
     <div class="screenshots-container">
         <div class="screenshots-scroll d-flex gap-3 gap-md-4 pb-4" id="screenshotsContainer">
-            <img src="assets/screenshots/fr/01.png" alt="Screenshot 1" class="screenshot-item" data-screenshot="1">
-            <img src="assets/screenshots/fr/02.png" alt="Screenshot 2" class="screenshot-item" data-screenshot="2">
-            <img src="assets/screenshots/fr/03.png" alt="Screenshot 3" class="screenshot-item" data-screenshot="3">
-            <img src="assets/screenshots/fr/04.png" alt="Screenshot 4" class="screenshot-item" data-screenshot="4">
-            <img src="assets/screenshots/fr/05.png" alt="Screenshot 5" class="screenshot-item" data-screenshot="5">
-            <img src="assets/screenshots/fr/06.png" alt="Screenshot 6" class="screenshot-item" data-screenshot="6">
+            <img src="{{ 'assets/screenshots/fr/01.png' | relative_url }}" alt="Capture d'écran Book Nova montrant le tableau de bord de lecture" class="screenshot-item" data-screenshot="1" loading="lazy" decoding="async">
+            <img src="{{ 'assets/screenshots/fr/02.png' | relative_url }}" alt="Capture d'écran Book Nova présentant les statistiques de lecture" class="screenshot-item" data-screenshot="2" loading="lazy" decoding="async">
+            <img src="{{ 'assets/screenshots/fr/03.png' | relative_url }}" alt="Capture d'écran Book Nova détaillant une fiche livre" class="screenshot-item" data-screenshot="3" loading="lazy" decoding="async">
+            <img src="{{ 'assets/screenshots/fr/04.png' | relative_url }}" alt="Capture d'écran Book Nova illustrant le suivi des prêts" class="screenshot-item" data-screenshot="4" loading="lazy" decoding="async">
+            <img src="{{ 'assets/screenshots/fr/05.png' | relative_url }}" alt="Capture d'écran Book Nova affichant les défis et badges" class="screenshot-item" data-screenshot="5" loading="lazy" decoding="async">
+            <img src="{{ 'assets/screenshots/fr/06.png' | relative_url }}" alt="Capture d'écran Book Nova indiquant les paramètres multilingues" class="screenshot-item" data-screenshot="6" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -138,5 +142,9 @@ layout: default
                 </div>
             </a>
         </div>
+        <p class="mt-4 mb-0 text-white-50">
+            <span data-i18n="cta.contactPrompt">Besoin d'un contact direct ?</span>
+            <a href="mailto:book-nova@outlook.fr" class="text-white fw-semibold">book-nova@outlook.fr</a>
+        </p>
     </div>
 </section>

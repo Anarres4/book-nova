@@ -37,6 +37,7 @@ fr:
   cta:
     title: "Prêt à commencer ?"
     subtitle: "Téléchargez BookNova dès maintenant et transformez votre expérience de lecture"
+    contactPrompt: "Besoin d'un contact direct ?"
   storeModal:
     title: "Disponible bientôt"
     message: "La version Android arrive très bientôt. Restez à l'écoute !"
@@ -373,6 +374,7 @@ en:
   cta:
     title: "Ready to start?"
     subtitle: "Download BookNova now and transform your reading experience"
+    contactPrompt: "Need a direct line?"
   storeModal:
     title: "Coming soon"
     message: "The Android version is on its way. Stay tuned!"
@@ -708,6 +710,7 @@ es:
   cta:
     title: "¿Listo para empezar?"
     subtitle: "Descarga BookNova ahora y transforma tu experiencia de lectura"
+    contactPrompt: "¿Necesitas hablar con nosotros?"
   storeModal:
     title: "Próximamente"
     message: "La versión para Android llegará muy pronto. ¡Mantente atento!"

@@ -1,14 +1,64 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ page.lang | default: site.default_lang | default: 'fr' }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
+    <meta name="theme-color" content="#6C63FF">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon-rounded.svg' | relative_url }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/hero-logo.png' | relative_url }}">
     <link rel="apple-touch-icon" href="{{ '/assets/images/hero-logo.png' | relative_url }}">
+
+    {% seo %}
+    {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
+    {% assign page_path = page.url | default: '/' %}
+    {% for lang in site.languages %}
+        {% assign lang_href = page_path %}
+        {% if lang != site.default_lang %}
+            {% assign lang_href = lang_href | append: '?lang=' | append: lang %}
+        {% endif %}
+        <link rel="alternate" hreflang="{{ lang }}" href="{{ lang_href | absolute_url }}">
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ canonical_url }}">
+
+    {% assign page_lang = page.lang | default: site.default_lang | default: 'fr' %}
+    {% assign app_name = page.app_name | default: site.app.name | default: site.title %}
+    {% assign description_text = page.seo_description | default: page.description | default: site.description %}
+    {% assign sanitized_description = description_text | strip_html | strip %}
+    {% assign app_logo = site.logo | default: site.hero_image %}
+    {% assign offer_url = page.ios_url | default: site.app.ios_beta_url | default: canonical_url %}
+    {% assign os_string = site.app.operating_systems | join: ', ' %}
+    {% capture app_json %}
+{
+  "@context": "https://schema.org",
+  "@type": "{{ site.app.category | default: 'SoftwareApplication' }}",
+  "name": {{ app_name | jsonify }},
+  "operatingSystem": {{ os_string | jsonify }},
+  "applicationCategory": "LifestyleApplication",
+  "inLanguage": {{ page_lang | jsonify }},
+  "description": {{ sanitized_description | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "image": {{ app_logo | absolute_url | jsonify }},
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.company_name | default: site.title | jsonify }},
+    "url": {{ site.url | default: canonical_url | jsonify }},
+    "email": {{ site.company_email | jsonify }}
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": {{ site.app.price | default: '0' | jsonify }},
+    "priceCurrency": {{ site.app.price_currency | default: 'EUR' | jsonify }},
+    "url": {{ offer_url | jsonify }},
+    "availability": "https://schema.org/PreOrder"
+  }
+}
+    {% endcapture %}
+    <script type="application/ld+json">{{ app_json | strip_newlines }}</script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
