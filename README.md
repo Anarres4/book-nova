@@ -26,7 +26,7 @@ Respect des données :
 
 Offre premium :
 - Validations illimitées avec métadonnées, ajouts sans limite quotidienne et exports avancés.
-- Limite actuelle en version gratuite : 3 validations enrichies par jour.
+- Limite actuelle en version gratuite : 5 validations enrichies par jour.
 
 ## Stack technique
 - `Jekyll` pour la génération statique et la configuration via `_config.yml`.
