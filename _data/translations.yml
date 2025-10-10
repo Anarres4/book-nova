@@ -57,15 +57,78 @@ fr:
   faq:
     title: "Questions fréquentes"
     q1: "Book Nova est-elle gratuite ?"
-    a1: "Oui, Book Nova est entièrement gratuite. Vous pouvez créer votre bibliothèque, suivre vos lectures et utiliser toutes les fonctionnalités sans frais."
-    q2: "Comment scanner mes livres ?"
-    a2: "Utilisez l'appareil photo de votre téléphone pour scanner le code-barres ISBN de vos livres. Book Nova récupérera automatiquement les informations du livre."
-    q3: "Mes données sont-elles sauvegardées ?"
-    a3: "Vos données sont sauvegardées localement sur votre appareil. Nous respectons votre vie privée et ne collectons pas vos informations personnelles."
-    q4: "L'application fonctionne-t-elle hors ligne ?"
-    a4: "Oui, une fois vos livres ajoutés, vous pouvez consulter votre bibliothèque et suivre votre progression sans connexion internet."
-    q5: "Puis-je exporter ma bibliothèque ?"
-    a5: "Cette fonctionnalité est en cours de développement et sera bientôt disponible dans une prochaine mise à jour."
+    a1: |-
+      Oui, Book Nova est disponible gratuitement avec certaines limitations.
+
+      📱 VERSION GRATUITE :
+      - Jusqu'à 5 livres ajoutés par jour
+      - Jusqu'à 3 prêts/emprunts simultanés
+      - Statistiques de lecture de base (par mois/par an)
+      - Défi Solar System accessible
+      - Accès à tous les badges de base
+
+      💎 VERSION PREMIUM :
+      - Ajout illimité de livres par jour
+      - Prêts et emprunts illimités
+      - Statistiques détaillées avec calendrier de lecture
+      - Défis exclusifs (Galaxy Challenge & Universe Challenge)
+      - Accès à tous les badges et médailles premium
+
+      Toutes les fonctionnalités principales restent accessibles gratuitement !
+    q2: "Puis-je suivre mes prêts de livres ?"
+    a2: |-
+      Oui ! Book Nova inclut un système complet de gestion de prêts :
+      - Enregistrez à qui vous prêtez vos livres
+      - Ajoutez les livres que vous empruntez
+      - Recevez des notifications de rappel
+      - Suivez les dates de retour prévues
+
+      Version gratuite : jusqu'à 3 prêts/emprunts simultanés.
+      Version Premium : prêts/emprunts illimités.
+    q3: "Quels sont les badges disponibles ?"
+    a3: |-
+      Débloquez plus de 100 badges différents :
+      - Badges de lecture (1, 5, 10... jusqu'à 1000 livres !)
+      - Badges d'objectifs (hauteur de pile : fourmi, chat, girafe...)
+      - Badges de genres littéraires (fiction, biographie, science-fiction...)
+      - Badges spéciaux (lecteur nocturne, lecteur matinal, marathonien...)
+      - Défis légendaires (Solar, Galaxy, Universe)
+
+      Partagez vos badges sur les réseaux sociaux !
+    q4: "L'application est-elle disponible en plusieurs langues ?"
+    a4: |-
+      Oui, Book Nova est proposée en 3 langues :
+      - Français 🇫🇷
+      - Anglais 🇬🇧
+      - Espagnol 🇪🇸
+
+      Vous pouvez aussi définir la langue de chaque livre pour un meilleur suivi.
+    q5: "Comment fonctionne la visualisation de la pile de livres ?"
+    a5: |-
+      Book Nova calcule la hauteur cumulée de vos livres lus et la compare à des repères visuels :
+
+      📏 Exemples :
+      - 0,5 cm → hauteur d'une fourmi 🐜
+      - 20 cm → un chat assis 🐈
+      - Votre taille → aussi grand que vous ! 👤
+      - 3 m → une girafe 🦒
+
+      Chaque palier débloque un badge unique : plus vous lisez, plus votre pile grandit !
+    q6: "Puis-je exporter ma bibliothèque ?"
+    a6: |-
+      L'export complet n'est pas encore disponible.
+      Aujourd'hui, vous pouvez :
+      - Partager vos badges de lecture sur les réseaux sociaux
+      - Conserver toutes vos données localement sur votre appareil
+    q7: "Ai-je besoin d'une connexion internet ?"
+    a7: |-
+      La connexion Internet n'est requise que pour :
+      - Scanner des codes-barres ISBN (recherche automatique des informations)
+      - Rechercher un livre manuellement via ISBNdb
+      - Effectuer des achats Premium
+
+      Pour tout le reste (bibliothèque, stats, badges, prêts), Book Nova fonctionne hors ligne.
+      Astuce : ajoutez un livre manuellement hors ligne si vous connaissez ses informations (titre, pages, etc.).
   notFound:
     title: "Page introuvable"
     message: "Nous n'avons pas pu trouver la page que vous cherchez."
@@ -443,15 +506,78 @@ en:
   faq:
     title: "Frequently Asked Questions"
     q1: "Is Book Nova free?"
-    a1: "Yes, Book Nova is completely free. You can create your library, track your reading, and use all features at no cost."
-    q2: "How do I scan my books?"
-    a2: "Use your phone's camera to scan the ISBN barcode on your books. Book Nova will automatically retrieve the book information."
-    q3: "Is my data backed up?"
-    a3: "Your data is saved locally on your device. We respect your privacy and do not collect your personal information."
-    q4: "Does the app work offline?"
-    a4: "Yes, once your books are added, you can browse your library and track your progress without an internet connection."
-    q5: "Can I export my library?"
-    a5: "This feature is currently in development and will be available in an upcoming update."
+    a1: |-
+      Yes, Book Nova is available for free with a few limitations.
+
+      📱 FREE VERSION:
+      - Up to 5 books added per day
+      - Up to 3 simultaneous loans/borrows
+      - Basic reading stats (monthly/yearly)
+      - Solar System challenge unlocked
+      - Access to all core badges
+
+      💎 PREMIUM VERSION:
+      - Unlimited book additions per day
+      - Unlimited loans and borrows
+      - Detailed stats with reading calendar
+      - Exclusive challenges (Galaxy Challenge & Universe Challenge)
+      - Access to all premium badges and medals
+
+      All core features remain free to use!
+    q2: "Can I track my book loans?"
+    a2: |-
+      Yes! Book Nova includes a complete loan management system:
+      - Log who you lend books to
+      - Add the books you borrow
+      - Receive reminder notifications
+      - Track planned return dates
+
+      Free version: up to 3 active loans/borrows.
+      Premium version: unlimited loans/borrows.
+    q3: "What badges are available?"
+    a3: |-
+      Unlock more than 100 different badges:
+      - Reading badges (1, 5, 10... up to 1,000 books!)
+      - Goal badges (stack height: ant, cat, giraffe...)
+      - Genre badges (fiction, biography, science fiction...)
+      - Special badges (night reader, early bird, reading marathoner...)
+      - Legendary challenges (Solar, Galaxy, Universe)
+
+      Share your badges on social media!
+    q4: "Is the app available in multiple languages?"
+    a4: |-
+      Yes, Book Nova currently supports 3 languages:
+      - French 🇫🇷
+      - English 🇬🇧
+      - Spanish 🇪🇸
+
+      You can also tag each book with its language for better tracking.
+    q5: "How does the book stack visualization work?"
+    a5: |-
+      Book Nova tallies the combined height of the books you've read and compares it to fun real-world references:
+
+      📏 Examples:
+      - 0.5 cm → the height of an ant 🐜
+      - 20 cm → a seated cat 🐈
+      - Your height → as tall as you! 👤
+      - 3 m → a giraffe 🦒
+
+      Each milestone unlocks a unique badge—the more you read, the taller your stack grows!
+    q6: "Can I export my library?"
+    a6: |-
+      Full export isn't available yet.
+      For now, you can:
+      - Share your reading badges on social media
+      - Keep all your data safely stored locally on your device
+    q7: "Do I need an internet connection?"
+    a7: |-
+      An internet connection is only required for:
+      - Scanning ISBN barcodes (automatic lookup)
+      - Manually searching for a book via ISBNdb
+      - Purchasing Premium
+
+      Everything else—library, stats, badges, loans—works offline.
+      Tip: add a book manually without a connection as long as you know its details (title, page count, etc.).
   notFound:
     title: "Page not found"
     message: "We couldn't find the page you're looking for."
@@ -828,15 +954,78 @@ es:
   faq:
     title: "Preguntas frecuentes"
     q1: "¿Book Nova es gratuita?"
-    a1: "Sí, Book Nova es completamente gratuita. Puedes crear tu biblioteca, seguir tus lecturas y utilizar todas las funciones sin coste."
-    q2: "¿Cómo escaneo mis libros?"
-    a2: "Usa la cámara de tu teléfono para escanear el código de barras ISBN de tus libros. Book Nova recuperará automáticamente la información del libro."
-    q3: "¿Mis datos están respaldados?"
-    a3: "Tus datos se guardan localmente en tu dispositivo. Respetamos tu privacidad y no recopilamos tu información personal."
-    q4: "¿La aplicación funciona sin conexión?"
-    a4: "Sí, una vez añadidos tus libros, puedes consultar tu biblioteca y seguir tu progreso sin conexión a internet."
-    q5: "¿Puedo exportar mi biblioteca?"
-    a5: "Esta funcionalidad está en desarrollo y estará disponible en una próxima actualización."
+    a1: |-
+      Sí, Book Nova está disponible de forma gratuita con algunas limitaciones.
+
+      📱 VERSIÓN GRATUITA:
+      - Hasta 5 libros añadidos por día
+      - Hasta 3 préstamos simultáneos
+      - Estadísticas básicas de lectura (por mes/año)
+      - Desafío Solar System disponible
+      - Acceso a todas las insignias básicas
+
+      💎 VERSIÓN PREMIUM:
+      - Añade libros sin límite cada día
+      - Préstamos ilimitados (prestar y recibir)
+      - Estadísticas detalladas con calendario de lectura
+      - Desafíos exclusivos (Galaxy Challenge y Universe Challenge)
+      - Acceso a todas las insignias y medallas premium
+
+      ¡Todas las funciones principales siguen siendo gratuitas!
+    q2: "¿Puedo seguir mis préstamos de libros?"
+    a2: |-
+      ¡Sí! Book Nova incluye un sistema completo de gestión de préstamos:
+      - Registra a quién le prestas tus libros
+      - Añade los libros que tomas prestados
+      - Recibe notificaciones de recordatorio
+      - Controla las fechas previstas de devolución
+
+      Versión gratuita: hasta 3 operaciones de préstamo activas.
+      Versión Premium: préstamos ilimitados.
+    q3: "¿Qué insignias están disponibles?"
+    a3: |-
+      Desbloquea más de 100 insignias distintas:
+      - Insignias de lectura (1, 5, 10... hasta 1.000 libros)
+      - Insignias de objetivos (altura de la pila: hormiga, gato, jirafa...)
+      - Insignias de géneros (ficción, biografía, ciencia ficción...)
+      - Insignias especiales (lector nocturno, madrugador, maratonista de lectura...)
+      - Desafíos legendarios (Solar, Galaxy, Universe)
+
+      ¡Comparte tus insignias en redes sociales!
+    q4: "¿La aplicación está disponible en varios idiomas?"
+    a4: |-
+      Sí, Book Nova está disponible en 3 idiomas:
+      - Francés 🇫🇷
+      - Inglés 🇬🇧
+      - Español 🇪🇸
+
+      También puedes indicar el idioma de cada libro para un mejor seguimiento.
+    q5: "¿Cómo funciona la visualización de la pila de libros?"
+    a5: |-
+      Book Nova calcula la altura acumulada de todos los libros que has leído y la compara con referencias familiares:
+
+      📏 Ejemplos:
+      - 0,5 cm → la altura de una hormiga 🐜
+      - 20 cm → un gato sentado 🐈
+      - Tu altura → ¡tan alto como tú! 👤
+      - 3 m → una jirafa 🦒
+
+      Cada hito desbloquea una insignia única: ¡cuanto más lees, más crece tu pila!
+    q6: "¿Puedo exportar mi biblioteca?"
+    a6: |-
+      La exportación completa aún no está disponible.
+      Por ahora puedes:
+      - Compartir tus insignias de lectura en redes sociales
+      - Mantener todos tus datos guardados localmente en tu dispositivo
+    q7: "¿Necesito conexión a Internet?"
+    a7: |-
+      Solo necesitas Internet para:
+      - Escanear códigos de barras ISBN (búsqueda automática)
+      - Buscar un libro manualmente mediante ISBNdb
+      - Realizar compras Premium
+
+      Para todo lo demás (biblioteca, estadísticas, insignias, préstamos) Book Nova funciona sin conexión.
+      Consejo: añade un libro manualmente sin conexión si conoces sus datos (título, número de páginas, etc.).
   notFound:
     title: "Página no encontrada"
     message: "No pudimos encontrar la página que buscas."

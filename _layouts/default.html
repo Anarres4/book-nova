@@ -92,31 +92,39 @@
       "name": "Book Nova est-elle gratuite ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, Book Nova est entièrement gratuite. Vous pouvez créer votre bibliothèque, suivre vos lectures et utiliser toutes les fonctionnalités sans frais."
+        "text": "Oui, Book Nova est disponible gratuitement avec certaines limitations.\n\n📱 VERSION GRATUITE :\n- Jusqu'à 5 livres ajoutés par jour\n- Jusqu'à 3 prêts/emprunts simultanés\n- Statistiques de lecture de base (par mois/par an)\n- Défi Solar System accessible\n- Accès à tous les badges de base\n\n💎 VERSION PREMIUM :\n- Ajout illimité de livres par jour\n- Prêts et emprunts illimités\n- Statistiques détaillées avec calendrier de lecture\n- Défis exclusifs (Galaxy Challenge & Universe Challenge)\n- Accès à tous les badges et médailles premium\n\nToutes les fonctionnalités principales restent accessibles gratuitement !"
       }
     },
     {
       "@type": "Question",
-      "name": "Comment scanner mes livres ?",
+      "name": "Puis-je suivre mes prêts de livres ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Utilisez l'appareil photo de votre téléphone pour scanner le code-barres ISBN de vos livres. Book Nova récupérera automatiquement les informations du livre."
+        "text": "Oui ! Book Nova inclut un système complet de gestion de prêts :\n- Enregistrez à qui vous prêtez vos livres\n- Ajoutez les livres que vous empruntez\n- Recevez des notifications de rappel\n- Suivez les dates de retour prévues\n\nVersion gratuite : jusqu'à 3 prêts/emprunts simultanés.\nVersion Premium : prêts/emprunts illimités."
       }
     },
     {
       "@type": "Question",
-      "name": "Mes données sont-elles sauvegardées ?",
+      "name": "Quels sont les badges disponibles ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Vos données sont sauvegardées localement sur votre appareil. Nous respectons votre vie privée et ne collectons pas vos informations personnelles."
+        "text": "Débloquez plus de 100 badges différents :\n- Badges de lecture (1, 5, 10... jusqu'à 1000 livres !)\n- Badges d'objectifs (hauteur de pile : fourmi, chat, girafe...)\n- Badges de genres littéraires (fiction, biographie, science-fiction...)\n- Badges spéciaux (lecteur nocturne, lecteur matinal, marathonien...)\n- Défis légendaires (Solar, Galaxy, Universe)\n\nPartagez vos badges sur les réseaux sociaux !"
       }
     },
     {
       "@type": "Question",
-      "name": "L'application fonctionne-t-elle hors ligne ?",
+      "name": "L'application est-elle disponible en plusieurs langues ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, une fois vos livres ajoutés, vous pouvez consulter votre bibliothèque et suivre votre progression sans connexion internet."
+        "text": "Oui, Book Nova est proposée en 3 langues :\n- Français 🇫🇷\n- Anglais 🇬🇧\n- Espagnol 🇪🇸\n\nVous pouvez aussi définir la langue de chaque livre pour un meilleur suivi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne la visualisation de la pile de livres ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book Nova calcule la hauteur cumulée de vos livres lus et la compare à des repères visuels :\n- 0,5 cm → hauteur d'une fourmi 🐜\n- 20 cm → un chat assis 🐈\n- Votre taille → aussi grand que vous ! 👤\n- 3 m → une girafe 🦒\n\nChaque palier débloque un badge unique : plus vous lisez, plus votre pile grandit !"
       }
     },
     {
@@ -124,7 +132,15 @@
       "name": "Puis-je exporter ma bibliothèque ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cette fonctionnalité est en cours de développement et sera bientôt disponible dans une prochaine mise à jour."
+        "text": "L'export complet n'est pas encore disponible.\nAujourd'hui, vous pouvez :\n- Partager vos badges de lecture sur les réseaux sociaux\n- Conserver toutes vos données localement sur votre appareil"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ai-je besoin d'une connexion internet ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La connexion Internet n'est requise que pour :\n- Scanner des codes-barres ISBN (recherche automatique des informations)\n- Rechercher un livre manuellement via ISBNdb\n- Effectuer des achats Premium\n\nPour tout le reste (bibliothèque, stats, badges, prêts), Book Nova fonctionne hors ligne.\nAstuce : ajoutez un livre manuellement hors ligne si vous connaissez ses informations (titre, pages, etc.)."
       }
     }
   ]
@@ -419,6 +435,50 @@
 
         // Update content
         function updateContent() {
+            const escapeHtml = (str) => str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+
+            const renderMultiline = (value) => {
+                const htmlParts = [];
+                const lines = value.split('\n');
+                let listBuffer = [];
+
+                const flushList = () => {
+                    if (!listBuffer.length) {
+                        return;
+                    }
+                    const items = listBuffer
+                        .map(item => `<li>${escapeHtml(item)}</li>`)
+                        .join('');
+                    htmlParts.push(`<ul>${items}</ul>`);
+                    listBuffer = [];
+                };
+
+                lines.forEach(line => {
+                    const trimmed = line.trim();
+
+                    if (!trimmed) {
+                        flushList();
+                        return;
+                    }
+
+                    if (trimmed.startsWith('- ')) {
+                        listBuffer.push(trimmed.slice(2));
+                        return;
+                    }
+
+                    flushList();
+                    htmlParts.push(`<p>${escapeHtml(trimmed)}</p>`);
+                });
+
+                flushList();
+                return htmlParts.join('');
+            };
+
             document.querySelectorAll('[data-i18n]').forEach(elem => {
                 const key = elem.getAttribute('data-i18n');
                 const keys = key.split('.');
@@ -429,7 +489,11 @@
                 }
 
                 if (value) {
-                    elem.textContent = value;
+                    if (elem.dataset.i18nHtml !== undefined) {
+                        elem.innerHTML = renderMultiline(value);
+                    } else {
+                        elem.textContent = value;
+                    }
                 }
             });
 
