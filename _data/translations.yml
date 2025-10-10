@@ -120,8 +120,8 @@ fr:
       Aujourd'hui, vous pouvez :
       - Partager vos badges de lecture sur les réseaux sociaux
       - Conserver toutes vos données localement sur votre appareil
-  q7: "Ai-je besoin d'une connexion internet ?"
-  a7: |-
+    q7: "Ai-je besoin d'une connexion internet ?"
+    a7: |-
       La connexion Internet n'est requise que pour :
       - Scanner des codes-barres ISBN (recherche automatique des informations)
       - Rechercher un livre manuellement via ISBNdb
@@ -587,8 +587,8 @@ en:
       For now, you can:
       - Share your reading badges on social media
       - Keep all your data safely stored locally on your device
-  q7: "Do I need an internet connection?"
-  a7: |-
+    q7: "Do I need an internet connection?"
+    a7: |-
       An internet connection is only required for:
       - Scanning ISBN barcodes (automatic lookup)
       - Manually searching for a book via ISBNdb
@@ -1053,8 +1053,8 @@ es:
       Por ahora puedes:
       - Compartir tus insignias de lectura en redes sociales
       - Mantener todos tus datos guardados localmente en tu dispositivo
-  q7: "¿Necesito conexión a Internet?"
-  a7: |-
+    q7: "¿Necesito conexión a Internet?"
+    a7: |-
       Solo necesitas conexión a Internet para:
       - Escanear códigos de barras ISBN (búsqueda automática)
       - Buscar un libro manualmente mediante ISBNdb
