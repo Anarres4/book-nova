@@ -428,7 +428,7 @@ fr:
     features:
       title: "Fonctionnalités Principales"
       isbn: "Scan de code-barres ISBN - Ajoutez rapidement vos livres à votre bibliothèque"
-      collection: "Gestion de collection - Organisez vos livres par catégories, auteurs, statuts"
+      collection: "Gestion de collection - Organisez vos livres par catégories"
       tracking: "Suivi de lecture - Suivez votre progression page par page"
       loans: "Système de prêts - Ne perdez plus jamais de vue vos livres prêtés"
       badges: "Badges et défis - Gamification pour encourager la lecture"
@@ -877,7 +877,7 @@ en:
     features:
       title: "Key Features"
       isbn: "ISBN barcode scanning - Quickly add books to your library"
-      collection: "Collection management - Organize books by categories, authors, statuses"
+      collection: "Collection management - Organize books by categories"
       tracking: "Reading tracking - Follow your progress page by page"
       loans: "Loan system - Never lose track of your lent books again"
       badges: "Badges and challenges - Gamification to encourage reading"
@@ -1151,7 +1151,7 @@ es:
     features:
       title: "Funciones Principales"
       isbn: "Escaneo de código de barras ISBN - Añade libros rápidamente a tu biblioteca"
-      collection: "Gestión de colección - Organiza tus libros por categorías, autores, estados"
+      collection: "Gestión de colección - Organiza tus libros por categorías"
       tracking: "Seguimiento de lectura - Sigue tu progreso página a página"
       loans: "Sistema de préstamos - No pierdas nunca más de vista tus libros prestados"
       badges: "Insignias y desafíos - Gamificación para fomentar la lectura"
