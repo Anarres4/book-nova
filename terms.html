@@ -29,9 +29,9 @@ permalink: /terms.html
                         <li data-i18n="termsPage.sections.service.items.2">Scanner des codes-barres ISBN pour récupérer automatiquement les informations des livres</li>
                         <li data-i18n="termsPage.sections.service.items.3">Suivre vos prêts et emprunts de livres</li>
                         <li data-i18n="termsPage.sections.service.items.4">Débloquer des badges et relever des défis de lecture</li>
-                        <li data-i18n="termsPage.sections.service.items.5">Consulter des statistiques personnalisées sur vos lectures</li>
+                        <li data-i18n="termsPage.sections.service.items.5">Consulter des statistiques personnalisées et découvrir des classements communautaires mis à jour chaque semaine</li>
                     </ul>
-                    <p data-i18n="termsPage.sections.service.note">L'Application fonctionne principalement hors ligne et stocke toutes vos données localement sur votre appareil.</p>
+                    <p data-i18n="termsPage.sections.service.note">L'Application fonctionne hors ligne pour la plupart des actions. Une synchronisation hebdomadaire via Firebase (Google Cloud) envoie une copie chiffrée de vos livres, catégories et notes afin de générer les classements communautaires.</p>
                 </section>
 
                 <section class="privacy-block">
@@ -66,11 +66,11 @@ permalink: /terms.html
                         <li data-i18n="termsPage.sections.userData.ownership.items.2">Progression de lecture et statistiques personnalisées</li>
                         <li data-i18n="termsPage.sections.userData.ownership.items.3">Avatar et paramètres personnalisés</li>
                     </ul>
-                    <p data-i18n="termsPage.sections.userData.ownership.note">Vos données restent sur votre appareil et ne sont pas transmises à nos serveurs.</p>
+                    <p data-i18n="termsPage.sections.userData.ownership.note">Vos données restent accessibles sur votre appareil. Une copie minimale (livres, catégories, notes et UUID anonyme) est synchronisée sur Firebase pour produire les classements hebdomadaires.</p>
                     <h3 data-i18n="termsPage.sections.userData.responsibility.title">4.2 Responsabilité du Contenu</h3>
                     <p data-i18n="termsPage.sections.userData.responsibility.body">Vous êtes seul responsable de l'exactitude et de la légalité des informations saisies dans l'Application. Nous ne sommes pas responsables des erreurs de saisie ou des litiges liés aux prêts de livres entre utilisateurs.</p>
                     <h3 data-i18n="termsPage.sections.userData.backup.title">4.3 Sauvegarde de Vos Données</h3>
-                    <p data-i18n="termsPage.sections.userData.backup.body">L'Application stocke vos données localement. Il vous appartient de les sauvegarder via iCloud (iOS) ou Google Drive (Android).</p>
+                    <p data-i18n="termsPage.sections.userData.backup.body">L'Application stocke vos données localement et synchronise une copie sur Firebase. Il vous appartient de conserver vos sauvegardes iCloud/Google Drive et de nous contacter pour supprimer la copie distante en cas de désinstallation.</p>
                 </section>
 
                 <section class="privacy-block">
@@ -88,14 +88,15 @@ permalink: /terms.html
                 <section class="privacy-block">
                     <h2 data-i18n="termsPage.sections.accounts.title">6. Comptes et Authentification</h2>
                     <h3 data-i18n="termsPage.sections.accounts.noAccount.title">6.1 Pas de Compte Obligatoire</h3>
-                    <p data-i18n="termsPage.sections.accounts.noAccount.body">L'Application ne nécessite pas la création d'un compte. Toutes vos données restent stockées localement sur votre appareil.</p>
+                    <p data-i18n="termsPage.sections.accounts.noAccount.body">L'Application ne nécessite pas la création d'un compte. La synchronisation utilise un identifiant anonyme généré sur votre appareil.</p>
                     <h3 data-i18n="termsPage.sections.accounts.uuid.title">6.2 Identifiant Anonyme (UUID)</h3>
                     <p data-i18n="termsPage.sections.accounts.uuid.body">Un identifiant anonyme (UUID) est généré localement et utilisé uniquement pour :</p>
                     <ul>
                         <li data-i18n="termsPage.sections.accounts.uuid.items.0">Gérer votre statut d'abonnement premium via RevenueCat</li>
-                        <li data-i18n="termsPage.sections.accounts.uuid.items.1">Préparer de futures fonctionnalités de recommandations locales</li>
+                        <li data-i18n="termsPage.sections.accounts.uuid.items.1">Associer votre synchronisation Firebase pour calculer les classements communautaires</li>
+                        <li data-i18n="termsPage.sections.accounts.uuid.items.2">Préparer de futures fonctionnalités de recommandations locales</li>
                     </ul>
-                    <p data-i18n="termsPage.sections.accounts.uuid.note">Cet UUID ne contient aucune information personnelle et n'est jamais partagé à des fins publicitaires.</p>
+                    <p data-i18n="termsPage.sections.accounts.uuid.note">Cet UUID ne contient aucune information personnelle et n'est jamais partagé à des fins publicitaires. Il vous permet également de demander la suppression de votre copie synchronisée.</p>
                 </section>
 
                 <section class="privacy-block">
@@ -196,17 +197,17 @@ permalink: /terms.html
                     <h2 data-i18n="termsPage.summary.title">Résumé Simplifié</h2>
                     <ul>
                         <li data-i18n="termsPage.summary.items.0">Usage personnel et légal uniquement</li>
-                        <li data-i18n="termsPage.summary.items.1">Vos données vous appartiennent et restent sur votre appareil</li>
+                        <li data-i18n="termsPage.summary.items.1">Vos données restent consultables sur votre appareil et une copie minimale est synchronisée via Firebase</li>
                         <li data-i18n="termsPage.summary.items.2">Version gratuite : 3 validations de livres avec métadonnées par jour</li>
                         <li data-i18n="termsPage.summary.items.3">Version premium : validations et ajouts illimités</li>
                         <li data-i18n="termsPage.summary.items.4">Achats via Apple/Google, remboursements via ces plateformes</li>
                         <li data-i18n="termsPage.summary.items.5">Application fournie "en l'état", responsabilité limitée</li>
-                        <li data-i18n="termsPage.summary.items.6">Pas de compte requis, UUID anonyme pour le premium</li>
+                        <li data-i18n="termsPage.summary.items.6">Pas de compte requis, UUID anonyme pour le premium et la synchronisation Firebase</li>
                     </ul>
                 </section>
             </div>
 
-            <p class="privacy-meta" data-i18n="termsPage.lastUpdated">Dernière mise à jour : 02/10/2025</p>
+            <p class="privacy-meta" data-i18n="termsPage.lastUpdated">Dernière mise à jour : 10/10/2025</p>
 
             <div class="privacy-back-link">
                 <a href="{{ '/' | relative_url }}" data-i18n="termsPage.backToHome">Retour à l'accueil</a>

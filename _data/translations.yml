@@ -122,13 +122,14 @@ fr:
       - Conserver toutes vos données localement sur votre appareil
     q7: "Ai-je besoin d'une connexion internet ?"
     a7: |-
-      La connexion Internet n'est requise que pour :
+      La connexion Internet est nécessaire pour :
       - Scanner des codes-barres ISBN (recherche automatique des informations)
       - Rechercher un livre manuellement via ISBNdb
+      - Synchroniser votre bibliothèque et vos notes via Firebase (une fois par semaine ou à la demande)
       - Effectuer des achats Premium
 
-      Pour tout le reste (bibliothèque, stats, badges, prêts), Book Nova fonctionne hors ligne.
-      Astuce : ajoutez un livre manuellement hors ligne si vous connaissez ses informations (titre, pages, etc.).
+      Le reste (consultation de la bibliothèque, stats locales, badges, prêts) reste utilisable hors ligne.
+      Astuce : ajoutez un livre manuellement hors ligne si vous connaissez ses informations (titre, pages, etc.), puis laissez la synchronisation s'exécuter dès que vous serez connecté.
   notFound:
     title: "Page introuvable"
     message: "Nous n'avons pas pu trouver la page que vous cherchez."
@@ -137,23 +138,37 @@ fr:
     title: "Politique de Confidentialité"
     intro:
       title: "Introduction"
-      content: "Bienvenue dans la politique de confidentialité de Book Nova. Nous accordons une grande importance à la protection de votre vie privée. L'application fonctionne principalement hors ligne avec un stockage 100 % local."
+      content: "Bienvenue dans la politique de confidentialité de Book Nova. Nous accordons une grande importance à la protection de votre vie privée. L'application conserve la majorité de vos données sur votre appareil et synchronise chaque semaine une copie minimale via Firebase (Google Cloud) pour proposer des classements communautaires."
     dataLocal:
       title: "Données stockées localement sur votre appareil"
-      intro: "Toutes les données suivantes sont conservées exclusivement sur votre appareil :"
+      intro: "Les informations suivantes restent accessibles hors ligne sur votre appareil :"
       items:
-        - "Informations de bibliothèque : titres, auteurs, nombre de pages, images de couverture, descriptions et progression de lecture"
+        - "Bibliothèque personnelle : titres, auteurs, nombre de pages, images de couverture, descriptions et progression de lecture (une copie des titres, auteurs, ISBN et couvertures est synchronisée pour les classements hebdomadaires)."
         - "Paramètres personnels : taille, unité d'affichage (cm/m), système métrique (métrique/impérial), avatar, langues de lecture préférées, genres favoris, préférence pour les livres audio"
         - "Défis et badges : défi sélectionné (solaire/galaxie/univers), badges débloqués et progression"
         - "Prêts de livres : livres prêtés ou empruntés, avec dates et contacts"
         - "Préférences d'interface : langue de l'application (FR/EN/ES), thème (clair/sombre), type de vue de bibliothèque"
         - "Identifiant d'appareil : UUID généré aléatoirement et stocké localement"
-      note: "Aucune donnée d'identification personnelle n'est collectée sans votre consentement explicite."
+      note: "Les données synchronisées n'incluent aucune information personnelle d'identification (nom, adresse e-mail ou contenu de notes libres)."
     usage:
       title: "Stockage et traitement"
       items:
-        - "100 % local : données enregistrées dans AsyncStorage et SecureStore (pour votre taille et l'UUID)"
-        - "Pas de serveur distant : aucune donnée n'est envoyée à Book Nova ni à des tiers"
+        - "Stockage local : données enregistrées dans AsyncStorage et SecureStore pour garantir l'accès hors ligne."
+        - "Synchronisation sécurisée : une fois par semaine (ou lors d'une action manuelle), l'application envoie à Firebase les livres, catégories, notes (étoiles) et l'identifiant anonyme nécessaires aux classements."
+        - "Agrégation : les statistiques produites dans Firebase sont anonymisées avant d'alimenter les classements visibles dans l'application."
+    sync:
+      title: "Synchronisation Firebase"
+      intro: "Les données transférées vers Firebase sont limitées aux éléments suivants :"
+      items:
+        - "Identifiant anonyme généré localement (UUID)"
+        - "Livres de votre bibliothèque : titre, auteur, ISBN, image de couverture, statut de lecture"
+        - "Catégories utilisées, tags personnalisés et notes attribuées (étoiles)"
+        - "Horodatage de synchronisation et compteurs de consultation agrégés"
+      purposesTitle: "Finalités du traitement :"
+      purposes:
+        - "Créer chaque semaine les classements des 50 livres les plus lus, populaires et les mieux notés"
+        - "Préparer la synchronisation multi-appareils et les recommandations collectives"
+      note: "Les listes générées sont publiées sous forme agrégée et ne permettent pas d'identifier votre bibliothèque personnelle."
     api:
       title: "API externe : ISBNdb"
       intro: "Book Nova utilise ISBNdb pour récupérer les métadonnées publiques des livres lorsque vous :"
@@ -183,14 +198,16 @@ fr:
       title: "Partage des données"
       intro: "Nous ne vendons, n'échangeons ni ne transférons vos données, sauf :"
       items:
-        - "ISBNdb : pour récupérer les métadonnées publiques de livres"
-        - "RevenueCat : pour gérer la version premium"
+        - "Firebase (Google Cloud) : hébergement de la synchronisation hebdomadaire de votre bibliothèque"
+        - "ISBNdb : récupération des métadonnées publiques des livres lors de vos recherches"
+        - "RevenueCat : gestion de la version premium"
         - "Obligations légales : si la loi l'exige"
     security:
       title: "Sécurité et stockage"
       items:
         - "SecureStore protège votre taille et l'UUID avec le chiffrement natif iOS/Android"
-        - "Vos livres, prêts et paramètres restent uniquement sur votre appareil"
+        - "Firebase applique le chiffrement en transit et au repos pour les données synchronisées (Google Cloud)"
+        - "Vos livres, prêts et paramètres restent consultables hors ligne sur votre appareil"
         - "Les sauvegardes iCloud ou Google Drive s'appliquent selon vos réglages système"
       warning: "Important : supprimer l'application sans sauvegarde système efface définitivement vos données."
     rights:
@@ -200,16 +217,18 @@ fr:
         - "Consulter vos données directement dans l'application"
         - "Modifier vos informations par l'interface"
         - "Retirer votre consentement aux notifications dans les réglages de votre appareil"
+        - "Demander la suppression de votre copie synchronisée en écrivant à book-nova@outlook.fr (en indiquant votre UUID)"
     permissions:
       title: "Permissions demandées"
       items:
         - "Caméra : scanner les codes-barres ISBN"
         - "Notifications : programmer des rappels locaux"
-        - "Stockage : enregistrer vos livres et paramètres"
+        - "Stockage local : enregistrer vos livres et paramètres"
+        - "Accès réseau : synchroniser votre bibliothèque et vos notes via Firebase"
       note: "Ces permissions ne servent jamais à collecter des données à votre insu."
     changes:
       title: "Modifications de cette politique"
-      content: "Nous pouvons mettre à jour cette politique à tout moment. Consultez-la régulièrement. Dernière mise à jour : 02/10/2025."
+      content: "Nous pouvons mettre à jour cette politique à tout moment. Consultez-la régulièrement. Dernière mise à jour : 10/10/2025."
     contact:
       title: "Contact"
       content: "Pour toute question relative à vos données ou à cette politique, écrivez-nous :"
@@ -217,13 +236,13 @@ fr:
     summary:
       title: "Résumé simplifié"
       items:
-        - "Vos données restent sur votre appareil"
-        - "Aucune collecte d'informations personnelles"
+        - "Vos données restent consultables hors ligne et une copie minimale est synchronisée via Firebase"
+        - "Aucune donnée d'identification personnelle n'est collectée"
+        - "Firebase est utilisé pour produire des classements communautaires anonymisés"
         - "ISBNdb uniquement pour les métadonnées publiques"
         - "RevenueCat gère la version premium (données anonymisées)"
-        - "Notifications 100 % locales"
-        - "Vous gardez le contrôle total sur vos données"
-    lastUpdated: "Dernière mise à jour : 02/10/2025"
+        - "Vous pouvez demander la suppression de la copie synchronisée à tout moment"
+    lastUpdated: "Dernière mise à jour : 10/10/2025"
     backToHome: "Retour à l'accueil"
   termsPage:
     title: "Conditions d'Utilisation"
@@ -240,8 +259,8 @@ fr:
           - "Scanner des codes-barres ISBN pour récupérer automatiquement les informations des livres"
           - "Suivre vos prêts et emprunts de livres"
           - "Débloquer des badges et relever des défis de lecture"
-          - "Consulter des statistiques personnalisées sur vos lectures"
-        note: "L'Application fonctionne principalement hors ligne et stocke toutes vos données localement sur votre appareil."
+          - "Consulter des statistiques personnalisées et découvrir des classements communautaires mis à jour chaque semaine"
+        note: "L'Application fonctionne hors ligne pour la plupart des actions. Une synchronisation hebdomadaire via Firebase (Google Cloud) envoie une copie chiffrée de vos livres, catégories et notes afin de générer les classements communautaires."
       usage:
         title: "3. Utilisation de l'Application"
         allowed:
@@ -272,13 +291,13 @@ fr:
             - "Informations sur vos prêts et emprunts"
             - "Progression de lecture et statistiques personnalisées"
             - "Avatar et paramètres personnalisés"
-          note: "Vos données restent sur votre appareil et ne sont pas transmises à nos serveurs."
+          note: "Vos données restent accessibles sur votre appareil. Une copie minimale (livres, catégories, notes et UUID anonyme) est synchronisée sur Firebase pour produire les classements hebdomadaires."
         responsibility:
           title: "4.2 Responsabilité du Contenu"
           body: "Vous êtes seul responsable de l'exactitude et de la légalité des informations saisies dans l'Application. Nous ne sommes pas responsables des erreurs de saisie ou des litiges liés aux prêts de livres entre utilisateurs."
         backup:
           title: "4.3 Sauvegarde de Vos Données"
-          body: "L'Application stocke vos données localement. Il vous appartient de les sauvegarder via iCloud (iOS) ou Google Drive (Android)."
+          body: "L'Application stocke vos données localement et synchronise une copie sur Firebase. Nous vous recommandons de conserver vos propres sauvegardes iCloud/Google Drive et de nous contacter pour supprimer la copie distante en cas de désinstallation."
       isbndb:
         title: "5. API ISBNdb et Métadonnées"
         thirdParty:
@@ -294,14 +313,15 @@ fr:
         title: "6. Comptes et Authentification"
         noAccount:
           title: "6.1 Pas de Compte Obligatoire"
-          body: "L'Application ne nécessite pas la création d'un compte. Toutes vos données restent stockées localement sur votre appareil."
+          body: "L'Application ne nécessite pas la création d'un compte. La synchronisation utilise un identifiant anonyme généré sur votre appareil."
         uuid:
           title: "6.2 Identifiant Anonyme (UUID)"
           body: "Un identifiant anonyme (UUID) est généré localement et utilisé uniquement pour :"
           items:
             - "Gérer votre statut d'abonnement premium via RevenueCat"
+            - "Associer votre synchronisation Firebase pour calculer les classements communautaires"
             - "Préparer de futures fonctionnalités de recommandations locales"
-          note: "Cet UUID ne contient aucune information personnelle et n'est jamais partagé à des fins publicitaires."
+          note: "Cet UUID ne contient aucune information personnelle et n'est jamais partagé à des fins publicitaires. Il vous permet également de demander la suppression de votre copie synchronisée."
       premium:
         title: "7. Abonnement Premium et Achats In-App"
         features:
@@ -391,13 +411,13 @@ fr:
       title: "Résumé Simplifié"
       items:
         - "Usage personnel et légal uniquement"
-        - "Vos données vous appartiennent et restent sur votre appareil"
+        - "Vos données restent consultables sur votre appareil et une copie minimale est synchronisée via Firebase"
         - "Version gratuite : 3 validations de livres avec métadonnées par jour"
         - "Version premium : validations et ajouts illimités"
         - "Achats via Apple/Google, remboursements via ces plateformes"
         - "Application fournie 'en l'état', responsabilité limitée"
-        - "Pas de compte requis, UUID anonyme pour le premium"
-    lastUpdated: "Dernière mise à jour : 02/10/2025"
+        - "Pas de compte requis, UUID anonyme pour le premium et la synchronisation Firebase"
+    lastUpdated: "Dernière mise à jour : 10/10/2025"
     backToHome: "Retour à l'accueil"
   supportPage:
     title: "Support"
@@ -417,10 +437,10 @@ fr:
       content: "Book Nova est née d'une passion simple : aider les lecteurs à mieux organiser et profiter de leur bibliothèque personnelle. Nous croyons que la lecture doit être une expérience agréable et enrichissante, et c'est pourquoi nous avons créé une application qui facilite la gestion de vos livres, le suivi de vos progrès et la découverte de nouvelles lectures."
     vision:
       title: "Notre Vision"
-      content: "Nous voulons créer la meilleure application de gestion de bibliothèque personnelle au monde. Une application qui respecte votre vie privée, qui fonctionne hors ligne, et qui vous aide vraiment à lire plus et mieux."
+      content: "Nous voulons créer la meilleure application de gestion de bibliothèque personnelle au monde. Une application qui respecte votre vie privée, qui combine un fonctionnement hors ligne avec une synchronisation sécurisée via Firebase, et qui vous aide vraiment à lire plus et mieux."
     values:
       title: "Nos Valeurs"
-      privacy: "Respect de la vie privée - Vos données vous appartiennent et restent sur votre appareil"
+      privacy: "Respect de la vie privée - Vos données vous appartiennent, la synchronisation Firebase est chiffrée et anonymisée"
       simplicity: "Simplicité - Une interface intuitive accessible à tous les lecteurs"
       accessibility: "Accessibilité - Application gratuite et disponible en plusieurs langues"
       innovation: "Innovation - Amélioration continue basée sur vos retours"
@@ -432,7 +452,7 @@ fr:
       tracking: "Suivi de lecture - Suivez votre progression page par page"
       loans: "Système de prêts - Ne perdez plus jamais de vue vos livres prêtés"
       badges: "Badges et défis - Gamification pour encourager la lecture"
-      stats: "Statistiques détaillées - Visualisez vos habitudes de lecture"
+      stats: "Statistiques détaillées - Visualisez vos habitudes de lecture et les classements communautaires hebdomadaires"
       multilingual: "Mode multilingue - Disponible en français, anglais et espagnol"
     development:
       title: "Développement"
@@ -444,7 +464,7 @@ fr:
     contact:
       title: "Contact"
       content: "Vous avez des questions, suggestions ou vous souhaitez simplement nous dire bonjour ? N'hésitez pas à nous contacter à"
-    lastUpdated: "Dernière mise à jour : Octobre 2025"
+    lastUpdated: "Dernière mise à jour : 10 octobre 2025"
     backToHome: "Retour à l'accueil"
 
 en:
@@ -571,13 +591,14 @@ en:
       - Keep all your data safely stored locally on your device
     q7: "Do I need an internet connection?"
     a7: |-
-      An internet connection is only required for:
-      - Scanning ISBN barcodes (automatic lookup)
-      - Manually searching for a book via ISBNdb
-      - Purchasing Premium
+      You need an internet connection to:
+      - Scan ISBN barcodes (automatic lookup)
+      - Manually search for a book via ISBNdb
+      - Sync your library and ratings through Firebase (weekly or on demand)
+      - Purchase Premium
 
-      Everything else—library, stats, badges, loans—works offline.
-      Tip: add a book manually without a connection as long as you know its details (title, page count, etc.).
+      Everything else—browsing your library, local stats, badges, loans—works offline.
+      Tip: add a book manually while offline and let the sync run the next time you're connected.
   notFound:
     title: "Page not found"
     message: "We couldn't find the page you're looking for."
@@ -586,23 +607,37 @@ en:
     title: "Privacy Policy"
     intro:
       title: "Introduction"
-      content: "Welcome to Book Nova's privacy policy. Protecting your privacy is essential to us. The app works primarily offline, with 100% local storage."
+      content: "Welcome to Book Nova's privacy policy. Protecting your privacy is essential to us. The app keeps most of your data on your device and syncs a minimal copy to Firebase (Google Cloud) once a week to power community leaderboards."
     dataLocal:
       title: "Data stored locally on your device"
-      intro: "The following information stays on your device and is never sent elsewhere:"
+      intro: "The following information stays available offline on your device:"
       items:
-        - "Library details: titles, authors, page counts, cover images, descriptions, and reading progress"
+        - "Personal library: titles, authors, page counts, cover images, descriptions, and reading progress (a copy of titles, authors, ISBNs, and covers is synced for the weekly leaderboards)."
         - "Personal settings: height (for stack calculations), display unit (cm/m), measurement system (metric/imperial), avatar, preferred reading languages, favourite genres, audiobook preference"
         - "Challenges & badges: selected challenge (solar/galaxy/universe), unlocked badges, and completion status"
         - "Book loans: books you lend or borrow, including dates and contacts"
         - "Interface preferences: app language (FR/EN/ES), theme (light/dark), library view type"
         - "Device identifier: randomly generated UUID stored locally"
-      note: "No personally identifiable information is collected without your explicit consent."
+      note: "Synced data never includes personally identifiable information (name, email address, or free-form notes)."
     usage:
       title: "Storage & processing"
       items:
-        - "100% local: data stored in AsyncStorage and SecureStore (height and UUID)"
-        - "No remote server: nothing is sent to Book Nova or third parties"
+        - "Local storage: data saved in AsyncStorage and SecureStore to guarantee offline access."
+        - "Secure synchronisation: once a week (or on demand) the app sends to Firebase the books, categories, ratings (stars), and anonymous identifier required for the leaderboards."
+        - "Aggregation: statistics produced in Firebase are anonymised before powering the leaderboards you see in the app."
+    sync:
+      title: "Firebase synchronisation"
+      intro: "Data sent to Firebase is limited to:"
+      items:
+        - "An anonymous identifier generated locally (UUID)"
+        - "Books in your library: title, author, ISBN, cover image, reading status"
+        - "Categories, custom tags, and ratings you assign (stars)"
+        - "Sync timestamps and aggregated view counters"
+      purposesTitle: "Purpose of the processing:"
+      purposes:
+        - "Publish the weekly rankings of the top 50 most read, most popular, and best-rated books"
+        - "Prepare future multi-device sync and community recommendations"
+      note: "Leaderboards are published in an aggregated form and never expose your personal library."
     api:
       title: "External API: ISBNdb"
       intro: "Book Nova calls ISBNdb only to fetch public book metadata when you:"
@@ -630,16 +665,18 @@ en:
       note: "Book Nova never accesses your payment information."
     sharing:
       title: "Data sharing"
-      intro: "We do not sell or trade your data, except:"
+      intro: "We never sell or trade your data, except to:"
       items:
-        - "ISBNdb: solely to retrieve public book metadata"
-        - "RevenueCat: solely to manage premium access"
-        - "Legal requirements: when the law demands it"
+        - "Firebase (Google Cloud): host the weekly sync of your library"
+        - "ISBNdb: fetch public book metadata when you search"
+        - "RevenueCat: manage the premium tier"
+        - "Legal obligations: when required by law"
     security:
       title: "Security & storage"
       items:
         - "SecureStore encrypts your height and UUID using native iOS/Android security"
-        - "Books, loans, and settings remain on your device"
+        - "Firebase encrypts synced data in transit and at rest (Google Cloud)"
+        - "Books, loans, and settings remain available offline on your device"
         - "Automatic backups rely on iCloud or Google Drive according to your OS settings"
       warning: "Important: deleting the app without a system backup permanently erases your data."
     rights:
@@ -649,16 +686,18 @@ en:
         - "View your data directly in the app"
         - "Edit information through the interface"
         - "Disable notifications via your device settings"
+        - "Request deletion of your synced copy by emailing book-nova@outlook.fr (include your UUID)"
     permissions:
       title: "Requested permissions"
       items:
         - "Camera: scan ISBN barcodes"
         - "Notifications: schedule local reminders"
-        - "Storage: save books and preferences"
+        - "Local storage: save books and preferences"
+        - "Network access: sync your library and ratings through Firebase"
       note: "Permissions are never used to collect data without your knowledge."
     changes:
       title: "Changes to this policy"
-      content: "We may update this policy at any time. Please review it regularly. Last update: 02/10/2025."
+      content: "We may update this policy at any time. Please review it regularly. Last updated: 10/10/2025."
     contact:
       title: "Contact"
       content: "Questions about your data or this policy? Reach us at:"
@@ -666,13 +705,13 @@ en:
     summary:
       title: "Quick summary"
       items:
-        - "Your data stays on your device"
-        - "No personal data collection"
-        - "ISBNdb only for public metadata"
+        - "Your library stays available offline and a minimal copy syncs through Firebase"
+        - "No personally identifiable data is collected"
+        - "Firebase powers anonymised community leaderboards"
+        - "ISBNdb is used only for public metadata"
         - "RevenueCat handles premium (anonymised data)"
-        - "Notifications are 100% local"
-        - "You control your data at all times"
-    lastUpdated: "Last updated: 02/10/2025"
+        - "You can request deletion of the synced copy at any time"
+    lastUpdated: "Last updated: 10/10/2025"
     backToHome: "Back to home"
   termsPage:
     title: "Terms of Use"
@@ -689,8 +728,8 @@ en:
           - "Scan ISBN barcodes to automatically retrieve book information"
           - "Track books you lend or borrow"
           - "Unlock badges and take on reading challenges"
-          - "View personalized reading statistics"
-        note: "The App primarily works offline and stores all of your data locally on your device."
+          - "View personalized statistics and discover community leaderboards updated each week"
+        note: "The App works offline for most actions. A weekly synchronisation with Firebase (Google Cloud) sends an encrypted copy of your books, categories, and ratings to generate the community leaderboards."
       usage:
         title: "3. Using the App"
         allowed:
@@ -721,13 +760,13 @@ en:
             - "Details about books you lend or borrow"
             - "Reading progress and personalized statistics"
             - "Avatar choices and personalized settings"
-          note: "Your data stays on your device and is never sent to our servers."
+          note: "Your data stays accessible on your device. A minimal copy (books, categories, ratings, and anonymous UUID) is synced to Firebase to produce the weekly leaderboards."
         responsibility:
           title: "4.2 Responsibility for Content"
           body: "You alone are responsible for the accuracy and legality of the information you enter. We are not liable for data-entry errors or disputes between users over lent books."
         backup:
           title: "4.3 Backing Up Your Data"
-          body: "The App stores your information locally. You are responsible for backing it up via iCloud (iOS) or Google Drive (Android)."
+          body: "The App stores your information locally and syncs a copy to Firebase. Please keep your own iCloud/Google Drive backups and contact us if you want the remote copy deleted."
       isbndb:
         title: "5. ISBNdb API and Metadata"
         thirdParty:
@@ -743,14 +782,15 @@ en:
         title: "6. Accounts and Authentication"
         noAccount:
           title: "6.1 No Account Required"
-          body: "The App does not require you to create an account. All of your data remains stored locally on your device."
+          body: "The App does not require you to create an account. Synchronisation relies on an anonymous identifier generated on your device."
         uuid:
           title: "6.2 Anonymous Identifier (UUID)"
           body: "An anonymous identifier (UUID) is generated locally and used only to:"
           items:
             - "Manage your premium subscription status through RevenueCat"
+            - "Link your Firebase synchronisation and compute community leaderboards"
             - "Prepare future locally powered recommendation features"
-          note: "This UUID contains no personal information and is never shared for advertising purposes."
+          note: "This UUID contains no personal information and is never shared for advertising purposes. It also lets you request deletion of your synced copy."
       premium:
         title: "7. Premium Subscription and In-App Purchases"
         features:
@@ -840,13 +880,13 @@ en:
       title: "Quick Summary"
       items:
         - "Personal and lawful use only"
-        - "Your data stays on your device"
+        - "Your data stays accessible on your device and a minimal copy syncs through Firebase"
         - "Free plan: 3 metadata validations per day"
         - "Premium plan: unlimited validations and additions"
         - "Purchases handled by Apple/Google; refunds handled by them"
         - "App provided 'as is' with limited liability"
-        - "No account required, anonymous UUID powers premium"
-    lastUpdated: "Last updated: 02/10/2025"
+        - "No account required; an anonymous UUID powers premium and Firebase sync"
+    lastUpdated: "Last updated: 10/10/2025"
     backToHome: "Back to home"
   supportPage:
     title: "Support"
@@ -866,10 +906,10 @@ en:
       content: "Book Nova was born from a simple passion: helping readers better organize and enjoy their personal library. We believe reading should be a pleasant and enriching experience, which is why we created an app that makes it easy to manage your books, track your progress, and discover new reads."
     vision:
       title: "Our Vision"
-      content: "We want to create the best personal library management app in the world. An app that respects your privacy, works offline, and truly helps you read more and better."
+      content: "We want to create the best personal library management app in the world—one that respects your privacy, combines offline-first use with secure Firebase sync, and truly helps you read more and better."
     values:
       title: "Our Values"
-      privacy: "Privacy respect - Your data belongs to you and stays on your device"
+      privacy: "Privacy respect - Your data belongs to you; Firebase sync is encrypted and anonymised"
       simplicity: "Simplicity - An intuitive interface accessible to all readers"
       accessibility: "Accessibility - Free app available in multiple languages"
       innovation: "Innovation - Continuous improvement based on your feedback"
@@ -881,7 +921,7 @@ en:
       tracking: "Reading tracking - Follow your progress page by page"
       loans: "Loan system - Never lose track of your lent books again"
       badges: "Badges and challenges - Gamification to encourage reading"
-      stats: "Detailed statistics - Visualize your reading habits"
+      stats: "Detailed statistics - Visualize your reading habits and weekly community leaderboards"
       multilingual: "Multilingual mode - Available in French, English, and Spanish"
     development:
       title: "Development"
@@ -893,7 +933,7 @@ en:
     contact:
       title: "Contact"
       content: "Have questions, suggestions, or just want to say hello? Feel free to contact us at"
-    lastUpdated: "Last updated: October 2025"
+    lastUpdated: "Last updated: 10 October 2025"
     backToHome: "Back to home"
 es:
   nav:
@@ -1019,13 +1059,14 @@ es:
       - Mantener todos tus datos guardados localmente en tu dispositivo
     q7: "¿Necesito conexión a Internet?"
     a7: |-
-      Solo necesitas Internet para:
+      Necesitas conexión a Internet para:
       - Escanear códigos de barras ISBN (búsqueda automática)
       - Buscar un libro manualmente mediante ISBNdb
+      - Sincronizar tu biblioteca y valoraciones a través de Firebase (cada semana o bajo demanda)
       - Realizar compras Premium
 
-      Para todo lo demás (biblioteca, estadísticas, insignias, préstamos) Book Nova funciona sin conexión.
-      Consejo: añade un libro manualmente sin conexión si conoces sus datos (título, número de páginas, etc.).
+      Para el resto (consultar la biblioteca, estadísticas locales, insignias, préstamos) Book Nova funciona sin conexión.
+      Consejo: añade un libro manualmente sin conexión si conoces sus datos (título, número de páginas, etc.) y deja que la sincronización se ejecute cuando vuelvas a estar en línea.
   notFound:
     title: "Página no encontrada"
     message: "No pudimos encontrar la página que buscas."
@@ -1034,23 +1075,37 @@ es:
     title: "Política de Privacidad"
     intro:
       title: "Introducción"
-      content: "Bienvenido a la política de privacidad de Book Nova. Valoramos tu privacidad. La aplicación funciona principalmente sin conexión, con almacenamiento 100 % local."
+      content: "Bienvenido a la política de privacidad de Book Nova. Valoramos tu privacidad. La aplicación guarda la mayor parte de tus datos en tu dispositivo y sincroniza una copia mínima con Firebase (Google Cloud) una vez por semana para generar rankings comunitarios."
     dataLocal:
       title: "Datos almacenados en tu dispositivo"
-      intro: "La siguiente información permanece únicamente en tu dispositivo:"
+      intro: "La siguiente información permanece disponible sin conexión en tu dispositivo:"
       items:
-        - "Detalles de la biblioteca: títulos, autores, número de páginas, portadas, descripciones y progreso de lectura"
+        - "Biblioteca personal: títulos, autores, número de páginas, portadas, descripciones y progreso de lectura (se sincroniza una copia de los títulos, autores, ISBN y portadas para los rankings semanales)."
         - "Ajustes personales: altura (para calcular la pila), unidad de medida (cm/m), sistema (métrico/imperial), avatar, idiomas de lectura preferidos, géneros favoritos, preferencia por audiolibros"
         - "Desafíos e insignias: desafío elegido (solar/galaxia/universo), insignias desbloqueadas y progreso"
         - "Préstamos de libros: libros prestados o recibidos, con fechas y contactos"
         - "Preferencias de interfaz: idioma de la app (FR/EN/ES), tema (claro/oscuro), tipo de vista de biblioteca"
         - "Identificador del dispositivo: UUID generado aleatoriamente y almacenado localmente"
-      note: "No recopilamos información personal identificable sin tu consentimiento explícito."
+      note: "Los datos sincronizados nunca incluyen información personalmente identificable (nombre, correo electrónico o notas libres)."
     usage:
       title: "Almacenamiento y tratamiento"
       items:
-        - "100 % local: datos guardados en AsyncStorage y SecureStore (altura y UUID)"
-        - "Sin servidores remotos: nada se envía a Book Nova ni a terceros"
+        - "Almacenamiento local: datos guardados en AsyncStorage y SecureStore para garantizar el acceso sin conexión."
+        - "Sincronización segura: una vez por semana (o bajo demanda) la app envía a Firebase los libros, categorías, valoraciones (estrellas) y el identificador anónimo necesarios para los rankings."
+        - "Agregación: las estadísticas generadas en Firebase se anonimizan antes de mostrarse en la aplicación."
+    sync:
+      title: "Sincronización con Firebase"
+      intro: "Los datos enviados a Firebase se limitan a:"
+      items:
+        - "Identificador anónimo generado localmente (UUID)"
+        - "Libros de tu biblioteca: título, autor, ISBN, imagen de portada, estado de lectura"
+        - "Categorías, etiquetas personalizadas y valoraciones que asignas (estrellas)"
+        - "Marcas de tiempo de sincronización y contadores agregados"
+      purposesTitle: "Finalidades del tratamiento:"
+      purposes:
+        - "Publicar cada semana los rankings de los 50 libros más leídos, populares y mejor valorados"
+        - "Preparar la futura sincronización multi-dispositivo y recomendaciones comunitarias"
+      note: "Los rankings se publican de forma agregada y nunca exponen tu biblioteca personal."
     api:
       title: "API externa: ISBNdb"
       intro: "Book Nova usa ISBNdb solo para obtener metadatos públicos cuando tú:"
@@ -1080,14 +1135,16 @@ es:
       title: "Compartir datos"
       intro: "No vendemos ni compartimos tus datos, salvo:"
       items:
-        - "ISBNdb: solo para recuperar metadatos públicos"
-        - "RevenueCat: solo para gestionar la versión premium"
-        - "Obligación legal: cuando la ley lo exige"
+        - "Firebase (Google Cloud): alojar la sincronización semanal de tu biblioteca"
+        - "ISBNdb: recuperar metadatos públicos durante tus búsquedas"
+        - "RevenueCat: gestionar la versión premium"
+        - "Obligaciones legales: cuando la ley lo requiera"
     security:
       title: "Seguridad y almacenamiento"
       items:
         - "SecureStore cifra tu altura y el UUID con la seguridad nativa de iOS/Android"
-        - "Tus libros, préstamos y ajustes permanecen en tu dispositivo"
+        - "Firebase cifra los datos sincronizados en tránsito y en reposo (Google Cloud)"
+        - "Tus libros, préstamos y ajustes siguen disponibles sin conexión en tu dispositivo"
         - "Las copias de seguridad dependen de iCloud o Google Drive según tu sistema"
       warning: "Importante: si eliminas la app sin una copia de seguridad del sistema, perderás tus datos definitivamente."
     rights:
@@ -1097,16 +1154,18 @@ es:
         - "Consultar tus datos directamente en la app"
         - "Modificar la información desde la interfaz"
         - "Retirar el consentimiento para notificaciones en los ajustes del dispositivo"
+        - "Solicitar la eliminación de la copia sincronizada escribiendo a book-nova@outlook.fr (incluye tu UUID)"
     permissions:
       title: "Permisos solicitados"
       items:
         - "Cámara: escanear códigos de barras ISBN"
         - "Notificaciones: programar recordatorios locales"
-        - "Almacenamiento: guardar libros y preferencias"
+        - "Almacenamiento local: guardar libros y preferencias"
+        - "Acceso a la red: sincronizar tu biblioteca y valoraciones a través de Firebase"
       note: "Estos permisos no se usan para recopilar datos sin tu conocimiento."
     changes:
       title: "Cambios en esta política"
-      content: "Podemos actualizar esta política en cualquier momento. Revísala con frecuencia. Última actualización: 02/10/2025."
+      content: "Podemos actualizar esta política en cualquier momento. Revísala con frecuencia. Última actualización: 10/10/2025."
     contact:
       title: "Contacto"
       content: "Si tienes dudas sobre tus datos o esta política, escríbenos a:"
@@ -1114,13 +1173,13 @@ es:
     summary:
       title: "Resumen rápido"
       items:
-        - "Tus datos permanecen en tu dispositivo"
-        - "No recopilamos datos personales"
+        - "Tus datos siguen disponibles sin conexión y una copia mínima se sincroniza vía Firebase"
+        - "No recopilamos datos personales identificables"
+        - "Firebase se utiliza para generar rankings comunitarios anonimizados"
         - "ISBNdb solo para metadatos públicos"
         - "RevenueCat gestiona la versión premium (datos anonimizados)"
-        - "Notificaciones 100 % locales"
-        - "Tú controlas tus datos en todo momento"
-    lastUpdated: "Última actualización: 02/10/2025"
+        - "Puedes solicitar la eliminación de la copia sincronizada en cualquier momento"
+    lastUpdated: "Última actualización: 10/10/2025"
     backToHome: "Volver al inicio"
   supportPage:
     title: "Soporte"
@@ -1140,10 +1199,10 @@ es:
       content: "Book Nova nació de una pasión simple: ayudar a los lectores a organizar mejor y disfrutar de su biblioteca personal. Creemos que la lectura debe ser una experiencia agradable y enriquecedora, por eso creamos una app que facilita la gestión de tus libros, el seguimiento de tu progreso y el descubrimiento de nuevas lecturas."
     vision:
       title: "Nuestra Visión"
-      content: "Queremos crear la mejor aplicación de gestión de biblioteca personal del mundo. Una app que respete tu privacidad, funcione sin conexión y te ayude realmente a leer más y mejor."
+      content: "Queremos crear la mejor aplicación de gestión de biblioteca personal del mundo: una app que respete tu privacidad, combine el uso sin conexión con una sincronización segura mediante Firebase y te ayude a leer más y mejor."
     values:
       title: "Nuestros Valores"
-      privacy: "Respeto a la privacidad - Tus datos te pertenecen y permanecen en tu dispositivo"
+      privacy: "Respeto a la privacidad - Tus datos te pertenecen; la sincronización con Firebase es cifrada y anonimizada"
       simplicity: "Simplicidad - Una interfaz intuitiva accesible para todos los lectores"
       accessibility: "Accesibilidad - Aplicación gratuita y disponible en varios idiomas"
       innovation: "Innovación - Mejora continua basada en tus comentarios"
@@ -1155,7 +1214,7 @@ es:
       tracking: "Seguimiento de lectura - Sigue tu progreso página a página"
       loans: "Sistema de préstamos - No pierdas nunca más de vista tus libros prestados"
       badges: "Insignias y desafíos - Gamificación para fomentar la lectura"
-      stats: "Estadísticas detalladas - Visualiza tus hábitos de lectura"
+      stats: "Estadísticas detalladas - Visualiza tus hábitos de lectura y los rankings comunitarios semanales"
       multilingual: "Modo multilingüe - Disponible en francés, inglés y español"
     development:
       title: "Desarrollo"
@@ -1167,7 +1226,7 @@ es:
     contact:
       title: "Contacto"
       content: "¿Tienes preguntas, sugerencias o simplemente quieres saludarnos? No dudes en contactarnos en"
-    lastUpdated: "Última actualización: Octubre 2025"
+    lastUpdated: "Última actualización: 10 de octubre de 2025"
     backToHome: "Volver al inicio"
   termsPage:
     title: "Términos de Uso"
@@ -1184,8 +1243,8 @@ es:
           - "Escanear códigos de barras ISBN para recuperar automáticamente la información de los libros"
           - "Gestionar tus préstamos y devoluciones de libros"
           - "Desbloquear insignias y completar desafíos de lectura"
-          - "Consultar estadísticas personalizadas sobre tus lecturas"
-        note: "La Aplicación funciona principalmente sin conexión y guarda todos tus datos localmente en tu dispositivo."
+          - "Consultar estadísticas personalizadas y descubrir rankings comunitarios actualizados cada semana"
+        note: "La Aplicación funciona sin conexión para la mayoría de acciones. Una sincronización semanal con Firebase (Google Cloud) envía una copia cifrada de tus libros, categorías y valoraciones para generar los rankings comunitarios."
       usage:
         title: "3. Uso de la Aplicación"
         allowed:
@@ -1216,13 +1275,13 @@ es:
             - "Información sobre tus préstamos y préstamos recibidos"
             - "Progreso de lectura y estadísticas personalizadas"
             - "Avatar y ajustes personalizados"
-          note: "Tus datos permanecen en tu dispositivo y no se envían a nuestros servidores."
+          note: "Tus datos permanecen accesibles en tu dispositivo. Se sincroniza una copia mínima (libros, categorías, valoraciones y UUID anónimo) en Firebase para producir los rankings semanales."
         responsibility:
           title: "4.2 Responsabilidad sobre el Contenido"
           body: "Eres el único responsable de la exactitud y legalidad de la información que introduces. No nos hacemos responsables de errores de registro ni de conflictos entre usuarios por préstamos de libros."
         backup:
           title: "4.3 Copias de Seguridad"
-          body: "La Aplicación guarda tu información localmente. Tú eres responsable de realizar copias de seguridad mediante iCloud (iOS) o Google Drive (Android)."
+          body: "La Aplicación guarda tu información localmente y sincroniza una copia en Firebase. Te recomendamos mantener copias propias en iCloud/Google Drive y escribirnos si deseas eliminar la copia remota."
       isbndb:
         title: "5. API de ISBNdb y Metadatos"
         thirdParty:
@@ -1238,14 +1297,15 @@ es:
         title: "6. Cuentas y Autenticación"
         noAccount:
           title: "6.1 Sin Cuenta Obligatoria"
-          body: "La Aplicación no requiere crear una cuenta. Todos tus datos permanecen almacenados localmente en tu dispositivo."
+          body: "La Aplicación no requiere crear una cuenta. La sincronización se basa en un identificador anónimo generado en tu dispositivo."
         uuid:
           title: "6.2 Identificador Anónimo (UUID)"
           body: "Se genera localmente un identificador anónimo (UUID) que solo se utiliza para:"
           items:
             - "Gestionar tu estado de suscripción premium mediante RevenueCat"
+            - "Vincular tu sincronización con Firebase y calcular los rankings comunitarios"
             - "Preparar futuras funciones de recomendaciones locales"
-          note: "Este UUID no contiene datos personales y nunca se comparte con fines publicitarios."
+          note: "Este UUID no contiene datos personales y nunca se comparte con fines publicitarios. También te permite solicitar la eliminación de tu copia sincronizada."
       premium:
         title: "7. Suscripción Premium y Compras In-App"
         features:
@@ -1335,11 +1395,11 @@ es:
       title: "Resumen rápido"
       items:
         - "Uso personal y legal únicamente"
-        - "Tus datos te pertenecen y permanecen en tu dispositivo"
+        - "Tus datos siguen accesibles en tu dispositivo y se sincroniza una copia mínima mediante Firebase"
         - "Versión gratuita: 3 validaciones de libros con metadatos por día"
         - "Versión premium: validaciones y altas ilimitadas"
         - "Compras gestionadas por Apple/Google; reembolsos a través de ellos"
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
-        - "Sin cuenta obligatoria, UUID anónimo para la versión premium"
-    lastUpdated: "Última actualización: 02/10/2025"
+        - "Sin cuenta obligatoria; un UUID anónimo gestiona el premium y la sincronización con Firebase"
+    lastUpdated: "Última actualización: 10/10/2025"
     backToHome: "Volver al inicio"

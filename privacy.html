@@ -17,29 +17,47 @@ permalink: /privacy.html
             <div class="privacy-section-content">
                 <section class="privacy-block">
                     <h2 data-i18n="privacyPage.intro.title">Introduction</h2>
-                    <p data-i18n="privacyPage.intro.content">Bienvenue dans la politique de confidentialité de Book Nova. Nous accordons une grande importance à la protection de votre vie privée. L'application fonctionne principalement hors ligne avec un stockage 100 % local.</p>
+                    <p data-i18n="privacyPage.intro.content">Bienvenue dans la politique de confidentialité de Book Nova. Nous accordons une grande importance à la protection de votre vie privée. L'application conserve la majorité de vos données sur votre appareil et synchronise chaque semaine une copie minimale via Firebase (Google Cloud) pour proposer des classements communautaires.</p>
                 </section>
 
                 <section class="privacy-block">
                     <h2 data-i18n="privacyPage.dataLocal.title">Données stockées localement sur votre appareil</h2>
-                    <p data-i18n="privacyPage.dataLocal.intro">Toutes les données suivantes sont conservées exclusivement sur votre appareil :</p>
+                    <p data-i18n="privacyPage.dataLocal.intro">Les informations suivantes restent accessibles hors ligne sur votre appareil :</p>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.dataLocal.items.0">Informations de bibliothèque : titres, auteurs, nombre de pages, images de couverture, descriptions et progression de lecture</li>
+                        <li data-i18n="privacyPage.dataLocal.items.0">Bibliothèque personnelle : titres, auteurs, nombre de pages, images de couverture, descriptions et progression de lecture (une copie des titres, auteurs, ISBN et couvertures est synchronisée pour les classements hebdomadaires).</li>
                         <li data-i18n="privacyPage.dataLocal.items.1">Paramètres personnels : taille, unité d'affichage (cm/m), système métrique (métrique/impérial), avatar, langues de lecture préférées, genres favoris, préférence pour les livres audio</li>
                         <li data-i18n="privacyPage.dataLocal.items.2">Défis et badges : défi sélectionné (solaire/galaxie/univers), badges débloqués et progression</li>
                         <li data-i18n="privacyPage.dataLocal.items.3">Prêts de livres : livres prêtés ou empruntés, avec dates et contacts</li>
                         <li data-i18n="privacyPage.dataLocal.items.4">Préférences d'interface : langue de l'application (FR/EN/ES), thème (clair/sombre), type de vue de bibliothèque</li>
                         <li data-i18n="privacyPage.dataLocal.items.5">Identifiant d'appareil : UUID généré aléatoirement et stocké localement</li>
                     </ul>
-                    <p class="privacy-note" data-i18n="privacyPage.dataLocal.note">Aucune donnée d'identification personnelle n'est collectée sans votre consentement explicite.</p>
+                    <p class="privacy-note" data-i18n="privacyPage.dataLocal.note">Les données synchronisées n'incluent aucune information personnelle d'identification (nom, adresse e-mail ou contenu de notes libres).</p>
                 </section>
 
                 <section class="privacy-block">
                     <h2 data-i18n="privacyPage.usage.title">Stockage et traitement</h2>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.usage.items.0">100 % local : données enregistrées dans AsyncStorage et SecureStore (pour votre taille et l'UUID)</li>
-                        <li data-i18n="privacyPage.usage.items.1">Pas de serveur distant : aucune donnée n'est envoyée à Book Nova ni à des tiers</li>
+                        <li data-i18n="privacyPage.usage.items.0">Stockage local : données enregistrées dans AsyncStorage et SecureStore pour garantir l'accès hors ligne.</li>
+                        <li data-i18n="privacyPage.usage.items.1">Synchronisation sécurisée : une fois par semaine (ou lors d'une action manuelle), l'application envoie à Firebase les livres, catégories, notes (étoiles) et l'identifiant anonyme nécessaires aux classements.</li>
+                        <li data-i18n="privacyPage.usage.items.2">Agrégation : les statistiques produites dans Firebase sont anonymisées avant d'alimenter les classements visibles dans l'application.</li>
                     </ul>
+                </section>
+
+                <section class="privacy-block">
+                    <h2 data-i18n="privacyPage.sync.title">Synchronisation Firebase</h2>
+                    <p data-i18n="privacyPage.sync.intro">Les données transférées vers Firebase sont limitées aux éléments suivants :</p>
+                    <ul class="privacy-list">
+                        <li data-i18n="privacyPage.sync.items.0">Identifiant anonyme généré localement (UUID)</li>
+                        <li data-i18n="privacyPage.sync.items.1">Livres de votre bibliothèque : titre, auteur, ISBN, image de couverture, statut de lecture</li>
+                        <li data-i18n="privacyPage.sync.items.2">Catégories utilisées, tags personnalisés et notes attribuées (étoiles)</li>
+                        <li data-i18n="privacyPage.sync.items.3">Horodatage de synchronisation et compteurs de consultation agrégés</li>
+                    </ul>
+                    <h3 data-i18n="privacyPage.sync.purposesTitle">Finalités du traitement :</h3>
+                    <ul class="privacy-list">
+                        <li data-i18n="privacyPage.sync.purposes.0">Créer chaque semaine les classements des 50 livres les plus lus, populaires et les mieux notés</li>
+                        <li data-i18n="privacyPage.sync.purposes.1">Préparer la synchronisation multi-appareils et les recommandations collectives</li>
+                    </ul>
+                    <p class="privacy-note" data-i18n="privacyPage.sync.note">Les listes générées sont publiées sous forme agrégée et ne permettent pas d'identifier votre bibliothèque personnelle.</p>
                 </section>
 
                 <section class="privacy-block">
@@ -80,9 +98,10 @@ permalink: /privacy.html
                     <h2 data-i18n="privacyPage.sharing.title">Partage des données</h2>
                     <p data-i18n="privacyPage.sharing.intro">Nous ne vendons, n'échangeons ni ne transférons vos données, sauf :</p>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.sharing.items.0">ISBNdb : pour récupérer les métadonnées publiques de livres</li>
-                        <li data-i18n="privacyPage.sharing.items.1">RevenueCat : pour gérer la version premium</li>
-                        <li data-i18n="privacyPage.sharing.items.2">Obligations légales : si la loi l'exige</li>
+                        <li data-i18n="privacyPage.sharing.items.0">Firebase (Google Cloud) : hébergement de la synchronisation hebdomadaire de votre bibliothèque</li>
+                        <li data-i18n="privacyPage.sharing.items.1">ISBNdb : récupération des métadonnées publiques des livres lors de vos recherches</li>
+                        <li data-i18n="privacyPage.sharing.items.2">RevenueCat : gestion de la version premium</li>
+                        <li data-i18n="privacyPage.sharing.items.3">Obligations légales : si la loi l'exige</li>
                     </ul>
                 </section>
 
@@ -90,8 +109,9 @@ permalink: /privacy.html
                     <h2 data-i18n="privacyPage.security.title">Sécurité et stockage</h2>
                     <ul class="privacy-list">
                         <li data-i18n="privacyPage.security.items.0">SecureStore protège votre taille et l'UUID avec le chiffrement natif iOS/Android</li>
-                        <li data-i18n="privacyPage.security.items.1">Vos livres, prêts et paramètres restent uniquement sur votre appareil</li>
-                        <li data-i18n="privacyPage.security.items.2">Les sauvegardes iCloud ou Google Drive s'appliquent selon vos réglages système</li>
+                        <li data-i18n="privacyPage.security.items.1">Firebase applique le chiffrement en transit et au repos pour les données synchronisées (Google Cloud)</li>
+                        <li data-i18n="privacyPage.security.items.2">Vos livres, prêts et paramètres restent consultables hors ligne sur votre appareil</li>
+                        <li data-i18n="privacyPage.security.items.3">Les sauvegardes iCloud ou Google Drive s'appliquent selon vos réglages système</li>
                     </ul>
                     <p class="privacy-note" data-i18n="privacyPage.security.warning">Important : supprimer l'application sans sauvegarde système efface définitivement vos données.</p>
                 </section>
@@ -103,6 +123,7 @@ permalink: /privacy.html
                         <li data-i18n="privacyPage.rights.items.0">Consulter vos données directement dans l'application</li>
                         <li data-i18n="privacyPage.rights.items.1">Modifier vos informations par l'interface</li>
                         <li data-i18n="privacyPage.rights.items.2">Retirer votre consentement aux notifications dans les réglages de votre appareil</li>
+                        <li data-i18n="privacyPage.rights.items.3">Demander la suppression de votre copie synchronisée en écrivant à book-nova@outlook.fr (en indiquant votre UUID)</li>
                     </ul>
                 </section>
 
@@ -111,7 +132,8 @@ permalink: /privacy.html
                     <ul class="privacy-list">
                         <li data-i18n="privacyPage.permissions.items.0">Caméra : scanner les codes-barres ISBN</li>
                         <li data-i18n="privacyPage.permissions.items.1">Notifications : programmer des rappels locaux</li>
-                        <li data-i18n="privacyPage.permissions.items.2">Stockage : enregistrer vos livres et paramètres</li>
+                        <li data-i18n="privacyPage.permissions.items.2">Stockage local : enregistrer vos livres et paramètres</li>
+                        <li data-i18n="privacyPage.permissions.items.3">Accès réseau : synchroniser votre bibliothèque et vos notes via Firebase</li>
                     </ul>
                     <p class="privacy-note" data-i18n="privacyPage.permissions.note">Ces permissions ne servent jamais à collecter des données à votre insu.</p>
                 </section>
@@ -130,17 +152,17 @@ permalink: /privacy.html
                 <section class="privacy-block">
                     <h2 data-i18n="privacyPage.summary.title">Résumé simplifié</h2>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.summary.items.0">Vos données restent sur votre appareil</li>
-                        <li data-i18n="privacyPage.summary.items.1">Aucune collecte d'informations personnelles</li>
-                        <li data-i18n="privacyPage.summary.items.2">ISBNdb uniquement pour les métadonnées publiques</li>
-                        <li data-i18n="privacyPage.summary.items.3">RevenueCat gère la version premium (données anonymisées)</li>
-                        <li data-i18n="privacyPage.summary.items.4">Notifications 100 % locales</li>
-                        <li data-i18n="privacyPage.summary.items.5">Vous gardez le contrôle total sur vos données</li>
+                        <li data-i18n="privacyPage.summary.items.0">Vos données restent consultables hors ligne et une copie minimale est synchronisée via Firebase</li>
+                        <li data-i18n="privacyPage.summary.items.1">Aucune donnée d'identification personnelle n'est collectée</li>
+                        <li data-i18n="privacyPage.summary.items.2">Firebase est utilisé pour produire des classements communautaires anonymisés</li>
+                        <li data-i18n="privacyPage.summary.items.3">ISBNdb uniquement pour les métadonnées publiques</li>
+                        <li data-i18n="privacyPage.summary.items.4">RevenueCat gère la version premium (données anonymisées)</li>
+                        <li data-i18n="privacyPage.summary.items.5">Vous pouvez demander la suppression de la copie synchronisée à tout moment</li>
                     </ul>
                 </section>
             </div>
 
-            <p class="privacy-meta" data-i18n="privacyPage.lastUpdated">Dernière mise à jour : 02/10/2025</p>
+            <p class="privacy-meta" data-i18n="privacyPage.lastUpdated">Dernière mise à jour : 10/10/2025</p>
 
             <div class="privacy-back-link">
                 <a href="{{ '/' | relative_url }}" data-i18n="privacyPage.backToHome">Retour à l'accueil</a>
