@@ -23,8 +23,8 @@ email: book-nova@outlook.fr
 description: >- # this means to ignore newlines until "baseurl:"
   Votre compagnon de lecture intelligent pour découvrir, organiser et
   partager vos livres préférés. Disponible sur iOS et Android.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://anarres4.github.io/book-nova" # Update with the production domain
+baseurl: "/book-nova" # the subpath of your site, e.g. /blog
+url: "https://anarres4.github.io" # Update with the production domain
 
 # Branding
 hero_image: "/assets/images/hero-logo.png"
