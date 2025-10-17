@@ -143,7 +143,7 @@ fr:
       intro: "Les informations suivantes restent accessibles hors ligne sur votre appareil :"
       items:
         - "Bibliothèque personnelle : titres, auteurs, nombre de pages, images de couverture, descriptions et progression de lecture (une copie des titres, auteurs, ISBN et couvertures est synchronisée pour les recommandations anonymes)."
-        - "Paramètres personnels : taille, unité d'affichage (cm/m), système métrique (métrique/impérial), avatar, langues de lecture préférées, genres favoris, préférence pour les livres audio"
+        - "Paramètres personnels : taille (optionnelle, utilisée uniquement pour la visualisation ludique de votre pile de livres, jamais synchronisée), unité d'affichage (cm/m), système métrique (métrique/impérial), avatar, langues de lecture préférées, genres favoris, préférence pour les livres audio"
         - "Défis et badges : défi sélectionné (solaire/galaxie/univers), badges débloqués et progression"
         - "Prêts de livres : livres prêtés ou empruntés, avec dates et contacts"
         - "Préférences d'interface : langue de l'application (FR/EN/ES), thème (clair/sombre), type de vue de bibliothèque"
@@ -240,7 +240,7 @@ fr:
         - "ISBNdb uniquement pour les métadonnées publiques"
         - "RevenueCat gère la version premium (données anonymisées)"
         - "Vous pouvez demander la suppression de la copie synchronisée à tout moment ou désactiver la contribution aux statistiques dans l'application"
-    lastUpdated: "Dernière mise à jour : 10/10/2025"
+    lastUpdated: "Dernière mise à jour : 17/10/2025"
     backToHome: "Retour à l'accueil"
   termsPage:
     title: "Conditions d'Utilisation"
@@ -405,6 +405,12 @@ fr:
         title: "13. Contact"
         body: "Pour toute question concernant ces Conditions d'Utilisation, veuillez nous contacter à :"
         email: "book-nova@outlook.fr"
+      jurisdiction:
+        title: "14. Loi Applicable et Juridiction"
+        body: "Les présentes Conditions d'Utilisation sont régies par le droit français. Tout litige relatif à leur interprétation ou leur exécution relève de la compétence exclusive des tribunaux français."
+      generalProvisions:
+        title: "15. Dispositions Générales"
+        body: "Si une disposition de ces Conditions est jugée invalide ou inapplicable, les autres dispositions resteront pleinement en vigueur."
     summary:
       title: "Résumé Simplifié"
       items:
@@ -415,7 +421,7 @@ fr:
         - "Achats via Apple/Google, remboursements via ces plateformes"
         - "Application fournie 'en l'état', responsabilité limitée"
         - "Pas de compte requis, UUID anonyme pour le premium et la synchronisation Firebase dédiée aux recommandations"
-    lastUpdated: "Dernière mise à jour : 10/10/2025"
+    lastUpdated: "Dernière mise à jour : 17/10/2025"
     backToHome: "Retour à l'accueil"
   supportPage:
     title: "Support"
@@ -462,7 +468,7 @@ fr:
     contact:
       title: "Contact"
       content: "Vous avez des questions, suggestions ou vous souhaitez simplement nous dire bonjour ? N'hésitez pas à nous contacter à"
-    lastUpdated: "Dernière mise à jour : 10 octobre 2025"
+    lastUpdated: "Dernière mise à jour : 17 octobre 2025"
     backToHome: "Retour à l'accueil"
 
 en:
@@ -610,7 +616,7 @@ en:
       intro: "The following information stays available offline on your device:"
       items:
         - "Personal library: titles, authors, page counts, cover images, descriptions, and reading progress (a copy of titles, authors, ISBNs, and covers is synced for anonymous recommendations)."
-        - "Personal settings: height (for stack calculations), display unit (cm/m), measurement system (metric/imperial), avatar, preferred reading languages, favourite genres, audiobook preference"
+        - "Personal settings: height (optional, used only for playful stack visualization, never synced), display unit (cm/m), measurement system (metric/imperial), avatar, preferred reading languages, favourite genres, audiobook preference"
         - "Challenges & badges: selected challenge (solar/galaxy/universe), unlocked badges, and completion status"
         - "Book loans: books you lend or borrow, including dates and contacts"
         - "Interface preferences: app language (FR/EN/ES), theme (light/dark), library view type"
@@ -707,7 +713,7 @@ en:
         - "ISBNdb is used only for public metadata"
         - "RevenueCat handles premium (anonymised data)"
         - "You can request deletion of the synced copy or disable contribution in settings at any time"
-    lastUpdated: "Last updated: 10/10/2025"
+    lastUpdated: "Last updated: 17/10/2025"
     backToHome: "Back to home"
   termsPage:
     title: "Terms of Use"
@@ -872,6 +878,12 @@ en:
         title: "13. Contact"
         body: "If you have any questions about these Terms of Use, contact us at:"
         email: "book-nova@outlook.fr"
+      jurisdiction:
+        title: "14. Applicable Law and Jurisdiction"
+        body: "These Terms of Use are governed by French law. Any dispute relating to their interpretation or execution falls under the exclusive jurisdiction of French courts."
+      generalProvisions:
+        title: "15. General Provisions"
+        body: "If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect."
     summary:
       title: "Quick Summary"
       items:
@@ -882,7 +894,7 @@ en:
         - "Purchases handled by Apple/Google; refunds handled by them"
         - "App provided 'as is' with limited liability"
         - "No account required; an anonymous UUID powers premium and the Firebase recommendation sync"
-    lastUpdated: "Last updated: 10/10/2025"
+    lastUpdated: "Last updated: 17/10/2025"
     backToHome: "Back to home"
   supportPage:
     title: "Support"
@@ -929,7 +941,7 @@ en:
     contact:
       title: "Contact"
       content: "Have questions, suggestions, or just want to say hello? Feel free to contact us at"
-    lastUpdated: "Last updated: 10 October 2025"
+    lastUpdated: "Last updated: 17 October 2025"
     backToHome: "Back to home"
 es:
   nav:
@@ -1076,7 +1088,7 @@ es:
       intro: "La siguiente información permanece disponible sin conexión en tu dispositivo:"
       items:
         - "Biblioteca personal: títulos, autores, número de páginas, portadas, descripciones y progreso de lectura (se sincroniza una copia de los títulos, autores e ISBN para recomendaciones anónimas)."
-        - "Ajustes personales: altura (para calcular la pila), unidad de medida (cm/m), sistema (métrico/imperial), avatar, idiomas de lectura preferidos, géneros favoritos, preferencia por audiolibros"
+        - "Ajustes personales: altura (opcional, usada solo para visualización lúdica de tu pila, nunca sincronizada), unidad de medida (cm/m), sistema (métrico/imperial), avatar, idiomas de lectura preferidos, géneros favoritos, preferencia por audiolibros"
         - "Desafíos e insignias: desafío elegido (solar/galaxia/universo), insignias desbloqueadas y progreso"
         - "Préstamos de libros: libros prestados o recibidos, con fechas y contactos"
         - "Preferencias de interfaz: idioma de la app (FR/EN/ES), tema (claro/oscuro), tipo de vista de biblioteca"
@@ -1173,7 +1185,7 @@ es:
         - "ISBNdb solo para metadatos públicos"
         - "RevenueCat gestiona la versión premium (datos anonimizados)"
         - "Puedes solicitar la eliminación de la copia sincronizada o desactivar la contribución en los ajustes cuando quieras"
-    lastUpdated: "Última actualización: 10/10/2025"
+    lastUpdated: "Última actualización: 17/10/2025"
     backToHome: "Volver al inicio"
   supportPage:
     title: "Soporte"
@@ -1220,7 +1232,7 @@ es:
     contact:
       title: "Contacto"
       content: "¿Tienes preguntas, sugerencias o simplemente quieres saludarnos? No dudes en contactarnos en"
-    lastUpdated: "Última actualización: 10 de octubre de 2025"
+    lastUpdated: "Última actualización: 17 de octubre de 2025"
     backToHome: "Volver al inicio"
   termsPage:
     title: "Términos de Uso"
@@ -1385,6 +1397,12 @@ es:
         title: "13. Contacto"
         body: "Si tienes preguntas sobre estas Condiciones de Uso, contáctanos en:"
         email: "book-nova@outlook.fr"
+      jurisdiction:
+        title: "14. Ley Aplicable y Jurisdicción"
+        body: "Estas Condiciones de Uso se rigen por el derecho francés. Cualquier controversia relacionada con su interpretación o ejecución será competencia exclusiva de los tribunales franceses."
+      generalProvisions:
+        title: "15. Disposiciones Generales"
+        body: "Si alguna disposición de estas Condiciones se considera inválida o inaplicable, las demás disposiciones seguirán en pleno vigor y efecto."
     summary:
       title: "Resumen rápido"
       items:
@@ -1395,5 +1413,5 @@ es:
         - "Compras gestionadas por Apple/Google; reembolsos a través de ellos"
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
         - "Sin cuenta obligatoria; un UUID anónimo gestiona el premium y la sincronización con Firebase dedicada a recomendaciones"
-    lastUpdated: "Última actualización: 10/10/2025"
+    lastUpdated: "Última actualización: 17/10/2025"
     backToHome: "Volver al inicio"
