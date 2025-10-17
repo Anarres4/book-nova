@@ -61,7 +61,7 @@ fr:
       Oui, Book Nova est disponible gratuitement avec certaines limitations.
 
       📱 VERSION GRATUITE :
-      - Jusqu'à 5 livres ajoutés par jour
+      - Jusqu'à 8 livres ajoutés par jour
       - Jusqu'à 3 prêts/emprunts simultanés
       - Statistiques de lecture de base (par mois/par an)
       - Défi Solar System accessible
@@ -174,7 +174,7 @@ fr:
         - "Effectuez une recherche par titre ou auteur"
         - "Validez manuellement un ISBN"
       data: "Données envoyées à ISBNdb : ISBN, titre recherché, auteur recherché et langue de recherche."
-      limits: "Utilisateurs gratuits : jusqu'à 5 livres enrichis par jour. Utilisateurs premium : aucune limite."
+      limits: "Utilisateurs gratuits : jusqu'à 8 livres enrichis par jour. Utilisateurs premium : aucune limite."
       note: "ISBNdb ne reçoit aucune information personnelle vous concernant."
     notifications:
       title: "Notifications locales"
@@ -276,7 +276,7 @@ fr:
             - "Violer des droits de propriété intellectuelle (piratage, partage illégal de contenus protégés)"
             - "Automatiser des requêtes massives vers l'API ISBNdb (scraping, abus de l'API)"
             - "Modifier, décompiler, désassembler ou créer des œuvres dérivées de l'Application"
-            - "Contourner les limitations de la version gratuite (5 validations de livres par jour avec métadonnées)"
+            - "Contourner les limitations de la version gratuite (8 validations de livres par jour avec métadonnées)"
             - "Utiliser des outils tiers pour débloquer artificiellement des fonctionnalités premium"
             - "Endommager, désactiver ou surcharger l'Application ou l'API ISBNdb"
       userData:
@@ -306,7 +306,7 @@ fr:
             - "L'exactitude des données fournies par ISBNdb"
         limits:
           title: "5.2 Limitations de la Version Gratuite"
-          body: "Les utilisateurs de la version gratuite sont limités à 5 validations de livres enrichies de métadonnées par jour. Les utilisateurs premium ne sont pas soumis à cette limite."
+          body: "Les utilisateurs de la version gratuite sont limités à 8 validations de livres enrichies de métadonnées par jour. Les utilisateurs premium ne sont pas soumis à cette limite."
       accounts:
         title: "6. Comptes et Authentification"
         noAccount:
@@ -410,7 +410,7 @@ fr:
       items:
         - "Usage personnel et légal uniquement"
         - "Vos données restent consultables sur votre appareil et une copie minimale est synchronisée via Firebase pour les recommandations"
-        - "Version gratuite : 5 validations de livres avec métadonnées par jour"
+        - "Version gratuite : 8 validations de livres avec métadonnées par jour"
         - "Version premium : validations et ajouts illimités"
         - "Achats via Apple/Google, remboursements via ces plateformes"
         - "Application fournie 'en l'état', responsabilité limitée"
@@ -528,7 +528,7 @@ en:
       Yes, Book Nova is available for free with a few limitations.
 
       📱 FREE VERSION:
-      - Up to 5 books added per day
+      - Up to 8 books added per day
       - Up to 3 simultaneous loans/borrows
       - Basic reading stats (monthly/yearly)
       - Solar System challenge unlocked
@@ -641,7 +641,7 @@ en:
         - "Search by title or author"
         - "Enter an ISBN manually"
       data: "Data sent to ISBNdb: ISBN, searched title, searched author, and search language."
-      limits: "Free users: up to 5 enriched books per day. Premium users: no limit."
+      limits: "Free users: up to 8 enriched books per day. Premium users: no limit."
       note: "ISBNdb never receives personal information about you."
     notifications:
       title: "Local notifications"
@@ -743,7 +743,7 @@ en:
             - "Violate intellectual property rights (piracy or illegal sharing of protected content)"
             - "Automate massive requests to the ISBNdb API (scraping or abusing the API)"
             - "Modify, decompile, disassemble, or create derivative works of the App"
-            - "Bypass free-plan limitations (5 metadata validations per day)"
+            - "Bypass free-plan limitations (8 metadata validations per day)"
             - "Use third-party tools to unlock premium features artificially"
             - "Damage, disable, or overload the App or the ISBNdb API"
       userData:
@@ -773,7 +773,7 @@ en:
             - "The accuracy of the data provided by ISBNdb"
         limits:
           title: "5.2 Free Plan Limits"
-          body: "Free users are limited to 5 metadata-enriched validations per day. Premium subscribers are not subject to this limit."
+          body: "Free users are limited to 8 metadata-enriched validations per day. Premium subscribers are not subject to this limit."
       accounts:
         title: "6. Accounts and Authentication"
         noAccount:
@@ -877,7 +877,7 @@ en:
       items:
         - "Personal and lawful use only"
         - "Your data stays accessible on your device and a minimal copy syncs through Firebase for recommendations"
-        - "Free plan: 5 metadata validations per day"
+        - "Free plan: 8 metadata validations per day"
         - "Premium plan: unlimited validations and additions"
         - "Purchases handled by Apple/Google; refunds handled by them"
         - "App provided 'as is' with limited liability"
@@ -994,7 +994,7 @@ es:
       Sí, Book Nova está disponible de forma gratuita con algunas limitaciones.
 
       📱 VERSIÓN GRATUITA:
-      - Hasta 5 libros añadidos por día
+      - Hasta 8 libros añadidos por día
       - Hasta 3 préstamos simultáneos
       - Estadísticas básicas de lectura (por mes/año)
       - Desafío Solar System disponible
@@ -1107,7 +1107,7 @@ es:
         - "Buscas por título o autor"
         - "Introduces un ISBN manualmente"
       data: "Datos enviados a ISBNdb: ISBN, título buscado, autor buscado e idioma de búsqueda."
-      limits: "Usuarios gratuitos: hasta 5 libros enriquecidos al día. Usuarios premium: sin límite."
+      limits: "Usuarios gratuitos: hasta 8 libros enriquecidos al día. Usuarios premium: sin límite."
       note: "ISBNdb no recibe información personal sobre ti."
     notifications:
       title: "Notificaciones locales"
@@ -1256,7 +1256,7 @@ es:
             - "Infringir derechos de propiedad intelectual (piratería o intercambio ilegal de contenido protegido)"
             - "Automatizar solicitudes masivas a la API de ISBNdb (scraping o abuso de la API)"
             - "Modificar, descompilar, desensamblar o crear obras derivadas de la Aplicación"
-            - "Eludir las limitaciones de la versión gratuita (5 validaciones de libros con metadatos por día)"
+            - "Eludir las limitaciones de la versión gratuita (8 validaciones de libros con metadatos por día)"
             - "Usar herramientas de terceros para desbloquear funciones premium de forma artificial"
             - "Dañar, deshabilitar o sobrecargar la Aplicación o la API de ISBNdb"
       userData:
@@ -1286,7 +1286,7 @@ es:
             - "La exactitud de los datos proporcionados por ISBNdb"
         limits:
           title: "5.2 Límites de la Versión Gratuita"
-          body: "Los usuarios de la versión gratuita están limitados a 5 validaciones de libros con metadatos por día. Los usuarios premium no tienen esta limitación."
+          body: "Los usuarios de la versión gratuita están limitados a 8 validaciones de libros con metadatos por día. Los usuarios premium no tienen esta limitación."
       accounts:
         title: "6. Cuentas y Autenticación"
         noAccount:
@@ -1390,7 +1390,7 @@ es:
       items:
         - "Uso personal y legal únicamente"
         - "Tus datos siguen accesibles en tu dispositivo y se sincroniza una copia mínima mediante Firebase solo para recomendaciones"
-        - "Versión gratuita: 5 validaciones de libros con metadatos por día"
+        - "Versión gratuita: 8 validaciones de libros con metadatos por día"
         - "Versión premium: validaciones y altas ilimitadas"
         - "Compras gestionadas por Apple/Google; reembolsos a través de ellos"
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
