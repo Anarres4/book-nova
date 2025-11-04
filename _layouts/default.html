@@ -51,7 +51,7 @@
     {% assign description_text = page.seo_description | default: page.description | default: site.description %}
     {% assign sanitized_description = description_text | strip_html | strip %}
     {% assign app_logo = site.logo | default: site.hero_image %}
-    {% assign offer_url = page.ios_url | default: site.app.ios_beta_url | default: canonical_url %}
+    {% assign offer_url = page.ios_url | default: site.app.ios_url | default: canonical_url %}
     {% assign os_string = site.app.operating_systems | join: ', ' %}
     {% capture app_json %}
 {
@@ -298,12 +298,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="mb-3" data-i18n="storeModal.betaMessage">Vous pouvez déjà essayer BookNova sur iOS via TestFlight. La version finale arrivera bientôt sur l'App Store.</p>
-                    <a href="https://testflight.apple.com/join/MsKQAWfj" class="btn btn-primary w-100" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-box-arrow-up-right me-2"></i>
-                        <span data-i18n="storeModal.betaButton">Rejoindre la bêta TestFlight</span>
+                    <p class="mb-3" data-i18n="storeModal.appMessage">Book Nova est maintenant disponible sur l'App Store !</p>
+                    <a href="{{ site.app.ios_url }}" class="btn btn-primary w-100" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-apple me-2"></i>
+                        <span data-i18n="storeModal.appButton">Télécharger sur l'App Store</span>
                     </a>
-                    <p class="mt-3 mb-0 text-muted" data-i18n="storeModal.betaNote">Cette version est encore en bêta : vos retours sont précieux.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="storeModal.close">Fermer</button>
@@ -495,6 +494,22 @@
                         elem.textContent = value;
                     }
                 }
+            });
+
+            // Update App Store links based on language
+            const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
+            appStoreLinks.forEach(link => {
+                const appId = 'id6752571289';
+                let langCode = currentLang;
+                // Map language codes to App Store regions
+                if (currentLang === 'en') {
+                    langCode = 'us';
+                } else if (currentLang === 'es') {
+                    langCode = 'es';
+                } else {
+                    langCode = 'fr';
+                }
+                link.href = `https://apps.apple.com/${langCode}/app/book-nova/${appId}`;
             });
 
             // Update screenshots based on language
