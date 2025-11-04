@@ -64,15 +64,15 @@ fr:
       - Jusqu'à 8 livres ajoutés par jour
       - Maximum 100 livres TERMINÉS au total
       - Jusqu'à 3 prêts/emprunts simultanés
-      - Statistiques de lecture de base (par mois/par an)
+      - Calendrier de lecture
       - Accès aux badges de base
 
       💎 VERSION PREMIUM :
       - Ajout illimité de livres par jour
       - Livres terminés illimités
       - Prêts et emprunts illimités
+      - Statistiques de lecture de base (par mois/par an)
       - Statistiques détaillées avancées
-      - Calendrier de lecture
       - Accès à tous les badges et médailles premium
 
       Toutes les fonctionnalités principales restent accessibles gratuitement !
@@ -329,9 +329,9 @@ fr:
           items:
             - "Validations illimitées avec métadonnées via ISBNdb"
             - "Ajout de livres sans limite quotidienne"
-            - "Exports avancés (statistiques)"
+            - "Statistiques de lecture de base (par mois/par an)"
+            - "Statistiques détaillées avancées"
             - "Accès à des challenges et médailles exclusifs."
-            - "Accès au calendrier de lecture détaillé avec ton historique complet."
         processing:
           title: "7.2 Traitement des Achats"
           body: "Les achats in-app sont traités par :"
@@ -538,15 +538,15 @@ en:
       - Up to 8 books added per day
       - Maximum 100 FINISHED books in total
       - Up to 3 simultaneous loans/borrows
-      - Basic reading stats (monthly/yearly)
+      - Reading calendar
       - Access to core badges
 
       💎 PREMIUM VERSION:
       - Unlimited book additions per day
       - Unlimited finished books
       - Unlimited loans and borrows
+      - Basic reading stats (monthly/yearly)
       - Advanced detailed statistics
-      - Reading calendar
       - Access to all premium badges and medals
 
       All core features remain free to use!
@@ -803,9 +803,9 @@ en:
           items:
             - "Unlimited metadata validations via ISBNdb"
             - "Unlimited book additions each day"
-            - "Advanced exports (statistics)"
+            - "Basic reading stats (monthly/yearly)"
+            - "Advanced detailed statistics"
             - "Access to exclusive challenges and badges."
-            - "Access to the detailed reading calendar with your full history."
         processing:
           title: "7.2 Purchase Processing"
           body: "In-app purchases are processed by:"
@@ -1011,15 +1011,15 @@ es:
       - Hasta 8 libros añadidos por día
       - Máximo 100 libros TERMINADOS en total
       - Hasta 3 préstamos simultáneos
-      - Estadísticas básicas de lectura (por mes/año)
+      - Calendario de lectura
       - Acceso a insignias básicas
 
       💎 VERSIÓN PREMIUM:
       - Añade libros sin límite cada día
       - Libros terminados ilimitados
       - Préstamos ilimitados (prestar y recibir)
+      - Estadísticas básicas de lectura (por mes/año)
       - Estadísticas detalladas avanzadas
-      - Calendario de lectura
       - Acceso a todas las insignias y medallas premium
 
       ¡Todas las funciones principales siguen siendo gratuitas!
@@ -1323,9 +1323,9 @@ es:
           items:
             - "Validaciones ilimitadas con metadatos a través de ISBNdb"
             - "Añadir libros sin límite diario"
-            - "Exportaciones avanzadas (estadísticas)"
+            - "Estadísticas básicas de lectura (por mes/año)"
+            - "Estadísticas detalladas avanzadas"
             - "Acceso a desafíos e insignias exclusivos."
-            - "Acceso al calendario de lectura detallado con tu historial completo."
         processing:
           title: "7.2 Procesamiento de Compras"
           body: "Las compras in-app se procesan por:"
