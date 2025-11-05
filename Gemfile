@@ -22,6 +22,10 @@ end
 
 # Fix pour le warning logger dans Ruby 3.5+
 gem "logger"
+gem "bigdecimal"
+
+# Fix pour l'erreur sass-embedded avec Ruby 3.1
+gem "sass-embedded", "~> 1.69.5"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
