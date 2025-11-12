@@ -130,6 +130,50 @@ fr:
 
       Pour tout le reste (bibliothèque, stats, badges, prêts), Book Nova fonctionne hors ligne.
       Astuce : ajoutez un livre manuellement hors ligne si vous connaissez ses informations (titre, pages, etc.).
+    q8: "Comment annuler ma période d'essai ?"
+    a8: |-
+      📱 Sur Android :
+      1. Ouvrez l'application Google Play Store
+      2. Appuyez sur votre photo de profil en haut à droite
+      3. Sélectionnez Paiements et abonnements > Abonnements
+      4. Trouvez BookNova dans la liste
+      5. Appuyez sur Annuler l'abonnement
+      6. Suivez les instructions pour confirmer
+
+      Note : Vous conservez l'accès aux fonctionnalités premium jusqu'à la fin de votre période d'essai.
+
+      🍎 Sur iOS (iPhone/iPad) :
+      1. Ouvrez l'application Réglages de votre appareil
+      2. Appuyez sur votre nom en haut de l'écran
+      3. Sélectionnez Abonnements
+      4. Trouvez BookNova dans la liste
+      5. Appuyez sur Annuler l'abonnement ou Annuler l'essai gratuit
+      6. Confirmez l'annulation
+
+      Note : Vous conservez l'accès aux fonctionnalités premium jusqu'à la fin de votre période d'essai.
+
+      ⚠️ Important : L'annulation doit être effectuée au moins 24 heures avant la fin de la période d'essai pour éviter d'être facturé.
+    q9: "Comment me désabonner de la version Premium ?"
+    a9: |-
+      Pour annuler votre abonnement Premium actif, suivez les mêmes étapes que pour annuler la période d'essai :
+
+      📱 Sur Android :
+      1. Ouvrez l'application Google Play Store
+      2. Appuyez sur votre photo de profil en haut à droite
+      3. Sélectionnez Paiements et abonnements > Abonnements
+      4. Trouvez BookNova dans la liste
+      5. Appuyez sur Annuler l'abonnement
+      6. Confirmez l'annulation
+
+      🍎 Sur iOS (iPhone/iPad) :
+      1. Ouvrez l'application Réglages de votre appareil
+      2. Appuyez sur votre nom en haut de l'écran
+      3. Sélectionnez Abonnements
+      4. Trouvez BookNova dans la liste
+      5. Appuyez sur Annuler l'abonnement
+      6. Confirmez l'annulation
+
+      💡 Bon à savoir : Vous conserverez l'accès aux fonctionnalités premium jusqu'à la fin de la période de facturation en cours. Aucun remboursement ne sera effectué pour la période déjà payée.
   notFound:
     title: "Page introuvable"
     message: "Nous n'avons pas pu trouver la page que vous cherchez."
@@ -604,6 +648,50 @@ en:
 
       Everything else (library, stats, badges, loans) works offline in Book Nova.
       Tip: add a book manually while offline if you know its details (title, page count, etc.).
+    q8: "How do I cancel my trial period?"
+    a8: |-
+      📱 On Android:
+      1. Open the Google Play Store app
+      2. Tap your profile picture in the top right
+      3. Select Payments & subscriptions > Subscriptions
+      4. Find BookNova in the list
+      5. Tap Cancel subscription
+      6. Follow the instructions to confirm
+
+      Note: You will keep access to premium features until the end of your trial period.
+
+      🍎 On iOS (iPhone/iPad):
+      1. Open your device's Settings app
+      2. Tap your name at the top of the screen
+      3. Select Subscriptions
+      4. Find BookNova in the list
+      5. Tap Cancel Subscription or Cancel Free Trial
+      6. Confirm the cancellation
+
+      Note: You will keep access to premium features until the end of your trial period.
+
+      ⚠️ Important: Cancellation must be done at least 24 hours before the end of the trial period to avoid being charged.
+    q9: "How do I unsubscribe from Premium?"
+    a9: |-
+      To cancel your active Premium subscription, follow the same steps as canceling the trial period:
+
+      📱 On Android:
+      1. Open the Google Play Store app
+      2. Tap your profile picture in the top right
+      3. Select Payments & subscriptions > Subscriptions
+      4. Find BookNova in the list
+      5. Tap Cancel subscription
+      6. Confirm the cancellation
+
+      🍎 On iOS (iPhone/iPad):
+      1. Open your device's Settings app
+      2. Tap your name at the top of the screen
+      3. Select Subscriptions
+      4. Find BookNova in the list
+      5. Tap Cancel Subscription
+      6. Confirm the cancellation
+
+      💡 Good to know: You will retain access to premium features until the end of the current billing period. No refund will be issued for the period already paid.
   notFound:
     title: "Page not found"
     message: "We couldn't find the page you're looking for."
@@ -1077,6 +1165,50 @@ es:
 
       Para todo lo demás (biblioteca, estadísticas, insignias, préstamos), Book Nova funciona sin conexión.
       Consejo: añade un libro manualmente sin conexión si conoces sus datos (título, número de páginas, etc.).
+    q8: "¿Cómo cancelo mi período de prueba?"
+    a8: |-
+      📱 En Android:
+      1. Abre la aplicación Google Play Store
+      2. Toca tu foto de perfil en la parte superior derecha
+      3. Selecciona Pagos y suscripciones > Suscripciones
+      4. Encuentra BookNova en la lista
+      5. Toca Cancelar suscripción
+      6. Sigue las instrucciones para confirmar
+
+      Nota: Conservarás el acceso a las funciones premium hasta el final de tu período de prueba.
+
+      🍎 En iOS (iPhone/iPad):
+      1. Abre la aplicación Ajustes de tu dispositivo
+      2. Toca tu nombre en la parte superior de la pantalla
+      3. Selecciona Suscripciones
+      4. Encuentra BookNova en la lista
+      5. Toca Cancelar suscripción o Cancelar prueba gratuita
+      6. Confirma la cancelación
+
+      Nota: Conservarás el acceso a las funciones premium hasta el final de tu período de prueba.
+
+      ⚠️ Importante: La cancelación debe realizarse al menos 24 horas antes del final del período de prueba para evitar cargos.
+    q9: "¿Cómo me doy de baja de Premium?"
+    a9: |-
+      Para cancelar tu suscripción Premium activa, sigue los mismos pasos que para cancelar el período de prueba:
+
+      📱 En Android:
+      1. Abre la aplicación Google Play Store
+      2. Toca tu foto de perfil en la parte superior derecha
+      3. Selecciona Pagos y suscripciones > Suscripciones
+      4. Encuentra BookNova en la lista
+      5. Toca Cancelar suscripción
+      6. Confirma la cancelación
+
+      🍎 En iOS (iPhone/iPad):
+      1. Abre la aplicación Ajustes de tu dispositivo
+      2. Toca tu nombre en la parte superior de la pantalla
+      3. Selecciona Suscripciones
+      4. Encuentra BookNova en la lista
+      5. Toca Cancelar suscripción
+      6. Confirma la cancelación
+
+      💡 Bueno saber: Conservarás el acceso a las funciones premium hasta el final del período de facturación actual. No se realizará ningún reembolso por el período ya pagado.
   notFound:
     title: "Página no encontrada"
     message: "No pudimos encontrar la página que buscas."
