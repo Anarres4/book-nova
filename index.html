@@ -212,15 +212,49 @@ permalink: "/"
                             </button>
                         </h3>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body" data-i18n="faq.a2" data-i18n-html>
-                                <p>Oui ! Book Nova inclut un système complet de gestion de prêts :</p>
-                                <ul>
-                                    <li>Enregistrez à qui vous prêtez vos livres</li>
-                                    <li>Ajoutez les livres que vous empruntez</li>
-                                    <li>Recevez des notifications de rappel</li>
-                                    <li>Suivez les dates de retour prévues</li>
-                                </ul>
-                                <p>Version gratuite : jusqu'à 3 prêts/emprunts simultanés.<br>Version Premium : prêts/emprunts illimités.</p>
+                            <div class="accordion-body">
+                                <div class="row g-4 align-items-stretch">
+                                    <!-- Prêts -->
+                                    <div class="col-lg-6 d-flex">
+                                        <div class="p-4 rounded-3 w-100" style="background: linear-gradient(135deg, #6C63FF 0%, #5a52d5 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-arrow-right-circle me-2" style="font-size: 1.5rem;"></i>
+                                                <h4 class="mb-0" data-i18n="faq.loansOut">PRÊTS</h4>
+                                            </div>
+                                            <p class="mb-3" data-i18n="faq.loansOutDesc">Livres que vous prêtez :</p>
+                                            <ul class="mb-0" style="line-height: 1.8;">
+                                                <li data-i18n="faq.loansOut1">Enregistrez à qui vous prêtez</li>
+                                                <li data-i18n="faq.loansOut2">Ajoutez la date de retour prévue</li>
+                                                <li data-i18n="faq.loansOut3">Recevez des notifications de rappel</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Emprunts -->
+                                    <div class="col-lg-6 d-flex">
+                                        <div class="p-4 rounded-3 w-100" style="background: linear-gradient(135deg, #4FACFE 0%, #3b8cd9 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-arrow-left-circle me-2" style="font-size: 1.5rem;"></i>
+                                                <h4 class="mb-0" data-i18n="faq.loansIn">EMPRUNTS</h4>
+                                            </div>
+                                            <p class="mb-3" data-i18n="faq.loansInDesc">Livres que vous empruntez :</p>
+                                            <ul class="mb-0" style="line-height: 1.8;">
+                                                <li data-i18n="faq.loansIn1">Enregistrez de qui vous empruntez</li>
+                                                <li data-i18n="faq.loansIn2">Suivez les dates de retour</li>
+                                                <li data-i18n="faq.loansIn3">Gérez vos emprunts facilement</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-light border mt-4 d-flex align-items-center">
+                                    <i class="bi bi-info-circle-fill me-2" style="font-size: 1.2rem; color: #6C63FF;"></i>
+                                    <div>
+                                        <strong data-i18n="faq.loansLimits">Limites :</strong>
+                                        <span data-i18n="faq.loansLimitsFree">Version gratuite : jusqu'à 3 prêts/emprunts simultanés.</span>
+                                        <span data-i18n="faq.loansLimitsPremium">Version Premium : prêts/emprunts illimités.</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -232,16 +266,70 @@ permalink: "/"
                             </button>
                         </h3>
                         <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body" data-i18n="faq.a3" data-i18n-html>
-                                <p>Débloquez plus de 100 badges différents :</p>
-                                <ul>
-                                    <li>Badges de lecture (1, 5, 10... jusqu'à 1000 livres !)</li>
-                                    <li>Badges d'objectifs (hauteur de pile : fourmi, chat, girafe...)</li>
-                                    <li>Badges de genres littéraires (fiction, biographie, science-fiction...)</li>
-                                    <li>Badges spéciaux (lecteur nocturne, lecteur matinal, marathonien...)</li>
-                                    <li>Défis légendaires (Solar, Galaxy, Universe)</li>
-                                </ul>
-                                <p>Partagez vos badges sur les réseaux sociaux !</p>
+                            <div class="accordion-body">
+                                <p class="text-center mb-4" data-i18n="faq.badgesIntro">Débloquez plus de 100 badges différents :</p>
+
+                                <div class="row g-3 mb-3">
+                                    <!-- Badges de lecture -->
+                                    <div class="col-md-6">
+                                        <div class="p-3 rounded-3" style="background: linear-gradient(135deg, #6C63FF 0%, #5a52d5 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="bi bi-book-fill me-2" style="font-size: 1.3rem;"></i>
+                                                <h5 class="mb-0" data-i18n="faq.badgesReading">Badges de lecture</h5>
+                                            </div>
+                                            <p class="mb-0 small" data-i18n="faq.badgesReadingDesc">1, 5, 10... jusqu'à 1000 livres !</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Badges d'objectifs -->
+                                    <div class="col-md-6">
+                                        <div class="p-3 rounded-3" style="background: linear-gradient(135deg, #4FACFE 0%, #3b8cd9 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="bi bi-trophy-fill me-2" style="font-size: 1.3rem;"></i>
+                                                <h5 class="mb-0" data-i18n="faq.badgesGoals">Badges d'objectifs</h5>
+                                            </div>
+                                            <p class="mb-0 small" data-i18n="faq.badgesGoalsDesc">Hauteur de pile : fourmi, chat, girafe...</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Badges de genres -->
+                                    <div class="col-md-6">
+                                        <div class="p-3 rounded-3" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="bi bi-tags-fill me-2" style="font-size: 1.3rem;"></i>
+                                                <h5 class="mb-0" data-i18n="faq.badgesGenres">Badges de genres</h5>
+                                            </div>
+                                            <p class="mb-0 small" data-i18n="faq.badgesGenresDesc">Fiction, biographie, science-fiction...</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Badges spéciaux -->
+                                    <div class="col-md-6">
+                                        <div class="p-3 rounded-3" style="background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="bi bi-star-fill me-2" style="font-size: 1.3rem;"></i>
+                                                <h5 class="mb-0" data-i18n="faq.badgesSpecial">Badges spéciaux</h5>
+                                            </div>
+                                            <p class="mb-0 small" data-i18n="faq.badgesSpecialDesc">Lecteur nocturne, lecteur matinal, marathonien...</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Défis légendaires -->
+                                    <div class="col-12">
+                                        <div class="p-3 rounded-3 text-center" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;">
+                                            <div class="d-flex align-items-center justify-content-center mb-2">
+                                                <i class="bi bi-rocket-takeoff-fill me-2" style="font-size: 1.3rem;"></i>
+                                                <h5 class="mb-0" data-i18n="faq.badgesLegendary">Défis légendaires</h5>
+                                            </div>
+                                            <p class="mb-0 small" data-i18n="faq.badgesLegendaryDesc">Solar System, Galaxy Challenge, Universe Challenge</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-light border d-flex align-items-center">
+                                    <i class="bi bi-share-fill me-2" style="font-size: 1.2rem; color: #6C63FF;"></i>
+                                    <div data-i18n="faq.badgesShare">Partagez vos badges sur les réseaux sociaux !</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -253,14 +341,39 @@ permalink: "/"
                             </button>
                         </h3>
                         <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body" data-i18n="faq.a4" data-i18n-html>
-                                <p>Oui, Book Nova est proposée en 3 langues :</p>
-                                <ul>
-                                    <li>Français 🇫🇷</li>
-                                    <li>Anglais 🇬🇧</li>
-                                    <li>Espagnol 🇪🇸</li>
-                                </ul>
-                                <p>Vous pouvez aussi définir la langue de chaque livre pour un meilleur suivi.</p>
+                            <div class="accordion-body">
+                                <p class="text-center mb-4" data-i18n="faq.languagesIntro">Oui, BookNova est proposée en 3 langues :</p>
+
+                                <div class="row g-3 mb-3">
+                                    <!-- Français -->
+                                    <div class="col-md-4">
+                                        <div class="p-4 rounded-3 text-center" style="background: linear-gradient(135deg, #6C63FF 0%, #5a52d5 100%); color: white;">
+                                            <div style="font-size: 3rem; mb-2">🇫🇷</div>
+                                            <h5 class="mb-0" data-i18n="faq.languageFrench">Français</h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- English -->
+                                    <div class="col-md-4">
+                                        <div class="p-4 rounded-3 text-center" style="background: linear-gradient(135deg, #4FACFE 0%, #3b8cd9 100%); color: white;">
+                                            <div style="font-size: 3rem; mb-2">🇬🇧</div>
+                                            <h5 class="mb-0" data-i18n="faq.languageEnglish">English</h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- Español -->
+                                    <div class="col-md-4">
+                                        <div class="p-4 rounded-3 text-center" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: white;">
+                                            <div style="font-size: 3rem; mb-2">🇪🇸</div>
+                                            <h5 class="mb-0" data-i18n="faq.languageSpanish">Español</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-light border d-flex align-items-center">
+                                    <i class="bi bi-translate me-2" style="font-size: 1.2rem; color: #6C63FF;"></i>
+                                    <div data-i18n="faq.languagesBookTip">Vous pouvez aussi définir la langue de chaque livre pour un meilleur suivi.</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -272,16 +385,51 @@ permalink: "/"
                             </button>
                         </h3>
                         <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body" data-i18n="faq.a5" data-i18n-html>
-                                <p>Book Nova calcule la hauteur cumulée de vos livres lus et la compare à des repères visuels :</p>
-                                <p>📏 Exemples :</p>
-                                <ul>
-                                    <li>0,5 cm → hauteur d'une fourmi 🐜</li>
-                                    <li>20 cm → un chat assis 🐈</li>
-                                    <li>Votre taille → aussi grand que vous ! 👤</li>
-                                    <li>3 m → une girafe 🦒</li>
-                                </ul>
-                                <p>Chaque palier débloque un badge unique : plus vous lisez, plus votre pile grandit !</p>
+                            <div class="accordion-body">
+                                <p class="text-center mb-4" data-i18n="faq.stackIntro">BookNova calcule la hauteur cumulée de vos livres lus et la compare à des repères visuels :</p>
+
+                                <div class="row g-3 mb-3">
+                                    <!-- Fourmi -->
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="p-3 rounded-3 text-center" style="background: linear-gradient(135deg, #6C63FF 0%, #5a52d5 100%); color: white;">
+                                            <div style="font-size: 2.5rem;">🐜</div>
+                                            <p class="mb-1 fw-bold" data-i18n="faq.stack1">0,5 cm</p>
+                                            <p class="mb-0 small" data-i18n="faq.stack1Desc">Hauteur d'une fourmi</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Chat -->
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="p-3 rounded-3 text-center" style="background: linear-gradient(135deg, #4FACFE 0%, #3b8cd9 100%); color: white;">
+                                            <div style="font-size: 2.5rem;">🐈</div>
+                                            <p class="mb-1 fw-bold" data-i18n="faq.stack2">20 cm</p>
+                                            <p class="mb-0 small" data-i18n="faq.stack2Desc">Un chat assis</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Vous -->
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="p-3 rounded-3 text-center" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: white;">
+                                            <div style="font-size: 2.5rem;">👤</div>
+                                            <p class="mb-1 fw-bold" data-i18n="faq.stack3">Votre taille</p>
+                                            <p class="mb-0 small" data-i18n="faq.stack3Desc">Aussi grand que vous !</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Girafe -->
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="p-3 rounded-3 text-center" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;">
+                                            <div style="font-size: 2.5rem;">🦒</div>
+                                            <p class="mb-1 fw-bold" data-i18n="faq.stack4">3 m</p>
+                                            <p class="mb-0 small" data-i18n="faq.stack4Desc">Une girafe</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-light border d-flex align-items-center">
+                                    <i class="bi bi-award-fill me-2" style="font-size: 1.2rem; color: #6C63FF;"></i>
+                                    <div data-i18n="faq.stackBadges">Chaque palier débloque un badge unique : plus vous lisez, plus votre pile grandit !</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -293,13 +441,40 @@ permalink: "/"
                             </button>
                         </h3>
                         <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body" data-i18n="faq.a6" data-i18n-html>
-                                <p>L'export complet n'est pas encore disponible.</p>
-                                <p>Aujourd'hui, vous pouvez :</p>
-                                <ul>
-                                    <li>Partager vos badges de lecture sur les réseaux sociaux</li>
-                                    <li>Conserver toutes vos données localement sur votre appareil</li>
-                                </ul>
+                            <div class="accordion-body">
+                                <div class="alert alert-warning border-0 mb-4" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-hourglass-split me-2" style="font-size: 1.5rem; color: #d97706;"></i>
+                                        <div>
+                                            <strong data-i18n="faq.exportNotAvailable">Pas encore disponible</strong>
+                                            <p class="mb-0 small" data-i18n="faq.exportNotAvailableDesc">L'export complet de votre bibliothèque n'est pas encore disponible.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="mb-3" data-i18n="faq.exportCurrently">Aujourd'hui, vous pouvez :</p>
+
+                                <div class="row g-3">
+                                    <!-- Partager badges -->
+                                    <div class="col-md-6">
+                                        <div class="p-3 rounded-3" style="background: linear-gradient(135deg, #6C63FF 0%, #5a52d5 100%); color: white;">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-share-fill me-2" style="font-size: 1.5rem;"></i>
+                                                <p class="mb-0" data-i18n="faq.exportShare">Partager vos badges de lecture sur les réseaux sociaux</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Données locales -->
+                                    <div class="col-md-6">
+                                        <div class="p-3 rounded-3" style="background: linear-gradient(135deg, #4FACFE 0%, #3b8cd9 100%); color: white;">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-database-fill me-2" style="font-size: 1.5rem;"></i>
+                                                <p class="mb-0" data-i18n="faq.exportLocal">Conserver toutes vos données localement sur votre appareil</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -311,14 +486,47 @@ permalink: "/"
                             </button>
                         </h3>
                         <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body" data-i18n="faq.a7" data-i18n-html>
-                                <p>La connexion Internet n'est requise que pour :</p>
-                                <ul>
-                                    <li>Scanner des codes-barres ISBN (recherche automatique des informations)</li>
-                                    <li>Rechercher un livre manuellement via ISBNdb</li>
-                                    <li>Effectuer des achats Premium</li>
-                                </ul>
-                                <p>Pour tout le reste (bibliothèque, stats, badges, prêts), Book Nova fonctionne hors ligne.<br>Astuce : ajoutez un livre manuellement hors ligne si vous connaissez ses informations (titre, pages, etc.).</p>
+                            <div class="accordion-body">
+                                <div class="row g-4 align-items-stretch">
+                                    <!-- Nécessite Internet -->
+                                    <div class="col-lg-6 d-flex">
+                                        <div class="p-4 rounded-3 w-100" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-wifi me-2" style="font-size: 1.5rem;"></i>
+                                                <h4 class="mb-0" data-i18n="faq.offlineNeedsInternet">NÉCESSITE INTERNET</h4>
+                                            </div>
+                                            <ul class="mb-0" style="line-height: 1.8;">
+                                                <li data-i18n="faq.offlineNeed1">Scanner des codes-barres ISBN (recherche automatique)</li>
+                                                <li data-i18n="faq.offlineNeed2">Rechercher un livre via ISBNdb</li>
+                                                <li data-i18n="faq.offlineNeed3">Effectuer des achats Premium</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fonctionne hors ligne -->
+                                    <div class="col-lg-6 d-flex">
+                                        <div class="p-4 rounded-3 w-100" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-check-circle-fill me-2" style="font-size: 1.5rem;"></i>
+                                                <h4 class="mb-0" data-i18n="faq.offlineWorks">FONCTIONNE HORS LIGNE</h4>
+                                            </div>
+                                            <ul class="mb-0" style="line-height: 1.8;">
+                                                <li data-i18n="faq.offlineWork1">Bibliothèque complète</li>
+                                                <li data-i18n="faq.offlineWork2">Statistiques de lecture</li>
+                                                <li data-i18n="faq.offlineWork3">Badges et défis</li>
+                                                <li data-i18n="faq.offlineWork4">Gestion des prêts/emprunts</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-light border mt-4 d-flex align-items-start">
+                                    <i class="bi bi-lightbulb-fill me-2 mt-1" style="font-size: 1.2rem; color: #10b981;"></i>
+                                    <div>
+                                        <strong data-i18n="faq.offlineTipTitle">Astuce :</strong>
+                                        <span data-i18n="faq.offlineTipDesc">Ajoutez un livre manuellement hors ligne si vous connaissez ses informations (titre, pages, etc.).</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
