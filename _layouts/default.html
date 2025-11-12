@@ -631,6 +631,201 @@
                 });
             }
         });
+
+        // Custom FAQ #8 and #9 translation handler
+        const faqTranslations = {
+            fr: {
+                faq8: {
+                    android: 'Sur Android',
+                    ios: 'Sur iOS (iPhone/iPad)',
+                    steps: {
+                        android: [
+                            'Ouvrez l\'application <strong>Google Play Store</strong>',
+                            'Appuyez sur votre <strong>photo de profil</strong> en haut à droite',
+                            'Sélectionnez <strong>Paiements et abonnements</strong> &gt; <strong>Abonnements</strong>',
+                            'Trouvez <strong>BookNova</strong> dans la liste',
+                            'Appuyez sur <strong>Annuler l\'abonnement</strong>',
+                            'Suivez les instructions pour confirmer'
+                        ],
+                        ios: [
+                            'Ouvrez l\'application <strong>Réglages</strong> de votre appareil',
+                            'Appuyez sur votre <strong>nom</strong> en haut de l\'écran',
+                            'Sélectionnez <strong>Abonnements</strong>',
+                            'Trouvez <strong>BookNova</strong> dans la liste',
+                            'Appuyez sur <strong>Annuler l\'abonnement</strong> ou <strong>Annuler l\'essai gratuit</strong>',
+                            'Confirmez l\'annulation'
+                        ]
+                    },
+                    info: 'Vous conservez l\'accès aux fonctionnalités premium jusqu\'à la fin de votre période d\'essai.',
+                    warning: '<strong>Important :</strong> L\'annulation doit être effectuée au moins 24 heures avant la fin de la période d\'essai pour éviter d\'être facturé.'
+                },
+                faq9: {
+                    android: 'Sur Android',
+                    ios: 'Sur iOS (iPhone/iPad)',
+                    steps: {
+                        android: [
+                            'Ouvrez l\'application <strong>Google Play Store</strong>',
+                            'Appuyez sur votre <strong>photo de profil</strong> en haut à droite',
+                            'Sélectionnez <strong>Paiements et abonnements</strong> &gt; <strong>Abonnements</strong>',
+                            'Trouvez <strong>BookNova</strong> dans la liste',
+                            'Appuyez sur <strong>Annuler l\'abonnement</strong>',
+                            'Confirmez l\'annulation'
+                        ],
+                        ios: [
+                            'Ouvrez l\'application <strong>Réglages</strong> de votre appareil',
+                            'Appuyez sur votre <strong>nom</strong> en haut de l\'écran',
+                            'Sélectionnez <strong>Abonnements</strong>',
+                            'Trouvez <strong>BookNova</strong> dans la liste',
+                            'Appuyez sur <strong>Annuler l\'abonnement</strong>',
+                            'Confirmez l\'annulation'
+                        ]
+                    },
+                    goodToKnow: '<strong>Bon à savoir :</strong> Vous conserverez l\'accès aux fonctionnalités premium jusqu\'à la fin de la période de facturation en cours. Aucun remboursement ne sera effectué pour la période déjà payée.'
+                }
+            },
+            en: {
+                faq8: {
+                    android: 'On Android',
+                    ios: 'On iOS (iPhone/iPad)',
+                    steps: {
+                        android: [
+                            'Open the <strong>Google Play Store</strong> app',
+                            'Tap your <strong>profile picture</strong> in the top right',
+                            'Select <strong>Payments & subscriptions</strong> &gt; <strong>Subscriptions</strong>',
+                            'Find <strong>BookNova</strong> in the list',
+                            'Tap <strong>Cancel subscription</strong>',
+                            'Follow the instructions to confirm'
+                        ],
+                        ios: [
+                            'Open your device\'s <strong>Settings</strong> app',
+                            'Tap your <strong>name</strong> at the top of the screen',
+                            'Select <strong>Subscriptions</strong>',
+                            'Find <strong>BookNova</strong> in the list',
+                            'Tap <strong>Cancel Subscription</strong> or <strong>Cancel Free Trial</strong>',
+                            'Confirm the cancellation'
+                        ]
+                    },
+                    info: 'You will keep access to premium features until the end of your trial period.',
+                    warning: '<strong>Important:</strong> Cancellation must be done at least 24 hours before the end of the trial period to avoid being charged.'
+                },
+                faq9: {
+                    android: 'On Android',
+                    ios: 'On iOS (iPhone/iPad)',
+                    steps: {
+                        android: [
+                            'Open the <strong>Google Play Store</strong> app',
+                            'Tap your <strong>profile picture</strong> in the top right',
+                            'Select <strong>Payments & subscriptions</strong> &gt; <strong>Subscriptions</strong>',
+                            'Find <strong>BookNova</strong> in the list',
+                            'Tap <strong>Cancel subscription</strong>',
+                            'Confirm the cancellation'
+                        ],
+                        ios: [
+                            'Open your device\'s <strong>Settings</strong> app',
+                            'Tap your <strong>name</strong> at the top of the screen',
+                            'Select <strong>Subscriptions</strong>',
+                            'Find <strong>BookNova</strong> in the list',
+                            'Tap <strong>Cancel Subscription</strong>',
+                            'Confirm the cancellation'
+                        ]
+                    },
+                    goodToKnow: '<strong>Good to know:</strong> You will retain access to premium features until the end of the current billing period. No refund will be issued for the period already paid.'
+                }
+            },
+            es: {
+                faq8: {
+                    android: 'En Android',
+                    ios: 'En iOS (iPhone/iPad)',
+                    steps: {
+                        android: [
+                            'Abre la aplicación <strong>Google Play Store</strong>',
+                            'Toca tu <strong>foto de perfil</strong> en la parte superior derecha',
+                            'Selecciona <strong>Pagos y suscripciones</strong> &gt; <strong>Suscripciones</strong>',
+                            'Encuentra <strong>BookNova</strong> en la lista',
+                            'Toca <strong>Cancelar suscripción</strong>',
+                            'Sigue las instrucciones para confirmar'
+                        ],
+                        ios: [
+                            'Abre la aplicación <strong>Ajustes</strong> de tu dispositivo',
+                            'Toca tu <strong>nombre</strong> en la parte superior de la pantalla',
+                            'Selecciona <strong>Suscripciones</strong>',
+                            'Encuentra <strong>BookNova</strong> en la lista',
+                            'Toca <strong>Cancelar suscripción</strong> o <strong>Cancelar prueba gratuita</strong>',
+                            'Confirma la cancelación'
+                        ]
+                    },
+                    info: 'Conservarás el acceso a las funciones premium hasta el final de tu período de prueba.',
+                    warning: '<strong>Importante:</strong> La cancelación debe realizarse al menos 24 horas antes del final del período de prueba para evitar cargos.'
+                },
+                faq9: {
+                    android: 'En Android',
+                    ios: 'En iOS (iPhone/iPad)',
+                    steps: {
+                        android: [
+                            'Abre la aplicación <strong>Google Play Store</strong>',
+                            'Toca tu <strong>foto de perfil</strong> en la parte superior derecha',
+                            'Selecciona <strong>Pagos y suscripciones</strong> &gt; <strong>Suscripciones</strong>',
+                            'Encuentra <strong>BookNova</strong> en la lista',
+                            'Toca <strong>Cancelar suscripción</strong>',
+                            'Confirma la cancelación'
+                        ],
+                        ios: [
+                            'Abre la aplicación <strong>Ajustes</strong> de tu dispositivo',
+                            'Toca tu <strong>nombre</strong> en la parte superior de la pantalla',
+                            'Selecciona <strong>Suscripciones</strong>',
+                            'Encuentra <strong>BookNova</strong> en la lista',
+                            'Toca <strong>Cancelar suscripción</strong>',
+                            'Confirma la cancelación'
+                        ]
+                    },
+                    goodToKnow: '<strong>Bueno saber:</strong> Conservarás el acceso a las funciones premium hasta el final del período de facturación actual. No se realizará ningún reembolso por el período ya pagado.'
+                }
+            }
+        };
+
+        function updateStyledFAQs() {
+            const lang = currentLang || '{{ site.default_lang }}';
+            const data = faqTranslations[lang];
+            if (!data) return;
+
+            // Update FAQ #8
+            const faq8Android = document.querySelector('#faq8 .col-lg-6:nth-child(1) h4');
+            const faq8iOS = document.querySelector('#faq8 .col-lg-6:nth-child(2) h4');
+            const faq8AndroidSteps = document.querySelector('#faq8 .col-lg-6:nth-child(1) ol');
+            const faq8iOSSteps = document.querySelector('#faq8 .col-lg-6:nth-child(2) ol');
+            const faq8Info = document.querySelector('#faq8 .alert-light div');
+            const faq8Warning = document.querySelector('#faq8 .alert-warning div');
+
+            if (faq8Android) faq8Android.innerHTML = data.faq8.android;
+            if (faq8iOS) faq8iOS.innerHTML = data.faq8.ios;
+            if (faq8AndroidSteps) faq8AndroidSteps.innerHTML = data.faq8.steps.android.map(s => `<li>${s}</li>`).join('');
+            if (faq8iOSSteps) faq8iOSSteps.innerHTML = data.faq8.steps.ios.map(s => `<li>${s}</li>`).join('');
+            if (faq8Info) faq8Info.innerHTML = data.faq8.info;
+            if (faq8Warning) faq8Warning.innerHTML = data.faq8.warning;
+
+            // Update FAQ #9
+            const faq9Android = document.querySelector('#faq9 .col-lg-6:nth-child(1) h4');
+            const faq9iOS = document.querySelector('#faq9 .col-lg-6:nth-child(2) h4');
+            const faq9AndroidSteps = document.querySelector('#faq9 .col-lg-6:nth-child(1) ol');
+            const faq9iOSSteps = document.querySelector('#faq9 .col-lg-6:nth-child(2) ol');
+            const faq9GoodToKnow = document.querySelector('#faq9 .alert-info div');
+
+            if (faq9Android) faq9Android.innerHTML = data.faq9.android;
+            if (faq9iOS) faq9iOS.innerHTML = data.faq9.ios;
+            if (faq9AndroidSteps) faq9AndroidSteps.innerHTML = data.faq9.steps.android.map(s => `<li>${s}</li>`).join('');
+            if (faq9iOSSteps) faq9iOSSteps.innerHTML = data.faq9.steps.ios.map(s => `<li>${s}</li>`).join('');
+            if (faq9GoodToKnow) faq9GoodToKnow.innerHTML = data.faq9.goodToKnow;
+        }
+
+        // Hook into existing updateContent function
+        const originalUpdateContent = updateContent;
+        updateContent = function() {
+            originalUpdateContent();
+            updateStyledFAQs();
+        };
+
+        // Initialize styled FAQs on page load
+        document.addEventListener('DOMContentLoaded', updateStyledFAQs);
     </script>
 </body>
 </html>
