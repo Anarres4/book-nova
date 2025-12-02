@@ -173,6 +173,7 @@ permalink: "/"
                                                 <li data-i18n="faq.free3">Accès au calendrier de lecture détaillé</li>
                                                 <li data-i18n="faq.free4">Défi Solar System accessible</li>
                                                 <li data-i18n="faq.free5">Accès à tous les badges de base</li>
+                                                <li data-i18n="faq.free6">Page Découvrir : 25 livres visibles</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -191,6 +192,7 @@ permalink: "/"
                                                 <li data-i18n="faq.premium6">Statistiques détaillées (catégorie, langue, format...)</li>
                                                 <li data-i18n="faq.premium4">Défis exclusifs (Galaxy Challenge & Universe Challenge)</li>
                                                 <li data-i18n="faq.premium5">Accès à tous les badges et médailles premium</li>
+                                                <li data-i18n="faq.premium7">Page Découvrir : accès illimité aux recommandations</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -500,6 +502,7 @@ permalink: "/"
                                                 <li data-i18n="faq.offlineNeed1">Scanner des codes-barres ISBN (recherche automatique)</li>
                                                 <li data-i18n="faq.offlineNeed2">Rechercher un livre via ISBNdb</li>
                                                 <li data-i18n="faq.offlineNeed3">Effectuer des achats Premium</li>
+                                                <li data-i18n="faq.offlineNeed4">Accéder à la page Découvrir</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -588,7 +591,14 @@ permalink: "/"
                                 <div class="alert alert-warning mt-3 d-flex align-items-start">
                                     <i class="bi bi-exclamation-triangle-fill me-3 mt-1" style="font-size: 1.5rem;"></i>
                                     <div>
-                                        <strong>Important :</strong> L'annulation doit être effectuée au moins 24 heures avant la fin de la période d'essai pour éviter d'être facturé.
+                                        <strong data-i18n="faq.trialImportant">Important :</strong> <span data-i18n="faq.trialWarning">L'annulation doit être effectuée au moins 24 heures avant la fin de la période d'essai pour éviter d'être facturé.</span>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-secondary mt-3 d-flex align-items-start">
+                                    <i class="bi bi-gem me-3 mt-1" style="font-size: 1.5rem;"></i>
+                                    <div>
+                                        <strong data-i18n="faq.trialOnceTitle">Bon à savoir :</strong> <span data-i18n="faq.trialOnceDesc">L'essai gratuit de 14 jours n'est disponible qu'une seule fois par compte.</span>
                                     </div>
                                 </div>
                             </div>
@@ -645,6 +655,56 @@ permalink: "/"
                                     <i class="bi bi-lightbulb-fill me-3 mt-1" style="font-size: 1.5rem; color: #1e40af;"></i>
                                     <div>
                                         <strong>Bon à savoir :</strong> Vous conserverez l'accès aux fonctionnalités premium jusqu'à la fin de la période de facturation en cours. Aucun remboursement ne sera effectué pour la période déjà payée.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                                <span data-i18n="faq.q10">Qu'est-ce que la page Découvrir ?</span>
+                            </button>
+                        </h3>
+                        <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p class="mb-4" data-i18n="faq.discoverIntro">La page Découvrir vous propose des recommandations de livres personnalisées basées sur vos lectures et préférences.</p>
+
+                                <div class="row g-4 align-items-stretch">
+                                    <!-- Version Gratuite -->
+                                    <div class="col-lg-6 d-flex">
+                                        <div class="p-4 rounded-3 w-100" style="background: linear-gradient(135deg, #6C63FF 0%, #5a52d5 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-phone me-2" style="font-size: 1.5rem;"></i>
+                                                <h4 class="mb-0" data-i18n="faq.freeVersion">VERSION GRATUITE</h4>
+                                            </div>
+                                            <ul class="mb-0" style="line-height: 1.8;">
+                                                <li data-i18n="faq.discoverFree1">Accès à 25 recommandations de livres</li>
+                                                <li data-i18n="faq.discoverFree2">Suggestions basées sur vos genres favoris</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Version Premium -->
+                                    <div class="col-lg-6 d-flex">
+                                        <div class="p-4 rounded-3 w-100" style="background: linear-gradient(135deg, #4FACFE 0%, #3b8cd9 100%); color: white;">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="bi bi-gem me-2" style="font-size: 1.5rem;"></i>
+                                                <h4 class="mb-0" data-i18n="faq.premiumVersion">VERSION PREMIUM</h4>
+                                            </div>
+                                            <ul class="mb-0" style="line-height: 1.8;">
+                                                <li data-i18n="faq.discoverPremium1">Accès illimité aux recommandations</li>
+                                                <li data-i18n="faq.discoverPremium2">Suggestions personnalisées avancées</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-light border mt-4 d-flex align-items-center">
+                                    <i class="bi bi-wifi me-2" style="font-size: 1.2rem; color: #f59e0b;"></i>
+                                    <div data-i18n="faq.discoverNote">
+                                        Cette fonctionnalité nécessite une connexion internet pour afficher les recommandations.
                                     </div>
                                 </div>
                             </div>

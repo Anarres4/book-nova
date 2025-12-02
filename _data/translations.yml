@@ -174,6 +174,19 @@ fr:
       6. Confirmez l'annulation
 
       💡 Bon à savoir : Vous conserverez l'accès aux fonctionnalités premium jusqu'à la fin de la période de facturation en cours. Aucun remboursement ne sera effectué pour la période déjà payée.
+    q10: "Qu'est-ce que la page Découvrir ?"
+    a10: |-
+      La page Découvrir vous propose des recommandations de livres personnalisées basées sur vos lectures et préférences.
+
+      📱 VERSION GRATUITE :
+      - Accès à 25 recommandations de livres
+      - Suggestions basées sur vos genres favoris
+
+      💎 VERSION PREMIUM :
+      - Accès illimité aux recommandations
+      - Suggestions personnalisées avancées
+
+      📡 Cette fonctionnalité nécessite une connexion internet.
     # FAQ #1 - Additional translations
     freeVersion: "VERSION GRATUITE"
     premiumVersion: "VERSION PREMIUM"
@@ -182,12 +195,14 @@ fr:
     free3: "Accès au calendrier de lecture détaillé"
     free4: "Défi Solar System accessible"
     free5: "Accès à tous les badges de base"
+    free6: "Page Découvrir : 25 livres visibles"
     premium1: "Ajout illimité de livres par jour"
     premium2: "Prêts et emprunts illimités"
     premium3: "Statistiques de lecture par mois et par an"
     premium6: "Statistiques détaillées (catégorie, langue, format...)"
     premium4: "Défis exclusifs (Galaxy Challenge & Universe Challenge)"
     premium5: "Accès à tous les badges et médailles premium"
+    premium7: "Page Découvrir : accès illimité aux recommandations"
     mainFeaturesNote: "Toutes les fonctionnalités principales restent accessibles gratuitement !"
     # FAQ #2 - Loans translations
     loansOut: "PRÊTS"
@@ -244,6 +259,7 @@ fr:
     offlineNeed1: "Scanner des codes-barres ISBN (recherche automatique)"
     offlineNeed2: "Rechercher un livre via ISBNdb"
     offlineNeed3: "Effectuer des achats Premium"
+    offlineNeed4: "Accéder à la page Découvrir"
     offlineWorks: "FONCTIONNE HORS LIGNE"
     offlineWork1: "Bibliothèque complète"
     offlineWork2: "Statistiques de lecture"
@@ -251,6 +267,18 @@ fr:
     offlineWork4: "Gestion des prêts/emprunts"
     offlineTipTitle: "Astuce :"
     offlineTipDesc: "Ajoutez un livre manuellement hors ligne si vous connaissez ses informations (titre, pages, etc.)."
+    # FAQ #8 - Trial translations
+    trialImportant: "Important :"
+    trialWarning: "L'annulation doit être effectuée au moins 24 heures avant la fin de la période d'essai pour éviter d'être facturé."
+    trialOnceTitle: "Bon à savoir :"
+    trialOnceDesc: "L'essai gratuit de 14 jours n'est disponible qu'une seule fois par compte."
+    # FAQ #10 - Discover page translations
+    discoverIntro: "La page Découvrir vous propose des recommandations de livres personnalisées basées sur vos lectures et préférences."
+    discoverFree1: "Accès à 25 recommandations de livres"
+    discoverFree2: "Suggestions basées sur vos genres favoris"
+    discoverPremium1: "Accès illimité aux recommandations"
+    discoverPremium2: "Suggestions personnalisées avancées"
+    discoverNote: "Cette fonctionnalité nécessite une connexion internet pour afficher les recommandations."
   notFound:
     title: "Page introuvable"
     message: "Nous n'avons pas pu trouver la page que vous cherchez."
@@ -453,18 +481,22 @@ fr:
             - "Statistiques de lecture de base (par mois/par an)"
             - "Statistiques détaillées avancées"
             - "Accès à des challenges et médailles exclusifs."
+            - "Accès illimité aux recommandations de la page Découvrir."
+        trial:
+          title: "7.2 Période d'essai"
+          body: "La période d'essai gratuite de 14 jours n'est disponible qu'une seule fois par compte. Une fois utilisée, elle ne peut pas être réactivée."
         processing:
-          title: "7.2 Traitement des Achats"
+          title: "7.3 Traitement des Achats"
           body: "Les achats in-app sont traités par :"
           items:
             - "Apple App Store (iOS)"
             - "Google Play Store (Android)"
           note: "Ces achats sont soumis aux conditions générales des plateformes. RevenueCat gère vos abonnements en toute sécurité."
         refunds:
-          title: "7.3 Politique de Remboursement"
+          title: "7.4 Politique de Remboursement"
           body: "Les demandes de remboursement doivent être adressées directement à Apple ou Google. Book Nova ne peut pas traiter les remboursements."
         cancellation:
-          title: "7.4 Annulation de l'Abonnement"
+          title: "7.5 Annulation de l'Abonnement"
           body: "Vous pouvez annuler votre abonnement à tout moment via vos paramètres Apple ou Google. L'annulation prend effet à la fin de la période en cours."
       notifications:
         title: "8. Notifications"
@@ -543,7 +575,7 @@ fr:
         - "Achats via Apple/Google, remboursements via ces plateformes"
         - "Application fournie 'en l'état', responsabilité limitée"
         - "Pas de compte requis, UUID anonyme pour le premium et la synchronisation Firebase dédiée aux recommandations"
-    lastUpdated: "Dernière mise à jour : 04/10/2025"
+    lastUpdated: "Dernière mise à jour : 02/12/2025"
     backToHome: "Retour à l'accueil"
   supportPage:
     title: "Support"
@@ -579,6 +611,7 @@ fr:
       loans: "Système de prêts - Ne perdez plus jamais de vue vos livres prêtés"
       badges: "Badges et défis - Gamification pour encourager la lecture"
       stats: "Statistiques détaillées - Visualisez vos habitudes de lecture et recevez des recommandations anonymes"
+      discover: "Page Découvrir - Recevez des recommandations de livres personnalisées"
       multilingual: "Mode multilingue - Disponible en français, anglais et espagnol"
     development:
       title: "Développement"
@@ -769,6 +802,19 @@ en:
       6. Confirm the cancellation
 
       💡 Good to know: You will retain access to premium features until the end of the current billing period. No refund will be issued for the period already paid.
+    q10: "What is the Discover page?"
+    a10: |-
+      The Discover page offers personalized book recommendations based on your reading history and preferences.
+
+      📱 FREE VERSION:
+      - Access to 25 book recommendations
+      - Suggestions based on your favorite genres
+
+      💎 PREMIUM VERSION:
+      - Unlimited access to recommendations
+      - Advanced personalized suggestions
+
+      📡 This feature requires an internet connection.
     # FAQ #1 - Additional translations
     freeVersion: "FREE VERSION"
     premiumVersion: "PREMIUM VERSION"
@@ -777,12 +823,14 @@ en:
     free3: "Access to detailed reading calendar"
     free4: "Solar System challenge accessible"
     free5: "Access to all basic badges"
+    free6: "Discover page: 25 books visible"
     premium1: "Unlimited book additions per day"
     premium2: "Unlimited loans and borrows"
     premium3: "Reading statistics per month and per year"
     premium6: "Detailed statistics (category, language, format...)"
     premium4: "Exclusive challenges (Galaxy Challenge & Universe Challenge)"
     premium5: "Access to all premium badges and medals"
+    premium7: "Discover page: unlimited access to recommendations"
     mainFeaturesNote: "All main features remain freely accessible!"
     # FAQ #2 - Loans translations
     loansOut: "LOANS OUT"
@@ -839,6 +887,7 @@ en:
     offlineNeed1: "Scanning ISBN barcodes (automatic lookup)"
     offlineNeed2: "Searching for a book via ISBNdb"
     offlineNeed3: "Making Premium purchases"
+    offlineNeed4: "Accessing the Discover page"
     offlineWorks: "WORKS OFFLINE"
     offlineWork1: "Complete library"
     offlineWork2: "Reading statistics"
@@ -846,6 +895,18 @@ en:
     offlineWork4: "Loans/borrows management"
     offlineTipTitle: "Tip:"
     offlineTipDesc: "Add a book manually offline if you know its details (title, page count, etc.)."
+    # FAQ #8 - Trial translations
+    trialImportant: "Important:"
+    trialWarning: "Cancellation must be made at least 24 hours before the end of the trial period to avoid being charged."
+    trialOnceTitle: "Good to know:"
+    trialOnceDesc: "The 14-day free trial is only available once per account."
+    # FAQ #10 - Discover page translations
+    discoverIntro: "The Discover page offers personalized book recommendations based on your reading history and preferences."
+    discoverFree1: "Access to 25 book recommendations"
+    discoverFree2: "Suggestions based on your favorite genres"
+    discoverPremium1: "Unlimited access to recommendations"
+    discoverPremium2: "Advanced personalized suggestions"
+    discoverNote: "This feature requires an internet connection to display recommendations."
   notFound:
     title: "Page not found"
     message: "We couldn't find the page you're looking for."
@@ -1048,18 +1109,22 @@ en:
             - "Basic reading stats (monthly/yearly)"
             - "Advanced detailed statistics"
             - "Access to exclusive challenges and badges."
+            - "Unlimited access to Discover page recommendations."
+        trial:
+          title: "7.2 Trial Period"
+          body: "The 14-day free trial is only available once per account. Once used, it cannot be reactivated."
         processing:
-          title: "7.2 Purchase Processing"
+          title: "7.3 Purchase Processing"
           body: "In-app purchases are processed by:"
           items:
             - "Apple App Store (iOS)"
             - "Google Play Store (Android)"
           note: "These purchases are subject to each platform's terms. RevenueCat securely manages your subscriptions."
         refunds:
-          title: "7.3 Refund Policy"
+          title: "7.4 Refund Policy"
           body: "Refund requests must be submitted directly to Apple or Google. Book Nova cannot process refunds on your behalf."
         cancellation:
-          title: "7.4 Cancelling Your Subscription"
+          title: "7.5 Cancelling Your Subscription"
           body: "You can cancel your premium subscription at any time through your Apple or Google account settings. Cancellation takes effect at the end of the current billing period."
       notifications:
         title: "8. Notifications"
@@ -1138,7 +1203,7 @@ en:
         - "Purchases handled by Apple/Google; refunds handled by them"
         - "App provided 'as is' with limited liability"
         - "No account required; an anonymous UUID powers premium and the Firebase recommendation sync"
-    lastUpdated: "Last updated: 04/10/2025"
+    lastUpdated: "Last updated: 02/12/2025"
     backToHome: "Back to home"
   supportPage:
     title: "Support"
@@ -1174,6 +1239,7 @@ en:
       loans: "Loan system - Never lose track of your lent books again"
       badges: "Badges and challenges - Gamification to encourage reading"
       stats: "Detailed statistics - Visualize your reading habits and access anonymous recommendations"
+      discover: "Discover page - Get personalized book recommendations"
       multilingual: "Multilingual mode - Available in French, English, and Spanish"
     development:
       title: "Development"
@@ -1363,6 +1429,19 @@ es:
       6. Confirma la cancelación
 
       💡 Bueno saber: Conservarás el acceso a las funciones premium hasta el final del período de facturación actual. No se realizará ningún reembolso por el período ya pagado.
+    q10: "¿Qué es la página Descubrir?"
+    a10: |-
+      La página Descubrir te ofrece recomendaciones de libros personalizadas basadas en tus lecturas y preferencias.
+
+      📱 VERSIÓN GRATUITA:
+      - Acceso a 25 recomendaciones de libros
+      - Sugerencias basadas en tus géneros favoritos
+
+      💎 VERSIÓN PREMIUM:
+      - Acceso ilimitado a las recomendaciones
+      - Sugerencias personalizadas avanzadas
+
+      📡 Esta función requiere una conexión a internet.
     # FAQ #1 - Additional translations
     freeVersion: "VERSIÓN GRATUITA"
     premiumVersion: "VERSIÓN PREMIUM"
@@ -1371,12 +1450,14 @@ es:
     free3: "Acceso al calendario de lectura detallado"
     free4: "Desafío Solar System accesible"
     free5: "Acceso a todas las insignias básicas"
+    free6: "Página Descubrir: 25 libros visibles"
     premium1: "Adición ilimitada de libros por día"
     premium2: "Préstamos ilimitados"
     premium3: "Estadísticas de lectura por mes y por año"
     premium6: "Estadísticas detalladas (categoría, idioma, formato...)"
     premium4: "Desafíos exclusivos (Galaxy Challenge & Universe Challenge)"
     premium5: "Acceso a todas las insignias y medallas premium"
+    premium7: "Página Descubrir: acceso ilimitado a las recomendaciones"
     mainFeaturesNote: "¡Todas las funciones principales siguen siendo accesibles gratuitamente!"
     # FAQ #2 - Loans translations
     loansOut: "PRÉSTAMOS"
@@ -1433,6 +1514,7 @@ es:
     offlineNeed1: "Escanear códigos de barras ISBN (búsqueda automática)"
     offlineNeed2: "Buscar un libro a través de ISBNdb"
     offlineNeed3: "Realizar compras Premium"
+    offlineNeed4: "Acceder a la página Descubrir"
     offlineWorks: "FUNCIONA SIN CONEXIÓN"
     offlineWork1: "Biblioteca completa"
     offlineWork2: "Estadísticas de lectura"
@@ -1440,6 +1522,18 @@ es:
     offlineWork4: "Gestión de préstamos"
     offlineTipTitle: "Consejo:"
     offlineTipDesc: "Añade un libro manualmente sin conexión si conoces sus detalles (título, número de páginas, etc.)."
+    # FAQ #8 - Trial translations
+    trialImportant: "Importante:"
+    trialWarning: "La cancelación debe realizarse al menos 24 horas antes del final del período de prueba para evitar ser cobrado."
+    trialOnceTitle: "Bueno saber:"
+    trialOnceDesc: "La prueba gratuita de 14 días solo está disponible una vez por cuenta."
+    # FAQ #10 - Discover page translations
+    discoverIntro: "La página Descubrir te ofrece recomendaciones de libros personalizadas basadas en tus lecturas y preferencias."
+    discoverFree1: "Acceso a 25 recomendaciones de libros"
+    discoverFree2: "Sugerencias basadas en tus géneros favoritos"
+    discoverPremium1: "Acceso ilimitado a las recomendaciones"
+    discoverPremium2: "Sugerencias personalizadas avanzadas"
+    discoverNote: "Esta función requiere una conexión a internet para mostrar las recomendaciones."
   notFound:
     title: "Página no encontrada"
     message: "No pudimos encontrar la página que buscas."
@@ -1587,6 +1681,7 @@ es:
       loans: "Sistema de préstamos - No pierdas nunca más de vista tus libros prestados"
       badges: "Insignias y desafíos - Gamificación para fomentar la lectura"
       stats: "Estadísticas detalladas - Visualiza tus hábitos de lectura y recibe recomendaciones anónimas"
+      discover: "Página Descubrir - Recibe recomendaciones de libros personalizadas"
       multilingual: "Modo multilingüe - Disponible en francés, inglés y español"
     development:
       title: "Desarrollo"
@@ -1689,18 +1784,22 @@ es:
             - "Estadísticas básicas de lectura (por mes/año)"
             - "Estadísticas detalladas avanzadas"
             - "Acceso a desafíos e insignias exclusivos."
+            - "Acceso ilimitado a las recomendaciones de la página Descubrir."
+        trial:
+          title: "7.2 Período de prueba"
+          body: "El período de prueba gratuito de 14 días solo está disponible una vez por cuenta. Una vez utilizado, no se puede reactivar."
         processing:
-          title: "7.2 Procesamiento de Compras"
+          title: "7.3 Procesamiento de Compras"
           body: "Las compras in-app se procesan por:"
           items:
             - "Apple App Store (iOS)"
             - "Google Play Store (Android)"
           note: "Estas compras están sujetas a las condiciones de cada plataforma. RevenueCat gestiona tus suscripciones de forma segura."
         refunds:
-          title: "7.3 Política de Reembolsos"
+          title: "7.4 Política de Reembolsos"
           body: "Las solicitudes de reembolso deben dirigirse directamente a Apple o Google. Book Nova no puede gestionarlas."
         cancellation:
-          title: "7.4 Cancelación de la Suscripción"
+          title: "7.5 Cancelación de la Suscripción"
           body: "Puedes cancelar tu suscripción premium en cualquier momento desde tus ajustes de Apple o Google. La cancelación entra en vigor al final del período en curso."
       notifications:
         title: "8. Notificaciones"
@@ -1779,5 +1878,5 @@ es:
         - "Compras gestionadas por Apple/Google; reembolsos a través de ellos"
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
         - "Sin cuenta obligatoria; un UUID anónimo gestiona el premium y la sincronización con Firebase dedicada a recomendaciones"
-    lastUpdated: "Última actualización: 04/10/2025"
+    lastUpdated: "Última actualización: 02/12/2025"
     backToHome: "Volver al inicio"
