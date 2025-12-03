@@ -35,6 +35,11 @@ fr:
       description: "Visualise ton évolution de lecteur et découvre tes habitudes de lecture."
   screenshots:
     title: "Découvrez l'application"
+  story:
+    title: "Derrière Book Nova"
+    p1: "Un couple. Une passion commune pour la lecture. Et une idée un peu folle : mesurer nos lectures en hauteur jusqu'à atteindre notre propre taille."
+    p2: "Pas de startup, pas d'investisseurs. Juste deux amoureux des livres qui ont créé l'app qu'ils auraient voulu avoir."
+    link: "Découvrir notre histoire →"
   cta:
     title: "Prêt à commencer ?"
     subtitle: "Téléchargez BookNova dès maintenant et transformez votre expérience de lecture"
@@ -688,6 +693,11 @@ en:
       description: "Visualise your evolution as a reader and discover your reading habits."
   screenshots:
     title: "Discover the app"
+  story:
+    title: "Behind Book Nova"
+    p1: "A couple. A shared passion for reading. And a slightly crazy idea: measuring our reads by height until we reach our own size."
+    p2: "No startup, no investors. Just two book lovers who built the app they wished they had."
+    link: "Discover our story →"
   cta:
     title: "Ready to start?"
     subtitle: "Download BookNova now and transform your reading experience"
@@ -1340,6 +1350,11 @@ es:
       description: "Visualiza tu evolución como lector y descubre tus hábitos de lectura."
   screenshots:
     title: "Descubre la aplicación"
+  story:
+    title: "Detrás de Book Nova"
+    p1: "Una pareja. Una pasión compartida por la lectura. Y una idea un poco loca: medir nuestras lecturas en altura hasta alcanzar nuestra propia estatura."
+    p2: "Sin startup, sin inversores. Solo dos amantes de los libros que crearon la app que siempre quisieron tener."
+    link: "Descubre nuestra historia →"
   cta:
     title: "¿Listo para empezar?"
     subtitle: "Descarga BookNova ahora y transforma tu experiencia de lectura"

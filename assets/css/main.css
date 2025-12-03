@@ -396,6 +396,55 @@ body {
     background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
+/* Story Section (Index) */
+.story-section {
+    padding: 60px 0 80px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.12) 100%);
+}
+
+.story-section .section-title {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.story-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1.25rem;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 768px) {
+    .story-card {
+        padding: 3rem 3.5rem;
+    }
+}
+
+.story-text {
+    color: #4a5568;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.story-text:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.story-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.story-link:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
 .cta-section {
     padding: 80px 0;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 100%);

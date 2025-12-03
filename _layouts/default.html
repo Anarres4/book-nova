@@ -484,6 +484,10 @@
                 let value = translations[currentLang];
 
                 for (let k of keys) {
+                    if (value === undefined || value === null) {
+                        value = undefined;
+                        break;
+                    }
                     value = value[k];
                 }
 
