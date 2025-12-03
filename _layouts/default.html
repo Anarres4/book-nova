@@ -223,23 +223,23 @@
                         </ul>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="{{ '/about.html' | relative_url }}" data-i18n="nav.about">À propos</a>
+                        <a class="nav-link{% if page.url == '/about.html' %} active{% endif %}" href="{{ '/about.html' | relative_url }}" data-i18n="nav.about">À propos</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="{{ '/privacy.html' | relative_url }}" data-i18n="nav.privacy">Confidentialité</a>
+                        <a class="nav-link{% if page.url == '/privacy.html' %} active{% endif %}" href="{{ '/privacy.html' | relative_url }}" data-i18n="nav.privacy">Confidentialité</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="{{ '/terms.html' | relative_url }}" data-i18n="nav.terms">Conditions</a>
+                        <a class="nav-link{% if page.url == '/terms.html' %} active{% endif %}" href="{{ '/terms.html' | relative_url }}" data-i18n="nav.terms">Conditions</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="{{ '/support.html' | relative_url }}" data-i18n="nav.support">Support</a>
+                        <a class="nav-link{% if page.url == '/support.html' %} active{% endif %}" href="{{ '/support.html' | relative_url }}" data-i18n="nav.support">Support</a>
                     </li>
                     <li class="nav-item d-md-none w-100">
                         <div class="mobile-nav-panel">
-                            <a href="{{ '/about.html' | relative_url }}" class="mobile-nav-link touch-target" data-i18n="nav.about">À propos</a>
-                            <a href="{{ '/privacy.html' | relative_url }}" class="mobile-nav-link touch-target" data-i18n="nav.privacy">Confidentialité</a>
-                            <a href="{{ '/terms.html' | relative_url }}" class="mobile-nav-link touch-target" data-i18n="nav.terms">Conditions</a>
-                            <a href="{{ '/support.html' | relative_url }}" class="mobile-nav-link touch-target" data-i18n="nav.support">Support</a>
+                            <a href="{{ '/about.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/about.html' %} active{% endif %}" data-i18n="nav.about">À propos</a>
+                            <a href="{{ '/privacy.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/privacy.html' %} active{% endif %}" data-i18n="nav.privacy">Confidentialité</a>
+                            <a href="{{ '/terms.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/terms.html' %} active{% endif %}" data-i18n="nav.terms">Conditions</a>
+                            <a href="{{ '/support.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/support.html' %} active{% endif %}" data-i18n="nav.support">Support</a>
                             <div class="mobile-nav-divider"></div>
                             <div class="mobile-nav-heading" data-i18n="languageSwitcher.change">Changer de langue</div>
                             <button data-lang="en" class="mobile-language-option touch-target" aria-selected="false">

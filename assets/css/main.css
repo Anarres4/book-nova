@@ -59,6 +59,11 @@ body {
     color: white !important;
 }
 
+.nav-link.active {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .language-switcher {
     display: flex;
     align-items: center;
@@ -153,6 +158,12 @@ body {
 .mobile-nav-link:hover {
     background-color: rgba(108, 99, 255, 0.1);
     color: #1a1a1a;
+}
+
+.mobile-nav-link.active {
+    background-color: rgba(108, 99, 255, 0.15);
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 .mobile-nav-divider {
