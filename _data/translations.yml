@@ -613,7 +613,7 @@ fr:
     story:
       title: "L'histoire"
       p1: "Book Nova est né d'une conversation simple entre deux amoureux passionnés de lecture."
-      p2: "On cherchait une app pour suivre nos livres. Les options existantes étaient soit trop complexes (on ne veut pas un tableur Excel), soit trop sociales (on ne veut pas de likes et de followers), soit bourrées de pubs."
+      p2: "On cherchait une app pour suivre nos livres. Les options existantes étaient soit trop complexes (on ne veut pas un tableur Excel), soit trop sociales (on ne veut pas de likes et de followers), soit trop chronométrées, soit bourrées de pubs."
       p3: "On voulait juste quelque chose de simple et satisfaisant. Un endroit pour voir ce qu'on a lu, ce qu'on lit, et cette petite fierté de regarder sa bibliothèque grandir."
       idea: "\"Et si on mesurait nos lectures en hauteur ? Genre, atteindre notre propre taille en livres ?\""
       p4: "C'était une idée un peu bête. Mais plus on y réfléchissait, plus elle nous motivait. Il y avait quelque chose de profondément satisfaisant à imaginer une pile de livres qui grandit jusqu'à nos yeux, puis au-dessus de notre tête."
@@ -1271,7 +1271,7 @@ en:
     story:
       title: "The story"
       p1: "Book Nova was born from a simple conversation between two partners who love reading."
-      p2: "We were looking for an app to track our books. Existing options were either too complex (we don't want a spreadsheet), too social (we don't want likes and followers), or full of ads."
+      p2: "We were looking for an app to track our books. Existing options were either too complex (we don't want a spreadsheet), too social (we don't want likes and followers), too timer-focused, or full of ads."
       p3: "We just wanted something simple and satisfying. A place to see what we've read, what we're reading, and that little pride of watching our library grow."
       idea: "\"What if we measured our reading in height? Like, reaching our own height in books?\""
       p4: "It was a kind of silly idea. But the more we thought about it, the more it motivated us. There was something deeply satisfying about imagining a stack of books growing up to our eyes, then above our heads."
@@ -1743,7 +1743,7 @@ es:
     story:
       title: "La historia"
       p1: "Book Nova nació de una conversación simple entre dos enamorados apasionados por la lectura."
-      p2: "Buscábamos una app para seguir nuestros libros. Las opciones existentes eran o demasiado complejas (no queremos una hoja de cálculo), o demasiado sociales (no queremos likes ni seguidores), o llenas de anuncios."
+      p2: "Buscábamos una app para seguir nuestros libros. Las opciones existentes eran o demasiado complejas (no queremos una hoja de cálculo), o demasiado sociales (no queremos likes ni seguidores), o demasiado cronometradas, o llenas de anuncios."
       p3: "Solo queríamos algo simple y satisfactorio. Un lugar para ver lo que hemos leído, lo que estamos leyendo, y ese pequeño orgullo de ver crecer nuestra biblioteca."
       idea: "\"¿Y si midiéramos nuestras lecturas en altura? Como alcanzar nuestra propia estatura en libros.\""
       p4: "Era una idea algo tonta. Pero cuanto más lo pensábamos, más nos motivaba. Había algo profundamente satisfactorio en imaginar una pila de libros creciendo hasta nuestros ojos, y luego por encima de nuestra cabeza."
