@@ -603,11 +603,11 @@ fr:
       thanks: "Merci d'être là 📚"
     backToHome: "← Retour à l'accueil"
   aboutPage:
-    title: "Deux amis, une passion, une app"
+    title: "Un couple, une passion, une app"
     subtitle: "L'histoire derrière Book Nova"
     story:
       title: "L'histoire"
-      p1: "Book Nova est né d'une conversation simple entre deux amis passionnés de lecture."
+      p1: "Book Nova est né d'une conversation simple entre deux amoureux passionnés de lecture."
       p2: "On cherchait une app pour suivre nos livres. Les options existantes étaient soit trop complexes (on ne veut pas un tableur Excel), soit trop sociales (on ne veut pas de likes et de followers), soit bourrées de pubs."
       p3: "On voulait juste quelque chose de simple et satisfaisant. Un endroit pour voir ce qu'on a lu, ce qu'on lit, et cette petite fierté de regarder sa bibliothèque grandir."
       idea: "\"Et si on mesurait nos lectures en hauteur ? Genre, atteindre notre propre taille en livres ?\""
@@ -632,11 +632,12 @@ fr:
       b3_title: "La simplicité, c'est précieux."
       b3_desc: "On refuse d'ajouter des fonctionnalités juste pour en avoir plus. Chaque bouton, chaque écran a une raison d'être."
       b4_title: "Vos données vous appartiennent."
-      b4_desc: "Pas de revente, pas de tracking publicitaire. On synchronise vos livres de façon chiffrée pour que vous les retrouviez sur tous vos appareils — c'est tout."
+      b4_desc: "Pas de revente. On synchronise vos livres de façon chiffrée pour que vous les retrouviez sur tous vos appareils — c'est tout."
     team:
       title: "L'équipe"
-      p1: "Nous sommes deux. Pas une startup. Pas une entreprise avec des investisseurs à satisfaire."
-      p2: "Juste deux personnes qui aiment lire et qui voulaient une app à leur image."
+      p1: "Nous sommes un couple. Pas une startup. Pas une entreprise avec des investisseurs à satisfaire."
+      p2: "On venait tous les deux de perdre notre travail. Au lieu de se laisser abattre, on s'est retrouvés autour d'un projet commun : créer l'app de lecture qu'on aurait voulu avoir."
+      p3: "Juste deux amoureux qui aiment lire et qui ont transformé un moment difficile en aventure."
       fact1: "On répond nous-mêmes aux emails."
       fact2: "On lit chaque suggestion."
       fact3: "Et quand vous signalez un bug, c'est nous qui le corrigeons (souvent le soir même)."
@@ -647,7 +648,7 @@ fr:
       p2: "Vous faites partie de cette aventure."
       p3: "Chaque livre que vous ajoutez, chaque badge que vous débloquez, c'est un peu de votre voyage qui rejoint le nôtre."
       signature: "Bonne lecture 📚"
-      team: "— Florent & l'équipe Book Nova"
+      team: "— Ana + Florent = l'équipe Book Nova"
     backToHome: "← Retour à l'accueil"
 
 en:
@@ -1255,11 +1256,11 @@ en:
       thanks: "Thanks for being here 📚"
     backToHome: "← Back to home"
   aboutPage:
-    title: "Two friends, one passion, one app"
+    title: "A couple, one passion, one app"
     subtitle: "The story behind Book Nova"
     story:
       title: "The story"
-      p1: "Book Nova was born from a simple conversation between two friends who love reading."
+      p1: "Book Nova was born from a simple conversation between two partners who love reading."
       p2: "We were looking for an app to track our books. Existing options were either too complex (we don't want a spreadsheet), too social (we don't want likes and followers), or full of ads."
       p3: "We just wanted something simple and satisfying. A place to see what we've read, what we're reading, and that little pride of watching our library grow."
       idea: "\"What if we measured our reading in height? Like, reaching our own height in books?\""
@@ -1284,11 +1285,12 @@ en:
       b3_title: "Simplicity is precious."
       b3_desc: "We refuse to add features just to have more. Every button, every screen has a reason to exist."
       b4_title: "Your data belongs to you."
-      b4_desc: "No reselling, no ad tracking. We sync your books securely so you can find them on all your devices—that's it."
+      b4_desc: "No reselling. We sync your books securely so you can find them on all your devices—that's it."
     team:
       title: "The team"
-      p1: "There are two of us. Not a startup. Not a company with investors to satisfy."
-      p2: "Just two people who love reading and wanted an app that reflects that."
+      p1: "We're a couple. Not a startup. Not a company with investors to satisfy."
+      p2: "We had both just lost our jobs. Instead of letting it bring us down, we came together around a shared project: creating the reading app we always wished existed."
+      p3: "Just two partners who love reading and turned a tough moment into an adventure."
       fact1: "We answer emails ourselves."
       fact2: "We read every suggestion."
       fact3: "And when you report a bug, we're the ones who fix it (often the same evening)."
@@ -1299,7 +1301,7 @@ en:
       p2: "You're part of this adventure."
       p3: "Every book you add, every badge you unlock, is a bit of your journey joining ours."
       signature: "Happy reading 📚"
-      team: "— Florent & the Book Nova team"
+      team: "— Ana + Florent = the Book Nova team"
     backToHome: "← Back to home"
 es:
   nav:
@@ -1721,11 +1723,11 @@ es:
       thanks: "Gracias por estar aquí 📚"
     backToHome: "← Volver al inicio"
   aboutPage:
-    title: "Dos amigos, una pasión, una app"
+    title: "Una pareja, una pasión, una app"
     subtitle: "La historia detrás de Book Nova"
     story:
       title: "La historia"
-      p1: "Book Nova nació de una conversación simple entre dos amigos apasionados por la lectura."
+      p1: "Book Nova nació de una conversación simple entre dos enamorados apasionados por la lectura."
       p2: "Buscábamos una app para seguir nuestros libros. Las opciones existentes eran o demasiado complejas (no queremos una hoja de cálculo), o demasiado sociales (no queremos likes ni seguidores), o llenas de anuncios."
       p3: "Solo queríamos algo simple y satisfactorio. Un lugar para ver lo que hemos leído, lo que estamos leyendo, y ese pequeño orgullo de ver crecer nuestra biblioteca."
       idea: "\"¿Y si midiéramos nuestras lecturas en altura? Como alcanzar nuestra propia estatura en libros.\""
@@ -1750,11 +1752,12 @@ es:
       b3_title: "La simplicidad es valiosa."
       b3_desc: "Nos negamos a añadir funciones solo por tener más. Cada botón, cada pantalla tiene una razón de ser."
       b4_title: "Tus datos te pertenecen."
-      b4_desc: "Sin reventa, sin rastreo publicitario. Sincronizamos tus libros de forma cifrada para que los encuentres en todos tus dispositivos, y ya está."
+      b4_desc: "Sin reventa. Sincronizamos tus libros de forma cifrada para que los encuentres en todos tus dispositivos, y ya está."
     team:
       title: "El equipo"
-      p1: "Somos dos. No una startup. No una empresa con inversores que satisfacer."
-      p2: "Solo dos personas que aman leer y querían una app a su medida."
+      p1: "Somos una pareja. No una startup. No una empresa con inversores que satisfacer."
+      p2: "Ambos acabábamos de perder nuestro trabajo. En lugar de dejarnos abatir, nos unimos en torno a un proyecto común: crear la app de lectura que siempre quisimos tener."
+      p3: "Solo dos enamorados que aman leer y que convirtieron un momento difícil en una aventura."
       fact1: "Respondemos nosotros mismos los correos."
       fact2: "Leemos cada sugerencia."
       fact3: "Y cuando reportas un bug, somos nosotros quienes lo arreglamos (a menudo la misma noche)."
@@ -1765,7 +1768,7 @@ es:
       p2: "Sois parte de esta aventura."
       p3: "Cada libro que añades, cada insignia que desbloqueas, es un poco de tu viaje uniéndose al nuestro."
       signature: "Feliz lectura 📚"
-      team: "— Florent y el equipo de Book Nova"
+      team: "— Ana + Florent = el equipo Book Nova"
     backToHome: "← Volver al inicio"
   termsPage:
     title: "Términos de Uso"
