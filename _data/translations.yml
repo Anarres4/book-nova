@@ -43,7 +43,8 @@ fr:
   cta:
     title: "Prêt à commencer ?"
     subtitle: "Téléchargez BookNova dès maintenant et transformez votre expérience de lecture"
-    contactPrompt: "Besoin d'un contact direct ?"
+    contactPrompt: "Besoin d'aide ?"
+    contactLink: "Contactez-nous"
   storeModal:
     title: "Disponible bientôt"
     message: "La version Android arrive très bientôt. Restez à l'écoute !"
@@ -606,6 +607,7 @@ fr:
       p1: "Créer cette app, c'est un plaisir. Mais le vrai plaisir, c'est de savoir qu'elle aide des gens à lire plus, à découvrir des livres, à célébrer leur progression."
       p2: "Si vous avez 30 secondes, laissez-nous un avis sur l'App Store ou le Play Store. Ça nous aide énormément à faire connaître l'app — et ça nous fait chaud au cœur de lire vos retours."
       thanks: "Merci d'être là 📚"
+      team: "— Ana + Florent = l'équipe Book Nova"
     backToHome: "← Retour à l'accueil"
   aboutPage:
     title: "Un couple, une passion, une app"
@@ -701,7 +703,8 @@ en:
   cta:
     title: "Ready to start?"
     subtitle: "Download BookNova now and transform your reading experience"
-    contactPrompt: "Need a direct line?"
+    contactPrompt: "Need help?"
+    contactLink: "Contact us"
   storeModal:
     title: "Coming soon"
     message: "The Android version is on its way. Stay tuned!"
@@ -1264,6 +1267,7 @@ en:
       p1: "Building this app is a pleasure. But the real joy is knowing it helps people read more, discover books, and celebrate their progress."
       p2: "If you have 30 seconds, leave us a review on the App Store or Play Store. It helps us a lot to spread the word—and it warms our hearts to read your feedback."
       thanks: "Thanks for being here 📚"
+      team: "— Ana + Florent = the Book Nova team"
     backToHome: "← Back to home"
   aboutPage:
     title: "A couple, one passion, one app"
@@ -1358,7 +1362,8 @@ es:
   cta:
     title: "¿Listo para empezar?"
     subtitle: "Descarga BookNova ahora y transforma tu experiencia de lectura"
-    contactPrompt: "¿Necesitas hablar con nosotros?"
+    contactPrompt: "¿Necesitas ayuda?"
+    contactLink: "Contáctanos"
   storeModal:
     title: "Próximamente"
     message: "La versión para Android llegará muy pronto. ¡Mantente atento!"
@@ -1736,6 +1741,7 @@ es:
       p1: "Crear esta app es un placer. Pero la verdadera alegría es saber que ayuda a la gente a leer más, descubrir libros y celebrar su progreso."
       p2: "Si tienes 30 segundos, déjanos una reseña en la App Store o Play Store. Nos ayuda mucho a dar a conocer la app, y nos alegra el corazón leer vuestros comentarios."
       thanks: "Gracias por estar aquí 📚"
+      team: "— Ana + Florent = el equipo Book Nova"
     backToHome: "← Volver al inicio"
   aboutPage:
     title: "Una pareja, una pasión, una app"
