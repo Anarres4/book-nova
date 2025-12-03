@@ -1,38 +1,75 @@
 ---
 layout: default
-title: Support
+title: "Support Book Nova — Besoin d'un coup de main ?"
+description: "Besoin d'aide avec Book Nova ? Notre équipe de passionnés de lecture est là pour vous aider. Pas de chatbot, juste nous."
 permalink: /support.html
 ---
 
-<section class="privacy-section">
-    <div class="privacy-wrapper">
-        <div class="privacy-card text-center">
-            <header class="privacy-header">
-                <h1 class="privacy-title">
-                    <span data-i18n="supportPage.title">Support</span>
-                    <span class="privacy-brand font-marker">- {{ site.title }}</span>
-                </h1>
+<section class="support-section">
+    <div class="support-wrapper">
+        <div class="support-card">
+            <!-- Header -->
+            <header class="support-header text-center">
+                <div class="support-icon mb-4">
+                    <i class="bi bi-chat-heart" style="font-size: 3.5rem; color: var(--primary-color);"></i>
+                </div>
+                <h1 class="support-title" data-i18n="supportPage.title">Besoin d'un coup de main ?</h1>
+                <p class="support-subtitle" data-i18n="supportPage.subtitle">On a créé cette app pour des gens comme nous — des lecteurs, pas des experts en technologie. Si quelque chose ne marche pas comme prévu, on est là.</p>
             </header>
 
-            <div class="mb-5">
-                <i class="bi bi-headset" style="font-size: 3.5rem; color: var(--primary-color);"></i>
-            </div>
-
-            <section class="privacy-block">
-                <h2 data-i18n="supportPage.needHelp.title">Besoin d'aide ?</h2>
-                <p data-i18n="supportPage.needHelp.content">Vous rencontrez un problème avec BookNova ou avez une question ? Notre équipe est là pour vous aider.</p>
+            <!-- Contact Section -->
+            <section class="support-block contact-block text-center">
+                <h2 data-i18n="supportPage.contact.title">Nous contacter</h2>
+                <a href="mailto:book-nova@outlook.fr" class="contact-email-btn">
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    book-nova@outlook.fr
+                </a>
+                <p class="contact-note" data-i18n="supportPage.contact.note">On répond généralement sous 1-2 jours. Pas de chatbot, pas de réponse automatique — juste nous.</p>
+                <p class="contact-joke" data-i18n="supportPage.contact.joke">(Et si on met plus longtemps, c'est probablement qu'on est plongés dans un bon bouquin. Vous comprenez.)</p>
             </section>
 
-            <section class="privacy-block">
-                <h3 data-i18n="supportPage.contact.title">Contactez-nous</h3>
-                <p data-i18n="supportPage.contact.content">Envoyez-nous un e-mail et nous vous répondrons dès que possible :</p>
-                <a href="mailto:book-nova@outlook.fr" class="btn-download mt-3 touch-target" data-i18n="supportPage.contact.button">book-nova@outlook.fr</a>
+            <!-- FAQ Section -->
+            <section class="support-block faq-block">
+                <h2 data-i18n="supportPage.faq.title">Questions fréquentes</h2>
+
+                <div class="support-faq-list">
+                    <div class="support-faq-item">
+                        <h3 data-i18n="supportPage.faq.q1">L'app fonctionne-t-elle hors connexion ?</h3>
+                        <p data-i18n="supportPage.faq.a1">Oui ! Vos livres sont stockés sur votre téléphone. Vous pouvez les consulter et en ajouter même sans internet. La synchronisation se fait automatiquement quand vous retrouvez une connexion.</p>
+                    </div>
+
+                    <div class="support-faq-item">
+                        <h3 data-i18n="supportPage.faq.q2">Mes données sont-elles en sécurité ?</h3>
+                        <p data-i18n="supportPage.faq.a2">Absolument. Vos livres sont synchronisés de façon chiffrée via Firebase. On ne vend rien, on ne partage rien avec des annonceurs. Votre bibliothèque reste la vôtre.</p>
+                    </div>
+
+                    <div class="support-faq-item">
+                        <h3 data-i18n="supportPage.faq.q3">Comment annuler mon abonnement Premium ?</h3>
+                        <p data-i18n="supportPage.faq.a3">Depuis les paramètres de votre App Store (iOS) ou Google Play Store (Android). On ne rend pas ça compliqué volontairement — c'est juste comme ça que fonctionnent les abonnements in-app.</p>
+                    </div>
+
+                    <div class="support-faq-item">
+                        <h3 data-i18n="supportPage.faq.q4">J'ai une idée pour améliorer l'app !</h3>
+                        <p data-i18n="supportPage.faq.a4">On adore ça. Envoyez-nous un email — les meilleures fonctionnalités de Book Nova sont venues de suggestions d'utilisateurs comme vous.</p>
+                    </div>
+
+                    <div class="support-faq-item">
+                        <h3 data-i18n="supportPage.faq.q5">J'ai trouvé un bug.</h3>
+                        <p data-i18n="supportPage.faq.a5">Merci de nous le signaler ! Décrivez ce qui s'est passé (et sur quel téléphone vous êtes) et on s'en occupe rapidement.</p>
+                    </div>
+                </div>
             </section>
 
-            <p class="privacy-note" data-i18n="supportPage.response">Nous répondons généralement sous 1 à 2 jours ouvrés.</p>
+            <!-- Final Word -->
+            <section class="support-block final-word text-center">
+                <h2 data-i18n="supportPage.finalWord.title">Un dernier mot</h2>
+                <p data-i18n="supportPage.finalWord.p1">Créer cette app, c'est un plaisir. Mais le vrai plaisir, c'est de savoir qu'elle aide des gens à lire plus, à découvrir des livres, à célébrer leur progression.</p>
+                <p data-i18n="supportPage.finalWord.p2">Si vous avez 30 secondes, laissez-nous un avis sur l'App Store ou le Play Store. Ça nous aide énormément à faire connaître l'app — et ça nous fait chaud au cœur de lire vos retours.</p>
+                <p class="final-thanks" data-i18n="supportPage.finalWord.thanks">Merci d'être là 📚</p>
+            </section>
 
-            <div class="privacy-back-link">
-                <a href="{{ '/' | relative_url }}" data-i18n="supportPage.backToHome">Retour à l'accueil</a>
+            <div class="support-back-link">
+                <a href="{{ '/' | relative_url }}" data-i18n="supportPage.backToHome">← Retour à l'accueil</a>
             </div>
         </div>
     </div>

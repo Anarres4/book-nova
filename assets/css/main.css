@@ -665,3 +665,348 @@ body.home-page .screenshot-item.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ================================================
+   HUMANIZED PAGES - About & Support
+   ================================================ */
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+    padding: 2.5rem 1.75rem;
+    color: #1a1a1a;
+}
+
+@media (min-width: 768px) {
+    .about-card {
+        padding: 3rem 4rem;
+    }
+}
+
+.about-title {
+    font-size: clamp(1.875rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.about-subtitle {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.about-block {
+    margin-bottom: 2.5rem;
+}
+
+.about-block h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-block p {
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.story-highlight {
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(79, 172, 254, 0.1) 100%);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 0 1rem 1rem 0;
+    margin: 1.5rem 0;
+}
+
+.story-highlight p {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.intimidating-thoughts {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.intimidating-thoughts p {
+    font-style: italic;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.intimidating-thoughts p:last-child {
+    margin-bottom: 0;
+}
+
+.about-block .highlight-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Beliefs */
+.beliefs-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.belief-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(79, 172, 254, 0.05) 100%);
+    border-radius: 1rem;
+}
+
+.belief-emoji {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.belief-item strong {
+    display: block;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.belief-item p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* Team */
+.team-facts {
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.08) 0%, rgba(79, 172, 254, 0.08) 100%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.team-facts p {
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.team-facts p::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.team-facts p:last-child {
+    margin-bottom: 0;
+}
+
+.team-conclusion {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+/* Thanks */
+.thanks-signature {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+.thanks-team {
+    font-style: italic;
+    color: #718096;
+}
+
+.about-back-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.about-back-link a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.about-back-link a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Support Section */
+.support-section {
+    padding: 80px 0;
+}
+
+.support-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.support-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+    padding: 2.5rem 1.75rem;
+    color: #1a1a1a;
+}
+
+@media (min-width: 768px) {
+    .support-card {
+        padding: 3rem 4rem;
+    }
+}
+
+.support-title {
+    font-size: clamp(1.875rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.support-subtitle {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.support-block {
+    margin-bottom: 2.5rem;
+}
+
+.support-block h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.contact-email-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+.contact-email-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+    color: white;
+}
+
+.contact-note {
+    color: #4a5568;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-joke {
+    color: #718096;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Support FAQ */
+.support-faq-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.support-faq-item {
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(79, 172, 254, 0.05) 100%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.support-faq-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+}
+
+.support-faq-item p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Final Word */
+.final-word p {
+    color: #4a5568;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-thanks {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 1.5rem !important;
+}
+
+.support-back-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.support-back-link a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.support-back-link a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .belief-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
