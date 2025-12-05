@@ -27,9 +27,9 @@ fr:
     loans:
       title: "Prêts simplifiés"
       description: "Ne perds plus jamais un livre : suis tes prêts et reçois des rappels automatiques."
-    languages:
-      title: "Multilingue"
-      description: "Français, anglais, espagnol : lis dans la langue de ton choix."
+    discover:
+      title: "Découvrir"
+      description: "Découvre de nouveaux livres grâce aux recommandations de la communauté."
     stats:
       title: "Statistiques détaillées"
       description: "Visualise ton évolution de lecteur et découvre tes habitudes de lecture."
@@ -694,9 +694,9 @@ en:
     loans:
       title: "Simplified loans"
       description: "Never lose a book again: track your loans and receive automatic reminders."
-    languages:
-      title: "Multilingual"
-      description: "French, English, Spanish—read in the language that fits you best."
+    discover:
+      title: "Discover"
+      description: "Discover new books through community recommendations."
     stats:
       title: "Detailed statistics"
       description: "Visualise your evolution as a reader and discover your reading habits."
@@ -1360,9 +1360,9 @@ es:
     loans:
       title: "Préstamos simplificados"
       description: "No vuelvas a perder un libro: controla tus préstamos y recibe recordatorios automáticos."
-    languages:
-      title: "Multilingüe"
-      description: "Francés, inglés, español: lee en el idioma que prefieras."
+    discover:
+      title: "Descubrir"
+      description: "Descubre nuevos libros gracias a las recomendaciones de la comunidad."
     stats:
       title: "Estadísticas detalladas"
       description: "Visualiza tu evolución como lector y descubre tus hábitos de lectura."
