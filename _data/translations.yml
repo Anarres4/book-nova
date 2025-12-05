@@ -56,6 +56,7 @@ fr:
   footer:
     copyright: "Tous droits réservés."
   footerLinks:
+    contact: "Nous contacter"
     privacy: "Politique de confidentialité"
     terms: "Conditions d'utilisation"
   languageSwitcher:
@@ -716,6 +717,7 @@ en:
   footer:
     copyright: "All rights reserved."
   footerLinks:
+    contact: "Contact Us"
     privacy: "Privacy Policy"
     terms: "Terms of Use"
   languageSwitcher:
@@ -1375,6 +1377,7 @@ es:
   footer:
     copyright: "Todos los derechos reservados."
   footerLinks:
+    contact: "Contáctenos"
     privacy: "Política de privacidad"
     terms: "Condiciones de uso"
   languageSwitcher:
