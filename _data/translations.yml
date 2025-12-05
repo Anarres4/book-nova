@@ -589,7 +589,9 @@ fr:
     subtitle: "On a créé cette app pour des gens comme nous — des lecteurs, pas des experts en technologie. Si quelque chose ne marche pas comme prévu, on est là."
     contact:
       title: "Nous contacter"
+      inApp: "Vous pouvez aussi nous contacter directement depuis l'application : Paramètres → Support."
       note: "On répond généralement sous 1-2 jours. Pas de chatbot, pas de réponse automatique — juste nous."
+      deviceInfo: "Pour nous aider à résoudre votre problème plus rapidement, pensez à nous indiquer votre type de téléphone et son modèle."
       joke: "(Et si on met plus longtemps, c'est probablement qu'on est plongés dans un bon bouquin. Vous comprenez.)"
     faq:
       title: "Questions fréquentes"
@@ -603,6 +605,7 @@ fr:
       a4: "On adore ça. Envoyez-nous un email — les meilleures fonctionnalités de Book Nova sont venues de suggestions d'utilisateurs comme vous."
       q5: "J'ai trouvé un bug."
       a5: "Merci de nous le signaler ! Décrivez ce qui s'est passé (et sur quel téléphone vous êtes) et on s'en occupe rapidement."
+      seeDetailedFaq: "voir la FAQ détaillée"
     finalWord:
       title: "Un dernier mot"
       p1: "Créer cette app, c'est un plaisir. Mais le vrai plaisir, c'est de savoir qu'elle aide des gens à lire plus, à découvrir des livres, à célébrer leur progression."
@@ -1250,7 +1253,9 @@ en:
     subtitle: "We created this app for people like us—readers, not tech experts. If something's not working as expected, we're here."
     contact:
       title: "Contact us"
+      inApp: "You can also contact us directly from the app: Settings → Support."
       note: "We usually respond within 1-2 days. No chatbot, no automated reply—just us."
+      deviceInfo: "To help us solve your issue faster, please let us know your phone type and model."
       joke: "(And if it takes longer, we're probably deep in a good book. You understand.)"
     faq:
       title: "Frequently Asked Questions"
@@ -1264,6 +1269,7 @@ en:
       a4: "We love that. Send us an email—the best features in Book Nova have come from user suggestions like yours."
       q5: "I found a bug."
       a5: "Thanks for letting us know! Describe what happened (and what phone you're using) and we'll take care of it quickly."
+      seeDetailedFaq: "see detailed FAQ"
     finalWord:
       title: "One last thing"
       p1: "Building this app is a pleasure. But the real joy is knowing it helps people read more, discover books, and celebrate their progress."
@@ -1725,7 +1731,9 @@ es:
     subtitle: "Creamos esta app para gente como nosotros: lectores, no expertos en tecnología. Si algo no funciona como esperabas, estamos aquí."
     contact:
       title: "Contáctanos"
+      inApp: "También puedes contactarnos directamente desde la aplicación: Ajustes → Soporte."
       note: "Normalmente respondemos en 1-2 días. Sin chatbot, sin respuestas automáticas: solo nosotros."
+      deviceInfo: "Para ayudarnos a resolver tu problema más rápido, indícanos el tipo y modelo de tu teléfono."
       joke: "(Y si tardamos más, probablemente estemos inmersos en un buen libro. Lo entiendes.)"
     faq:
       title: "Preguntas frecuentes"
@@ -1739,6 +1747,7 @@ es:
       a4: "Nos encanta eso. Envíanos un correo: las mejores funciones de Book Nova han venido de sugerencias de usuarios como tú."
       q5: "Encontré un bug."
       a5: "¡Gracias por avisarnos! Describe qué pasó (y qué teléfono usas) y lo resolveremos rápidamente."
+      seeDetailedFaq: "ver FAQ detallada"
     finalWord:
       title: "Una última cosa"
       p1: "Crear esta app es un placer. Pero la verdadera alegría es saber que ayuda a la gente a leer más, descubrir libros y celebrar su progreso."
