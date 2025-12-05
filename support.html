@@ -14,24 +14,59 @@ permalink: /support.html
                     <i class="bi bi-chat-heart" style="font-size: 3.5rem; color: var(--primary-color);"></i>
                 </div>
                 <h1 class="support-title" data-i18n="supportPage.title">Besoin d'un coup de main ?</h1>
-                <p class="support-subtitle mb-3" data-i18n="supportPage.subtitle">On a créé cette app pour des gens comme nous — des lecteurs, pas des experts en technologie. Si quelque chose ne marche pas comme prévu, on est là.</p>
+                <p class="support-subtitle" data-i18n="supportPage.subtitle">On a créé cette app pour des gens comme nous — des lecteurs, pas des experts en technologie. Si quelque chose ne marche pas comme prévu, on est là.</p>
             </header>
 
-            <!-- Contact Section -->
-            <section class="support-block contact-block text-center">
-                <h2 data-i18n="supportPage.contact.title">Nous contacter</h2>
-                <a href="mailto:book-nova@outlook.fr" class="contact-email-btn">
-                    <i class="bi bi-envelope-fill me-2"></i>
-                    book-nova@outlook.fr
+            <!-- Contact Methods -->
+            <div class="contact-methods">
+                <a href="mailto:book-nova@outlook.fr" class="contact-method-card contact-method-primary">
+                    <div class="contact-method-icon">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <div class="contact-method-content">
+                        <span class="contact-method-label" data-i18n="supportPage.contact.emailLabel">Par email</span>
+                        <span class="contact-method-value">book-nova@outlook.fr</span>
+                    </div>
+                    <i class="bi bi-arrow-right contact-method-arrow"></i>
                 </a>
-                <p class="contact-note" data-i18n="supportPage.contact.inApp">Vous pouvez aussi nous contacter directement depuis l'application : Paramètres → Support.</p>
-                <p class="contact-note" data-i18n="supportPage.contact.note">On répond généralement sous 1-2 jours. Pas de chatbot, pas de réponse automatique — juste nous.</p>
-                <p class="contact-note" data-i18n="supportPage.contact.deviceInfo">Pour nous aider à résoudre votre problème plus rapidement, pensez à nous indiquer votre type de téléphone et son modèle.</p>
-                <p class="contact-joke" data-i18n="supportPage.contact.joke">(Et si on met plus longtemps, c'est probablement qu'on est plongés dans un bon bouquin. Vous comprenez.)</p>
-            </section>
+
+                <div class="contact-method-card contact-method-secondary">
+                    <div class="contact-method-icon">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <div class="contact-method-content">
+                        <span class="contact-method-label" data-i18n="supportPage.contact.inAppLabel">Depuis l'application</span>
+                        <span class="contact-method-value" data-i18n="supportPage.contact.inAppPath">Paramètres → Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Cards -->
+            <div class="support-info-cards">
+                <div class="support-info-card">
+                    <div class="support-info-icon">
+                        <i class="bi bi-clock"></i>
+                    </div>
+                    <h3 data-i18n="supportPage.contact.responseTitle">Délai de réponse</h3>
+                    <p data-i18n="supportPage.contact.responseText">1-2 jours ouvrés. Pas de chatbot, pas de réponse automatique — juste nous.</p>
+                </div>
+
+                <div class="support-info-card">
+                    <div class="support-info-icon">
+                        <i class="bi bi-phone-vibrate"></i>
+                    </div>
+                    <h3 data-i18n="supportPage.contact.deviceTitle">Info utile</h3>
+                    <p data-i18n="supportPage.contact.deviceText">Pensez à nous indiquer votre type de téléphone et son modèle pour un diagnostic plus rapide.</p>
+                </div>
+            </div>
+
+            <!-- Joke -->
+            <p class="contact-joke text-center" data-i18n="supportPage.contact.joke">(Et si on met plus longtemps, c'est probablement qu'on est plongés dans un bon bouquin. Vous comprenez.)</p>
+
+            <hr class="support-divider">
 
             <!-- Final Word -->
-            <section class="support-block final-word text-center">
+            <section class="final-word text-center">
                 <h2 data-i18n="supportPage.finalWord.title">Un dernier mot</h2>
                 <p data-i18n="supportPage.finalWord.p1">Créer cette app, c'est un plaisir. Mais le vrai plaisir, c'est de savoir qu'elle aide des gens à lire plus, à découvrir des livres, à célébrer leur progression.</p>
                 <p data-i18n="supportPage.finalWord.p2">Si vous avez 30 secondes, laissez-nous un avis sur l'App Store ou le Play Store. Ça nous aide énormément à faire connaître l'app — et ça nous fait chaud au cœur de lire vos retours.</p>
