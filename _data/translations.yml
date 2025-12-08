@@ -398,7 +398,7 @@ fr:
         - "ISBNdb uniquement pour les métadonnées publiques"
         - "RevenueCat gère la version premium (données anonymisées)"
         - "Vous pouvez demander la suppression de la copie synchronisée à tout moment ou désactiver la contribution aux statistiques dans l'application"
-    lastUpdated: "Dernière mise à jour : 04/10/2025"
+    lastUpdated: "Dernière mise à jour : 08/12/2025"
     backToHome: "Retour à l'accueil"
   termsPage:
     title: "Conditions d'Utilisation"
@@ -583,7 +583,7 @@ fr:
         - "Achats via Apple/Google, remboursements via ces plateformes"
         - "Application fournie 'en l'état', responsabilité limitée"
         - "Pas de compte requis, UUID anonyme pour le premium et la synchronisation Firebase dédiée aux recommandations"
-    lastUpdated: "Dernière mise à jour : 02/12/2025"
+    lastUpdated: "Dernière mise à jour : 08/12/2025"
     backToHome: "Retour à l'accueil"
   supportPage:
     title: "Besoin d'un coup de main ?"
@@ -1067,7 +1067,7 @@ en:
         - "ISBNdb is used only for public metadata"
         - "RevenueCat handles premium (anonymised data)"
         - "You can request deletion of the synced copy or disable contribution in settings at any time"
-    lastUpdated: "Last updated: 04/10/2025"
+    lastUpdated: "Last updated: 08/12/2025"
     backToHome: "Back to home"
   termsPage:
     title: "Terms of Use"
@@ -1252,7 +1252,7 @@ en:
         - "Purchases handled by Apple/Google; refunds handled by them"
         - "App provided 'as is' with limited liability"
         - "No account required; an anonymous UUID powers premium and the Firebase recommendation sync"
-    lastUpdated: "Last updated: 02/12/2025"
+    lastUpdated: "Last updated: 08/12/2025"
     backToHome: "Back to home"
   supportPage:
     title: "Need a hand?"
@@ -1735,7 +1735,7 @@ es:
         - "ISBNdb solo para metadatos públicos"
         - "RevenueCat gestiona la versión premium (datos anonimizados)"
         - "Puedes solicitar la eliminación de la copia sincronizada o desactivar la contribución en los ajustes cuando quieras"
-    lastUpdated: "Última actualización: 04/10/2025"
+    lastUpdated: "Última actualización: 08/12/2025"
     backToHome: "Volver al inicio"
   supportPage:
     title: "¿Necesitas ayuda?"
@@ -2001,5 +2001,5 @@ es:
         - "Compras gestionadas por Apple/Google; reembolsos a través de ellos"
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
         - "Sin cuenta obligatoria; un UUID anónimo gestiona el premium y la sincronización con Firebase dedicada a recomendaciones"
-    lastUpdated: "Última actualización: 02/12/2025"
+    lastUpdated: "Última actualización: 08/12/2025"
     backToHome: "Volver al inicio"
