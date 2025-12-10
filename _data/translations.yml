@@ -647,8 +647,8 @@ fr:
       b2_desc: "Un livre par an ou cent, peu importe. Si vous aimez lire, cette app est pour vous."
       b3_title: "La simplicité, c'est précieux."
       b3_desc: "On refuse d'ajouter des fonctionnalités juste pour en avoir plus. Chaque bouton, chaque écran a une raison d'être."
-      b4_title: "Vos données vous appartiennent."
-      b4_desc: "Pas de revente."
+      b4_title: "Lecture sans pression."
+      b4_desc: "Zéro culpabilité. Votre pile à lire grandit ? Aucun problème. Vous lisez lentement ? Parfait. Book Nova ne vous envoie ni notifications stressantes, ni emails moralisateurs."
     team:
       title: "L'équipe"
       p1: "Nous sommes un couple. Pas une startup. Pas une entreprise avec des investisseurs à satisfaire."
@@ -1316,8 +1316,8 @@ en:
       b2_desc: "One book a year or a hundred, it doesn't matter. If you love reading, this app is for you."
       b3_title: "Simplicity is precious."
       b3_desc: "We refuse to add features just to have more. Every button, every screen has a reason to exist."
-      b4_title: "Your data belongs to you."
-      b4_desc: "No reselling."
+      b4_title: "Reading without pressure."
+      b4_desc: "Zero guilt. Your TBR pile growing? No problem. Reading slowly? Perfect. Book Nova sends you no stressful notifications, no moralizing emails."
     team:
       title: "The team"
       p1: "We're a couple. Not a startup. Not a company with investors to satisfy."
@@ -1799,8 +1799,8 @@ es:
       b2_desc: "Un libro al año o cien, da igual. Si te gusta leer, esta app es para ti."
       b3_title: "La simplicidad es valiosa."
       b3_desc: "Nos negamos a añadir funciones solo por tener más. Cada botón, cada pantalla tiene una razón de ser."
-      b4_title: "Tus datos te pertenecen."
-      b4_desc: "Sin reventa."
+      b4_title: "Lectura sin presión."
+      b4_desc: "Cero culpabilidad. ¿Tu pila de lectura crece? No hay problema. ¿Lees despacio? Perfecto. Book Nova no te envía ni notificaciones estresantes, ni correos moralizadores."
     team:
       title: "El equipo"
       p1: "Somos una pareja. No una startup. No una empresa con inversores que satisfacer."
