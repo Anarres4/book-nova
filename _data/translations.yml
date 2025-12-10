@@ -648,7 +648,7 @@ fr:
       b3_title: "La simplicité, c'est précieux."
       b3_desc: "On refuse d'ajouter des fonctionnalités juste pour en avoir plus. Chaque bouton, chaque écran a une raison d'être."
       b4_title: "Vos données vous appartiennent."
-      b4_desc: "Pas de revente. On synchronise vos livres de façon chiffrée pour que vous les retrouviez sur tous vos appareils — c'est tout."
+      b4_desc: "Pas de revente."
     team:
       title: "L'équipe"
       p1: "Nous sommes un couple. Pas une startup. Pas une entreprise avec des investisseurs à satisfaire."
@@ -1317,7 +1317,7 @@ en:
       b3_title: "Simplicity is precious."
       b3_desc: "We refuse to add features just to have more. Every button, every screen has a reason to exist."
       b4_title: "Your data belongs to you."
-      b4_desc: "No reselling. We sync your books securely so you can find them on all your devices—that's it."
+      b4_desc: "No reselling."
     team:
       title: "The team"
       p1: "We're a couple. Not a startup. Not a company with investors to satisfy."
@@ -1800,7 +1800,7 @@ es:
       b3_title: "La simplicidad es valiosa."
       b3_desc: "Nos negamos a añadir funciones solo por tener más. Cada botón, cada pantalla tiene una razón de ser."
       b4_title: "Tus datos te pertenecen."
-      b4_desc: "Sin reventa. Sincronizamos tus libros de forma cifrada para que los encuentres en todos tus dispositivos, y ya está."
+      b4_desc: "Sin reventa."
     team:
       title: "El equipo"
       p1: "Somos una pareja. No una startup. No una empresa con inversores que satisfacer."
