@@ -1,5 +1,6 @@
 fr:
   nav:
+    home: "Accueil"
     features: "Fonctionnalités"
     download: "Télécharger"
     contact: "Contact"
@@ -737,6 +738,7 @@ fr:
 
 en:
   nav:
+    home: "Home"
     features: "Features"
     download: "Download"
     contact: "Contact"
@@ -1473,6 +1475,7 @@ en:
     backToHome: "← Back to home"
 es:
   nav:
+    home: "Inicio"
     features: "Características"
     download: "Descargar"
     contact: "Contacto"

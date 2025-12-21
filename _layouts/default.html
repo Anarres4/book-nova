@@ -237,6 +237,9 @@
                         </ul>
                     </li>
                     <li class="nav-item d-none d-md-block">
+                        <a class="nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}" data-i18n="nav.home">Accueil</a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
                         <a class="nav-link{% if page.url == '/about.html' %} active{% endif %}" href="{{ '/about.html' | relative_url }}" data-i18n="nav.about">À propos</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
@@ -250,6 +253,7 @@
                     </li>
                     <li class="nav-item d-md-none w-100">
                         <div class="mobile-nav-panel">
+                            <a href="{{ '/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" data-i18n="nav.home">Accueil</a>
                             <a href="{{ '/about.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/about.html' %} active{% endif %}" data-i18n="nav.about">À propos</a>
                             <a href="{{ '/privacy.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/privacy.html' %} active{% endif %}" data-i18n="nav.privacy">Confidentialité</a>
                             <a href="{{ '/terms.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/terms.html' %} active{% endif %}" data-i18n="nav.terms">Conditions</a>
