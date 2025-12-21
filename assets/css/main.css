@@ -1175,27 +1175,3 @@ body.home-page .screenshot-item.visible {
     }
 }
 
-/* ================================================
-   CURVE SEPARATORS
-   ================================================ */
-
-.curve-separator {
-    width: 100%;
-    line-height: 0;
-    overflow: hidden;
-}
-
-.curve-separator svg {
-    display: block;
-    width: 100%;
-}
-
-.curve-separator.curve-flip svg {
-    transform: scaleY(-1);
-}
-
-@media (max-width: 767px) {
-    .curve-separator svg {
-        height: 40px !important;
-    }
-}
