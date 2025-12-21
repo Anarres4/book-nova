@@ -466,6 +466,18 @@ body {
     padding: 80px 0;
 }
 
+/* Mobile: reduce section spacing */
+@media (max-width: 767px) {
+    .hero-section,
+    .screenshots-section,
+    .features-section,
+    .story-section,
+    .faq-section,
+    .cta-section {
+        padding: 30px 0;
+    }
+}
+
 .faq-section .accordion-item {
     background: rgba(255, 255, 255, 0.95);
     border: none;
