@@ -404,13 +404,11 @@ body {
 
 .features-section {
     padding: 40px 0 80px;
-    background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
 /* Story Section (Index) */
 .story-section {
     padding: 60px 0 80px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.12) 100%);
 }
 
 .story-section .section-title {
@@ -458,18 +456,14 @@ body {
 
 .cta-section {
     padding: 80px 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
 }
 
 .screenshots-section {
     padding: 80px 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.1) 100%);
-    backdrop-filter: blur(12px);
 }
 
 .faq-section {
     padding: 80px 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
 .faq-section .accordion-item {
@@ -1178,5 +1172,30 @@ body.home-page .screenshot-item.visible {
     .belief-item {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+/* ================================================
+   CURVE SEPARATORS
+   ================================================ */
+
+.curve-separator {
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.curve-separator svg {
+    display: block;
+    width: 100%;
+}
+
+.curve-separator.curve-flip svg {
+    transform: scaleY(-1);
+}
+
+@media (max-width: 767px) {
+    .curve-separator svg {
+        height: 40px !important;
     }
 }
