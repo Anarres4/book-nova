@@ -15,10 +15,23 @@ permalink: "/"
                 <div class="hero-image">
                     {% if site.hero_image %}
                     <picture class="hero-logo-wrapper">
-                        {% if site.hero_image_webp %}
-                        <source srcset="{{ site.hero_image_webp | relative_url }}" type="image/webp">
-                        {% endif %}
-                        <img src="{{ site.hero_image | relative_url }}" alt="{{ site.title }}" class="hero-logo">
+                        <source
+                            srcset="{{ '/assets/images/hero-logo-small.webp' | relative_url }} 128w,
+                                    {{ '/assets/images/hero-logo-medium.webp' | relative_url }} 256w,
+                                    {{ '/assets/images/hero-logo-large.webp' | relative_url }} 512w"
+                            sizes="(max-width: 768px) 128px, 256px"
+                            type="image/webp">
+                        <img
+                            src="{{ site.hero_image | relative_url }}"
+                            srcset="{{ '/assets/images/hero-logo-small.webp' | relative_url }} 128w,
+                                    {{ '/assets/images/hero-logo-medium.webp' | relative_url }} 256w,
+                                    {{ '/assets/images/hero-logo-large.webp' | relative_url }} 512w"
+                            sizes="(max-width: 768px) 128px, 256px"
+                            alt="{{ site.title }}"
+                            class="hero-logo"
+                            width="256"
+                            height="256"
+                            loading="eager">
                     </picture>
                     {% else %}
                     <i class="bi bi-book-fill"></i>
@@ -60,28 +73,58 @@ permalink: "/"
     <div class="screenshots-container">
         <div class="screenshots-scroll d-flex gap-3 gap-md-4 pb-4" id="screenshotsContainer">
             <picture class="screenshot-picture" data-screenshot="1">
-                <source srcset="{{ 'assets/screenshots/fr/01.webp' | relative_url }}" type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/01.png' | relative_url }}" alt="Application de gestion de bibliothèque Book Nova - tableau de bord de lecture avec suivi de progression" class="screenshot-item" loading="lazy" decoding="async">
+                <source
+                    srcset="{{ 'assets/screenshots/fr/01-small.webp' | relative_url }} 500w,
+                            {{ 'assets/screenshots/fr/01-medium.webp' | relative_url }} 750w,
+                            {{ 'assets/screenshots/fr/01.webp' | relative_url }} 1242w"
+                    sizes="(max-width: 768px) 180px, 231px"
+                    type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/01.png' | relative_url }}" alt="Application de gestion de bibliothèque Book Nova - tableau de bord de lecture avec suivi de progression" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="2">
-                <source srcset="{{ 'assets/screenshots/fr/02.webp' | relative_url }}" type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/02.png' | relative_url }}" alt="Statistiques de lecture détaillées dans Book Nova - visualisez vos habitudes de lecture et objectifs" class="screenshot-item" loading="lazy" decoding="async">
+                <source
+                    srcset="{{ 'assets/screenshots/fr/02-small.webp' | relative_url }} 500w,
+                            {{ 'assets/screenshots/fr/02-medium.webp' | relative_url }} 750w,
+                            {{ 'assets/screenshots/fr/02.webp' | relative_url }} 1242w"
+                    sizes="(max-width: 768px) 180px, 231px"
+                    type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/02.png' | relative_url }}" alt="Statistiques de lecture détaillées dans Book Nova - visualisez vos habitudes de lecture et objectifs" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="3">
-                <source srcset="{{ 'assets/screenshots/fr/03.webp' | relative_url }}" type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/03.png' | relative_url }}" alt="Fiche livre complète Book Nova - organisez votre collection avec informations et notes" class="screenshot-item" loading="lazy" decoding="async">
+                <source
+                    srcset="{{ 'assets/screenshots/fr/03-small.webp' | relative_url }} 500w,
+                            {{ 'assets/screenshots/fr/03-medium.webp' | relative_url }} 750w,
+                            {{ 'assets/screenshots/fr/03.webp' | relative_url }} 1242w"
+                    sizes="(max-width: 768px) 180px, 231px"
+                    type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/03.png' | relative_url }}" alt="Fiche livre complète Book Nova - organisez votre collection avec informations et notes" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="4">
-                <source srcset="{{ 'assets/screenshots/fr/04.webp' | relative_url }}" type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/04.png' | relative_url }}" alt="Gestion des prêts de livres Book Nova - suivez vos livres prêtés avec rappels automatiques" class="screenshot-item" loading="lazy" decoding="async">
+                <source
+                    srcset="{{ 'assets/screenshots/fr/04-small.webp' | relative_url }} 500w,
+                            {{ 'assets/screenshots/fr/04-medium.webp' | relative_url }} 750w,
+                            {{ 'assets/screenshots/fr/04.webp' | relative_url }} 1242w"
+                    sizes="(max-width: 768px) 180px, 231px"
+                    type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/04.png' | relative_url }}" alt="Gestion des prêts de livres Book Nova - suivez vos livres prêtés avec rappels automatiques" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="5">
-                <source srcset="{{ 'assets/screenshots/fr/05.webp' | relative_url }}" type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/05.png' | relative_url }}" alt="Défis de lecture et badges Book Nova - gamification pour motiver vos lectures" class="screenshot-item" loading="lazy" decoding="async">
+                <source
+                    srcset="{{ 'assets/screenshots/fr/05-small.webp' | relative_url }} 500w,
+                            {{ 'assets/screenshots/fr/05-medium.webp' | relative_url }} 750w,
+                            {{ 'assets/screenshots/fr/05.webp' | relative_url }} 1242w"
+                    sizes="(max-width: 768px) 180px, 231px"
+                    type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/05.png' | relative_url }}" alt="Défis de lecture et badges Book Nova - gamification pour motiver vos lectures" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="6">
-                <source srcset="{{ 'assets/screenshots/fr/06.webp' | relative_url }}" type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/06.png' | relative_url }}" alt="Paramètres multilingues Book Nova - application disponible en français, anglais et espagnol" class="screenshot-item" loading="lazy" decoding="async">
+                <source
+                    srcset="{{ 'assets/screenshots/fr/06-small.webp' | relative_url }} 500w,
+                            {{ 'assets/screenshots/fr/06-medium.webp' | relative_url }} 750w,
+                            {{ 'assets/screenshots/fr/06.webp' | relative_url }} 1242w"
+                    sizes="(max-width: 768px) 180px, 231px"
+                    type="image/webp">
+                <img src="{{ 'assets/screenshots/fr/06.png' | relative_url }}" alt="Paramètres multilingues Book Nova - application disponible en français, anglais et espagnol" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
             </picture>
         </div>
     </div>
