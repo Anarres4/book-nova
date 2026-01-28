@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anarres4.github.io/book-nova/sitemap.xml
+Sitemap: https://book-nova.com/sitemap.xml
