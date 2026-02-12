@@ -648,6 +648,18 @@ body.home-page .hero-image {
     padding: 80px 0;
 }
 
+@supports (content-visibility: auto) {
+    body.home-page .reviews-section,
+    body.home-page .screenshots-section,
+    body.home-page .features-section,
+    body.home-page .story-section,
+    body.home-page .faq-section,
+    body.home-page .cta-section {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 900px;
+    }
+}
+
 body.home-page .screenshots-section,
 body.home-page .reviews-section {
     position: relative;
@@ -1212,8 +1224,8 @@ body.home-page .feature-card.animate-on-scroll.animated:nth-child(6) {
     animation-delay: 0.6s;
 }
 
-section {
-    transition: all 0.5s ease;
+body.home-page section.animate-on-scroll {
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .screenshot-item {
