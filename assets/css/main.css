@@ -6,6 +6,20 @@
     --inner-pages-dark: #292079;
 }
 
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
+
 @font-face {
     font-family: 'Permanent Marker';
     font-style: normal;

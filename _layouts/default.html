@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#6C63FF">
+    <meta name="theme-color" content="#c0d5ec">
     <script>
         (function() {
             try {
                 var storedTheme = localStorage.getItem('theme');
-                var theme = storedTheme === 'light' ? 'light' : 'dark';
+                var theme = storedTheme === 'dark' ? 'dark' : 'light';
                 document.documentElement.classList.add(theme === 'light' ? 'theme-light' : 'theme-dark');
                 var themeColorMeta = document.querySelector('meta[name="theme-color"]');
                 if (themeColorMeta) {
                     themeColorMeta.setAttribute('content', theme === 'light' ? '#c0d5ec' : '#6C63FF');
                 }
             } catch (e) {
-                document.documentElement.classList.add('theme-dark');
+                document.documentElement.classList.add('theme-light');
             }
         })();
     </script>
@@ -262,10 +262,6 @@
                             <a href="{{ '/support.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/support.html' %} active{% endif %}" data-i18n="nav.support">Support</a>
                             <div class="mobile-nav-divider"></div>
                             <div class="mobile-nav-heading" data-i18n="languageSwitcher.change">Changer de langue</div>
-                            <button type="button" class="mobile-theme-toggle touch-target" data-theme-toggle aria-pressed="false" aria-label="Activer le mode clair">
-                                <i class="bi bi-moon-stars-fill" data-theme-icon aria-hidden="true"></i>
-                                <span data-theme-label>Nuit</span>
-                            </button>
                             <button data-lang="en" class="mobile-language-option touch-target" aria-selected="false">
                                 <span>English</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark d-none" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -283,6 +279,12 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark d-none" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                                 </svg>
+                            </button>
+                            <div class="mobile-nav-divider"></div>
+                            <div class="mobile-nav-heading" data-i18n="languageSwitcher.theme">Thème</div>
+                            <button type="button" class="mobile-theme-toggle touch-target" data-theme-toggle aria-pressed="false" aria-label="Activer le mode clair">
+                                <i class="bi bi-moon-stars-fill" data-theme-icon aria-hidden="true"></i>
+                                <span data-theme-label>Nuit</span>
                             </button>
                         </div>
                     </li>
