@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#6C63FF">
+    <script>
+        (function() {
+            try {
+                var storedTheme = localStorage.getItem('theme');
+                var theme = storedTheme === 'light' ? 'light' : 'dark';
+                document.documentElement.classList.add(theme === 'light' ? 'theme-light' : 'theme-dark');
+                var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+                if (themeColorMeta) {
+                    themeColorMeta.setAttribute('content', theme === 'light' ? '#d3e4f7' : '#6C63FF');
+                }
+            } catch (e) {
+                document.documentElement.classList.add('theme-dark');
+            }
+        })();
+    </script>
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
@@ -226,6 +241,12 @@
                         </ul>
                     </li>
                     <li class="nav-item d-none d-md-block">
+                        <button type="button" class="theme-switcher" data-theme-toggle aria-pressed="false" aria-label="Activer le mode clair">
+                            <i class="bi bi-moon-stars-fill" data-theme-icon aria-hidden="true"></i>
+                            <span data-theme-label>Nuit</span>
+                        </button>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
                         <a class="nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}" data-i18n="nav.home">Accueil</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
@@ -241,6 +262,10 @@
                             <a href="{{ '/support.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/support.html' %} active{% endif %}" data-i18n="nav.support">Support</a>
                             <div class="mobile-nav-divider"></div>
                             <div class="mobile-nav-heading" data-i18n="languageSwitcher.change">Changer de langue</div>
+                            <button type="button" class="mobile-theme-toggle touch-target" data-theme-toggle aria-pressed="false" aria-label="Activer le mode clair">
+                                <i class="bi bi-moon-stars-fill" data-theme-icon aria-hidden="true"></i>
+                                <span data-theme-label>Nuit</span>
+                            </button>
                             <button data-lang="en" class="mobile-language-option touch-target" aria-selected="false">
                                 <span>English</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark d-none" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -464,6 +489,8 @@
         }
 
         let currentLang = getLangFromUrl() || storedLang || '{{ site.default_lang }}';
+        const themeStorageKey = 'theme';
+        let currentTheme = document.documentElement.classList.contains('theme-light') ? 'light' : 'dark';
 
         if (!isValidLang(currentLang)) {
             currentLang = '{{ site.default_lang }}';
@@ -474,6 +501,78 @@
         }
 
         setLangInUrl(currentLang);
+
+        function getStoredTheme() {
+            try {
+                const stored = localStorage.getItem(themeStorageKey);
+                if (stored === 'light' || stored === 'dark') {
+                    return stored;
+                }
+            } catch (e) {}
+            return null;
+        }
+
+        function getThemeLabels() {
+            const switcher = translations[currentLang]?.languageSwitcher || {};
+            return {
+                toLight: switcher.toLight || 'Activer le mode clair',
+                toDark: switcher.toDark || 'Activer le mode nuit',
+                lightLabel: switcher.modeLight || 'Clair',
+                darkLabel: switcher.modeDark || 'Nuit'
+            };
+        }
+
+        function syncThemeToggleButtons() {
+            const isLight = currentTheme === 'light';
+            const labels = getThemeLabels();
+            const nextThemeLabel = isLight ? labels.toDark : labels.toLight;
+            const currentThemeLabel = isLight ? labels.lightLabel : labels.darkLabel;
+
+            document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+                btn.setAttribute('aria-pressed', String(isLight));
+                btn.setAttribute('aria-label', nextThemeLabel);
+                btn.setAttribute('title', nextThemeLabel);
+                btn.dataset.theme = currentTheme;
+
+                const icon = btn.querySelector('[data-theme-icon]');
+                if (icon) {
+                    icon.classList.remove('bi-moon-stars-fill', 'bi-sun-fill');
+                    icon.classList.add(isLight ? 'bi-sun-fill' : 'bi-moon-stars-fill');
+                }
+
+                const themeLabel = btn.querySelector('[data-theme-label]');
+                if (themeLabel) {
+                    themeLabel.textContent = currentThemeLabel;
+                }
+            });
+
+            const themeMeta = document.querySelector('meta[name="theme-color"]');
+            if (themeMeta) {
+                themeMeta.setAttribute('content', isLight ? '#d3e4f7' : '#6C63FF');
+            }
+        }
+
+        function applyTheme(theme, options = {}) {
+            const persist = options.persist !== false;
+            currentTheme = theme === 'light' ? 'light' : 'dark';
+            const isLight = currentTheme === 'light';
+
+            document.documentElement.classList.toggle('theme-light', isLight);
+            document.documentElement.classList.toggle('theme-dark', !isLight);
+
+            if (document.body) {
+                document.body.classList.toggle('theme-light', isLight);
+                document.body.classList.toggle('theme-dark', !isLight);
+            }
+
+            if (persist) {
+                try {
+                    localStorage.setItem(themeStorageKey, currentTheme);
+                } catch (e) {}
+            }
+
+            syncThemeToggleButtons();
+        }
 
         // Toggle dropdown
         const langButton = document.getElementById('languageButton');
@@ -656,6 +755,8 @@
                     checkmark.classList.toggle('d-none', !isActive);
                 }
             });
+
+            syncThemeToggleButtons();
         }
 
         // Update current language display
@@ -673,6 +774,12 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
+            const storedTheme = getStoredTheme();
+            if (storedTheme) {
+                currentTheme = storedTheme;
+            }
+            applyTheme(currentTheme, { persist: false });
+
             updateContent();
             updateCurrentLanguage();
 
@@ -687,6 +794,12 @@
                 btn.addEventListener('click', () => {
                     const lang = btn.getAttribute('data-lang');
                     changeLanguage(lang);
+                });
+            });
+
+            document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    applyTheme(currentTheme === 'light' ? 'dark' : 'light');
                 });
             });
 

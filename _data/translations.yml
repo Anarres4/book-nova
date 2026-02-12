@@ -72,6 +72,11 @@ fr:
     terms: "Conditions d'utilisation"
   languageSwitcher:
     change: "Changer de langue"
+    theme: "Thème"
+    toLight: "Activer le mode clair"
+    toDark: "Activer le mode nuit"
+    modeLight: "Clair"
+    modeDark: "Nuit"
   faq:
     title: "Questions fréquentes"
     q1: "Book Nova est-elle gratuite ?"
@@ -879,6 +884,11 @@ en:
     terms: "Terms of Use"
   languageSwitcher:
     change: "Change language"
+    theme: "Theme"
+    toLight: "Switch to light mode"
+    toDark: "Switch to dark mode"
+    modeLight: "Light"
+    modeDark: "Dark"
   faq:
     title: "Frequently Asked Questions"
     q1: "Is Book Nova free?"
@@ -1685,6 +1695,11 @@ es:
     terms: "Condiciones de uso"
   languageSwitcher:
     change: "Cambiar idioma"
+    theme: "Tema"
+    toLight: "Activar modo claro"
+    toDark: "Activar modo oscuro"
+    modeLight: "Claro"
+    modeDark: "Oscuro"
   faq:
     title: "Preguntas frecuentes"
     q1: "¿Book Nova es gratuita?"
