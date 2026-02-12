@@ -71,7 +71,6 @@ body.home-page::after {
     z-index: 0;
 }
 
-body.home-page .navbar,
 body.home-page .site-main,
 body.home-page footer {
     position: relative;
@@ -79,6 +78,8 @@ body.home-page footer {
 }
 
 body.home-page .navbar {
+    position: relative;
+    z-index: 50;
     background: linear-gradient(135deg, rgba(41, 32, 121, 0.72) 0%, rgba(20, 96, 163, 0.64) 100%) !important;
     box-shadow: 0 10px 28px rgba(8, 13, 41, 0.22);
 }
@@ -220,7 +221,7 @@ body:not(.home-page) .privacy-back-link a {
     padding: 0.25rem 0;
     min-width: 9rem;
     display: none;
-    z-index: 1000;
+    z-index: 1200;
 }
 
 .language-dropdown.show {

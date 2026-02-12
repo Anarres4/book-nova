@@ -220,9 +220,9 @@
                             </svg>
                         </button>
                         <ul class="language-dropdown" id="languageDropdown">
-                            <li><button onclick="changeLanguage('fr')" data-lang="fr">Français</button></li>
-                            <li><button onclick="changeLanguage('en')" data-lang="en">English</button></li>
-                            <li><button onclick="changeLanguage('es')" data-lang="es">Español</button></li>
+                            <li><button type="button" data-lang="fr">Français</button></li>
+                            <li><button type="button" data-lang="en">English</button></li>
+                            <li><button type="button" data-lang="es">Español</button></li>
                         </ul>
                     </li>
                     <li class="nav-item d-none d-md-block">
@@ -577,6 +577,13 @@
         document.addEventListener('DOMContentLoaded', () => {
             updateContent();
             updateCurrentLanguage();
+
+            document.querySelectorAll('.language-dropdown button[data-lang]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    changeLanguage(lang);
+                });
+            });
 
             document.querySelectorAll('.mobile-language-option').forEach(btn => {
                 btn.addEventListener('click', () => {
