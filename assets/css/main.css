@@ -2754,15 +2754,15 @@ body:not(.home-page) .support-section .support-info-icon {
 
 html.theme-light body {
     color: #16395c;
-    background: linear-gradient(145deg, #dbe8f7 0%, #c6d9ee 52%, #b3cce5 100%);
+    background: linear-gradient(145deg, #cfdeef 0%, #b9cfe5 52%, #a5c2df 100%);
 }
 
 html.theme-light body.home-page {
     background:
-        radial-gradient(1200px 620px at -8% -5%, rgba(238, 247, 255, 0.56) 0%, rgba(238, 247, 255, 0) 58%),
+        radial-gradient(1200px 620px at -8% -5%, rgba(222, 236, 250, 0.44) 0%, rgba(222, 236, 250, 0) 58%),
         radial-gradient(760px 460px at 96% 12%, rgba(79, 172, 254, 0.22) 0%, rgba(79, 172, 254, 0) 65%),
         radial-gradient(840px 540px at 88% 88%, rgba(108, 99, 255, 0.16) 0%, rgba(108, 99, 255, 0) 62%),
-        linear-gradient(150deg, #dce9f7 0%, #c7dbef 46%, #b8d2e8 100%);
+        linear-gradient(150deg, #d0deee 0%, #b8cfe5 46%, #aac5df 100%);
 }
 
 html.theme-light body.home-page::before {
@@ -2782,7 +2782,7 @@ html.theme-light body.home-page::after {
 html.theme-light body.home-page .navbar,
 html.theme-light body:not(.home-page) .navbar,
 html.theme-light .navbar {
-    background: linear-gradient(135deg, rgba(216, 232, 248, 0.95) 0%, rgba(191, 216, 241, 0.95) 100%) !important;
+    background: linear-gradient(135deg, rgba(201, 221, 242, 0.95) 0%, rgba(177, 205, 234, 0.95) 100%) !important;
     border-bottom: 1px solid rgba(111, 151, 195, 0.35);
     box-shadow: 0 10px 24px rgba(34, 72, 114, 0.14);
 }
@@ -2803,17 +2803,17 @@ html.theme-light .nav-link.active {
 }
 
 html.theme-light .language-switcher {
-    background-color: rgba(236, 245, 254, 0.88);
+    background-color: rgba(223, 237, 251, 0.9);
     color: #133e65;
     border: 1px solid rgba(111, 151, 195, 0.38);
 }
 
 html.theme-light .language-switcher:hover {
-    background-color: rgba(244, 250, 255, 0.98);
+    background-color: rgba(232, 244, 255, 0.96);
 }
 
 html.theme-light .language-dropdown {
-    background-color: #ffffff;
+    background-color: #e9f2fb;
     border: 1px solid rgba(111, 151, 195, 0.28);
     box-shadow: 0 14px 26px rgba(38, 74, 116, 0.18);
 }
@@ -2833,19 +2833,19 @@ html.theme-light .language-dropdown li button[data-lang].active {
 }
 
 html.theme-light .theme-switcher {
-    background: rgba(234, 244, 254, 0.9);
+    background: rgba(220, 235, 249, 0.92);
     color: #133f66;
     border-color: rgba(111, 151, 195, 0.42);
     box-shadow: 0 8px 16px rgba(38, 74, 116, 0.16);
 }
 
 html.theme-light .theme-switcher:hover {
-    background: rgba(243, 250, 255, 0.98);
+    background: rgba(229, 242, 253, 0.98);
     border-color: rgba(91, 136, 183, 0.48);
 }
 
 html.theme-light .mobile-nav-panel {
-    background-color: rgba(232, 244, 255, 0.95);
+    background-color: rgba(219, 235, 251, 0.95);
     border: 1px solid rgba(111, 151, 195, 0.28);
     box-shadow: 0 12px 24px rgba(38, 74, 116, 0.16);
 }
@@ -2870,12 +2870,12 @@ html.theme-light .mobile-language-option[aria-selected="true"] {
 }
 
 html.theme-light .mobile-theme-toggle {
-    background: rgba(222, 235, 250, 0.82);
+    background: rgba(210, 227, 245, 0.84);
     border-color: rgba(111, 151, 195, 0.42);
 }
 
 html.theme-light footer {
-    background: linear-gradient(135deg, rgba(206, 225, 245, 0.96) 0%, rgba(184, 209, 236, 0.96) 100%);
+    background: linear-gradient(135deg, rgba(191, 214, 238, 0.96) 0%, rgba(168, 196, 227, 0.96) 100%);
     border-top: 1px solid rgba(111, 151, 195, 0.35);
     color: #173c61;
 }
@@ -2915,7 +2915,7 @@ html.theme-light .contact-joke,
 html.theme-light .final-word,
 html.theme-light .support-card .support-faq-section .accordion-item,
 html.theme-light .faq-section .accordion-body .faq-explainer-block {
-    background: linear-gradient(150deg, rgba(229, 241, 253, 0.82) 0%, rgba(214, 233, 250, 0.74) 100%);
+    background: linear-gradient(150deg, rgba(212, 229, 246, 0.8) 0%, rgba(198, 220, 241, 0.72) 100%);
     border-color: rgba(118, 159, 198, 0.34);
     box-shadow: 0 16px 30px rgba(40, 80, 122, 0.14);
 }
@@ -2923,7 +2923,7 @@ html.theme-light .faq-section .accordion-body .faq-explainer-block {
 html.theme-light body:not(.home-page) .support-section .contact-method-secondary .contact-method-icon,
 html.theme-light body:not(.home-page) .support-section .support-info-icon {
     color: #123d66;
-    background: linear-gradient(145deg, rgba(205, 226, 246, 0.94) 0%, rgba(185, 211, 237, 0.88) 100%);
+    background: linear-gradient(145deg, rgba(192, 216, 241, 0.94) 0%, rgba(171, 198, 227, 0.9) 100%);
     border-color: rgba(111, 151, 195, 0.44);
     box-shadow: 0 8px 16px rgba(40, 80, 122, 0.18);
 }
@@ -2978,27 +2978,27 @@ html.theme-light body.home-page .hero-title {
 }
 
 html.theme-light body.home-page .hero-image {
-    background: linear-gradient(165deg, rgba(229, 241, 253, 0.82) 0%, rgba(208, 227, 247, 0.68) 100%);
+    background: linear-gradient(165deg, rgba(213, 231, 249, 0.82) 0%, rgba(189, 212, 237, 0.7) 100%);
     border-color: rgba(111, 151, 195, 0.36);
     box-shadow: 0 18px 34px rgba(40, 80, 122, 0.2);
 }
 
 html.theme-light body.home-page .story-kicker {
     border-color: rgba(111, 151, 195, 0.42);
-    background: rgba(212, 230, 247, 0.82);
+    background: rgba(198, 219, 241, 0.84);
     color: #34597d;
 }
 
 html.theme-light body.home-page .story-link {
     color: #123d66;
     border-color: rgba(111, 151, 195, 0.38);
-    background: rgba(209, 229, 248, 0.84);
+    background: rgba(194, 216, 239, 0.86);
     box-shadow: 0 10px 20px rgba(40, 80, 122, 0.15);
 }
 
 html.theme-light body.home-page .story-link:hover {
     color: #0f3659;
-    background: rgba(198, 220, 242, 0.94);
+    background: rgba(183, 207, 233, 0.94);
     border-color: rgba(93, 143, 196, 0.44);
     box-shadow: 0 14px 24px rgba(40, 80, 122, 0.2);
 }
@@ -3015,7 +3015,7 @@ html.theme-light .features-section .feature-card p {
 html.theme-light .feature-chip {
     color: #1f4a73;
     border-color: rgba(111, 151, 195, 0.38);
-    background: rgba(226, 240, 255, 0.9);
+    background: rgba(212, 230, 248, 0.88);
 }
 
 html.theme-light .store-score-card,
@@ -3043,16 +3043,16 @@ html.theme-light .reviews-disclaimer {
 }
 
 html.theme-light .faq-section .accordion-button:not(.collapsed) {
-    background: linear-gradient(115deg, rgba(216, 235, 254, 0.86) 0%, rgba(194, 224, 252, 0.9) 100%);
+    background: linear-gradient(115deg, rgba(202, 223, 246, 0.88) 0%, rgba(182, 210, 240, 0.9) 100%);
     color: #103860;
 }
 
 html.theme-light .faq-section .accordion-button::after {
-    background-color: rgba(212, 231, 251, 0.92);
+    background-color: rgba(198, 220, 244, 0.92);
 }
 
 html.theme-light .faq-section .accordion-button:not(.collapsed)::after {
-    background-color: rgba(186, 218, 250, 0.95);
+    background-color: rgba(172, 205, 239, 0.95);
 }
 
 html.theme-light .faq-section .accordion-body {
@@ -3070,13 +3070,13 @@ html.theme-light .faq-section .accordion-body .faq-block-title {
 html.theme-light .faq-section .accordion-body .faq-badge-list li {
     color: #1f4f79;
     border-color: rgba(111, 151, 195, 0.4);
-    background: rgba(206, 225, 245, 0.66);
+    background: rgba(190, 212, 236, 0.7);
 }
 
 html.theme-light .about-back-link a,
 html.theme-light .support-back-link a {
     color: #123d66;
-    background: rgba(210, 229, 248, 0.9);
+    background: rgba(194, 216, 239, 0.9);
     border-color: rgba(111, 151, 195, 0.44);
     box-shadow: 0 10px 22px rgba(40, 80, 122, 0.15);
 }
@@ -3084,7 +3084,7 @@ html.theme-light .support-back-link a {
 html.theme-light .about-back-link a:hover,
 html.theme-light .support-back-link a:hover {
     color: #0f3659;
-    background: rgba(195, 218, 241, 0.96);
+    background: rgba(180, 205, 232, 0.96);
     border-color: rgba(93, 143, 196, 0.46);
     box-shadow: 0 14px 24px rgba(40, 80, 122, 0.2);
 }
@@ -3109,14 +3109,14 @@ html.theme-light .cta-section a.text-white {
 html.theme-light .faq-section .btn-outline-light {
     color: #123d66;
     border-color: rgba(93, 143, 196, 0.5);
-    background: rgba(209, 229, 248, 0.78);
+    background: rgba(194, 216, 239, 0.82);
 }
 
 html.theme-light .faq-section .btn-outline-light:hover,
 html.theme-light .faq-section .btn-outline-light:focus {
     color: #0f3659;
     border-color: rgba(93, 143, 196, 0.64);
-    background: rgba(195, 218, 241, 0.92);
+    background: rgba(180, 205, 232, 0.94);
 }
 
 html.theme-light body.home-page .screenshot-item {
