@@ -16,6 +16,7 @@ fr:
     google_play: "Google Play"
   features:
     title: "Ta bibliothèque personnelle qui t'accompagne"
+    subtitle: "Six fonctionnalités clés pour garder tes lectures motivantes, organisées et faciles à suivre."
     library:
       title: "Gestion intelligente"
       description: "Scanne, organise et visualise ta collection de livres avec une précision millimétrique."
@@ -49,7 +50,7 @@ fr:
     title: "Derrière Book Nova"
     p1: "Un couple. Une passion commune pour la lecture. Et une idée un peu folle : mesurer nos lectures en hauteur jusqu'à atteindre notre propre taille."
     p2: "Pas de startup, pas d'investisseurs. Juste deux amoureux des livres qui ont créé l'app qu'ils auraient voulu avoir."
-    link: "Découvrir notre histoire →"
+    link: "Découvrir notre histoire"
   cta:
     title: "Prêt à commencer ?"
     subtitle: "Téléchargez BookNova dès maintenant et transformez votre expérience de lecture"
@@ -822,6 +823,7 @@ en:
     google_play: "Google Play"
   features:
     title: "Your personal library that stays with you"
+    subtitle: "Six key features to keep your reading motivating, organized, and easy to track."
     library:
       title: "Smart management"
       description: "Scan, organize, and visualise your book collection with pinpoint precision."
@@ -855,7 +857,7 @@ en:
     title: "Behind Book Nova"
     p1: "A couple. A shared passion for reading. And a slightly crazy idea: measuring our reads by height until we reach our own size."
     p2: "No startup, no investors. Just two book lovers who built the app they wished they had."
-    link: "Discover our story →"
+    link: "Discover our story"
   cta:
     title: "Ready to start?"
     subtitle: "Download BookNova now and transform your reading experience"
@@ -1627,6 +1629,7 @@ es:
     google_play: "Google Play"
   features:
     title: "Tu biblioteca personal que te acompaña"
+    subtitle: "Seis funciones clave para mantener tus lecturas motivadoras, organizadas y fáciles de seguir."
     library:
       title: "Gestión inteligente"
       description: "Escanea, organiza y visualiza tu colección de libros con precisión milimétrica."
@@ -1660,7 +1663,7 @@ es:
     title: "Detrás de Book Nova"
     p1: "Una pareja. Una pasión compartida por la lectura. Y una idea un poco loca: medir nuestras lecturas en altura hasta alcanzar nuestra propia estatura."
     p2: "Sin startup, sin inversores. Solo dos amantes de los libros que crearon la app que siempre quisieron tener."
-    link: "Descubre nuestra historia →"
+    link: "Descubre nuestra historia"
   cta:
     title: "¿Listo para empezar?"
     subtitle: "Descarga BookNova ahora y transforma tu experiencia de lectura"

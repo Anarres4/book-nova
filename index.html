@@ -220,56 +220,77 @@ permalink: "/"
 <!-- Features Section -->
 <section class="features-section" id="features">
     <div class="container">
-        <h2 class="section-title" data-i18n="features.title">Ta bibliothèque personnelle qui t'accompagne</h2>
+        <div class="features-heading text-center">
+            <h2 class="section-title mb-0" data-i18n="features.title">Ta bibliothèque personnelle qui t'accompagne</h2>
+            <p class="features-subtitle mb-0" data-i18n="features.subtitle">Six fonctionnalités clés pour garder tes lectures motivantes, organisées et faciles à suivre.</p>
+        </div>
 
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <i class="bi bi-book feature-icon"></i>
-                    <h3 data-i18n="features.library.title">📚 Gestion intelligente</h3>
-                    <p data-i18n="features.library.description">Scanne, organise et visualise ta collection de livres avec une précision millimétrique.</p>
+        <div class="features-grid">
+            <article class="feature-card feature-card--library" style="--feature-delay: 0.06s;">
+                <div class="feature-card-head">
+                    <span class="feature-icon-wrap feature-icon-wrap--library" aria-hidden="true">
+                        <i class="bi bi-book feature-icon"></i>
+                    </span>
+                    <span class="feature-chip" aria-hidden="true">01</span>
                 </div>
-            </div>
+                <h3 data-i18n="features.library.title">Gestion intelligente</h3>
+                <p data-i18n="features.library.description">Scanne, organise et visualise ta collection de livres avec une précision millimétrique.</p>
+            </article>
 
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <i class="bi bi-award feature-icon"></i>
-                    <h3 data-i18n="features.badges.title">🎯 Badges & progression</h3>
-                    <p data-i18n="features.badges.description">Des défis qui t'encouragent à lire plus et à diversifier tes lectures.</p>
+            <article class="feature-card feature-card--badges" style="--feature-delay: 0.14s;">
+                <div class="feature-card-head">
+                    <span class="feature-icon-wrap feature-icon-wrap--badges" aria-hidden="true">
+                        <i class="bi bi-award feature-icon"></i>
+                    </span>
+                    <span class="feature-chip" aria-hidden="true">02</span>
                 </div>
-            </div>
+                <h3 data-i18n="features.badges.title">Badges & progression</h3>
+                <p data-i18n="features.badges.description">Des défis qui t'encouragent à lire plus et à diversifier tes lectures.</p>
+            </article>
 
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <i class="bi bi-journal-check feature-icon"></i>
-                    <h3 data-i18n="features.tracking.title">📖 Suivi de lecture</h3>
-                    <p data-i18n="features.tracking.description">Garde une trace de ta progression et célèbre chaque page tournée.</p>
+            <article class="feature-card feature-card--tracking" style="--feature-delay: 0.22s;">
+                <div class="feature-card-head">
+                    <span class="feature-icon-wrap feature-icon-wrap--tracking" aria-hidden="true">
+                        <i class="bi bi-journal-check feature-icon"></i>
+                    </span>
+                    <span class="feature-chip" aria-hidden="true">03</span>
                 </div>
-            </div>
+                <h3 data-i18n="features.tracking.title">Suivi de lecture</h3>
+                <p data-i18n="features.tracking.description">Garde une trace de ta progression et célèbre chaque page tournée.</p>
+            </article>
 
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <i class="bi bi-arrow-left-right feature-icon"></i>
-                    <h3 data-i18n="features.loans.title">🤝 Prêts simplifiés</h3>
-                    <p data-i18n="features.loans.description">Ne perds plus jamais un livre : suis tes prêts et reçois des rappels automatiques.</p>
+            <article class="feature-card feature-card--loans" style="--feature-delay: 0.30s;">
+                <div class="feature-card-head">
+                    <span class="feature-icon-wrap feature-icon-wrap--loans" aria-hidden="true">
+                        <i class="bi bi-arrow-left-right feature-icon"></i>
+                    </span>
+                    <span class="feature-chip" aria-hidden="true">04</span>
                 </div>
-            </div>
+                <h3 data-i18n="features.loans.title">Prêts simplifiés</h3>
+                <p data-i18n="features.loans.description">Ne perds plus jamais un livre : suis tes prêts et reçois des rappels automatiques.</p>
+            </article>
 
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <i class="bi bi-compass feature-icon"></i>
-                    <h3 data-i18n="features.discover.title">🔍 Découvrir</h3>
-                    <p data-i18n="features.discover.description">Découvre de nouveaux livres grâce aux recommandations de la communauté.</p>
+            <article class="feature-card feature-card--discover" style="--feature-delay: 0.38s;">
+                <div class="feature-card-head">
+                    <span class="feature-icon-wrap feature-icon-wrap--discover" aria-hidden="true">
+                        <i class="bi bi-compass feature-icon"></i>
+                    </span>
+                    <span class="feature-chip" aria-hidden="true">05</span>
                 </div>
-            </div>
+                <h3 data-i18n="features.discover.title">Découvrir</h3>
+                <p data-i18n="features.discover.description">Découvre de nouveaux livres grâce aux recommandations de la communauté.</p>
+            </article>
 
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <i class="bi bi-bar-chart feature-icon"></i>
-                    <h3 data-i18n="features.stats.title">📊 Statistiques détaillées</h3>
-                    <p data-i18n="features.stats.description">Visualise ton évolution de lecteur et découvre tes habitudes de lecture.</p>
+            <article class="feature-card feature-card--stats" style="--feature-delay: 0.46s;">
+                <div class="feature-card-head">
+                    <span class="feature-icon-wrap feature-icon-wrap--stats" aria-hidden="true">
+                        <i class="bi bi-bar-chart feature-icon"></i>
+                    </span>
+                    <span class="feature-chip" aria-hidden="true">06</span>
                 </div>
-            </div>
+                <h3 data-i18n="features.stats.title">Statistiques détaillées</h3>
+                <p data-i18n="features.stats.description">Visualise ton évolution de lecteur et découvre tes habitudes de lecture.</p>
+            </article>
         </div>
     </div>
 </section>
@@ -277,14 +298,21 @@ permalink: "/"
 <!-- Story Section -->
 <section class="story-section" id="story">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
+        <div class="story-shell">
+            <div class="story-heading text-center">
+                <span class="story-kicker">
+                    <i class="bi bi-stars" aria-hidden="true"></i>
+                    <span data-i18n="nav.about">À propos</span>
+                </span>
                 <h2 class="section-title" data-i18n="story.title">Derrière Book Nova</h2>
-                <div class="story-card">
-                    <p class="story-text" data-i18n="story.p1">Un couple. Une passion commune pour la lecture. Et une idée un peu folle : mesurer nos lectures en hauteur jusqu'à atteindre notre propre taille.</p>
-                    <p class="story-text" data-i18n="story.p2">Pas de startup, pas d'investisseurs. Juste deux amoureux des livres qui ont créé l'app qu'ils auraient voulu avoir.</p>
-                    <a href="{{ '/about.html' | relative_url }}" class="story-link" data-i18n="story.link">Découvrir notre histoire →</a>
-                </div>
+            </div>
+            <div class="story-card">
+                <p class="story-text" data-i18n="story.p1">Un couple. Une passion commune pour la lecture. Et une idée un peu folle : mesurer nos lectures en hauteur jusqu'à atteindre notre propre taille.</p>
+                <p class="story-text" data-i18n="story.p2">Pas de startup, pas d'investisseurs. Juste deux amoureux des livres qui ont créé l'app qu'ils auraient voulu avoir.</p>
+                <a href="{{ '/about.html' | relative_url }}" class="story-link">
+                    <span data-i18n="story.link">Découvrir notre histoire</span>
+                    <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </div>
