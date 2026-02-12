@@ -10,14 +10,6 @@ html,
 body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
-}
-
-@supports (overflow: clip) {
-    html,
-    body {
-        overflow-x: clip;
-    }
 }
 
 @font-face {
@@ -44,6 +36,13 @@ body {
 
 .site-main {
     flex: 1 0 auto;
+    overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+    .site-main {
+        overflow-x: clip;
+    }
 }
 
 body.home-page {
@@ -75,7 +74,7 @@ body.home-page::after {
     position: absolute;
     width: min(44vw, 560px);
     aspect-ratio: 1 / 1;
-    right: -10vw;
+    right: 0;
     top: clamp(220px, 26vh, 420px);
     pointer-events: none;
     border-radius: 42% 58% 63% 37% / 45% 39% 61% 55%;
@@ -136,6 +135,9 @@ body:not(.home-page) .privacy-back-link a {
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1060;
     background: linear-gradient(135deg, rgba(108, 99, 255, 0.8) 0%, rgba(79, 172, 254, 0.8) 100%) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -1186,7 +1188,7 @@ body.home-page .cta-section .container {
 
     body.home-page::after {
         width: 72vw;
-        right: -28vw;
+        right: 0;
         top: 280px;
         opacity: 0.35;
     }
