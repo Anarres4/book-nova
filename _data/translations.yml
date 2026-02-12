@@ -36,6 +36,15 @@ fr:
       description: "Visualise ton évolution de lecteur et découvre tes habitudes de lecture."
   screenshots:
     title: "Découvrez l'application"
+  reviews:
+    kicker: "Avis vérifiés"
+    title: "Nos notes sur les stores"
+    subtitle: "Notes officielles et extraits de vrais commentaires publiés sur App Store et Google Play."
+    appStore: "App Store"
+    googlePlay: "Google Play"
+    ratingsLabel: "avis"
+    seeStore: "Voir le store"
+    snapshot: "Données relevées le 12 février 2026. Extraits raccourcis des commentaires publics."
   story:
     title: "Derrière Book Nova"
     p1: "Un couple. Une passion commune pour la lecture. Et une idée un peu folle : mesurer nos lectures en hauteur jusqu'à atteindre notre propre taille."
@@ -84,6 +93,21 @@ fr:
       - Accès à tous les badges et médailles premium
 
       Toutes les fonctionnalités principales restent accessibles gratuitement !
+    q1_intro: "Oui, Book Nova est disponible gratuitement avec certaines limitations."
+    q1_free_title: "Version gratuite"
+    q1_free_limit1: "Jusqu'à 8 livres ajoutés par jour"
+    q1_free_limit2: "Maximum 150 livres AJOUTÉS au total"
+    q1_free_limit3: "Jusqu'à 3 prêts/emprunts simultanés"
+    q1_free_limit4: "Calendrier de lecture"
+    q1_free_limit5: "Accès aux badges de base"
+    q1_premium_title: "Version premium"
+    q1_premium_limit1: "Ajout illimité de livres par jour"
+    q1_premium_limit2: "Livres terminés illimités"
+    q1_premium_limit3: "Prêts et emprunts illimités"
+    q1_premium_limit4: "Statistiques de lecture de base (par mois/par an)"
+    q1_premium_limit5: "Statistiques détaillées avancées"
+    q1_premium_limit6: "Accès à tous les badges et médailles premium"
+    q1_note: "Toutes les fonctionnalités principales restent accessibles gratuitement !"
     q2: "Puis-je suivre mes prêts de livres ?"
     a2: |-
       Oui ! Book Nova inclut un système complet de gestion de prêts :
@@ -184,6 +208,25 @@ fr:
       Note : Vous conservez l'accès aux fonctionnalités premium jusqu'à la fin de votre période d'essai.
 
       ⚠️ Important : L'annulation doit être effectuée au moins 24 heures avant la fin de la période d'essai pour éviter d'être facturé.
+    q8_intro: "Vous pouvez annuler votre période d'essai directement depuis votre store."
+    q8_android_title: "Sur Android"
+    q8_android_step1: "Ouvrez l'application Google Play Store"
+    q8_android_step2: "Appuyez sur votre photo de profil en haut à droite"
+    q8_android_step3: "Sélectionnez Paiements et abonnements > Abonnements"
+    q8_android_step4: "Trouvez BookNova dans la liste"
+    q8_android_step5: "Appuyez sur Annuler l'abonnement"
+    q8_android_step6: "Suivez les instructions pour confirmer"
+    q8_ios_title: "Sur iOS (iPhone/iPad)"
+    q8_ios_step1: "Ouvrez l'application Réglages de votre appareil"
+    q8_ios_step2: "Appuyez sur votre nom en haut de l'écran"
+    q8_ios_step3: "Sélectionnez Abonnements"
+    q8_ios_step4: "Trouvez BookNova dans la liste"
+    q8_ios_step5: "Appuyez sur Annuler l'abonnement ou Annuler l'essai gratuit"
+    q8_ios_step6: "Confirmez l'annulation"
+    q8_note_label: "Note :"
+    q8_note: "Vous conservez l'accès aux fonctionnalités premium jusqu'à la fin de votre période d'essai."
+    q8_warning_label: "Important :"
+    q8_warning: "L'annulation doit être effectuée au moins 24 heures avant la fin de la période d'essai pour éviter d'être facturé."
     q9: "Comment me désabonner de la version Premium ?"
     a9: |-
       Pour annuler votre abonnement Premium actif, suivez les mêmes étapes que pour annuler la période d'essai :
@@ -205,6 +248,23 @@ fr:
       6. Confirmez l'annulation
 
       💡 Bon à savoir : Vous conserverez l'accès aux fonctionnalités premium jusqu'à la fin de la période de facturation en cours. Aucun remboursement ne sera effectué pour la période déjà payée.
+    q9_intro: "Pour annuler votre abonnement Premium actif, suivez les mêmes étapes que pour annuler la période d'essai :"
+    q9_android_title: "Sur Android"
+    q9_android_step1: "Ouvrez l'application Google Play Store"
+    q9_android_step2: "Appuyez sur votre photo de profil en haut à droite"
+    q9_android_step3: "Sélectionnez Paiements et abonnements > Abonnements"
+    q9_android_step4: "Trouvez BookNova dans la liste"
+    q9_android_step5: "Appuyez sur Annuler l'abonnement"
+    q9_android_step6: "Confirmez l'annulation"
+    q9_ios_title: "Sur iOS (iPhone/iPad)"
+    q9_ios_step1: "Ouvrez l'application Réglages de votre appareil"
+    q9_ios_step2: "Appuyez sur votre nom en haut de l'écran"
+    q9_ios_step3: "Sélectionnez Abonnements"
+    q9_ios_step4: "Trouvez BookNova dans la liste"
+    q9_ios_step5: "Appuyez sur Annuler l'abonnement"
+    q9_ios_step6: "Confirmez l'annulation"
+    q9_note_label: "Bon à savoir :"
+    q9_note: "Vous conserverez l'accès aux fonctionnalités premium jusqu'à la fin de la période de facturation en cours. Aucun remboursement ne sera effectué pour la période déjà payée."
     q10: "Qu'est-ce que la page Découvrir ?"
     a10: |-
       La page Découvrir vous propose des recommandations de livres personnalisées basées sur vos lectures et préférences.
@@ -217,6 +277,14 @@ fr:
       - 100 recommandations par genre
 
       📡 Cette fonctionnalité nécessite une connexion internet.
+    q10_intro: "La page Découvrir vous propose des recommandations de livres personnalisées basées sur vos lectures et préférences."
+    q10_free_title: "Version gratuite"
+    q10_free_item1: "20 recommandations par genre"
+    q10_free_item2: "Suggestions basées sur vos genres favoris et leurs tags associés"
+    q10_premium_title: "Version premium"
+    q10_premium_item1: "100 recommandations par genre"
+    q10_online_label: "Connexion :"
+    q10_online: "Cette fonctionnalité nécessite une connexion internet."
     q11: "Comment est calculée la hauteur de ma pile ?"
     a11_title: "Une estimation"
     a11_intro: "Book Nova calcule l'épaisseur de chaque livre à partir de son nombre de pages :"
@@ -774,6 +842,15 @@ en:
       description: "Visualise your evolution as a reader and discover your reading habits."
   screenshots:
     title: "Discover the app"
+  reviews:
+    kicker: "Verified feedback"
+    title: "How readers rate us"
+    subtitle: "Official store ratings and real user review excerpts from the App Store and Google Play."
+    appStore: "App Store"
+    googlePlay: "Google Play"
+    ratingsLabel: "ratings"
+    seeStore: "Open store page"
+    snapshot: "Data captured on February 12, 2026. Excerpts shortened from public reviews."
   story:
     title: "Behind Book Nova"
     p1: "A couple. A shared passion for reading. And a slightly crazy idea: measuring our reads by height until we reach our own size."
@@ -822,6 +899,21 @@ en:
       - Access to all premium badges and medals
 
       All core features remain free to use!
+    q1_intro: "Yes, Book Nova is available for free with a few limitations."
+    q1_free_title: "Free version"
+    q1_free_limit1: "Up to 8 books added per day"
+    q1_free_limit2: "Maximum 150 books ADDED in total"
+    q1_free_limit3: "Up to 3 simultaneous loans/borrows"
+    q1_free_limit4: "Reading calendar"
+    q1_free_limit5: "Access to core badges"
+    q1_premium_title: "Premium version"
+    q1_premium_limit1: "Unlimited book additions per day"
+    q1_premium_limit2: "Unlimited finished books"
+    q1_premium_limit3: "Unlimited loans and borrows"
+    q1_premium_limit4: "Basic reading stats (monthly/yearly)"
+    q1_premium_limit5: "Advanced detailed statistics"
+    q1_premium_limit6: "Access to all premium badges and medals"
+    q1_note: "All core features remain free to use!"
     q2: "Can I track my book loans?"
     a2: |-
       Yes! Book Nova includes a complete loan management system:
@@ -922,6 +1014,25 @@ en:
       Note: You will keep access to premium features until the end of your trial period.
 
       ⚠️ Important: Cancellation must be done at least 24 hours before the end of the trial period to avoid being charged.
+    q8_intro: "You can cancel your trial period directly from your store."
+    q8_android_title: "On Android"
+    q8_android_step1: "Open the Google Play Store app"
+    q8_android_step2: "Tap your profile picture in the top right"
+    q8_android_step3: "Select Payments & subscriptions > Subscriptions"
+    q8_android_step4: "Find BookNova in the list"
+    q8_android_step5: "Tap Cancel subscription"
+    q8_android_step6: "Follow the instructions to confirm"
+    q8_ios_title: "On iOS (iPhone/iPad)"
+    q8_ios_step1: "Open your device's Settings app"
+    q8_ios_step2: "Tap your name at the top of the screen"
+    q8_ios_step3: "Select Subscriptions"
+    q8_ios_step4: "Find BookNova in the list"
+    q8_ios_step5: "Tap Cancel Subscription or Cancel Free Trial"
+    q8_ios_step6: "Confirm the cancellation"
+    q8_note_label: "Note:"
+    q8_note: "You will keep access to premium features until the end of your trial period."
+    q8_warning_label: "Important:"
+    q8_warning: "Cancellation must be done at least 24 hours before the end of the trial period to avoid being charged."
     q9: "How do I unsubscribe from Premium?"
     a9: |-
       To cancel your active Premium subscription, follow the same steps as canceling the trial period:
@@ -943,6 +1054,23 @@ en:
       6. Confirm the cancellation
 
       💡 Good to know: You will retain access to premium features until the end of the current billing period. No refund will be issued for the period already paid.
+    q9_intro: "To cancel your active Premium subscription, follow the same steps as canceling the trial period:"
+    q9_android_title: "On Android"
+    q9_android_step1: "Open the Google Play Store app"
+    q9_android_step2: "Tap your profile picture in the top right"
+    q9_android_step3: "Select Payments & subscriptions > Subscriptions"
+    q9_android_step4: "Find BookNova in the list"
+    q9_android_step5: "Tap Cancel subscription"
+    q9_android_step6: "Confirm the cancellation"
+    q9_ios_title: "On iOS (iPhone/iPad)"
+    q9_ios_step1: "Open your device's Settings app"
+    q9_ios_step2: "Tap your name at the top of the screen"
+    q9_ios_step3: "Select Subscriptions"
+    q9_ios_step4: "Find BookNova in the list"
+    q9_ios_step5: "Tap Cancel Subscription"
+    q9_ios_step6: "Confirm the cancellation"
+    q9_note_label: "Good to know:"
+    q9_note: "You will retain access to premium features until the end of the current billing period. No refund will be issued for the period already paid."
     q10: "What is the Discover page?"
     a10: |-
       The Discover page offers personalized book recommendations based on your reading history and preferences.
@@ -955,6 +1083,14 @@ en:
       - 100 recommendations per genre
 
       📡 This feature requires an internet connection.
+    q10_intro: "The Discover page offers personalized book recommendations based on your reading history and preferences."
+    q10_free_title: "Free version"
+    q10_free_item1: "20 recommendations per genre"
+    q10_free_item2: "Suggestions based on your favorite genres and their associated tags"
+    q10_premium_title: "Premium version"
+    q10_premium_item1: "100 recommendations per genre"
+    q10_online_label: "Connection:"
+    q10_online: "This feature requires an internet connection."
     q11: "How is my stack height calculated?"
     a11_title: "An estimate"
     a11_intro: "Book Nova calculates the thickness of each book based on its page count:"
@@ -1511,6 +1647,15 @@ es:
       description: "Visualiza tu evolución como lector y descubre tus hábitos de lectura."
   screenshots:
     title: "Descubre la aplicación"
+  reviews:
+    kicker: "Opiniones verificadas"
+    title: "Cómo nos puntúan en las tiendas"
+    subtitle: "Valoraciones oficiales y extractos de reseñas reales publicadas en App Store y Google Play."
+    appStore: "App Store"
+    googlePlay: "Google Play"
+    ratingsLabel: "reseñas"
+    seeStore: "Ver en la tienda"
+    snapshot: "Datos recopilados el 12 de febrero de 2026. Extractos abreviados de reseñas públicas."
   story:
     title: "Detrás de Book Nova"
     p1: "Una pareja. Una pasión compartida por la lectura. Y una idea un poco loca: medir nuestras lecturas en altura hasta alcanzar nuestra propia estatura."
@@ -1559,6 +1704,21 @@ es:
       - Acceso a todas las insignias y medallas premium
 
       ¡Todas las funciones principales siguen siendo gratuitas!
+    q1_intro: "Sí, Book Nova está disponible de forma gratuita con algunas limitaciones."
+    q1_free_title: "Versión gratuita"
+    q1_free_limit1: "Hasta 8 libros añadidos por día"
+    q1_free_limit2: "Máximo 150 libros AÑADIDOS en total"
+    q1_free_limit3: "Hasta 3 préstamos simultáneos"
+    q1_free_limit4: "Calendario de lectura"
+    q1_free_limit5: "Acceso a insignias básicas"
+    q1_premium_title: "Versión premium"
+    q1_premium_limit1: "Añade libros sin límite cada día"
+    q1_premium_limit2: "Libros terminados ilimitados"
+    q1_premium_limit3: "Préstamos ilimitados (prestar y recibir)"
+    q1_premium_limit4: "Estadísticas básicas de lectura (por mes/año)"
+    q1_premium_limit5: "Estadísticas detalladas avanzadas"
+    q1_premium_limit6: "Acceso a todas las insignias y medallas premium"
+    q1_note: "¡Todas las funciones principales siguen siendo gratuitas!"
     q2: "¿Puedo seguir mis préstamos de libros?"
     a2: |-
       ¡Sí! Book Nova incluye un sistema completo de gestión de préstamos:
@@ -1659,6 +1819,25 @@ es:
       Nota: Conservarás el acceso a las funciones premium hasta el final de tu período de prueba.
 
       ⚠️ Importante: La cancelación debe realizarse al menos 24 horas antes del final del período de prueba para evitar cargos.
+    q8_intro: "Puedes cancelar tu período de prueba directamente desde tu tienda."
+    q8_android_title: "En Android"
+    q8_android_step1: "Abre la aplicación Google Play Store"
+    q8_android_step2: "Toca tu foto de perfil en la parte superior derecha"
+    q8_android_step3: "Selecciona Pagos y suscripciones > Suscripciones"
+    q8_android_step4: "Encuentra BookNova en la lista"
+    q8_android_step5: "Toca Cancelar suscripción"
+    q8_android_step6: "Sigue las instrucciones para confirmar"
+    q8_ios_title: "En iOS (iPhone/iPad)"
+    q8_ios_step1: "Abre la aplicación Ajustes de tu dispositivo"
+    q8_ios_step2: "Toca tu nombre en la parte superior de la pantalla"
+    q8_ios_step3: "Selecciona Suscripciones"
+    q8_ios_step4: "Encuentra BookNova en la lista"
+    q8_ios_step5: "Toca Cancelar suscripción o Cancelar prueba gratuita"
+    q8_ios_step6: "Confirma la cancelación"
+    q8_note_label: "Nota:"
+    q8_note: "Conservarás el acceso a las funciones premium hasta el final de tu período de prueba."
+    q8_warning_label: "Importante:"
+    q8_warning: "La cancelación debe realizarse al menos 24 horas antes del final del período de prueba para evitar cargos."
     q9: "¿Cómo me doy de baja de Premium?"
     a9: |-
       Para cancelar tu suscripción Premium activa, sigue los mismos pasos que para cancelar el período de prueba:
@@ -1680,6 +1859,23 @@ es:
       6. Confirma la cancelación
 
       💡 Bueno saber: Conservarás el acceso a las funciones premium hasta el final del período de facturación actual. No se realizará ningún reembolso por el período ya pagado.
+    q9_intro: "Para cancelar tu suscripción Premium activa, sigue los mismos pasos que para cancelar el período de prueba:"
+    q9_android_title: "En Android"
+    q9_android_step1: "Abre la aplicación Google Play Store"
+    q9_android_step2: "Toca tu foto de perfil en la parte superior derecha"
+    q9_android_step3: "Selecciona Pagos y suscripciones > Suscripciones"
+    q9_android_step4: "Encuentra BookNova en la lista"
+    q9_android_step5: "Toca Cancelar suscripción"
+    q9_android_step6: "Confirma la cancelación"
+    q9_ios_title: "En iOS (iPhone/iPad)"
+    q9_ios_step1: "Abre la aplicación Ajustes de tu dispositivo"
+    q9_ios_step2: "Toca tu nombre en la parte superior de la pantalla"
+    q9_ios_step3: "Selecciona Suscripciones"
+    q9_ios_step4: "Encuentra BookNova en la lista"
+    q9_ios_step5: "Toca Cancelar suscripción"
+    q9_ios_step6: "Confirma la cancelación"
+    q9_note_label: "Bueno saber:"
+    q9_note: "Conservarás el acceso a las funciones premium hasta el final del período de facturación actual. No se realizará ningún reembolso por el período ya pagado."
     q10: "¿Qué es la página Descubrir?"
     a10: |-
       La página Descubrir te ofrece recomendaciones de libros personalizadas basadas en tus lecturas y preferencias.
@@ -1692,6 +1888,14 @@ es:
       - 100 recomendaciones por género
 
       📡 Esta función requiere una conexión a internet.
+    q10_intro: "La página Descubrir te ofrece recomendaciones de libros personalizadas basadas en tus lecturas y preferencias."
+    q10_free_title: "Versión gratuita"
+    q10_free_item1: "20 recomendaciones por género"
+    q10_free_item2: "Sugerencias basadas en tus géneros favoritos y sus etiquetas asociadas"
+    q10_premium_title: "Versión premium"
+    q10_premium_item1: "100 recomendaciones por género"
+    q10_online_label: "Conexión:"
+    q10_online: "Esta función requiere una conexión a internet."
     q11: "¿Cómo se calcula la altura de mi pila?"
     a11_title: "Una estimación"
     a11_intro: "Book Nova calcula el grosor de cada libro a partir de su número de páginas:"

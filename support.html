@@ -11,7 +11,7 @@ permalink: /support.html
             <!-- Header -->
             <header class="support-header text-center">
                 <div class="support-icon mb-4">
-                    <i class="bi bi-chat-heart" style="font-size: 3.5rem; color: var(--primary-color);"></i>
+                    <i class="bi bi-chat-heart"></i>
                 </div>
                 <h1 class="support-title" data-i18n="supportPage.title">Besoin d'un coup de main ?</h1>
                 <p class="support-subtitle" data-i18n="supportPage.subtitle">On a créé cette app pour des gens comme nous — des lecteurs, pas des experts en technologie. Si quelque chose ne marche pas comme prévu, on est là.</p>
@@ -62,7 +62,404 @@ permalink: /support.html
 
             <!-- Joke -->
             <p class="contact-joke text-center" data-i18n="supportPage.contact.joke">(Et si on met plus longtemps, c'est probablement qu'on est plongés dans un bon bouquin. Vous comprenez.)</p>
-            <p class="text-muted small text-center mt-2" data-i18n="supportPage.contact.responseNote">*Assurez-vous que votre boîte email n'est pas pleine, sinon nous ne pourrons pas vous répondre.</p>
+            <p class="support-response-note text-center mt-2" data-i18n="supportPage.contact.responseNote">*Assurez-vous que votre boîte email n'est pas pleine, sinon nous ne pourrons pas vous répondre.</p>
+
+            <section class="faq-section support-faq-section" id="support-faq">
+                <h2 class="section-title" data-i18n="faq.title">Questions fréquentes</h2>
+                <div class="accordion" id="supportFaqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq1" aria-expanded="false" aria-controls="supportFaq1">
+                                <span data-i18n="faq.q1">Book Nova est-elle gratuite ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq1" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading1" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body">
+                                <div class="faq-explainer-block">
+                                    <p class="mb-0" data-i18n="faq.q1_intro">Oui, Book Nova est disponible gratuitement avec certaines limitations.</p>
+                                </div>
+
+                                <div class="faq-explainer-grid">
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.q1_free_title">Version gratuite</p>
+                                        <ul class="mb-0">
+                                            <li data-i18n="faq.q1_free_limit1">Jusqu'à 8 livres ajoutés par jour</li>
+                                            <li data-i18n="faq.q1_free_limit2">Maximum 150 livres AJOUTÉS au total</li>
+                                            <li data-i18n="faq.q1_free_limit3">Jusqu'à 3 prêts/emprunts simultanés</li>
+                                            <li data-i18n="faq.q1_free_limit4">Calendrier de lecture</li>
+                                            <li data-i18n="faq.q1_free_limit5">Accès aux badges de base</li>
+                                        </ul>
+                                    </div>
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.q1_premium_title">Version premium</p>
+                                        <ul class="mb-0">
+                                            <li data-i18n="faq.q1_premium_limit1">Ajout illimité de livres par jour</li>
+                                            <li data-i18n="faq.q1_premium_limit2">Livres terminés illimités</li>
+                                            <li data-i18n="faq.q1_premium_limit3">Prêts et emprunts illimités</li>
+                                            <li data-i18n="faq.q1_premium_limit4">Statistiques de lecture de base (par mois/par an)</li>
+                                            <li data-i18n="faq.q1_premium_limit5">Statistiques détaillées avancées</li>
+                                            <li data-i18n="faq.q1_premium_limit6">Accès à tous les badges et médailles premium</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="faq-explainer-block mb-0">
+                                    <p class="mb-0" data-i18n="faq.q1_note">Toutes les fonctionnalités principales restent accessibles gratuitement !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq2" aria-expanded="false" aria-controls="supportFaq2">
+                                <span data-i18n="faq.q2">Puis-je suivre mes prêts de livres ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq2" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading2" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body" data-i18n="faq.a2" data-i18n-html>
+                                Oui ! Book Nova inclut un système complet de gestion de prêts.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq3" aria-expanded="false" aria-controls="supportFaq3">
+                                <span data-i18n="faq.q3">Quels sont les badges disponibles ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq3" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading3" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body" data-i18n="faq.a3" data-i18n-html>
+                                Débloquez plus de 100 badges différents.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq4" aria-expanded="false" aria-controls="supportFaq4">
+                                <span data-i18n="faq.q4">L'application est-elle disponible en plusieurs langues ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq4" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading4" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body" data-i18n="faq.a4" data-i18n-html>
+                                Oui, Book Nova est proposée en plusieurs langues.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq5" aria-expanded="false" aria-controls="supportFaq5">
+                                <span data-i18n="faq.q5">Comment fonctionne la visualisation de la pile de livres ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq5" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading5" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body" data-i18n="faq.a5" data-i18n-html>
+                                Book Nova calcule la hauteur cumulée de vos livres lus.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq6" aria-expanded="false" aria-controls="supportFaq6">
+                                <span data-i18n="faq.q6">Puis-je exporter ma bibliothèque ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq6" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading6" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body">
+                                <div class="faq-explainer-block">
+                                    <p class="faq-block-title" data-i18n="faq.exportAvailable">Oui, depuis la version 1.11.4 !</p>
+                                    <p class="mb-0" data-i18n="faq.exportAvailableDesc">Vous pouvez exporter et importer toutes vos données.</p>
+                                </div>
+
+                                <div class="faq-explainer-block">
+                                    <p class="faq-block-title" data-i18n="faq.exportWhatTitle">Ce qui est exporté :</p>
+                                    <ul>
+                                        <li data-i18n="faq.exportBooks">Tous vos livres</li>
+                                        <li data-i18n="faq.exportBadges">Vos badges</li>
+                                        <li data-i18n="faq.exportLoans">Vos prêts</li>
+                                        <li data-i18n="faq.exportBorrows">Vos emprunts</li>
+                                    </ul>
+                                </div>
+
+                                <div class="faq-explainer-grid">
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.exportExportTitle">Exporter</p>
+                                        <ol>
+                                            <li data-i18n="faq.exportStep1">Allez dans Paramètres</li>
+                                            <li data-i18n="faq.exportStep2">Cliquez sur "Exporter mes données"</li>
+                                            <li data-i18n="faq.exportStep3">Un fichier JSON sera créé</li>
+                                        </ol>
+                                    </div>
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.exportImportTitle">Importer</p>
+                                        <ol>
+                                            <li data-i18n="faq.importStep1">Allez dans Paramètres</li>
+                                            <li data-i18n="faq.importStep2">Cliquez sur "Importer mes données"</li>
+                                            <li data-i18n="faq.importStep3">Sélectionnez votre fichier</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div class="faq-explainer-block">
+                                    <p class="faq-block-title" data-i18n="faq.importModesTitle">Modes d'import :</p>
+                                    <ul>
+                                        <li><strong data-i18n="faq.importReplace">Remplacer</strong> : <span data-i18n="faq.importReplaceDesc">efface les données existantes</span></li>
+                                        <li><strong data-i18n="faq.importMerge">Fusionner</strong> : <span data-i18n="faq.importMergeDesc">ajoute sans doublons</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="faq-explainer-block mb-0">
+                                    <p class="faq-block-title" data-i18n="faq.autoBackupTitle">Sauvegarde automatique</p>
+                                    <p class="mb-0" data-i18n="faq.autoBackupDesc">L'application effectue une sauvegarde automatique hebdomadaire sur votre appareil.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq7" aria-expanded="false" aria-controls="supportFaq7">
+                                <span data-i18n="faq.q7">Ai-je besoin d'une connexion internet ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq7" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading7" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body" data-i18n="faq.a7" data-i18n-html>
+                                La connexion internet n'est requise que pour certaines fonctionnalités.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq8" aria-expanded="false" aria-controls="supportFaq8">
+                                <span data-i18n="faq.q8">Comment annuler ma période d'essai ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq8" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading8" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body">
+                                <div class="faq-explainer-block">
+                                    <p class="mb-0" data-i18n="faq.q8_intro">Vous pouvez annuler votre période d'essai directement depuis votre store.</p>
+                                </div>
+
+                                <div class="faq-explainer-grid">
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.q8_android_title">Sur Android</p>
+                                        <ol class="mb-0">
+                                            <li data-i18n="faq.q8_android_step1">Ouvrez l'application Google Play Store</li>
+                                            <li data-i18n="faq.q8_android_step2">Appuyez sur votre photo de profil en haut à droite</li>
+                                            <li data-i18n="faq.q8_android_step3">Sélectionnez Paiements et abonnements &gt; Abonnements</li>
+                                            <li data-i18n="faq.q8_android_step4">Trouvez BookNova dans la liste</li>
+                                            <li data-i18n="faq.q8_android_step5">Appuyez sur Annuler l'abonnement</li>
+                                            <li data-i18n="faq.q8_android_step6">Suivez les instructions pour confirmer</li>
+                                        </ol>
+                                    </div>
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.q8_ios_title">Sur iOS (iPhone/iPad)</p>
+                                        <ol class="mb-0">
+                                            <li data-i18n="faq.q8_ios_step1">Ouvrez l'application Réglages de votre appareil</li>
+                                            <li data-i18n="faq.q8_ios_step2">Appuyez sur votre nom en haut de l'écran</li>
+                                            <li data-i18n="faq.q8_ios_step3">Sélectionnez Abonnements</li>
+                                            <li data-i18n="faq.q8_ios_step4">Trouvez BookNova dans la liste</li>
+                                            <li data-i18n="faq.q8_ios_step5">Appuyez sur Annuler l'abonnement ou Annuler l'essai gratuit</li>
+                                            <li data-i18n="faq.q8_ios_step6">Confirmez l'annulation</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div class="faq-explainer-block">
+                                    <p class="mb-0"><strong data-i18n="faq.q8_note_label">Note :</strong> <span data-i18n="faq.q8_note">Vous conservez l'accès aux fonctionnalités premium jusqu'à la fin de votre période d'essai.</span></p>
+                                </div>
+
+                                <div class="faq-explainer-block faq-explainer-warning mb-0">
+                                    <p class="mb-0"><strong data-i18n="faq.q8_warning_label">Important :</strong> <span data-i18n="faq.q8_warning">L'annulation doit être effectuée au moins 24 heures avant la fin de la période d'essai pour éviter d'être facturé.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq9" aria-expanded="false" aria-controls="supportFaq9">
+                                <span data-i18n="faq.q9">Comment me désabonner de la version Premium ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq9" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading9" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body">
+                                <div class="faq-explainer-block">
+                                    <p class="mb-0" data-i18n="faq.q9_intro">Pour annuler votre abonnement Premium actif, suivez les mêmes étapes que pour annuler la période d'essai :</p>
+                                </div>
+
+                                <div class="faq-explainer-grid">
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.q9_android_title">Sur Android</p>
+                                        <ol class="mb-0">
+                                            <li data-i18n="faq.q9_android_step1">Ouvrez l'application Google Play Store</li>
+                                            <li data-i18n="faq.q9_android_step2">Appuyez sur votre photo de profil en haut à droite</li>
+                                            <li data-i18n="faq.q9_android_step3">Sélectionnez Paiements et abonnements &gt; Abonnements</li>
+                                            <li data-i18n="faq.q9_android_step4">Trouvez BookNova dans la liste</li>
+                                            <li data-i18n="faq.q9_android_step5">Appuyez sur Annuler l'abonnement</li>
+                                            <li data-i18n="faq.q9_android_step6">Confirmez l'annulation</li>
+                                        </ol>
+                                    </div>
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.q9_ios_title">Sur iOS (iPhone/iPad)</p>
+                                        <ol class="mb-0">
+                                            <li data-i18n="faq.q9_ios_step1">Ouvrez l'application Réglages de votre appareil</li>
+                                            <li data-i18n="faq.q9_ios_step2">Appuyez sur votre nom en haut de l'écran</li>
+                                            <li data-i18n="faq.q9_ios_step3">Sélectionnez Abonnements</li>
+                                            <li data-i18n="faq.q9_ios_step4">Trouvez BookNova dans la liste</li>
+                                            <li data-i18n="faq.q9_ios_step5">Appuyez sur Annuler l'abonnement</li>
+                                            <li data-i18n="faq.q9_ios_step6">Confirmez l'annulation</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div class="faq-explainer-block mb-0">
+                                    <p class="mb-0"><strong data-i18n="faq.q9_note_label">Bon à savoir :</strong> <span data-i18n="faq.q9_note">Vous conserverez l'accès aux fonctionnalités premium jusqu'à la fin de la période de facturation en cours. Aucun remboursement ne sera effectué pour la période déjà payée.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq10" aria-expanded="false" aria-controls="supportFaq10">
+                                <span data-i18n="faq.q10">Qu'est-ce que la page Découvrir ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq10" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading10" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body">
+                                <div class="faq-explainer-block">
+                                    <p class="mb-0" data-i18n="faq.q10_intro">La page Découvrir vous propose des recommandations de livres personnalisées basées sur vos lectures et préférences.</p>
+                                </div>
+
+                                <div class="faq-explainer-grid">
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.q10_free_title">Version gratuite</p>
+                                        <ul class="mb-0">
+                                            <li data-i18n="faq.q10_free_item1">20 recommandations par genre</li>
+                                            <li data-i18n="faq.q10_free_item2">Suggestions basées sur vos genres favoris et leurs tags associés</li>
+                                        </ul>
+                                    </div>
+                                    <div class="faq-explainer-block">
+                                        <p class="faq-block-title" data-i18n="faq.q10_premium_title">Version premium</p>
+                                        <ul class="mb-0">
+                                            <li data-i18n="faq.q10_premium_item1">100 recommandations par genre</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="faq-explainer-block mb-0">
+                                    <p class="mb-0"><strong data-i18n="faq.q10_online_label">Connexion :</strong> <span data-i18n="faq.q10_online">Cette fonctionnalité nécessite une connexion internet.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading11">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq11" aria-expanded="false" aria-controls="supportFaq11">
+                                <span data-i18n="faq.q11">Comment est calculée la hauteur de ma pile ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq11" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading11" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body">
+                                <div class="faq-explainer-block">
+                                    <p class="faq-block-title" data-i18n="faq.a11_title">Une estimation</p>
+                                    <p data-i18n="faq.a11_intro">Book Nova calcule l'épaisseur de chaque livre à partir de son nombre de pages :</p>
+                                    <ul>
+                                        <li><strong data-i18n="faq.a11_type1">Romans & livres standards</strong> : 0.05 mm <span data-i18n="faq.a11_perPage">par page</span></li>
+                                        <li><strong data-i18n="faq.a11_type2">Mangas</strong> : 0.08 mm <span data-i18n="faq.a11_perPage">par page</span></li>
+                                        <li><strong data-i18n="faq.a11_type3">BD & Comics</strong> : 0.08 mm <span data-i18n="faq.a11_perPage">par page</span></li>
+                                    </ul>
+                                    <p class="mb-0" data-i18n="faq.a11_calibration">Ces valeurs ont été calibrées sur des mesures réelles pour être les plus précises possible.</p>
+                                </div>
+
+                                <div class="faq-explainer-block">
+                                    <p class="faq-block-title" data-i18n="faq.a11_why_title">Pourquoi ma mesure peut être différente ?</p>
+                                    <p data-i18n="faq.a11_why_intro">Chaque livre est unique ! L'épaisseur réelle dépend de :</p>
+                                    <ul>
+                                        <li data-i18n="faq.a11_factor1">La qualité du papier (bible, offset, couché...)</li>
+                                        <li data-i18n="faq.a11_factor2">Le type de couverture (souple ou rigide)</li>
+                                        <li data-i18n="faq.a11_factor3">La reliure (collée, cousue...)</li>
+                                        <li data-i18n="faq.a11_factor4">L'éditeur et l'édition</li>
+                                    </ul>
+                                </div>
+
+                                <div class="faq-explainer-block mb-0">
+                                    <p class="faq-block-title" data-i18n="faq.a11_tip_title">Tu veux une précision parfaite ?</p>
+                                    <p data-i18n="faq.a11_tip_intro">Tu peux mesurer et corriger l'épaisseur de n'importe quel livre :</p>
+                                    <ol>
+                                        <li data-i18n="faq.a11_step1">Ouvre le livre dans ta bibliothèque</li>
+                                        <li data-i18n="faq.a11_step2">Clique sur "Modifier"</li>
+                                        <li data-i18n="faq.a11_step3">Ajuste l'épaisseur manuellement</li>
+                                    </ol>
+                                    <p class="mb-0" data-i18n="faq.a11_tip_conclusion">Ta pile reflétera alors tes mesures exactes ! 📚</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="supportFaqHeading12">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportFaq12" aria-expanded="false" aria-controls="supportFaq12">
+                                <span data-i18n="faq.q12">Comment supprimer mes données ?</span>
+                            </button>
+                        </h3>
+                        <div id="supportFaq12" class="accordion-collapse collapse" aria-labelledby="supportFaqHeading12" data-bs-parent="#supportFaqAccordion">
+                            <div class="accordion-body">
+                                <div class="faq-explainer-block">
+                                    <p class="faq-block-title" data-i18n="faq.deleteDataOwnership">Vos données vous appartiennent</p>
+                                    <p class="mb-0" data-i18n="faq.deleteDataOwnershipDesc">Book Nova ne nécessite pas de compte — toutes vos données personnelles sont stockées uniquement sur votre téléphone.</p>
+                                </div>
+
+                                <div class="faq-explainer-block">
+                                    <p class="faq-block-title" data-i18n="faq.deleteHowTitle">Pour supprimer vos données</p>
+                                    <p data-i18n="faq.deleteHowIntro">Désinstallez l'application. C'est tout ! La désinstallation de Book Nova supprime automatiquement et définitivement toutes vos données :</p>
+                                    <ul>
+                                        <li data-i18n="faq.deleteBooks">Vos livres</li>
+                                        <li data-i18n="faq.deleteBadges">Vos badges</li>
+                                        <li data-i18n="faq.deleteLoans">Prêts et emprunts</li>
+                                        <li data-i18n="faq.deletePrefs">Préférences</li>
+                                        <li data-i18n="faq.deleteBackups">Sauvegardes locales</li>
+                                    </ul>
+                                </div>
+
+                                <div class="faq-explainer-block">
+                                    <p class="faq-block-title" data-i18n="faq.deleteSharedTitle">Données partagées (statistiques anonymes)</p>
+                                    <p data-i18n="faq.deleteSharedIntro">Si vous avez activé "Contribuer aux statistiques" dans les paramètres, seules des données anonymes sont partagées :</p>
+                                    <ul>
+                                        <li data-i18n="faq.deleteShared1">Titres et auteurs des livres (pour la page Découvrir)</li>
+                                        <li data-i18n="faq.deleteShared2">Notes moyennes agrégées</li>
+                                    </ul>
+                                    <ul class="faq-badge-list">
+                                        <li data-i18n="faq.deleteAnonymous">Totalement anonymes</li>
+                                        <li data-i18n="faq.deleteNotLinked">Non liées à votre identité</li>
+                                        <li data-i18n="faq.deleteForRecos">Pour les recommandations</li>
+                                    </ul>
+                                </div>
+
+                                <div class="faq-explainer-block">
+                                    <p><strong data-i18n="faq.deleteStopSharing">Pour arrêter le partage :</strong> <span data-i18n="faq.deleteStopSharingDesc">Désactivez "Contribuer aux statistiques" dans Paramètres > Données et confidentialité.</span></p>
+                                    <p class="mb-0"><strong data-i18n="faq.deleteRequestDeletion">Pour supprimer vos statistiques partagées :</strong> <span data-i18n="faq.deleteRequestDeletionDesc">Contactez-nous à book-nova@outlook.fr avec votre identifiant support (disponible dans Paramètres → Support).</span></p>
+                                </div>
+
+                                <div class="faq-explainer-block mb-0">
+                                    <p class="faq-block-title" data-i18n="faq.deleteBeforeUninstall">Avant de désinstaller</p>
+                                    <p data-i18n="faq.deleteBeforeUninstallDesc">Pensez à exporter vos données si vous souhaitez les conserver :</p>
+                                    <ul class="mb-0">
+                                        <li data-i18n="faq.deleteKeepFile">Conservez le fichier JSON pour une réimportation ultérieure.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <hr class="support-divider">
 

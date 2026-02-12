@@ -200,7 +200,7 @@
         }
     </style>
 </head>
-<body>
+<body{% if page.url == '/' or page.url == '/index.html' %} class="home-page"{% endif %}>
     <!-- Header/Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark sticky-top">
         <div class="container-fluid px-3 px-md-5">
@@ -220,9 +220,9 @@
                             </svg>
                         </button>
                         <ul class="language-dropdown" id="languageDropdown">
-                            <li><button onclick="changeLanguage('fr')" data-lang="fr">Français</button></li>
-                            <li><button onclick="changeLanguage('en')" data-lang="en">English</button></li>
-                            <li><button onclick="changeLanguage('es')" data-lang="es">Español</button></li>
+                            <li><button type="button" data-lang="fr">Français</button></li>
+                            <li><button type="button" data-lang="en">English</button></li>
+                            <li><button type="button" data-lang="es">Español</button></li>
                         </ul>
                     </li>
                     <li class="nav-item d-none d-md-block">
@@ -232,20 +232,12 @@
                         <a class="nav-link{% if page.url == '/about.html' %} active{% endif %}" href="{{ '/about.html' | relative_url }}" data-i18n="nav.about">À propos</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link{% if page.url == '/privacy.html' %} active{% endif %}" href="{{ '/privacy.html' | relative_url }}" data-i18n="nav.privacy">Confidentialité</a>
-                    </li>
-                    <li class="nav-item d-none d-md-block">
-                        <a class="nav-link{% if page.url == '/terms.html' %} active{% endif %}" href="{{ '/terms.html' | relative_url }}" data-i18n="nav.terms">Conditions</a>
-                    </li>
-                    <li class="nav-item d-none d-md-block">
                         <a class="nav-link{% if page.url == '/support.html' %} active{% endif %}" href="{{ '/support.html' | relative_url }}" data-i18n="nav.support">Support</a>
                     </li>
                     <li class="nav-item d-md-none w-100">
                         <div class="mobile-nav-panel">
                             <a href="{{ '/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" data-i18n="nav.home">Accueil</a>
                             <a href="{{ '/about.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/about.html' %} active{% endif %}" data-i18n="nav.about">À propos</a>
-                            <a href="{{ '/privacy.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/privacy.html' %} active{% endif %}" data-i18n="nav.privacy">Confidentialité</a>
-                            <a href="{{ '/terms.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/terms.html' %} active{% endif %}" data-i18n="nav.terms">Conditions</a>
                             <a href="{{ '/support.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/support.html' %} active{% endif %}" data-i18n="nav.support">Support</a>
                             <div class="mobile-nav-divider"></div>
                             <div class="mobile-nav-heading" data-i18n="languageSwitcher.change">Changer de langue</div>
@@ -306,10 +298,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="mb-3" data-i18n="storeModal.appMessage">Book Nova est maintenant disponible sur l'App Store !</p>
+                    <p class="mb-3" data-i18n="storeModal.betaMessage">Book Nova est maintenant disponible sur l'App Store !</p>
                     <a href="{{ site.app.ios_url }}" class="btn btn-primary w-100" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-apple me-2"></i>
-                        <span data-i18n="storeModal.appButton">Télécharger sur l'App Store</span>
+                        <span data-i18n="storeModal.betaButton">Télécharger sur l'App Store</span>
                     </a>
                 </div>
                 <div class="modal-footer">
@@ -341,7 +333,105 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <!-- i18n Script -->
-    <script type="application/json" id="translationsData">{{ site.data.translations | jsonify }}</script>
+    {% assign current_page_url = page.url | default: '/' %}
+    {% assign is_home_template = false %}
+    {% if current_page_url == '/' or current_page_url == '/index.html' %}
+        {% assign is_home_template = true %}
+    {% endif %}
+    <script type="application/json" id="translationsData">
+{% if is_home_template %}
+{
+{% for lang in site.languages %}
+    {% assign lang_data = site.data.translations[lang] %}
+    "{{ lang }}": {
+        "nav": {{ lang_data.nav | jsonify }},
+        "hero": {{ lang_data.hero | jsonify }},
+        "features": {{ lang_data.features | jsonify }},
+        "screenshots": {{ lang_data.screenshots | jsonify }},
+        "reviews": {{ lang_data.reviews | jsonify }},
+        "story": {{ lang_data.story | jsonify }},
+        "cta": {{ lang_data.cta | jsonify }},
+        "storeModal": {{ lang_data.storeModal | jsonify }},
+        "footer": {{ lang_data.footer | jsonify }},
+        "footerLinks": {{ lang_data.footerLinks | jsonify }},
+        "languageSwitcher": {{ lang_data.languageSwitcher | jsonify }},
+        "faq": {
+            "title": {{ lang_data.faq.title | jsonify }},
+            "q1": {{ lang_data.faq.q1 | jsonify }},
+            "a1": {{ lang_data.faq.a1 | jsonify }},
+            "q1_intro": {{ lang_data.faq.q1_intro | jsonify }},
+            "q1_free_title": {{ lang_data.faq.q1_free_title | jsonify }},
+            "q1_free_limit1": {{ lang_data.faq.q1_free_limit1 | jsonify }},
+            "q1_free_limit2": {{ lang_data.faq.q1_free_limit2 | jsonify }},
+            "q1_free_limit3": {{ lang_data.faq.q1_free_limit3 | jsonify }},
+            "q1_free_limit4": {{ lang_data.faq.q1_free_limit4 | jsonify }},
+            "q1_free_limit5": {{ lang_data.faq.q1_free_limit5 | jsonify }},
+            "q1_premium_title": {{ lang_data.faq.q1_premium_title | jsonify }},
+            "q1_premium_limit1": {{ lang_data.faq.q1_premium_limit1 | jsonify }},
+            "q1_premium_limit2": {{ lang_data.faq.q1_premium_limit2 | jsonify }},
+            "q1_premium_limit3": {{ lang_data.faq.q1_premium_limit3 | jsonify }},
+            "q1_premium_limit4": {{ lang_data.faq.q1_premium_limit4 | jsonify }},
+            "q1_premium_limit5": {{ lang_data.faq.q1_premium_limit5 | jsonify }},
+            "q1_premium_limit6": {{ lang_data.faq.q1_premium_limit6 | jsonify }},
+            "q1_note": {{ lang_data.faq.q1_note | jsonify }},
+            "q6": {{ lang_data.faq.q6 | jsonify }},
+            "a6": {{ lang_data.faq.a6 | jsonify }},
+            "exportAvailable": {{ lang_data.faq.exportAvailable | jsonify }},
+            "exportAvailableDesc": {{ lang_data.faq.exportAvailableDesc | jsonify }},
+            "exportWhatTitle": {{ lang_data.faq.exportWhatTitle | jsonify }},
+            "exportBooks": {{ lang_data.faq.exportBooks | jsonify }},
+            "exportBadges": {{ lang_data.faq.exportBadges | jsonify }},
+            "exportLoans": {{ lang_data.faq.exportLoans | jsonify }},
+            "exportBorrows": {{ lang_data.faq.exportBorrows | jsonify }},
+            "exportExportTitle": {{ lang_data.faq.exportExportTitle | jsonify }},
+            "exportStep1": {{ lang_data.faq.exportStep1 | jsonify }},
+            "exportStep2": {{ lang_data.faq.exportStep2 | jsonify }},
+            "exportStep3": {{ lang_data.faq.exportStep3 | jsonify }},
+            "exportImportTitle": {{ lang_data.faq.exportImportTitle | jsonify }},
+            "importStep1": {{ lang_data.faq.importStep1 | jsonify }},
+            "importStep2": {{ lang_data.faq.importStep2 | jsonify }},
+            "importStep3": {{ lang_data.faq.importStep3 | jsonify }},
+            "importModesTitle": {{ lang_data.faq.importModesTitle | jsonify }},
+            "importReplace": {{ lang_data.faq.importReplace | jsonify }},
+            "importReplaceDesc": {{ lang_data.faq.importReplaceDesc | jsonify }},
+            "importMerge": {{ lang_data.faq.importMerge | jsonify }},
+            "importMergeDesc": {{ lang_data.faq.importMergeDesc | jsonify }},
+            "autoBackupTitle": {{ lang_data.faq.autoBackupTitle | jsonify }},
+            "autoBackupDesc": {{ lang_data.faq.autoBackupDesc | jsonify }},
+            "q7": {{ lang_data.faq.q7 | jsonify }},
+            "a7": {{ lang_data.faq.a7 | jsonify }},
+            "q8": {{ lang_data.faq.q8 | jsonify }},
+            "a8": {{ lang_data.faq.a8 | jsonify }},
+            "q8_intro": {{ lang_data.faq.q8_intro | jsonify }},
+            "q8_android_title": {{ lang_data.faq.q8_android_title | jsonify }},
+            "q8_android_step1": {{ lang_data.faq.q8_android_step1 | jsonify }},
+            "q8_android_step2": {{ lang_data.faq.q8_android_step2 | jsonify }},
+            "q8_android_step3": {{ lang_data.faq.q8_android_step3 | jsonify }},
+            "q8_android_step4": {{ lang_data.faq.q8_android_step4 | jsonify }},
+            "q8_android_step5": {{ lang_data.faq.q8_android_step5 | jsonify }},
+            "q8_android_step6": {{ lang_data.faq.q8_android_step6 | jsonify }},
+            "q8_ios_title": {{ lang_data.faq.q8_ios_title | jsonify }},
+            "q8_ios_step1": {{ lang_data.faq.q8_ios_step1 | jsonify }},
+            "q8_ios_step2": {{ lang_data.faq.q8_ios_step2 | jsonify }},
+            "q8_ios_step3": {{ lang_data.faq.q8_ios_step3 | jsonify }},
+            "q8_ios_step4": {{ lang_data.faq.q8_ios_step4 | jsonify }},
+            "q8_ios_step5": {{ lang_data.faq.q8_ios_step5 | jsonify }},
+            "q8_ios_step6": {{ lang_data.faq.q8_ios_step6 | jsonify }},
+            "q8_note_label": {{ lang_data.faq.q8_note_label | jsonify }},
+            "q8_note": {{ lang_data.faq.q8_note | jsonify }},
+            "q8_warning_label": {{ lang_data.faq.q8_warning_label | jsonify }},
+            "q8_warning": {{ lang_data.faq.q8_warning | jsonify }}
+        },
+        "faqHome": {
+            "more": {{ lang_data.supportPage.faq.seeDetailedFaq | jsonify }}
+        }
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+}
+{% else %}
+{{ site.data.translations | jsonify }}
+{% endif %}
+    </script>
     <script>
         const translations = JSON.parse(document.getElementById('translationsData').textContent);
         const availableLangs = Object.keys(translations);
@@ -586,6 +676,13 @@
             updateContent();
             updateCurrentLanguage();
 
+            document.querySelectorAll('.language-dropdown button[data-lang]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    changeLanguage(lang);
+                });
+            });
+
             document.querySelectorAll('.mobile-language-option').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const lang = btn.getAttribute('data-lang');
@@ -645,200 +742,6 @@
             }
         });
 
-        // Custom FAQ #8 and #9 translation handler
-        const faqTranslations = {
-            fr: {
-                faq8: {
-                    android: 'Sur Android',
-                    ios: 'Sur iOS (iPhone/iPad)',
-                    steps: {
-                        android: [
-                            'Ouvrez l\'application <strong>Google Play Store</strong>',
-                            'Appuyez sur votre <strong>photo de profil</strong> en haut à droite',
-                            'Sélectionnez <strong>Paiements et abonnements</strong> &gt; <strong>Abonnements</strong>',
-                            'Trouvez <strong>BookNova</strong> dans la liste',
-                            'Appuyez sur <strong>Annuler l\'abonnement</strong>',
-                            'Suivez les instructions pour confirmer'
-                        ],
-                        ios: [
-                            'Ouvrez l\'application <strong>Réglages</strong> de votre appareil',
-                            'Appuyez sur votre <strong>nom</strong> en haut de l\'écran',
-                            'Sélectionnez <strong>Abonnements</strong>',
-                            'Trouvez <strong>BookNova</strong> dans la liste',
-                            'Appuyez sur <strong>Annuler l\'abonnement</strong> ou <strong>Annuler l\'essai gratuit</strong>',
-                            'Confirmez l\'annulation'
-                        ]
-                    },
-                    info: 'Vous conservez l\'accès aux fonctionnalités premium jusqu\'à la fin de votre période d\'essai.',
-                    warning: '<strong>Important :</strong> L\'annulation doit être effectuée au moins 24 heures avant la fin de la période d\'essai pour éviter d\'être facturé.'
-                },
-                faq9: {
-                    android: 'Sur Android',
-                    ios: 'Sur iOS (iPhone/iPad)',
-                    steps: {
-                        android: [
-                            'Ouvrez l\'application <strong>Google Play Store</strong>',
-                            'Appuyez sur votre <strong>photo de profil</strong> en haut à droite',
-                            'Sélectionnez <strong>Paiements et abonnements</strong> &gt; <strong>Abonnements</strong>',
-                            'Trouvez <strong>BookNova</strong> dans la liste',
-                            'Appuyez sur <strong>Annuler l\'abonnement</strong>',
-                            'Confirmez l\'annulation'
-                        ],
-                        ios: [
-                            'Ouvrez l\'application <strong>Réglages</strong> de votre appareil',
-                            'Appuyez sur votre <strong>nom</strong> en haut de l\'écran',
-                            'Sélectionnez <strong>Abonnements</strong>',
-                            'Trouvez <strong>BookNova</strong> dans la liste',
-                            'Appuyez sur <strong>Annuler l\'abonnement</strong>',
-                            'Confirmez l\'annulation'
-                        ]
-                    },
-                    goodToKnow: '<strong>Bon à savoir :</strong> Vous conserverez l\'accès aux fonctionnalités premium jusqu\'à la fin de la période de facturation en cours. Aucun remboursement ne sera effectué pour la période déjà payée.'
-                }
-            },
-            en: {
-                faq8: {
-                    android: 'On Android',
-                    ios: 'On iOS (iPhone/iPad)',
-                    steps: {
-                        android: [
-                            'Open the <strong>Google Play Store</strong> app',
-                            'Tap your <strong>profile picture</strong> in the top right',
-                            'Select <strong>Payments & subscriptions</strong> &gt; <strong>Subscriptions</strong>',
-                            'Find <strong>BookNova</strong> in the list',
-                            'Tap <strong>Cancel subscription</strong>',
-                            'Follow the instructions to confirm'
-                        ],
-                        ios: [
-                            'Open your device\'s <strong>Settings</strong> app',
-                            'Tap your <strong>name</strong> at the top of the screen',
-                            'Select <strong>Subscriptions</strong>',
-                            'Find <strong>BookNova</strong> in the list',
-                            'Tap <strong>Cancel Subscription</strong> or <strong>Cancel Free Trial</strong>',
-                            'Confirm the cancellation'
-                        ]
-                    },
-                    info: 'You will keep access to premium features until the end of your trial period.',
-                    warning: '<strong>Important:</strong> Cancellation must be done at least 24 hours before the end of the trial period to avoid being charged.'
-                },
-                faq9: {
-                    android: 'On Android',
-                    ios: 'On iOS (iPhone/iPad)',
-                    steps: {
-                        android: [
-                            'Open the <strong>Google Play Store</strong> app',
-                            'Tap your <strong>profile picture</strong> in the top right',
-                            'Select <strong>Payments & subscriptions</strong> &gt; <strong>Subscriptions</strong>',
-                            'Find <strong>BookNova</strong> in the list',
-                            'Tap <strong>Cancel subscription</strong>',
-                            'Confirm the cancellation'
-                        ],
-                        ios: [
-                            'Open your device\'s <strong>Settings</strong> app',
-                            'Tap your <strong>name</strong> at the top of the screen',
-                            'Select <strong>Subscriptions</strong>',
-                            'Find <strong>BookNova</strong> in the list',
-                            'Tap <strong>Cancel Subscription</strong>',
-                            'Confirm the cancellation'
-                        ]
-                    },
-                    goodToKnow: '<strong>Good to know:</strong> You will retain access to premium features until the end of the current billing period. No refund will be issued for the period already paid.'
-                }
-            },
-            es: {
-                faq8: {
-                    android: 'En Android',
-                    ios: 'En iOS (iPhone/iPad)',
-                    steps: {
-                        android: [
-                            'Abre la aplicación <strong>Google Play Store</strong>',
-                            'Toca tu <strong>foto de perfil</strong> en la parte superior derecha',
-                            'Selecciona <strong>Pagos y suscripciones</strong> &gt; <strong>Suscripciones</strong>',
-                            'Encuentra <strong>BookNova</strong> en la lista',
-                            'Toca <strong>Cancelar suscripción</strong>',
-                            'Sigue las instrucciones para confirmar'
-                        ],
-                        ios: [
-                            'Abre la aplicación <strong>Ajustes</strong> de tu dispositivo',
-                            'Toca tu <strong>nombre</strong> en la parte superior de la pantalla',
-                            'Selecciona <strong>Suscripciones</strong>',
-                            'Encuentra <strong>BookNova</strong> en la lista',
-                            'Toca <strong>Cancelar suscripción</strong> o <strong>Cancelar prueba gratuita</strong>',
-                            'Confirma la cancelación'
-                        ]
-                    },
-                    info: 'Conservarás el acceso a las funciones premium hasta el final de tu período de prueba.',
-                    warning: '<strong>Importante:</strong> La cancelación debe realizarse al menos 24 horas antes del final del período de prueba para evitar cargos.'
-                },
-                faq9: {
-                    android: 'En Android',
-                    ios: 'En iOS (iPhone/iPad)',
-                    steps: {
-                        android: [
-                            'Abre la aplicación <strong>Google Play Store</strong>',
-                            'Toca tu <strong>foto de perfil</strong> en la parte superior derecha',
-                            'Selecciona <strong>Pagos y suscripciones</strong> &gt; <strong>Suscripciones</strong>',
-                            'Encuentra <strong>BookNova</strong> en la lista',
-                            'Toca <strong>Cancelar suscripción</strong>',
-                            'Confirma la cancelación'
-                        ],
-                        ios: [
-                            'Abre la aplicación <strong>Ajustes</strong> de tu dispositivo',
-                            'Toca tu <strong>nombre</strong> en la parte superior de la pantalla',
-                            'Selecciona <strong>Suscripciones</strong>',
-                            'Encuentra <strong>BookNova</strong> en la lista',
-                            'Toca <strong>Cancelar suscripción</strong>',
-                            'Confirma la cancelación'
-                        ]
-                    },
-                    goodToKnow: '<strong>Bueno saber:</strong> Conservarás el acceso a las funciones premium hasta el final del período de facturación actual. No se realizará ningún reembolso por el período ya pagado.'
-                }
-            }
-        };
-
-        function updateStyledFAQs() {
-            const lang = currentLang || '{{ site.default_lang }}';
-            const data = faqTranslations[lang];
-            if (!data) return;
-
-            // Update FAQ #8
-            const faq8Android = document.querySelector('#faq8 .col-lg-6:nth-child(1) h4');
-            const faq8iOS = document.querySelector('#faq8 .col-lg-6:nth-child(2) h4');
-            const faq8AndroidSteps = document.querySelector('#faq8 .col-lg-6:nth-child(1) ol');
-            const faq8iOSSteps = document.querySelector('#faq8 .col-lg-6:nth-child(2) ol');
-            const faq8Info = document.querySelector('#faq8 .alert-light div');
-            const faq8Warning = document.querySelector('#faq8 .alert-warning div');
-
-            if (faq8Android) faq8Android.innerHTML = data.faq8.android;
-            if (faq8iOS) faq8iOS.innerHTML = data.faq8.ios;
-            if (faq8AndroidSteps) faq8AndroidSteps.innerHTML = data.faq8.steps.android.map(s => `<li>${s}</li>`).join('');
-            if (faq8iOSSteps) faq8iOSSteps.innerHTML = data.faq8.steps.ios.map(s => `<li>${s}</li>`).join('');
-            if (faq8Info) faq8Info.innerHTML = data.faq8.info;
-            if (faq8Warning) faq8Warning.innerHTML = data.faq8.warning;
-
-            // Update FAQ #9
-            const faq9Android = document.querySelector('#faq9 .col-lg-6:nth-child(1) h4');
-            const faq9iOS = document.querySelector('#faq9 .col-lg-6:nth-child(2) h4');
-            const faq9AndroidSteps = document.querySelector('#faq9 .col-lg-6:nth-child(1) ol');
-            const faq9iOSSteps = document.querySelector('#faq9 .col-lg-6:nth-child(2) ol');
-            const faq9GoodToKnow = document.querySelector('#faq9 .alert-info div');
-
-            if (faq9Android) faq9Android.innerHTML = data.faq9.android;
-            if (faq9iOS) faq9iOS.innerHTML = data.faq9.ios;
-            if (faq9AndroidSteps) faq9AndroidSteps.innerHTML = data.faq9.steps.android.map(s => `<li>${s}</li>`).join('');
-            if (faq9iOSSteps) faq9iOSSteps.innerHTML = data.faq9.steps.ios.map(s => `<li>${s}</li>`).join('');
-            if (faq9GoodToKnow) faq9GoodToKnow.innerHTML = data.faq9.goodToKnow;
-        }
-
-        // Hook into existing updateContent function
-        const originalUpdateContent = updateContent;
-        updateContent = function() {
-            originalUpdateContent();
-            updateStyledFAQs();
-        };
-
-        // Initialize styled FAQs on page load
-        document.addEventListener('DOMContentLoaded', updateStyledFAQs);
     </script>
 
     <!-- TikTok Pixel Code - Deferred for better performance -->
