@@ -200,7 +200,7 @@
         }
     </style>
 </head>
-<body>
+<body{% if page.url == '/' or page.url == '/index.html' %} class="home-page"{% endif %}>
     <!-- Header/Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark sticky-top">
         <div class="container-fluid px-3 px-md-5">
