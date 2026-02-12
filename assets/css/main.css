@@ -725,6 +725,9 @@ body.home-page .reviews-section .container {
 
 .store-score-card {
     display: block;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
     color: white;
     text-decoration: none;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.08) 100%);
@@ -737,19 +740,100 @@ body.home-page .reviews-section .container {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.store-score-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: var(--store-accent, linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.35) 100%));
+}
+
+.store-score-card::after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    right: -60px;
+    top: -70px;
+    border-radius: 50%;
+    background: var(--store-glow, radial-gradient(circle, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 72%));
+    pointer-events: none;
+}
+
+.store-score-card > * {
+    position: relative;
+    z-index: 1;
+}
+
 .store-score-card:hover {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 18px 34px rgba(7, 12, 39, 0.3);
 }
 
+.store-score-head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.55rem;
+}
+
+.store-score-badge {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+    border: 1px solid var(--store-badge-border, rgba(255, 255, 255, 0.25));
+    background: var(--store-badge-bg, rgba(255, 255, 255, 0.15));
+    color: var(--store-badge-color, #ffffff);
+    box-shadow: 0 6px 16px rgba(10, 16, 40, 0.25);
+}
+
+.store-score-badge i {
+    line-height: 1;
+}
+
+.store-score-gp-icon {
+    width: 1.18rem;
+    height: 1.18rem;
+    display: block;
+}
+
+.store-score-badge--googleplay {
+    padding: 0;
+}
+
 .store-score-label {
-    margin-bottom: 0.45rem;
+    margin-bottom: 0;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     font-size: 0.78rem;
     color: rgba(255, 255, 255, 0.82);
+}
+
+.store-score-card--apple {
+    --store-accent: linear-gradient(90deg, #f4f4f5 0%, #d1d9e6 100%);
+    --store-glow: radial-gradient(circle, rgba(221, 231, 248, 0.36) 0%, rgba(221, 231, 248, 0) 72%);
+    --store-badge-bg: linear-gradient(145deg, #0f172a 0%, #1f2937 100%);
+    --store-badge-border: rgba(255, 255, 255, 0.34);
+    --store-badge-color: #ffffff;
+    border-color: rgba(232, 238, 252, 0.38);
+}
+
+.store-score-card--google {
+    --store-accent: linear-gradient(90deg, #34a853 0%, #4285f4 35%, #fbbc05 68%, #ea4335 100%);
+    --store-glow: radial-gradient(circle, rgba(66, 133, 244, 0.36) 0%, rgba(66, 133, 244, 0) 72%);
+    --store-badge-bg: #ffffff;
+    --store-badge-border: rgba(228, 238, 255, 0.65);
+    --store-badge-color: #ffffff;
+    border-color: rgba(146, 205, 255, 0.35);
 }
 
 .store-score-value {
@@ -776,10 +860,26 @@ body.home-page .reviews-section .container {
     color: #ffd166;
 }
 
+.store-score-card--apple .store-score-stars {
+    color: #ffd98f;
+}
+
+.store-score-card--google .store-score-stars {
+    color: #ffe081;
+}
+
 .store-score-link {
     font-size: 0.9rem;
     color: white;
     text-decoration: underline;
+}
+
+.store-score-card--apple .store-score-link {
+    color: #f2f6ff;
+}
+
+.store-score-card--google .store-score-link {
+    color: #e6f5ff;
 }
 
 .review-cards-grid {
