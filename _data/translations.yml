@@ -36,6 +36,15 @@ fr:
       description: "Visualise ton évolution de lecteur et découvre tes habitudes de lecture."
   screenshots:
     title: "Découvrez l'application"
+  reviews:
+    kicker: "Avis vérifiés"
+    title: "Nos notes sur les stores"
+    subtitle: "Notes officielles et extraits de vrais commentaires publiés sur App Store et Google Play."
+    appStore: "App Store"
+    googlePlay: "Google Play"
+    ratingsLabel: "avis"
+    seeStore: "Voir le store"
+    snapshot: "Données relevées le 12 février 2026. Extraits raccourcis des commentaires publics."
   story:
     title: "Derrière Book Nova"
     p1: "Un couple. Une passion commune pour la lecture. Et une idée un peu folle : mesurer nos lectures en hauteur jusqu'à atteindre notre propre taille."
@@ -774,6 +783,15 @@ en:
       description: "Visualise your evolution as a reader and discover your reading habits."
   screenshots:
     title: "Discover the app"
+  reviews:
+    kicker: "Verified feedback"
+    title: "How readers rate us"
+    subtitle: "Official store ratings and real user review excerpts from the App Store and Google Play."
+    appStore: "App Store"
+    googlePlay: "Google Play"
+    ratingsLabel: "ratings"
+    seeStore: "Open store page"
+    snapshot: "Data captured on February 12, 2026. Excerpts shortened from public reviews."
   story:
     title: "Behind Book Nova"
     p1: "A couple. A shared passion for reading. And a slightly crazy idea: measuring our reads by height until we reach our own size."
@@ -1511,6 +1529,15 @@ es:
       description: "Visualiza tu evolución como lector y descubre tus hábitos de lectura."
   screenshots:
     title: "Descubre la aplicación"
+  reviews:
+    kicker: "Opiniones verificadas"
+    title: "Cómo nos puntúan en las tiendas"
+    subtitle: "Valoraciones oficiales y extractos de reseñas reales publicadas en App Store y Google Play."
+    appStore: "App Store"
+    googlePlay: "Google Play"
+    ratingsLabel: "reseñas"
+    seeStore: "Ver en la tienda"
+    snapshot: "Datos recopilados el 12 de febrero de 2026. Extractos abreviados de reseñas públicas."
   story:
     title: "Detrás de Book Nova"
     p1: "Una pareja. Una pasión compartida por la lectura. Y una idea un poco loca: medir nuestras lecturas en altura hasta alcanzar nuestra propia estatura."
