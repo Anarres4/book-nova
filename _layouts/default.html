@@ -805,6 +805,36 @@
                 });
             });
 
+            // Logo interaction on home: animate logo and guide to download buttons
+            const heroLogoAction = document.querySelector('[data-hero-logo-action]');
+            const downloadButtons = document.getElementById('download-buttons');
+            if (heroLogoAction && downloadButtons) {
+                const runHeroLogoAction = () => {
+                    heroLogoAction.classList.remove('hero-image-activated');
+                    downloadButtons.classList.remove('download-buttons-spotlight');
+
+                    // Restart CSS animations on repeated clicks
+                    void heroLogoAction.offsetWidth;
+                    void downloadButtons.offsetWidth;
+
+                    heroLogoAction.classList.add('hero-image-activated');
+                    downloadButtons.classList.add('download-buttons-spotlight');
+                    downloadButtons.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                    if (navigator.vibrate) {
+                        navigator.vibrate(12);
+                    }
+                };
+
+                heroLogoAction.addEventListener('click', runHeroLogoAction);
+                heroLogoAction.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        runHeroLogoAction();
+                    }
+                });
+            }
+
             // Détecter si on est sur la page d'accueil et ajouter la classe
             const path = window.location.pathname;
             const isHomePage = path === '/' || path === '/index.html' || path.endsWith('/');
