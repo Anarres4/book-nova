@@ -1,0 +1,10 @@
+# Notes et avis sur les stores — mise à jour manuelle
+# Pour mettre à jour : modifier les valeurs ci-dessous puis rebuild le site.
+
+app_store:
+  rating: 4.7
+  count: 146
+
+google_play:
+  rating: 4.6
+  count: 325

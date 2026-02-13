@@ -150,8 +150,8 @@ permalink: "/"
                     <span class="store-score-badge" aria-hidden="true"><i class="bi bi-apple"></i></span>
                     <p class="store-score-label" data-i18n="reviews.appStore">App Store</p>
                 </div>
-                <p class="store-score-value">4.7<span>/5</span></p>
-                <p class="store-score-meta"><strong>146</strong> <span data-i18n="reviews.ratingsLabel">avis</span></p>
+                <p class="store-score-value">{{ site.data.ratings.app_store.rating }}<span>/5</span></p>
+                <p class="store-score-meta"><strong>{{ site.data.ratings.app_store.count }}</strong> <span data-i18n="reviews.ratingsLabel">avis</span></p>
                 <p class="store-score-stars" aria-hidden="true">★★★★★</p>
                 <span class="store-score-link" data-i18n="reviews.seeStore">Voir le store</span>
             </a>
@@ -168,8 +168,8 @@ permalink: "/"
                     </span>
                     <p class="store-score-label" data-i18n="reviews.googlePlay">Google Play</p>
                 </div>
-                <p class="store-score-value">4.6<span>/5</span></p>
-                <p class="store-score-meta"><strong>325</strong> <span data-i18n="reviews.ratingsLabel">avis</span></p>
+                <p class="store-score-value">{{ site.data.ratings.google_play.rating }}<span>/5</span></p>
+                <p class="store-score-meta"><strong>{{ site.data.ratings.google_play.count }}</strong> <span data-i18n="reviews.ratingsLabel">avis</span></p>
                 <p class="store-score-stars" aria-hidden="true">★★★★★</p>
                 <span class="store-score-link" data-i18n="reviews.seeStore">Voir le store</span>
             </a>
