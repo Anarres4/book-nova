@@ -453,6 +453,12 @@ body:not(.home-page) .privacy-back-link a {
     opacity: 0.9;
 }
 
+.hero-logo-wrapper {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .hero-logo {
     width: 100%;
     height: 100%;
