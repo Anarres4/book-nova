@@ -9,9 +9,9 @@ fr:
     terms: "Conditions"
     support: "Support"
   hero:
-    tagline: "Lisez. Empilez. Grandissez."
-    title: "Et si tu pouvais mesurer tes livres lus... en hauteur ?"
-    subtitle: "Chaque livre que vous terminez s'empile. Page après page, centimètre après centimètre, jusqu'à atteindre... votre propre taille."
+    tagline: "La lecture, ça se mesure. (En girafes.)"
+    title: "Vos livres s'empilent. Jusqu'où irez-vous ?"
+    subtitle: "Chaque livre terminé s'ajoute à votre pile. Dépassez un chihuahua, puis un flamant rose, puis… vous-même."
     app_store: "App Store"
     google_play: "Google Play"
   features:
@@ -821,9 +821,9 @@ en:
     terms: "Terms"
     support: "Support"
   hero:
-    tagline: "Read. Stack. Grow."
-    title: "What if you could measure your read books... by height?"
-    subtitle: "Every book you finish stacks up. Page by page, inch by inch, until reaching... your own height."
+    tagline: "Reading is measurable. (In giraffes.)"
+    title: "Your books stack up. How far will you go?"
+    subtitle: "Every finished book adds to your stack. Outgrow a chihuahua, then a flamingo, then… yourself."
     app_store: "App Store"
     google_play: "Google Play"
   features:
@@ -1632,9 +1632,9 @@ es:
     terms: "Condiciones"
     support: "Soporte"
   hero:
-    tagline: "Lee. Apila. Crece."
-    title: "¿Y si pudieras medir tus libros leídos... en altura?"
-    subtitle: "Cada libro que terminas se apila. Página tras página, centímetro a centímetro, hasta alcanzar... tu propia altura."
+    tagline: "La lectura se mide. (En jirafas.)"
+    title: "Tus libros se apilan. ¿Hasta dónde llegarás?"
+    subtitle: "Cada libro terminado se suma a tu pila. Supera a un chihuahua, luego a un flamenco, luego… a ti mismo."
     app_store: "App Store"
     google_play: "Google Play"
   features:
