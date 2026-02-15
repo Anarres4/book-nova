@@ -491,7 +491,8 @@ body:not(.home-page) .team-facts {
     color: white;
     padding: 40px 0 80px;
     position: relative;
-    overflow: visible;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
 /* Medal rain easter egg */

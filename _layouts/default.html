@@ -860,6 +860,9 @@
                                 const eggCta = egg.cta || 'Télécharger l\'app';
                                 const closeLabel = translations[currentLang]?.storeModal?.close || 'Fermer';
 
+                                const appStoreRegion = currentLang === 'en' ? 'us' : currentLang === 'es' ? 'es' : 'fr';
+                                const appStoreUrl = 'https://apps.apple.com/' + appStoreRegion + '/app/book-nova/id6752571289';
+
                                 const card = document.createElement('div');
                                 card.className = 'medal-complete-card';
                                 card.innerHTML =
@@ -868,7 +871,7 @@
                                     + '<p class="medal-complete-card__text" data-i18n="medalEgg.text">' + eggText + '</p>'
                                     + '<p class="medal-complete-card__cta-label" data-i18n="medalEgg.cta">' + eggCta + '</p>'
                                     + '<div class="medal-complete-card__stores">'
-                                    + '<a href="https://apps.apple.com/fr/app/book-nova/id6752571289" class="medal-complete-card__store" target="_blank" rel="noopener noreferrer">'
+                                    + '<a href="' + appStoreUrl + '" class="medal-complete-card__store" target="_blank" rel="noopener noreferrer">'
                                     + '<i class="bi bi-apple"></i> App Store</a>'
                                     + '<a href="https://play.google.com/store/apps/details?id=com.quantumash.bigbangbook.app" class="medal-complete-card__store" target="_blank" rel="noopener noreferrer">'
                                     + '<svg viewBox="0 0 28.99 31.99" xmlns="http://www.w3.org/2000/svg" width="14" height="14" aria-hidden="true">'
@@ -878,7 +881,8 @@
                                     + '<path d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z" fill="#34a853"/>'
                                     + '</svg> Google Play</a>'
                                     + '</div>';
-                                medalRain.appendChild(card);
+                                const heroContainer = document.querySelector('.hero-section .container');
+                                (heroContainer || medalRain).appendChild(card);
 
                                 card.querySelector('.medal-complete-card__close').addEventListener('click', () => {
                                     card.classList.add('card-dismiss');
@@ -886,7 +890,8 @@
                                 });
                             }, totalDelay);
 
-                            // Disable further clicks
+                            // Cleanup & disable further clicks
+                            placedMedals.length = 0;
                             heroLogoAction.classList.add('medal-done');
                             heroLogoAction.removeAttribute('role');
                             heroLogoAction.removeAttribute('tabindex');
