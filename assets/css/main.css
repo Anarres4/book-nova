@@ -1323,19 +1323,22 @@ body.home-page .reviews-section .container {
     }
 }
 
+/* ── Store Score Cards: horizontal split layout ── */
 .store-score-card {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
     position: relative;
     overflow: hidden;
     isolation: isolate;
     color: white;
     text-decoration: none;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.08) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.34);
-    border-radius: 1.2rem;
-    padding: 1.4rem 1.3rem;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 1.5rem;
+    padding: 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 14px 30px rgba(7, 12, 39, 0.22);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1344,22 +1347,11 @@ body.home-page .reviews-section .container {
     content: "";
     position: absolute;
     left: 0;
-    right: 0;
+    top: 0;
     bottom: 0;
-    height: 4px;
-    background: var(--store-accent, linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.35) 100%));
-}
-
-.store-score-card::after {
-    content: "";
-    position: absolute;
-    width: 170px;
-    height: 170px;
-    right: -60px;
-    top: -70px;
-    border-radius: 50%;
-    background: var(--store-glow, radial-gradient(circle, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 72%));
-    pointer-events: none;
+    width: 5px;
+    border-radius: 1.5rem 0 0 1.5rem;
+    background: var(--store-accent, linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.35) 100%));
 }
 
 .store-score-card > * {
@@ -1369,30 +1361,47 @@ body.home-page .reviews-section .container {
 
 .store-score-card:hover {
     color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 18px 34px rgba(7, 12, 39, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 22px 44px rgba(7, 12, 39, 0.35);
 }
 
-.store-score-head {
+/* Left panel — Score spotlight */
+.store-score-left {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 0.6rem;
-    margin-bottom: 0.55rem;
+    padding: 1.8rem 2rem;
+    background: var(--store-left-bg, rgba(255, 255, 255, 0.06));
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 140px;
 }
 
+/* Right panel — Details */
+.store-score-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 1.8rem;
+    flex: 1;
+    gap: 0.15rem;
+}
+
+/* Badge icon */
 .store-score-badge {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.6rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 0.9rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    font-size: 1rem;
+    font-size: 1.6rem;
     border: 1px solid var(--store-badge-border, rgba(255, 255, 255, 0.25));
     background: var(--store-badge-bg, rgba(255, 255, 255, 0.15));
     color: var(--store-badge-color, #ffffff);
-    box-shadow: 0 6px 16px rgba(10, 16, 40, 0.25);
+    box-shadow: 0 6px 18px var(--store-badge-shadow, rgba(10, 16, 40, 0.3));
 }
 
 .store-score-badge i {
@@ -1400,8 +1409,8 @@ body.home-page .reviews-section .container {
 }
 
 .store-score-gp-icon {
-    width: 1.18rem;
-    height: 1.18rem;
+    width: 1.6rem;
+    height: 1.6rem;
     display: block;
 }
 
@@ -1409,55 +1418,52 @@ body.home-page .reviews-section .container {
     padding: 0;
 }
 
-.store-score-label {
-    margin-bottom: 0;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.82);
-}
-
-.store-score-card--apple {
-    --store-accent: linear-gradient(90deg, #f4f4f5 0%, #d1d9e6 100%);
-    --store-glow: radial-gradient(circle, rgba(221, 231, 248, 0.36) 0%, rgba(221, 231, 248, 0) 72%);
-    --store-badge-bg: linear-gradient(145deg, #0f172a 0%, #1f2937 100%);
-    --store-badge-border: rgba(255, 255, 255, 0.34);
-    --store-badge-color: #ffffff;
-    border-color: rgba(232, 238, 252, 0.38);
-}
-
-.store-score-card--google {
-    --store-accent: linear-gradient(90deg, #34a853 0%, #4285f4 35%, #fbbc05 68%, #ea4335 100%);
-    --store-glow: radial-gradient(circle, rgba(66, 133, 244, 0.36) 0%, rgba(66, 133, 244, 0) 72%);
-    --store-badge-bg: #ffffff;
-    --store-badge-border: rgba(228, 238, 255, 0.65);
-    --store-badge-color: #ffffff;
-    border-color: rgba(146, 205, 255, 0.35);
-}
-
+/* Score number — giant */
 .store-score-value {
-    margin-bottom: 0.45rem;
-    font-size: 2.2rem;
+    margin: 0;
+    font-size: 3.6rem;
     line-height: 1;
     font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.store-score-card--apple .store-score-value {
+    text-shadow: 0 4px 28px rgba(200, 215, 240, 0.4);
+}
+
+.store-score-card--google .store-score-value {
+    text-shadow: 0 4px 28px rgba(66, 133, 244, 0.4);
 }
 
 .store-score-value span {
-    font-size: 1.05rem;
-    font-weight: 600;
-    opacity: 0.82;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.4;
+    margin-left: 0.05em;
 }
 
-.store-score-meta {
-    margin-bottom: 0.45rem;
-    color: rgba(255, 255, 255, 0.9);
+/* Store label */
+.store-score-label {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
 }
 
+/* Stars — big and prominent */
 .store-score-stars {
-    margin-bottom: 0.6rem;
-    letter-spacing: 0.12em;
+    margin: 0.15rem 0;
+    letter-spacing: 0.15em;
+    font-size: 1.6rem;
     color: #ffd166;
+    animation: star-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes star-shimmer {
+    0%, 100% { text-shadow: 0 0 6px rgba(255, 209, 102, 0.25); }
+    50% { text-shadow: 0 0 18px rgba(255, 209, 102, 0.6), 0 0 36px rgba(255, 209, 102, 0.2); }
 }
 
 .store-score-card--apple .store-score-stars {
@@ -1468,18 +1474,97 @@ body.home-page .reviews-section .container {
     color: #ffe081;
 }
 
+/* Meta info */
+.store-score-meta {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.8rem;
+}
+
+/* CTA link pill */
 .store-score-link {
-    font-size: 0.9rem;
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 2rem;
+    padding: 0.4rem 1.2rem;
+    margin-top: 0.5rem;
+    transition: background 0.2s, transform 0.2s, border-color 0.2s;
+    letter-spacing: 0.02em;
+    width: fit-content;
 }
 
-.store-score-card--apple .store-score-link {
-    color: #f2f6ff;
+.store-score-link::after {
+    content: " \2192";
+    opacity: 0.6;
 }
 
-.store-score-card--google .store-score-link {
-    color: #e6f5ff;
+.store-score-card:hover .store-score-link {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* ── Apple variant ── */
+.store-score-card--apple {
+    --store-accent: linear-gradient(180deg, #c8d6e5 0%, #8395a7 100%);
+    --store-left-bg: linear-gradient(160deg, rgba(200, 214, 229, 0.15) 0%, rgba(131, 149, 167, 0.05) 100%);
+    --store-badge-bg: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+    --store-badge-border: rgba(255, 255, 255, 0.2);
+    --store-badge-shadow: rgba(15, 23, 42, 0.5);
+    --store-badge-color: #ffffff;
+    border-color: rgba(232, 238, 252, 0.32);
+}
+
+/* ── Google variant ── */
+.store-score-card--google {
+    --store-accent: linear-gradient(180deg, #34a853 0%, #4285f4 35%, #fbbc05 68%, #ea4335 100%);
+    --store-left-bg: linear-gradient(160deg, rgba(66, 133, 244, 0.12) 0%, rgba(52, 168, 83, 0.05) 100%);
+    --store-badge-bg: #ffffff;
+    --store-badge-border: rgba(200, 220, 255, 0.5);
+    --store-badge-shadow: rgba(66, 133, 244, 0.25);
+    --store-badge-color: #ffffff;
+    border-color: rgba(146, 205, 255, 0.3);
+}
+
+/* ── Mobile: stack vertically on small screens ── */
+@media (max-width: 575px) {
+    .store-score-card {
+        flex-direction: column;
+    }
+
+    .store-score-left {
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.2rem 1.5rem;
+        min-width: unset;
+        gap: 1rem;
+    }
+
+    .store-score-card::before {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: unset;
+        width: unset;
+        height: 5px;
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+
+    .store-score-right {
+        padding: 1rem 1.5rem 1.2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .store-score-link {
+        margin-top: 0.4rem;
+    }
 }
 
 .review-cards-grid {
@@ -3583,14 +3668,18 @@ html.theme-light .store-score-card:hover {
 }
 
 html.theme-light .store-score-label,
-html.theme-light .store-score-meta,
-html.theme-light .store-score-link {
+html.theme-light .store-score-meta {
     color: #2f557d;
 }
 
-html.theme-light .store-score-card--apple .store-score-link,
-html.theme-light .store-score-card--google .store-score-link {
+html.theme-light .store-score-link {
     color: #2f557d;
+    background: rgba(47, 85, 125, 0.1);
+    border-color: rgba(47, 85, 125, 0.2);
+}
+
+html.theme-light .store-score-card:hover .store-score-link {
+    background: rgba(47, 85, 125, 0.18);
 }
 
 html.theme-light .review-card-store {
