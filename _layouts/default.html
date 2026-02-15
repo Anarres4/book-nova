@@ -892,7 +892,8 @@
                         const img = document.createElement('img');
                         img.src = `{{ '/assets/images/medals/medal-' | relative_url }}${n}.svg`;
                         img.alt = '';
-                        const size = 110 + Math.random() * 70;
+                        const isMobile = window.innerWidth < 768;
+                        const size = isMobile ? (70 + Math.random() * 40) : (110 + Math.random() * 70);
                         const rotation = -30 + Math.random() * 60;
 
                         // Find a position that doesn't overlap existing medals

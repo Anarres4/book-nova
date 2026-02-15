@@ -509,6 +509,7 @@ body:not(.home-page) .team-facts {
 @media (max-width: 767.98px) {
     .medal-rain {
         left: 0;
+        right: 0;
         bottom: 55%;
     }
 }
