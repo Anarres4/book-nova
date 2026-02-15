@@ -808,6 +808,10 @@
             // Logo interaction on home: animate logo and guide to download buttons
             const heroLogoAction = document.querySelector('[data-hero-logo-action]');
             const downloadButtons = document.getElementById('download-buttons');
+            const medalRain = document.querySelector('.medal-rain');
+            let medalCount = 0;
+            const placedMedals = [];
+
             if (heroLogoAction && downloadButtons) {
                 const runHeroLogoAction = () => {
                     heroLogoAction.classList.remove('hero-image-activated');
@@ -819,14 +823,48 @@
 
                     heroLogoAction.classList.add('hero-image-activated');
                     downloadButtons.classList.add('download-buttons-spotlight');
-                    downloadButtons.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
                     if (navigator.vibrate) {
                         navigator.vibrate(12);
                     }
+
+                    // Medal easter egg
+                    if (medalRain) {
+                        medalCount++;
+                        const n = Math.min(medalCount, 36);
+                        const img = document.createElement('img');
+                        img.src = `{{ '/assets/images/medals/medal-' | relative_url }}${n}.svg`;
+                        img.alt = '';
+                        const size = 110 + Math.random() * 70;
+                        const rotation = -30 + Math.random() * 60;
+
+                        // Find a position that doesn't overlap existing medals
+                        const rect = medalRain.getBoundingClientRect();
+                        const sizeW = rect.width > 0 ? size / rect.width * 100 : 20;
+                        const sizeH = rect.height > 0 ? size / rect.height * 100 : 20;
+                        let top, left, attempts = 0;
+                        do {
+                            top = 5 + Math.random() * 85;
+                            left = 5 + Math.random() * 85;
+                            attempts++;
+                        } while (attempts < 60 && placedMedals.some(m => {
+                            return Math.abs(left - m.left) < (sizeW + m.sizeW) * 0.4
+                                && Math.abs(top - m.top) < (sizeH + m.sizeH) * 0.4;
+                        }));
+                        placedMedals.push({ top, left, sizeW, sizeH });
+
+                        img.style.width = size + 'px';
+                        img.style.height = size + 'px';
+                        img.style.top = top + '%';
+                        img.style.left = left + '%';
+                        img.style.setProperty('--medal-rotation', rotation + 'deg');
+                        medalRain.appendChild(img);
+                    }
                 };
 
-                heroLogoAction.addEventListener('click', runHeroLogoAction);
+                heroLogoAction.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    runHeroLogoAction();
+                });
                 heroLogoAction.addEventListener('keydown', (event) => {
                     if (event.key === 'Enter' || event.key === ' ') {
                         event.preventDefault();

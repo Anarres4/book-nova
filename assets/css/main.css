@@ -490,6 +490,43 @@ body:not(.home-page) .team-facts {
 .hero-section {
     color: white;
     padding: 40px 0 80px;
+    position: relative;
+    overflow: visible;
+}
+
+/* Medal rain easter egg */
+.medal-rain {
+    position: absolute;
+    top: -12px;
+    right: 0;
+    bottom: -20px;
+    left: 35%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+    .medal-rain {
+        left: 0;
+        bottom: 55%;
+    }
+}
+
+.medal-rain img {
+    position: absolute;
+    animation: medal-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes medal-pop {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(var(--medal-rotation));
+        opacity: 1;
+    }
 }
 
 .hero-tagline {
