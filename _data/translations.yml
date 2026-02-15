@@ -10,7 +10,7 @@ fr:
     support: "Support"
   hero:
     tagline: "La lecture, ça se mesure. (En girafes.)"
-    title: "Vos livres s'empilent. Jusqu'où irez-vous ?"
+    title: "Vos lectures font quelle taille ?"
     subtitle: "Chaque livre terminé s'ajoute à votre pile. Dépassez un chihuahua, puis un flamant rose, puis… vous-même."
     app_store: "App Store"
     google_play: "Google Play"
@@ -824,7 +824,7 @@ en:
     support: "Support"
   hero:
     tagline: "Reading is measurable. (In giraffes.)"
-    title: "Your books stack up. How far will you go?"
+    title: "How tall are your readings?"
     subtitle: "Every finished book adds to your stack. Outgrow a chihuahua, then a flamingo, then… yourself."
     app_store: "App Store"
     google_play: "Google Play"
@@ -1637,7 +1637,7 @@ es:
     support: "Soporte"
   hero:
     tagline: "La lectura se mide. (En jirafas.)"
-    title: "Tus libros se apilan. ¿Hasta dónde llegarás?"
+    title: "¿Cuánto miden tus lecturas?"
     subtitle: "Cada libro terminado se suma a tu pila. Supera a un chihuahua, luego a un flamenco, luego… a ti mismo."
     app_store: "App Store"
     google_play: "Google Play"
