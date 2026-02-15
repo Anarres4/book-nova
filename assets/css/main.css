@@ -249,6 +249,46 @@ body:not(.home-page) .team-facts {
     line-height: 1;
 }
 
+/* Theme FAB */
+.theme-fab {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(11, 18, 48, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #f5f9ff;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(7, 12, 36, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.theme-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(7, 12, 36, 0.4);
+    background: rgba(11, 18, 48, 0.75);
+}
+
+.theme-fab i {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+@media (max-width: 767.98px) {
+    .theme-fab {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
 .nav-item.dropdown {
     position: relative;
 }
@@ -3060,6 +3100,18 @@ html.theme-light .mobile-language-option[aria-selected="true"] {
 html.theme-light .mobile-theme-toggle {
     background: rgba(210, 227, 245, 0.84);
     border-color: rgba(111, 151, 195, 0.42);
+}
+
+html.theme-light .theme-fab {
+    background: rgba(220, 235, 249, 0.85);
+    color: #133f66;
+    border-color: rgba(111, 151, 195, 0.42);
+    box-shadow: 0 4px 14px rgba(38, 74, 116, 0.18);
+}
+
+html.theme-light .theme-fab:hover {
+    background: rgba(229, 242, 253, 0.95);
+    box-shadow: 0 6px 20px rgba(38, 74, 116, 0.25);
 }
 
 html.theme-light footer {
