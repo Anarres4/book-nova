@@ -607,9 +607,9 @@ body:not(.home-page) .team-facts {
 .medal-complete-card__title {
     font-family: 'Permanent Marker', cursive;
     font-size: 1.3rem;
-    color: #ffd700;
+    color: #fff;
     margin: 0 0 0.5rem;
-    text-shadow: 0 2px 10px rgba(255, 215, 0, 0.35);
+    text-shadow: 0 2px 10px rgba(108, 99, 255, 0.5);
 }
 
 .medal-complete-card__text {
@@ -619,26 +619,40 @@ body:not(.home-page) .team-facts {
     margin: 0 0 1.25rem;
 }
 
-.medal-complete-card__cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.4rem;
-    background: linear-gradient(135deg, #ffd700, #ffaa00);
-    color: #1a1240;
-    font-weight: 700;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 0.75rem;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.3);
+.medal-complete-card__cta-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.medal-complete-card__cta:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 6px 24px rgba(255, 215, 0, 0.45);
+.medal-complete-card__stores {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+}
+
+.medal-complete-card__store {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.medal-complete-card__store:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-1px);
+    color: #fff;
 }
 
 @keyframes medal-card-pop {
