@@ -809,6 +809,8 @@ fr:
       signature: "Bonne lecture 📚"
       team: "— Ana + Florent = l'équipe Book Nova"
     backToHome: "← Retour à l'accueil"
+  scrollTop:
+    label: "Haut"
 
 en:
   nav:
@@ -1621,6 +1623,8 @@ en:
       signature: "Happy reading 📚"
       team: "— Ana + Florent = the Book Nova team"
     backToHome: "← Back to home"
+  scrollTop:
+    label: "Top"
 es:
   nav:
     home: "Inicio"
@@ -2432,3 +2436,5 @@ es:
         - "Sin cuenta obligatoria; un UUID anónimo gestiona el premium y la sincronización con Firebase dedicada a recomendaciones"
     lastUpdated: "Última actualización: 08/12/2025"
     backToHome: "Volver al inicio"
+  scrollTop:
+    label: "Arriba"

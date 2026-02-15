@@ -286,6 +286,12 @@
         {{ content }}
     </main>
 
+    <!-- Scroll to top FAB -->
+    <button type="button" class="scroll-top-fab" aria-label="Retour en haut">
+        <i class="bi bi-arrow-up"></i>
+        <span data-i18n="scrollTop.label">Haut</span>
+    </button>
+
     <!-- Theme FAB -->
     <button type="button" class="theme-fab" data-theme-toggle aria-pressed="false" aria-label="Activer le mode clair">
         <i class="bi bi-moon-stars-fill" data-theme-icon aria-hidden="true"></i>
@@ -444,7 +450,8 @@
         },
         "faqHome": {
             "more": {{ lang_data.supportPage.faq.seeDetailedFaq | jsonify }}
-        }
+        },
+        "scrollTop": {{ lang_data.scrollTop | jsonify }}
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 }
@@ -876,6 +883,22 @@
                 document.querySelectorAll('.section-title').forEach(title => {
                     title.classList.add('animate-on-scroll');
                     observer.observe(title);
+                });
+            }
+
+            // Scroll to top FAB
+            const scrollTopBtn = document.querySelector('.scroll-top-fab');
+            if (scrollTopBtn) {
+                window.addEventListener('scroll', () => {
+                    scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+                }, { passive: true });
+
+                scrollTopBtn.addEventListener('click', () => {
+                    scrollTopBtn.classList.add('launching');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    scrollTopBtn.addEventListener('animationend', () => {
+                        scrollTopBtn.classList.remove('launching');
+                    }, { once: true });
                 });
             }
         });
