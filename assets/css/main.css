@@ -1323,7 +1323,7 @@ body.home-page .reviews-section .container {
     }
 }
 
-/* ── Store Score Cards: horizontal split layout ── */
+/* ── Store Score Cards: bold horizontal layout ── */
 .store-score-card {
     display: flex;
     flex-direction: row;
@@ -1333,25 +1333,16 @@ body.home-page .reviews-section .container {
     isolation: isolate;
     color: white;
     text-decoration: none;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    border-radius: 1.5rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.6rem;
     padding: 0;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 14px 30px rgba(7, 12, 39, 0.22);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.store-score-card::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 5px;
-    border-radius: 1.5rem 0 0 1.5rem;
-    background: var(--store-accent, linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.35) 100%));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 20px 50px rgba(7, 12, 39, 0.3),
+        0 0 80px var(--store-glow-color, rgba(100, 150, 255, 0.08));
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .store-score-card > * {
@@ -1360,48 +1351,51 @@ body.home-page .reviews-section .container {
 }
 
 .store-score-card:hover {
-    color: white;
-    transform: translateY(-5px);
-    box-shadow: 0 22px 44px rgba(7, 12, 39, 0.35);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 20px 36px rgba(6, 11, 34, 0.28);
 }
 
-/* Left panel — Score spotlight */
+/* ── Left panel — Score spotlight ── */
 .store-score-left {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    padding: 1.8rem 2rem;
+    gap: 0.7rem;
+    padding: 2rem 2.2rem;
     background: var(--store-left-bg, rgba(255, 255, 255, 0.06));
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    min-width: 140px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    min-width: 160px;
+    position: relative;
 }
 
-/* Right panel — Details */
+/* ── Right panel — Details ── */
 .store-score-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1.5rem 1.8rem;
+    padding: 1.6rem 2rem;
     flex: 1;
-    gap: 0.15rem;
+    gap: 0.2rem;
 }
 
-/* Badge icon */
+/* ── Badge icon ── */
 .store-score-badge {
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 0.9rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     border: 1px solid var(--store-badge-border, rgba(255, 255, 255, 0.25));
     background: var(--store-badge-bg, rgba(255, 255, 255, 0.15));
     color: var(--store-badge-color, #ffffff);
-    box-shadow: 0 6px 18px var(--store-badge-shadow, rgba(10, 16, 40, 0.3));
+    box-shadow:
+        0 8px 24px var(--store-badge-shadow, rgba(10, 16, 40, 0.3)),
+        0 0 20px var(--store-badge-glow, rgba(255, 255, 255, 0.05));
 }
 
 .store-score-badge i {
@@ -1409,8 +1403,8 @@ body.home-page .reviews-section .container {
 }
 
 .store-score-gp-icon {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.8rem;
+    height: 1.8rem;
     display: block;
 }
 
@@ -1418,117 +1412,120 @@ body.home-page .reviews-section .container {
     padding: 0;
 }
 
-/* Score number — giant */
+/* ── Score number — massive and bright ── */
 .store-score-value {
     margin: 0;
-    font-size: 3.6rem;
+    font-size: 4.5rem;
     line-height: 1;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-}
-
-.store-score-card--apple .store-score-value {
-    text-shadow: 0 4px 28px rgba(200, 215, 240, 0.4);
-}
-
-.store-score-card--google .store-score-value {
-    text-shadow: 0 4px 28px rgba(66, 133, 244, 0.4);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: rgba(255, 255, 255, 0.45);
 }
 
 .store-score-value span {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    opacity: 0.4;
+    opacity: 0.55;
     margin-left: 0.05em;
 }
 
-/* Store label */
+/* ── Store label ── */
 .store-score-label {
     margin: 0;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-weight: 800;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.55);
 }
 
-/* Stars — big and prominent */
+/* ── Stars — SVG icons in rounded pill ── */
 .store-score-stars {
-    margin: 0.15rem 0;
-    letter-spacing: 0.15em;
-    font-size: 1.6rem;
-    color: #ffd166;
-    animation: star-shimmer 3s ease-in-out infinite;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.3rem;
+    margin: 0.3rem 0;
+    background: transparent;
+    border: 1.5px solid rgba(255, 215, 0, 0.3);
+    border-radius: 2rem;
+    padding: 0.35rem 0.9rem;
 }
 
-@keyframes star-shimmer {
-    0%, 100% { text-shadow: 0 0 6px rgba(255, 209, 102, 0.25); }
-    50% { text-shadow: 0 0 18px rgba(255, 209, 102, 0.6), 0 0 36px rgba(255, 209, 102, 0.2); }
+.store-score-stars img {
+    display: block;
+    width: 22px;
+    height: 22px;
 }
 
-.store-score-card--apple .store-score-stars {
-    color: #ffd98f;
-}
-
-.store-score-card--google .store-score-stars {
-    color: #ffe081;
-}
-
-/* Meta info */
+/* ── Meta info ── */
 .store-score-meta {
     margin: 0;
-    color: rgba(255, 255, 255, 0.55);
-    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
 }
 
-/* CTA link pill */
+.store-score-meta strong {
+    font-weight: 700;
+}
+
+/* ── CTA link pill ── */
 .store-score-link {
-    display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 700;
     color: white;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 2rem;
-    padding: 0.4rem 1.2rem;
-    margin-top: 0.5rem;
-    transition: background 0.2s, transform 0.2s, border-color 0.2s;
+    padding: 0.5rem 1.4rem;
+    margin-top: 0.6rem;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     letter-spacing: 0.02em;
     width: fit-content;
 }
 
 .store-score-link::after {
-    content: " \2192";
-    opacity: 0.6;
+    content: "\2192";
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.store-score-card:hover .store-score-link {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-1px);
+.store-score-link:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* ── Apple variant ── */
+.store-score-link:hover::after {
+    transform: translateX(4px);
+    opacity: 1;
+}
+
+/* ══════════════ Apple variant ══════════════ */
 .store-score-card--apple {
-    --store-accent: linear-gradient(180deg, #c8d6e5 0%, #8395a7 100%);
-    --store-left-bg: linear-gradient(160deg, rgba(200, 214, 229, 0.15) 0%, rgba(131, 149, 167, 0.05) 100%);
+    --store-glow-color: rgba(200, 214, 229, 0.12);
+    --store-left-bg: linear-gradient(160deg, rgba(200, 214, 229, 0.18) 0%, rgba(131, 149, 167, 0.04) 100%);
     --store-badge-bg: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
-    --store-badge-border: rgba(255, 255, 255, 0.2);
+    --store-badge-border: rgba(200, 214, 229, 0.3);
     --store-badge-shadow: rgba(15, 23, 42, 0.5);
+    --store-badge-glow: rgba(200, 214, 229, 0.15);
     --store-badge-color: #ffffff;
-    border-color: rgba(232, 238, 252, 0.32);
+    border-color: rgba(232, 238, 252, 0.25);
 }
 
-/* ── Google variant ── */
+/* ══════════════ Google variant ══════════════ */
 .store-score-card--google {
-    --store-accent: linear-gradient(180deg, #34a853 0%, #4285f4 35%, #fbbc05 68%, #ea4335 100%);
-    --store-left-bg: linear-gradient(160deg, rgba(66, 133, 244, 0.12) 0%, rgba(52, 168, 83, 0.05) 100%);
+    --store-glow-color: rgba(66, 133, 244, 0.12);
+    --store-left-bg: linear-gradient(160deg, rgba(66, 133, 244, 0.14) 0%, rgba(52, 168, 83, 0.04) 100%);
     --store-badge-bg: #ffffff;
-    --store-badge-border: rgba(200, 220, 255, 0.5);
-    --store-badge-shadow: rgba(66, 133, 244, 0.25);
-    --store-badge-color: #ffffff;
-    border-color: rgba(146, 205, 255, 0.3);
+    --store-badge-border: rgba(66, 133, 244, 0.35);
+    --store-badge-shadow: rgba(66, 133, 244, 0.3);
+    --store-badge-glow: rgba(66, 133, 244, 0.15);
+    border-color: rgba(146, 205, 255, 0.22);
 }
 
 /* ── Mobile: stack vertically on small screens ── */
@@ -1540,30 +1537,24 @@ body.home-page .reviews-section .container {
     .store-score-left {
         flex-direction: row;
         border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 1.2rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 1.4rem 1.5rem;
         min-width: unset;
         gap: 1rem;
     }
 
-    .store-score-card::before {
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: unset;
-        width: unset;
-        height: 5px;
-        border-radius: 1.5rem 1.5rem 0 0;
+    .store-score-value {
+        font-size: 3.2rem;
+    }
+
+    .store-score-stars {
+        align-self: center;
     }
 
     .store-score-right {
-        padding: 1rem 1.5rem 1.2rem;
+        padding: 1rem 1.5rem 1.3rem;
         align-items: center;
         text-align: center;
-    }
-
-    .store-score-link {
-        margin-top: 0.4rem;
     }
 }
 
@@ -1616,9 +1607,15 @@ body.home-page .reviews-section .container {
 }
 
 .review-card-stars {
-    letter-spacing: 0.12em;
-    color: #f6b845;
-    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.review-card-stars img {
+    display: block;
+    width: 16px;
+    height: 16px;
 }
 
 .review-card-store {
@@ -2441,6 +2438,13 @@ body.home-page .store-badge:hover {
     .hero-image-interactive.hero-image-activated,
     .download-buttons-spotlight .btn-download {
         animation: none;
+    }
+
+    .store-score-card,
+    .store-score-link,
+    .store-score-link::after,
+    .review-card {
+        transition: none;
     }
 }
 
@@ -3662,11 +3666,24 @@ html.theme-light .feature-chip {
     background: rgba(212, 230, 248, 0.88);
 }
 
-html.theme-light .store-score-card,
-html.theme-light .store-score-card:hover {
+html.theme-light .store-score-card {
     color: #123d66;
+    border-color: rgba(47, 85, 125, 0.18);
+    box-shadow:
+        0 20px 50px rgba(47, 85, 125, 0.1),
+        0 0 80px var(--store-glow-color, rgba(47, 85, 125, 0.03));
+    --store-glow-color: rgba(47, 85, 125, 0.05);
+    --store-badge-glow: rgba(47, 85, 125, 0.08);
+    --store-left-bg: rgba(47, 85, 125, 0.06);
 }
 
+html.theme-light .store-score-card:hover {
+    color: #123d66;
+    border-color: rgba(47, 85, 125, 0.28);
+    box-shadow: 0 20px 36px rgba(47, 85, 125, 0.12);
+}
+
+html.theme-light .store-score-value,
 html.theme-light .store-score-label,
 html.theme-light .store-score-meta {
     color: #2f557d;
@@ -3678,8 +3695,27 @@ html.theme-light .store-score-link {
     border-color: rgba(47, 85, 125, 0.2);
 }
 
-html.theme-light .store-score-card:hover .store-score-link {
+html.theme-light .store-score-link:hover {
     background: rgba(47, 85, 125, 0.18);
+    border-color: rgba(47, 85, 125, 0.3);
+    box-shadow: 0 4px 16px rgba(47, 85, 125, 0.1);
+}
+
+html.theme-light .store-score-left {
+    border-right-color: rgba(47, 85, 125, 0.1);
+    border-bottom-color: rgba(47, 85, 125, 0.1);
+}
+
+html.theme-light .store-score-card--apple {
+    --store-badge-bg: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+}
+
+html.theme-light .store-score-card--google {
+    --store-left-bg: rgba(66, 133, 244, 0.06);
+}
+
+html.theme-light .store-score-stars {
+    border-color: rgba(200, 170, 0, 0.3);
 }
 
 html.theme-light .review-card-store {
