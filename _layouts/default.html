@@ -451,7 +451,8 @@
         "faqHome": {
             "more": {{ lang_data.supportPage.faq.seeDetailedFaq | jsonify }}
         },
-        "scrollTop": {{ lang_data.scrollTop | jsonify }}
+        "scrollTop": {{ lang_data.scrollTop | jsonify }},
+        "medalEgg": {{ lang_data.medalEgg | jsonify }}
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 }
@@ -808,6 +809,10 @@
             // Logo interaction on home: animate logo and guide to download buttons
             const heroLogoAction = document.querySelector('[data-hero-logo-action]');
             const downloadButtons = document.getElementById('download-buttons');
+            const medalRain = document.querySelector('.medal-rain');
+            let medalCount = 0;
+            const placedMedals = [];
+
             if (heroLogoAction && downloadButtons) {
                 const runHeroLogoAction = () => {
                     heroLogoAction.classList.remove('hero-image-activated');
@@ -819,14 +824,116 @@
 
                     heroLogoAction.classList.add('hero-image-activated');
                     downloadButtons.classList.add('download-buttons-spotlight');
-                    downloadButtons.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
                     if (navigator.vibrate) {
                         navigator.vibrate(12);
                     }
+
+                    // Medal easter egg
+                    if (medalRain) {
+                        medalCount++;
+
+                        // 36th click: finale sequence
+                        if (medalCount === 36) {
+                            const heroSection = document.querySelector('.hero-section');
+                            if (heroSection) {
+                                heroSection.classList.add('golden-shake');
+                                heroSection.addEventListener('animationend', () => {
+                                    heroSection.classList.remove('golden-shake');
+                                }, { once: true });
+                            }
+
+                            // Reverse-vanish medals one by one
+                            const medals = Array.from(medalRain.querySelectorAll('img'));
+                            medals.reverse().forEach((m, i) => {
+                                setTimeout(() => {
+                                    m.classList.add('medal-vanish');
+                                    m.addEventListener('animationend', () => m.remove(), { once: true });
+                                }, i * 60);
+                            });
+
+                            // Show card after all medals vanish
+                            const totalDelay = medals.length * 60 + 500;
+                            setTimeout(() => {
+                                const egg = translations[currentLang]?.medalEgg || {};
+                                const eggTitle = egg.title || '35 médailles collectées !';
+                                const eggText = egg.text || 'Et toi, tes lectures font quelle taille ?';
+                                const eggCta = egg.cta || 'Télécharger l\'app';
+                                const closeLabel = translations[currentLang]?.storeModal?.close || 'Fermer';
+
+                                const appStoreRegion = currentLang === 'en' ? 'us' : currentLang === 'es' ? 'es' : 'fr';
+                                const appStoreUrl = 'https://apps.apple.com/' + appStoreRegion + '/app/book-nova/id6752571289';
+
+                                const card = document.createElement('div');
+                                card.className = 'medal-complete-card';
+                                card.innerHTML =
+                                    '<button class="medal-complete-card__close" aria-label="' + closeLabel + '"><i class="bi bi-x-lg"></i></button>'
+                                    + '<p class="medal-complete-card__title" data-i18n="medalEgg.title">' + eggTitle + '</p>'
+                                    + '<p class="medal-complete-card__text" data-i18n="medalEgg.text">' + eggText + '</p>'
+                                    + '<p class="medal-complete-card__cta-label" data-i18n="medalEgg.cta">' + eggCta + '</p>'
+                                    + '<div class="medal-complete-card__stores">'
+                                    + '<a href="' + appStoreUrl + '" class="medal-complete-card__store" target="_blank" rel="noopener noreferrer">'
+                                    + '<i class="bi bi-apple"></i> App Store</a>'
+                                    + '<a href="https://play.google.com/store/apps/details?id=com.quantumash.bigbangbook.app" class="medal-complete-card__store" target="_blank" rel="noopener noreferrer">'
+                                    + '<svg viewBox="0 0 28.99 31.99" xmlns="http://www.w3.org/2000/svg" width="14" height="14" aria-hidden="true">'
+                                    + '<path d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z" fill="#ea4335"/>'
+                                    + '<path d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z" fill="#fbbc04"/>'
+                                    + '<path d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z" fill="#4285f4"/>'
+                                    + '<path d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z" fill="#34a853"/>'
+                                    + '</svg> Google Play</a>'
+                                    + '</div>';
+                                const heroContainer = document.querySelector('.hero-section .container');
+                                (heroContainer || medalRain).appendChild(card);
+
+                                card.querySelector('.medal-complete-card__close').addEventListener('click', () => {
+                                    card.classList.add('card-dismiss');
+                                    card.addEventListener('animationend', () => card.remove(), { once: true });
+                                });
+                            }, totalDelay);
+
+                            // Cleanup & disable further clicks
+                            placedMedals.length = 0;
+                            heroLogoAction.classList.add('medal-done');
+                            heroLogoAction.removeAttribute('role');
+                            heroLogoAction.removeAttribute('tabindex');
+                            return;
+                        }
+
+                        const n = medalCount;
+                        const img = document.createElement('img');
+                        img.src = `{{ '/assets/images/medals/medal-' | relative_url }}${n}.svg`;
+                        img.alt = '';
+                        const isMobile = window.innerWidth < 768;
+                        const size = isMobile ? (70 + Math.random() * 40) : (110 + Math.random() * 70);
+                        const rotation = -30 + Math.random() * 60;
+
+                        // Find a position that doesn't overlap existing medals
+                        const rect = medalRain.getBoundingClientRect();
+                        const sizeW = rect.width > 0 ? size / rect.width * 100 : 20;
+                        const sizeH = rect.height > 0 ? size / rect.height * 100 : 20;
+                        let top, left, attempts = 0;
+                        do {
+                            top = 5 + Math.random() * 85;
+                            left = 5 + Math.random() * 85;
+                            attempts++;
+                        } while (attempts < 60 && placedMedals.some(m => {
+                            return Math.abs(left - m.left) < (sizeW + m.sizeW) * 0.4
+                                && Math.abs(top - m.top) < (sizeH + m.sizeH) * 0.4;
+                        }));
+                        placedMedals.push({ top, left, sizeW, sizeH });
+
+                        img.style.width = size + 'px';
+                        img.style.height = size + 'px';
+                        img.style.top = top + '%';
+                        img.style.left = left + '%';
+                        img.style.setProperty('--medal-rotation', rotation + 'deg');
+                        medalRain.appendChild(img);
+                    }
                 };
 
-                heroLogoAction.addEventListener('click', runHeroLogoAction);
+                heroLogoAction.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    runHeroLogoAction();
+                });
                 heroLogoAction.addEventListener('keydown', (event) => {
                     if (event.key === 'Enter' || event.key === ' ') {
                         event.preventDefault();

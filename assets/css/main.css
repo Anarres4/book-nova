@@ -490,6 +490,201 @@ body:not(.home-page) .team-facts {
 .hero-section {
     color: white;
     padding: 40px 0 80px;
+    position: relative;
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+/* Medal rain easter egg */
+.medal-rain {
+    position: absolute;
+    top: -12px;
+    right: 0;
+    bottom: -20px;
+    left: 35%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+    .medal-rain {
+        left: 0;
+        right: 0;
+        bottom: 55%;
+    }
+}
+
+.medal-rain img {
+    position: absolute;
+    animation: medal-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes medal-pop {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(var(--medal-rotation));
+        opacity: 1;
+    }
+}
+
+/* 36th click finale */
+@keyframes golden-shake {
+    0%, 100% { transform: translateX(0); }
+    10% { transform: translateX(-6px) rotate(-0.5deg); }
+    20% { transform: translateX(6px) rotate(0.5deg); }
+    30% { transform: translateX(-5px) rotate(-0.3deg); }
+    40% { transform: translateX(5px) rotate(0.3deg); }
+    50% { transform: translateX(-3px); }
+    60% { transform: translateX(3px); }
+    70% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+}
+
+.hero-section.golden-shake {
+    animation: golden-shake 0.6s ease;
+}
+
+.medal-rain img.medal-vanish {
+    animation: medal-vanish 0.5s ease forwards !important;
+}
+
+@keyframes medal-vanish {
+    0% {
+        transform: scale(1) rotate(var(--medal-rotation));
+        opacity: 1;
+    }
+    60% {
+        transform: scale(1.15) rotate(var(--medal-rotation));
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0) rotate(calc(var(--medal-rotation) + 180deg));
+        opacity: 0;
+    }
+}
+
+.medal-complete-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: min(340px, 90%);
+    background: linear-gradient(145deg, rgba(20, 16, 56, 0.92) 0%, rgba(40, 30, 100, 0.88) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 1.25rem;
+    padding: 1.75rem 1.5rem 1.5rem;
+    text-align: center;
+    pointer-events: auto;
+    z-index: 10;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 215, 0, 0.1);
+    opacity: 0;
+    animation: medal-card-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.medal-complete-card__close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.7rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.medal-complete-card__close:hover {
+    color: #fff;
+}
+
+.medal-complete-card__title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 0 0 0.5rem;
+    text-shadow: 0 2px 10px rgba(108, 99, 255, 0.5);
+}
+
+.medal-complete-card__text {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin: 0 0 1.25rem;
+}
+
+.medal-complete-card__cta-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.medal-complete-card__stores {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+}
+
+.medal-complete-card__store {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.medal-complete-card__store:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+@keyframes medal-card-pop {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.medal-complete-card.card-dismiss {
+    animation: medal-card-dismiss 0.35s ease forwards;
+}
+
+@keyframes medal-card-dismiss {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
+}
+
+.hero-image-interactive.medal-done {
+    cursor: default;
+    pointer-events: none;
 }
 
 .hero-tagline {
