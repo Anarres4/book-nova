@@ -451,7 +451,8 @@
         "faqHome": {
             "more": {{ lang_data.supportPage.faq.seeDetailedFaq | jsonify }}
         },
-        "scrollTop": {{ lang_data.scrollTop | jsonify }}
+        "scrollTop": {{ lang_data.scrollTop | jsonify }},
+        "medalEgg": {{ lang_data.medalEgg | jsonify }}
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 }
@@ -830,7 +831,64 @@
                     // Medal easter egg
                     if (medalRain) {
                         medalCount++;
-                        const n = Math.min(medalCount, 36);
+
+                        // 36th click: finale sequence
+                        if (medalCount === 36) {
+                            const heroSection = document.querySelector('.hero-section');
+                            if (heroSection) {
+                                heroSection.classList.add('golden-shake');
+                                heroSection.addEventListener('animationend', () => {
+                                    heroSection.classList.remove('golden-shake');
+                                }, { once: true });
+                            }
+
+                            // Reverse-vanish medals one by one
+                            const medals = Array.from(medalRain.querySelectorAll('img'));
+                            medals.reverse().forEach((m, i) => {
+                                setTimeout(() => {
+                                    m.classList.add('medal-vanish');
+                                    m.addEventListener('animationend', () => m.remove(), { once: true });
+                                }, i * 60);
+                            });
+
+                            // Show card after all medals vanish
+                            const totalDelay = medals.length * 60 + 500;
+                            setTimeout(() => {
+                                const egg = translations[currentLang]?.medalEgg || {};
+                                const eggTitle = egg.title || '35 médailles collectées !';
+                                const eggText = egg.text || 'Et toi, tes lectures font quelle taille ?';
+                                const eggCta = egg.cta || 'Télécharger l\'app';
+                                const closeLabel = translations[currentLang]?.storeModal?.close || 'Fermer';
+
+                                const card = document.createElement('div');
+                                card.className = 'medal-complete-card';
+                                card.innerHTML =
+                                    '<button class="medal-complete-card__close" aria-label="' + closeLabel + '"><i class="bi bi-x-lg"></i></button>'
+                                    + '<p class="medal-complete-card__title">' + eggTitle + '</p>'
+                                    + '<p class="medal-complete-card__text">' + eggText + '</p>'
+                                    + '<a class="medal-complete-card__cta" href="#download-buttons">' + eggCta + '</a>';
+                                medalRain.appendChild(card);
+
+                                card.querySelector('.medal-complete-card__close').addEventListener('click', () => {
+                                    card.classList.add('card-dismiss');
+                                    card.addEventListener('animationend', () => card.remove(), { once: true });
+                                });
+                                card.querySelector('.medal-complete-card__cta').addEventListener('click', (e) => {
+                                    e.preventDefault();
+                                    document.getElementById('download-buttons')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    card.classList.add('card-dismiss');
+                                    card.addEventListener('animationend', () => card.remove(), { once: true });
+                                });
+                            }, totalDelay);
+
+                            // Disable further clicks
+                            heroLogoAction.classList.add('medal-done');
+                            heroLogoAction.removeAttribute('role');
+                            heroLogoAction.removeAttribute('tabindex');
+                            return;
+                        }
+
+                        const n = medalCount;
                         const img = document.createElement('img');
                         img.src = `{{ '/assets/images/medals/medal-' | relative_url }}${n}.svg`;
                         img.alt = '';

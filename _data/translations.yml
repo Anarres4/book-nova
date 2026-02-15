@@ -809,6 +809,10 @@ fr:
       signature: "Bonne lecture 📚"
       team: "— Ana + Florent = l'équipe Book Nova"
     backToHome: "← Retour à l'accueil"
+  medalEgg:
+    title: "35 médailles collectées !"
+    text: "Et toi, tes lectures font quelle taille ? Dépasse un chihuahua, un flamant rose, puis… une girafe !"
+    cta: "Télécharger l'app"
   scrollTop:
     label: "Haut"
 
@@ -1623,6 +1627,10 @@ en:
       signature: "Happy reading 📚"
       team: "— Ana + Florent = the Book Nova team"
     backToHome: "← Back to home"
+  medalEgg:
+    title: "35 medals collected!"
+    text: "How tall is your reading stack? Beat a chihuahua, then a flamingo, then… a giraffe!"
+    cta: "Download the app"
   scrollTop:
     label: "Top"
 es:
@@ -2436,5 +2444,9 @@ es:
         - "Sin cuenta obligatoria; un UUID anónimo gestiona el premium y la sincronización con Firebase dedicada a recomendaciones"
     lastUpdated: "Última actualización: 08/12/2025"
     backToHome: "Volver al inicio"
+  medalEgg:
+    title: "¡35 medallas coleccionadas!"
+    text: "¿Cuánto miden tus lecturas? Supera a un chihuahua, un flamenco y luego… ¡una jirafa!"
+    cta: "Descargar la app"
   scrollTop:
     label: "Arriba"
