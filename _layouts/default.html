@@ -1022,6 +1022,17 @@
         ttq.load('D4SPNBRC77U5FES2MNQ0');
         ttq.page();
         }(window, document, 'ttq');
+
+        // Track store button clicks
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href*="apps.apple.com"], a[href*="play.google.com"]');
+            if (!link) return;
+            if (link.href.indexOf('apps.apple.com') !== -1) {
+                ttq.track('ClickButton', { content_type: 'App Store iOS', content_id: 'ios_store_button' });
+            } else if (link.href.indexOf('play.google.com') !== -1) {
+                ttq.track('ClickButton', { content_type: 'Google Play Android', content_id: 'android_store_button' });
+            }
+        });
     });
     </script>
 </body>
