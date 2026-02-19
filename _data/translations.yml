@@ -813,6 +813,9 @@ fr:
     title: "35 médailles collectées !"
     text: "Et toi, tes lectures font quelle taille ? Dépasse un chihuahua, un flamant rose, puis… une girafe !"
     cta: "Télécharger l'app"
+  banner:
+    message: "Nous rencontrons des perturbations sur la recherche de livres depuis le 18 février. Notre équipe est sur le coup, tout reviendra bientôt à la normale. Merci pour votre patience !"
+    dismiss: "Fermer"
   scrollTop:
     label: "Haut"
 
@@ -1631,6 +1634,9 @@ en:
     title: "35 medals collected!"
     text: "How tall is your reading stack? Beat a chihuahua, then a flamingo, then… a giraffe!"
     cta: "Download the app"
+  banner:
+    message: "We've been experiencing issues with our book search service since February 18. Our team is on it and things will be back to normal soon. Thanks for your patience!"
+    dismiss: "Close"
   scrollTop:
     label: "Top"
 es:
@@ -2448,5 +2454,8 @@ es:
     title: "¡35 medallas coleccionadas!"
     text: "¿Cuánto miden tus lecturas? Supera a un chihuahua, un flamenco y luego… ¡una jirafa!"
     cta: "Descargar la app"
+  banner:
+    message: "Estamos experimentando problemas con nuestro servicio de búsqueda de libros desde el 18 de febrero. Nuestro equipo está trabajando en ello, todo volverá a la normalidad pronto. ¡Gracias por tu paciencia!"
+    dismiss: "Cerrar"
   scrollTop:
     label: "Arriba"
