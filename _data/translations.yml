@@ -814,7 +814,7 @@ fr:
     text: "Et toi, tes lectures font quelle taille ? Dépasse un chihuahua, un flamant rose, puis… une girafe !"
     cta: "Télécharger l'app"
   banner:
-    message: "Nous avons rencontré un souci avec la recherche de livres depuis le 18 février. Une mise à jour corrective est en cours de déploiement sur le Play Store — pensez à mettre l'app à jour ! Disponible sur l'App Store à partir du 20 février. Merci pour votre patience."
+    message: "Nous avons rencontré un souci avec la recherche de livres depuis le 18 février. Une mise à jour corrective a été déployée sur le Play Store et l'App Store — pensez à mettre l'app à jour ! Merci pour votre patience."
     dismiss: "Fermer"
   scrollTop:
     label: "Haut"
@@ -1635,7 +1635,7 @@ en:
     text: "How tall is your reading stack? Beat a chihuahua, then a flamingo, then… a giraffe!"
     cta: "Download the app"
   banner:
-    message: "We've had an issue with the book search service since February 18. A fix is being rolled out on the Play Store — please update your app! Available on the App Store from February 20. Thanks for your patience."
+    message: "We've had an issue with the book search service since February 18. A fix has been deployed on the Play Store and the App Store — please update your app! Thanks for your patience."
     dismiss: "Close"
   scrollTop:
     label: "Top"
@@ -2455,7 +2455,7 @@ es:
     text: "¿Cuánto miden tus lecturas? Supera a un chihuahua, un flamenco y luego… ¡una jirafa!"
     cta: "Descargar la app"
   banner:
-    message: "Hemos tenido un problema con el servicio de búsqueda de libros desde el 18 de febrero. Una corrección se está desplegando en el Play Store — ¡actualiza tu app! Disponible en el App Store a partir del 20 de febrero. Gracias por tu paciencia."
+    message: "Hemos tenido un problema con el servicio de búsqueda de libros desde el 18 de febrero. Una corrección ha sido desplegada en el Play Store y el App Store — ¡actualiza tu app! Gracias por tu paciencia."
     dismiss: "Cerrar"
   scrollTop:
     label: "Arriba"
