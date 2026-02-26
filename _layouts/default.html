@@ -833,8 +833,46 @@
             });
 
             document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+                btn.addEventListener('click', async (e) => {
+                    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+                    // Fallback if View Transitions API is not supported or reduced motion is preferred
+                    if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                        applyTheme(newTheme);
+                        return;
+                    }
+
+                    // Get the position of the toggle button for the circle origin
+                    const rect = btn.getBoundingClientRect();
+                    const x = rect.left + rect.width / 2;
+                    const y = rect.top + rect.height / 2;
+
+                    // Calculate the maximum radius to cover the entire screen
+                    const maxRadius = Math.hypot(
+                        Math.max(x, window.innerWidth - x),
+                        Math.max(y, window.innerHeight - y)
+                    );
+
+                    const transition = document.startViewTransition(() => {
+                        applyTheme(newTheme);
+                    });
+
+                    await transition.ready;
+
+                    // Animate the new view with a circular clip-path expanding from the button
+                    document.documentElement.animate(
+                        {
+                            clipPath: [
+                                `circle(0px at ${x}px ${y}px)`,
+                                `circle(${maxRadius}px at ${x}px ${y}px)`
+                            ]
+                        },
+                        {
+                            duration: 500,
+                            easing: 'ease-in-out',
+                            pseudoElement: '::view-transition-new(root)'
+                        }
+                    );
                 });
             });
 

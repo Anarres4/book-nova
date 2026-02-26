@@ -3470,6 +3470,13 @@ html.theme-light .theme-fab:hover {
     box-shadow: 0 6px 20px rgba(38, 74, 116, 0.25);
 }
 
+/* View Transition API — animated theme toggle */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
 html.theme-light .scroll-top-fab {
     background: rgba(220, 235, 249, 0.85);
     color: #133f66;
