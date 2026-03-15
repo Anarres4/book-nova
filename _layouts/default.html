@@ -281,7 +281,8 @@
         </div>
     </nav>
 
-    <!-- Status Banner -->
+    <!-- Status Banner (désactivée — décommenter pour réactiver, puis modifier le texte dans _data/translations.yml) -->
+    <!--
     <div class="status-banner" id="statusBanner" role="status">
         <div class="status-banner__inner">
             <span class="status-banner__pulse"></span>
@@ -296,6 +297,7 @@
             </button>
         </div>
     </div>
+    -->
 
     <!-- Main Content -->
     <main class="site-main">
@@ -794,20 +796,20 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            // Status banner dismiss
-            const statusBanner = document.getElementById('statusBanner');
-            const dismissBtn = document.getElementById('dismissBanner');
-            if (statusBanner && dismissBtn) {
-                if (localStorage.getItem('bannerDismissed') === 'api-feb2025') {
-                    statusBanner.remove();
-                } else {
-                    dismissBtn.addEventListener('click', () => {
-                        statusBanner.classList.add('dismissed');
-                        localStorage.setItem('bannerDismissed', 'api-feb2025');
-                        statusBanner.addEventListener('animationend', () => statusBanner.remove(), { once: true });
-                    });
-                }
-            }
+            // Status banner dismiss (désactivé — décommenter avec le HTML pour réactiver)
+            // const statusBanner = document.getElementById('statusBanner');
+            // const dismissBtn = document.getElementById('dismissBanner');
+            // if (statusBanner && dismissBtn) {
+            //     if (localStorage.getItem('bannerDismissed') === 'api-feb2025') {
+            //         statusBanner.remove();
+            //     } else {
+            //         dismissBtn.addEventListener('click', () => {
+            //             statusBanner.classList.add('dismissed');
+            //             localStorage.setItem('bannerDismissed', 'api-feb2025');
+            //             statusBanner.addEventListener('animationend', () => statusBanner.remove(), { once: true });
+            //         });
+            //     }
+            // }
 
             const storedTheme = getStoredTheme();
             if (storedTheme) {
