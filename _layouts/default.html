@@ -252,16 +252,16 @@
                         <a class="nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}">{{ t.nav.home }}</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link{% if page.url contains 'propos' or page.url contains 'about' or page.url contains 'acerca' %} active{% endif %}" href="{{ '/a-propos/' | relative_url }}">{{ t.nav.about }}</a>
+                        <a class="nav-link{% if page.url contains 'about' %} active{% endif %}" href="{{ '/about/' | relative_url }}">{{ t.nav.about }}</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link{% if page.url contains 'aide' or page.url contains 'support' or page.url contains 'soporte' %} active{% endif %}" href="{{ '/aide/' | relative_url }}">{{ t.nav.support }}</a>
+                        <a class="nav-link{% if page.url contains 'support' %} active{% endif %}" href="{{ '/support/' | relative_url }}">{{ t.nav.support }}</a>
                     </li>
                     <li class="nav-item d-md-none w-100">
                         <div class="mobile-nav-panel">
                             <a href="{{ '/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}">{{ t.nav.home }}</a>
-                            <a href="{{ '/a-propos/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url contains 'propos' or page.url contains 'about' or page.url contains 'acerca' %} active{% endif %}">{{ t.nav.about }}</a>
-                            <a href="{{ '/aide/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url contains 'aide' or page.url contains 'support' or page.url contains 'soporte' %} active{% endif %}">{{ t.nav.support }}</a>
+                            <a href="{{ '/about/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url contains 'about' %} active{% endif %}">{{ t.nav.about }}</a>
+                            <a href="{{ '/support/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url contains 'support' %} active{% endif %}">{{ t.nav.support }}</a>
                             <div class="mobile-nav-divider"></div>
                             <div class="mobile-nav-heading">{{ t.languageSwitcher.change }}</div>
                             <a href="#" data-lang-url="{{ page_path }}" class="mobile-language-option touch-target"{% if site.active_lang == 'fr' %} aria-selected="true"{% else %} aria-selected="false"{% endif %}>
@@ -338,9 +338,9 @@
                 </div>
 
                 <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-4 align-items-center">
-                    <a href="{{ '/aide/' | relative_url }}">{{ t.footerLinks.contact }}</a>
-                    <a href="{{ '/confidentialite/' | relative_url }}">{{ t.footerLinks.privacy }}</a>
-                    <a href="{{ '/conditions/' | relative_url }}">{{ t.footerLinks.terms }}</a>
+                    <a href="{{ '/support/' | relative_url }}">{{ t.footerLinks.contact }}</a>
+                    <a href="{{ '/privacy/' | relative_url }}">{{ t.footerLinks.privacy }}</a>
+                    <a href="{{ '/terms/' | relative_url }}">{{ t.footerLinks.terms }}</a>
                 </div>
             </div>
         </div>
@@ -696,7 +696,7 @@
 
             // Détecter si on est sur la page d'accueil et ajouter la classe
             const path = window.location.pathname;
-            const isHomePage = path === '/' || path === '/index.html' || path.endsWith('/');
+            const isHomePage = path === '/' || path === '/index.html' || path === '/en/' || path === '/es/';
 
             if (isHomePage) {
                 document.body.classList.add('home-page');
