@@ -1,171 +1,172 @@
 ---
 layout: default
 title: Politique de Confidentialité
-permalink: /privacy.html
+permalink: /confidentialite/
 last_modified_at: 2026-03-19
 ---
+{% assign t = site.data.translations[site.active_lang] %}
 
 <section class="privacy-section">
     <div class="privacy-wrapper">
         <div class="privacy-card">
             <header class="privacy-header">
                 <h1 class="privacy-title">
-                    <span data-i18n="privacyPage.title">Politique de Confidentialité</span>
+                    <span>{{ t.privacyPage.title }}</span>
                     <span class="privacy-brand font-marker">- {{ site.title }}</span>
                 </h1>
             </header>
 
             <div class="privacy-section-content">
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.intro.title">Introduction</h2>
-                    <p data-i18n="privacyPage.intro.content">Bienvenue dans la politique de confidentialité de Book Nova. Nous accordons une grande importance à la protection de votre vie privée. L'application conserve la majorité de vos données sur votre appareil et synchronise chaque semaine une copie minimale via Firebase (Google Cloud) pour proposer des recommandations de lecture.</p>
+                    <h2>{{ t.privacyPage.intro.title }}</h2>
+                    <p>{{ t.privacyPage.intro.content }}</p>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.dataLocal.title">Données stockées localement sur votre appareil</h2>
-                    <p data-i18n="privacyPage.dataLocal.intro">Les informations suivantes restent accessibles hors ligne sur votre appareil :</p>
+                    <h2>{{ t.privacyPage.dataLocal.title }}</h2>
+                    <p>{{ t.privacyPage.dataLocal.intro }}</p>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.dataLocal.items.0">Bibliothèque personnelle : titres, auteurs, nombre de pages, images de couverture, descriptions et progression de lecture (une copie des titres, auteurs, ISBN et couvertures est synchronisée pour des recommandations anonymes).</li>
-                        <li data-i18n="privacyPage.dataLocal.items.1">Paramètres personnels : taille, unité d'affichage (cm/m), système métrique (métrique/impérial), avatar, langues de lecture préférées, genres favoris, préférence pour les livres audio</li>
-                        <li data-i18n="privacyPage.dataLocal.items.2">Défis et badges : défi sélectionné (solaire/galaxie/univers), badges débloqués et progression</li>
-                        <li data-i18n="privacyPage.dataLocal.items.3">Prêts de livres : livres prêtés ou empruntés, avec dates et contacts</li>
-                        <li data-i18n="privacyPage.dataLocal.items.4">Préférences d'interface : langue de l'application (FR/EN/ES), thème (clair/sombre), type de vue de bibliothèque</li>
-                        <li data-i18n="privacyPage.dataLocal.items.5">Identifiant d'appareil : UUID généré aléatoirement et stocké localement</li>
+                        <li>{{ t.privacyPage.dataLocal.items[0] }}</li>
+                        <li>{{ t.privacyPage.dataLocal.items[1] }}</li>
+                        <li>{{ t.privacyPage.dataLocal.items[2] }}</li>
+                        <li>{{ t.privacyPage.dataLocal.items[3] }}</li>
+                        <li>{{ t.privacyPage.dataLocal.items[4] }}</li>
+                        <li>{{ t.privacyPage.dataLocal.items[5] }}</li>
                     </ul>
-                    <p class="privacy-note" data-i18n="privacyPage.dataLocal.note">Les données synchronisées n'incluent aucune information personnelle d'identification (nom, adresse e-mail).</p>
+                    <p class="privacy-note">{{ t.privacyPage.dataLocal.note }}</p>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.usage.title">Stockage et traitement</h2>
+                    <h2>{{ t.privacyPage.usage.title }}</h2>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.usage.items.0">Stockage local : données enregistrées dans AsyncStorage et SecureStore pour garantir l'accès hors ligne.</li>
-                        <li data-i18n="privacyPage.usage.items.1">Synchronisation sécurisée : une fois par semaine, l'application envoie à Firebase les livres, catégories, notes (étoiles) et l'identifiant anonyme nécessaires aux recommandations de lecture.</li>
-                        <li data-i18n="privacyPage.usage.items.2">Agrégation : les statistiques produites dans Firebase sont anonymisées avant d'alimenter les recommandations visibles dans l'application.</li>
-                    </ul>
-                </section>
-
-                <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.sync.title">Synchronisation Firebase</h2>
-                    <p data-i18n="privacyPage.sync.intro">Les données transférées vers Firebase sont limitées aux éléments suivants :</p>
-                    <ul class="privacy-list">
-                        <li data-i18n="privacyPage.sync.items.0">Identifiant anonyme généré localement (UUID)</li>
-                        <li data-i18n="privacyPage.sync.items.1">Livres de votre bibliothèque : titre, auteur, ISBN et image de couverture</li>
-                        <li data-i18n="privacyPage.sync.items.2">Catégories utilisées et notes attribuées (étoiles)</li>
-                    </ul>
-                    <h3 data-i18n="privacyPage.sync.purposesTitle">Finalités du traitement :</h3>
-                    <ul class="privacy-list">
-                        <li data-i18n="privacyPage.sync.purposes.0">Créer des recommandations des livres les plus lus, populaires et les mieux notés</li>
-                    </ul>
-                    <p class="privacy-note" data-i18n="privacyPage.sync.note">Les listes générées sont publiées sous forme agrégée et ne permettent pas d'identifier votre bibliothèque personnelle.</p>
-                </section>
-
-                <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.api.title">API externe : ISBNdb</h2>
-                    <p data-i18n="privacyPage.api.intro">Book Nova utilise ISBNdb pour récupérer les métadonnées publiques des livres lorsque vous :</p>
-                    <ul class="privacy-list">
-                        <li data-i18n="privacyPage.api.items.0">Scannez un code-barres ISBN</li>
-                        <li data-i18n="privacyPage.api.items.1">Effectuez une recherche par titre ou auteur</li>
-                        <li data-i18n="privacyPage.api.items.2">Validez manuellement un ISBN</li>
-                    </ul>
-                    <p data-i18n="privacyPage.api.data">Données envoyées à ISBNdb : ISBN, titre recherché, auteur recherché et langue de recherche.</p>
-                    <p data-i18n="privacyPage.api.limits">Utilisateurs gratuits : jusqu'à 4 livres enrichis par jour. Utilisateurs premium : aucune limite.</p>
-                    <p class="privacy-note" data-i18n="privacyPage.api.note">ISBNdb ne reçoit aucune information personnelle vous concernant.</p>
-                </section>
-
-                <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.notifications.title">Notifications locales</h2>
-                    <p data-i18n="privacyPage.notifications.intro">Les notifications sont programmées localement sur votre appareil pour :</p>
-                    <ul class="privacy-list">
-                        <li data-i18n="privacyPage.notifications.items.0">Rappeler les livres prêtés (30 jours après le prêt)</li>
-                        <li data-i18n="privacyPage.notifications.items.1">Vous encourager à lire (rappel mensuel optionnel)</li>
-                    </ul>
-                    <p class="privacy-note" data-i18n="privacyPage.notifications.note">Aucune connexion Internet n'est nécessaire.</p>
-                </section>
-
-                <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.premium.title">Version premium - RevenueCat</h2>
-                    <p data-i18n="privacyPage.premium.intro">Lors d'achats in-app, RevenueCat gère vos abonnements. Nous transmettons uniquement :</p>
-                    <ul class="privacy-list">
-                        <li data-i18n="privacyPage.premium.items.0">UUID de votre appareil (identifiant anonyme)</li>
-                        <li data-i18n="privacyPage.premium.items.1">Statut d'abonnement (actif/inactif)</li>
-                        <li data-i18n="privacyPage.premium.items.2">Informations de transaction fournies par l'App Store ou Google Play</li>
-                    </ul>
-                    <p class="privacy-note" data-i18n="privacyPage.premium.note">Book Nova n'accède jamais à vos informations de paiement.</p>
-                </section>
-
-                <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.sharing.title">Partage des données</h2>
-                    <p data-i18n="privacyPage.sharing.intro">Nous ne vendons, n'échangeons ni ne transférons vos données, sauf :</p>
-                    <ul class="privacy-list">
-                        <li data-i18n="privacyPage.sharing.items.0">Firebase (Google Cloud) : hébergement de la synchronisation hebdomadaire de votre bibliothèque</li>
-                        <li data-i18n="privacyPage.sharing.items.1">ISBNdb : récupération des métadonnées publiques des livres lors de vos recherches</li>
-                        <li data-i18n="privacyPage.sharing.items.2">RevenueCat : gestion de la version premium</li>
-                        <li data-i18n="privacyPage.sharing.items.3">Obligations légales : si la loi l'exige</li>
+                        <li>{{ t.privacyPage.usage.items[0] }}</li>
+                        <li>{{ t.privacyPage.usage.items[1] }}</li>
+                        <li>{{ t.privacyPage.usage.items[2] }}</li>
                     </ul>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.security.title">Sécurité et stockage</h2>
+                    <h2>{{ t.privacyPage.sync.title }}</h2>
+                    <p>{{ t.privacyPage.sync.intro }}</p>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.security.items.0">SecureStore protège votre taille et l'UUID avec le chiffrement natif iOS/Android</li>
-                        <li data-i18n="privacyPage.security.items.1">Firebase applique le chiffrement en transit et au repos pour les données synchronisées (Google Cloud)</li>
-                        <li data-i18n="privacyPage.security.items.2">Vos livres, prêts et paramètres restent consultables hors ligne sur votre appareil</li>
-                        <li data-i18n="privacyPage.security.items.3">Les sauvegardes iCloud ou Google Drive s'appliquent selon vos réglages système</li>
+                        <li>{{ t.privacyPage.sync.items[0] }}</li>
+                        <li>{{ t.privacyPage.sync.items[1] }}</li>
+                        <li>{{ t.privacyPage.sync.items[2] }}</li>
                     </ul>
-                    <p class="privacy-note" data-i18n="privacyPage.security.warning">Important : supprimer l'application sans sauvegarde système efface définitivement vos données.</p>
+                    <h3>{{ t.privacyPage.sync.purposesTitle }}</h3>
+                    <ul class="privacy-list">
+                        <li>{{ t.privacyPage.sync.purposes[0] }}</li>
+                    </ul>
+                    <p class="privacy-note">{{ t.privacyPage.sync.note }}</p>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.rights.title">Vos droits</h2>
-                    <p data-i18n="privacyPage.rights.intro">Vous pouvez à tout moment :</p>
+                    <h2>{{ t.privacyPage.api.title }}</h2>
+                    <p>{{ t.privacyPage.api.intro }}</p>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.rights.items.0">Consulter vos données directement dans l'application</li>
-                        <li data-i18n="privacyPage.rights.items.1">Modifier vos informations par l'interface</li>
-                        <li data-i18n="privacyPage.rights.items.2">Retirer votre consentement aux notifications dans les réglages de votre appareil</li>
-                        <li data-i18n="privacyPage.rights.items.3">Désactiver « Contribuer aux statistiques anonymes » dans l'application pour suspendre la synchronisation</li>
-                        <li data-i18n="privacyPage.rights.items.4">Demander la suppression de votre copie synchronisée en écrivant à book-nova@outlook.fr (en indiquant votre UUID)</li>
+                        <li>{{ t.privacyPage.api.items[0] }}</li>
+                        <li>{{ t.privacyPage.api.items[1] }}</li>
+                        <li>{{ t.privacyPage.api.items[2] }}</li>
+                    </ul>
+                    <p>{{ t.privacyPage.api.data }}</p>
+                    <p>{{ t.privacyPage.api.limits }}</p>
+                    <p class="privacy-note">{{ t.privacyPage.api.note }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.privacyPage.notifications.title }}</h2>
+                    <p>{{ t.privacyPage.notifications.intro }}</p>
+                    <ul class="privacy-list">
+                        <li>{{ t.privacyPage.notifications.items[0] }}</li>
+                        <li>{{ t.privacyPage.notifications.items[1] }}</li>
+                    </ul>
+                    <p class="privacy-note">{{ t.privacyPage.notifications.note }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.privacyPage.premium.title }}</h2>
+                    <p>{{ t.privacyPage.premium.intro }}</p>
+                    <ul class="privacy-list">
+                        <li>{{ t.privacyPage.premium.items[0] }}</li>
+                        <li>{{ t.privacyPage.premium.items[1] }}</li>
+                        <li>{{ t.privacyPage.premium.items[2] }}</li>
+                    </ul>
+                    <p class="privacy-note">{{ t.privacyPage.premium.note }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.privacyPage.sharing.title }}</h2>
+                    <p>{{ t.privacyPage.sharing.intro }}</p>
+                    <ul class="privacy-list">
+                        <li>{{ t.privacyPage.sharing.items[0] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[1] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[2] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[3] }}</li>
                     </ul>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.permissions.title">Permissions demandées</h2>
+                    <h2>{{ t.privacyPage.security.title }}</h2>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.permissions.items.0">Caméra : scanner les codes-barres ISBN</li>
-                        <li data-i18n="privacyPage.permissions.items.1">Notifications : programmer des rappels locaux</li>
-                        <li data-i18n="privacyPage.permissions.items.2">Stockage local : enregistrer vos livres et paramètres</li>
-                        <li data-i18n="privacyPage.permissions.items.3">Accès réseau : synchroniser votre bibliothèque via Firebase pour les recommandations</li>
+                        <li>{{ t.privacyPage.security.items[0] }}</li>
+                        <li>{{ t.privacyPage.security.items[1] }}</li>
+                        <li>{{ t.privacyPage.security.items[2] }}</li>
+                        <li>{{ t.privacyPage.security.items[3] }}</li>
                     </ul>
-                    <p class="privacy-note" data-i18n="privacyPage.permissions.note">Ces permissions ne servent jamais à collecter des données à votre insu.</p>
+                    <p class="privacy-note">{{ t.privacyPage.security.warning }}</p>
                 </section>
 
                 <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.changes.title">Modifications de cette politique</h2>
-                    <p data-i18n="privacyPage.changes.content">Nous pouvons mettre à jour cette politique à tout moment. Consultez-la régulièrement.</p>
-                </section>
-
-                <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.contact.title">Contact</h2>
-                    <p data-i18n="privacyPage.contact.content">Pour toute question relative à vos données ou à cette politique, écrivez-nous :</p>
-                    <p class="privacy-pill" data-i18n="privacyPage.contact.email">book-nova@outlook.fr</p>
-                </section>
-
-                <section class="privacy-block">
-                    <h2 data-i18n="privacyPage.summary.title">Résumé simplifié</h2>
+                    <h2>{{ t.privacyPage.rights.title }}</h2>
+                    <p>{{ t.privacyPage.rights.intro }}</p>
                     <ul class="privacy-list">
-                        <li data-i18n="privacyPage.summary.items.0">Vos données restent consultables hors ligne et une copie minimale est synchronisée via Firebase pour les recommandations</li>
-                        <li data-i18n="privacyPage.summary.items.1">Aucune donnée d'identification personnelle n'est collectée</li>
-                        <li data-i18n="privacyPage.summary.items.2">Firebase sert uniquement à générer des recommandations de lecture anonymes</li>
-                        <li data-i18n="privacyPage.summary.items.3">ISBNdb uniquement pour les métadonnées publiques</li>
-                        <li data-i18n="privacyPage.summary.items.4">RevenueCat gère la version premium (données anonymisées)</li>
-                        <li data-i18n="privacyPage.summary.items.5">Vous pouvez demander la suppression de la copie synchronisée ou désactiver la contribution aux statistiques à tout moment</li>
+                        <li>{{ t.privacyPage.rights.items[0] }}</li>
+                        <li>{{ t.privacyPage.rights.items[1] }}</li>
+                        <li>{{ t.privacyPage.rights.items[2] }}</li>
+                        <li>{{ t.privacyPage.rights.items[3] }}</li>
+                        <li>{{ t.privacyPage.rights.items[4] }}</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.privacyPage.permissions.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.privacyPage.permissions.items[0] }}</li>
+                        <li>{{ t.privacyPage.permissions.items[1] }}</li>
+                        <li>{{ t.privacyPage.permissions.items[2] }}</li>
+                        <li>{{ t.privacyPage.permissions.items[3] }}</li>
+                    </ul>
+                    <p class="privacy-note">{{ t.privacyPage.permissions.note }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.privacyPage.changes.title }}</h2>
+                    <p>{{ t.privacyPage.changes.content }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.privacyPage.contact.title }}</h2>
+                    <p>{{ t.privacyPage.contact.content }}</p>
+                    <p class="privacy-pill">{{ t.privacyPage.contact.email }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.privacyPage.summary.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.privacyPage.summary.items[0] }}</li>
+                        <li>{{ t.privacyPage.summary.items[1] }}</li>
+                        <li>{{ t.privacyPage.summary.items[2] }}</li>
+                        <li>{{ t.privacyPage.summary.items[3] }}</li>
+                        <li>{{ t.privacyPage.summary.items[4] }}</li>
+                        <li>{{ t.privacyPage.summary.items[5] }}</li>
                     </ul>
                 </section>
             </div>
 
-            <p class="privacy-meta" data-i18n="privacyPage.lastUpdated">Dernière mise à jour : 19/03/2026</p>
+            <p class="privacy-meta">{{ t.privacyPage.lastUpdated }}</p>
 
             <div class="privacy-back-link">
-                <a href="{{ '/' | relative_url }}" data-i18n="privacyPage.backToHome">Retour à l'accueil</a>
+                <a href="{{ '/' | relative_url }}">{{ t.privacyPage.backToHome }}</a>
             </div>
         </div>
     </div>

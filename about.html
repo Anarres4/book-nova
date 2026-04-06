@@ -2,10 +2,10 @@
 layout: default
 title: "À propos de Book Nova — Un couple, une passion, une app"
 description: "Découvrez l'histoire de Book Nova : une app créée par un couple passionné de lecture, pour transformer chaque livre en aventure."
-lang: "fr"
-permalink: "/about.html"
+permalink: /a-propos/
 last_modified_at: 2026-02-12
 ---
+{% assign t = site.data.translations[site.active_lang] %}
 
 <section class="about-section">
     <div class="about-wrapper">
@@ -15,66 +15,66 @@ last_modified_at: 2026-02-12
                 <div class="about-icon mb-4">
                     <i class="bi bi-stars"></i>
                 </div>
-                <h1 class="about-title" data-i18n="aboutPage.title">Un couple, une passion, une app</h1>
-                <p class="about-subtitle font-marker" data-i18n="aboutPage.subtitle">L'histoire derrière Book Nova</p>
+                <h1 class="about-title">{{ t.aboutPage.title }}</h1>
+                <p class="about-subtitle font-marker">{{ t.aboutPage.subtitle }}</p>
             </div>
 
             <!-- L'histoire -->
             <div class="about-block">
-                <p data-i18n="aboutPage.story.p2">On cherchait une app pour suivre nos livres. Les options existantes étaient soit trop complexes (on ne veut pas un tableur Excel), soit trop sociales (on ne veut pas de likes et de followers), soit trop chronométrées, soit bourrées de pubs.</p>
-                <p data-i18n="aboutPage.story.p3">On voulait juste quelque chose de simple et satisfaisant. Un endroit pour voir ce qu'on a lu, ce qu'on lit, et cette petite fierté de regarder sa bibliothèque grandir.</p>
+                <p>{{ t.aboutPage.story.p2 }}</p>
+                <p>{{ t.aboutPage.story.p3 }}</p>
                 <div class="story-highlight">
-                    <p data-i18n="aboutPage.story.idea">"Et si on mesurait nos lectures en hauteur ? Genre, atteindre notre propre taille en livres ?"</p>
+                    <p>{{ t.aboutPage.story.idea }}</p>
                 </div>
-                <p data-i18n="aboutPage.story.p4">C'était une idée un peu bête. Mais plus on y réfléchissait, plus elle nous motivait. Il y avait quelque chose de profondément satisfaisant à imaginer une pile de livres qui grandit jusqu'à nos yeux, puis au-dessus de notre tête.</p>
-                <p data-i18n="aboutPage.story.p5">Alors on l'a construite. Pas avec une équipe de 50 développeurs. Juste nous deux, le soir et le week-end, pendant des mois.</p>
+                <p>{{ t.aboutPage.story.p4 }}</p>
+                <p>{{ t.aboutPage.story.p5 }}</p>
             </div>
 
             <!-- Pourquoi "atteindre sa taille" -->
             <div class="about-block">
-                <h2 data-i18n="aboutPage.whyHeight.title">Pourquoi "atteindre sa taille" ?</h2>
-                <p data-i18n="aboutPage.whyHeight.p1">Parce que lire peut être intimidant.</p>
+                <h2>{{ t.aboutPage.whyHeight.title }}</h2>
+                <p>{{ t.aboutPage.whyHeight.p1 }}</p>
                 <div class="intimidating-thoughts">
-                    <p data-i18n="aboutPage.whyHeight.thought1">"Je n'ai pas le temps."</p>
-                    <p data-i18n="aboutPage.whyHeight.thought2">"Je ne sais pas quoi lire."</p>
-                    <p data-i18n="aboutPage.whyHeight.thought3">"Je lis trop lentement."</p>
+                    <p>{{ t.aboutPage.whyHeight.thought1 }}</p>
+                    <p>{{ t.aboutPage.whyHeight.thought2 }}</p>
+                    <p>{{ t.aboutPage.whyHeight.thought3 }}</p>
                 </div>
-                <p data-i18n="aboutPage.whyHeight.p2">On connaît ces pensées — on se les est dites aussi.</p>
-                <p data-i18n="aboutPage.whyHeight.p3">L'idée de la taille, c'est un objectif concret et personnel. Pas 52 livres par an comme les challenges internet. Pas de comparaison avec les autres.</p>
-                <p class="highlight-text" data-i18n="aboutPage.whyHeight.highlight">Votre taille, votre défi.</p>
-                <p data-i18n="aboutPage.whyHeight.p4">Que vous fassiez 1m55 ou 1m95, l'objectif est le vôtre. Et franchement ? C'est juste fun de se dire "J'ai lu 63 cm cette année".</p>
+                <p>{{ t.aboutPage.whyHeight.p2 }}</p>
+                <p>{{ t.aboutPage.whyHeight.p3 }}</p>
+                <p class="highlight-text">{{ t.aboutPage.whyHeight.highlight }}</p>
+                <p>{{ t.aboutPage.whyHeight.p4 }}</p>
             </div>
 
             <!-- Ce qu'on croit -->
             <div class="about-block beliefs-block">
-                <h2 data-i18n="aboutPage.beliefs.title">Ce qu'on croit</h2>
+                <h2>{{ t.aboutPage.beliefs.title }}</h2>
                 <div class="beliefs-list">
                     <div class="belief-item">
                         <span class="belief-emoji">📖</span>
                         <div>
-                            <strong data-i18n="aboutPage.beliefs.b1_title">Lire, c'est voyager.</strong>
-                            <p data-i18n="aboutPage.beliefs.b1_desc">Chaque livre est une porte vers un autre monde. C'est pour ça que nos badges racontent une odyssée spatiale — de la Terre jusqu'aux confins de l'univers.</p>
+                            <strong>{{ t.aboutPage.beliefs.b1_title }}</strong>
+                            <p>{{ t.aboutPage.beliefs.b1_desc }}</p>
                         </div>
                     </div>
                     <div class="belief-item">
                         <span class="belief-emoji">🌍</span>
                         <div>
-                            <strong data-i18n="aboutPage.beliefs.b2_title">Tout le monde est un lecteur.</strong>
-                            <p data-i18n="aboutPage.beliefs.b2_desc">Un livre par an ou cent, peu importe. Si vous aimez lire, cette app est pour vous.</p>
+                            <strong>{{ t.aboutPage.beliefs.b2_title }}</strong>
+                            <p>{{ t.aboutPage.beliefs.b2_desc }}</p>
                         </div>
                     </div>
                     <div class="belief-item">
                         <span class="belief-emoji">✨</span>
                         <div>
-                            <strong data-i18n="aboutPage.beliefs.b3_title">La simplicité, c'est précieux.</strong>
-                            <p data-i18n="aboutPage.beliefs.b3_desc">On refuse d'ajouter des fonctionnalités juste pour en avoir plus. Chaque bouton, chaque écran a une raison d'être.</p>
+                            <strong>{{ t.aboutPage.beliefs.b3_title }}</strong>
+                            <p>{{ t.aboutPage.beliefs.b3_desc }}</p>
                         </div>
                     </div>
                     <div class="belief-item">
                         <span class="belief-emoji">🌱</span>
                         <div>
-                            <strong data-i18n="aboutPage.beliefs.b4_title">Lecture sans pression.</strong>
-                            <p data-i18n="aboutPage.beliefs.b4_desc">Zéro culpabilité. Votre pile à lire grandit ? Aucun problème. Vous lisez lentement ? Parfait. Book Nova ne vous envoie ni notifications stressantes, ni emails moralisateurs.</p>
+                            <strong>{{ t.aboutPage.beliefs.b4_title }}</strong>
+                            <p>{{ t.aboutPage.beliefs.b4_desc }}</p>
                         </div>
                     </div>
                 </div>
@@ -82,30 +82,30 @@ last_modified_at: 2026-02-12
 
             <!-- L'équipe -->
             <div class="about-block team-block">
-                <h2 data-i18n="aboutPage.team.title">L'équipe</h2>
-                <p data-i18n="aboutPage.team.p1">Nous sommes un couple. Pas une startup. Pas une entreprise avec des investisseurs à satisfaire.</p>
-                <p data-i18n="aboutPage.team.p2">On venait tous les deux de perdre notre travail. Au lieu de se laisser abattre, on s'est retrouvés autour d'un projet commun : créer l'app de lecture qu'on aurait voulu avoir.</p>
-                <p data-i18n="aboutPage.team.p3">Juste deux amoureux qui aiment lire et qui ont transformé un moment difficile en aventure.</p>
+                <h2>{{ t.aboutPage.team.title }}</h2>
+                <p>{{ t.aboutPage.team.p1 }}</p>
+                <p>{{ t.aboutPage.team.p2 }}</p>
+                <p>{{ t.aboutPage.team.p3 }}</p>
                 <div class="team-facts">
-                    <p data-i18n="aboutPage.team.fact1">On répond nous-mêmes aux emails.</p>
-                    <p data-i18n="aboutPage.team.fact2">On lit chaque suggestion.</p>
-                    <p data-i18n="aboutPage.team.fact3">Et quand vous signalez un bug, c'est nous qui le corrigeons (souvent le soir même).</p>
+                    <p>{{ t.aboutPage.team.fact1 }}</p>
+                    <p>{{ t.aboutPage.team.fact2 }}</p>
+                    <p>{{ t.aboutPage.team.fact3 }}</p>
                 </div>
-                <p class="team-conclusion" data-i18n="aboutPage.team.conclusion">C'est peut-être petit. Mais c'est sincère.</p>
+                <p class="team-conclusion">{{ t.aboutPage.team.conclusion }}</p>
             </div>
 
             <!-- Merci -->
             <div class="about-block thanks-block">
-                <h2 data-i18n="aboutPage.thanks.title">Merci</h2>
-                <p data-i18n="aboutPage.thanks.p1">À tous ceux qui utilisent Book Nova, qui nous envoient des messages, qui partagent leurs badges sur les réseaux, qui suggèrent des améliorations : merci.</p>
-                <p data-i18n="aboutPage.thanks.p2">Vous faites partie de cette aventure.</p>
-                <p data-i18n="aboutPage.thanks.p3">Chaque livre que vous ajoutez, chaque badge que vous débloquez, c'est un peu de votre voyage qui rejoint le nôtre.</p>
-                <p class="thanks-signature" data-i18n="aboutPage.thanks.signature">Bonne lecture 📚</p>
-                <p class="thanks-team" data-i18n="aboutPage.thanks.team">— Ana + Florent = l'équipe Book Nova</p>
+                <h2>{{ t.aboutPage.thanks.title }}</h2>
+                <p>{{ t.aboutPage.thanks.p1 }}</p>
+                <p>{{ t.aboutPage.thanks.p2 }}</p>
+                <p>{{ t.aboutPage.thanks.p3 }}</p>
+                <p class="thanks-signature">{{ t.aboutPage.thanks.signature }}</p>
+                <p class="thanks-team">{{ t.aboutPage.thanks.team }}</p>
             </div>
 
             <div class="about-back-link">
-                <a href="{{ '/' | relative_url }}" data-i18n="aboutPage.backToHome">← Retour à l'accueil</a>
+                <a href="{{ '/' | relative_url }}">{{ t.aboutPage.backToHome }}</a>
             </div>
         </div>
     </div>

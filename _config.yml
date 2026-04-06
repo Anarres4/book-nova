@@ -52,7 +52,8 @@ app:
 # Languages
 languages: ["fr", "en", "es"]
 default_lang: "fr"
-exclude_from_localization: ["assets"]
+exclude_from_localization: ["assets", "manifest.json", "robots.txt", "CNAME", "llms.txt", "feed.xml"]
+parallel_localization: true
 twitter_username:
 github_username:
 
@@ -62,6 +63,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-polyglot
 
 # Defaults pour les metadata
 defaults:
