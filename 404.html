@@ -10,7 +10,9 @@ title: 404
         <div class="privacy-card text-center">
             <div class="mb-4" style="font-size: 4rem; font-weight: 700; color: var(--primary-color);">404</div>
             <h1 class="privacy-title">{{ t.notFound.title }}</h1>
-            <p class="mt-3 mb-4">{{ t.notFound.message }}</p>
+            <div class="privacy-section-content">
+                <p class="mt-3 mb-4">{{ t.notFound.message }}</p>
+            </div>
             <a href="{{ '/' | relative_url }}" class="btn-download mx-auto">{{ t.notFound.cta }}</a>
         </div>
     </div>
