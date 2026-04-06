@@ -59,6 +59,8 @@ github_username:
 
 # Build settings
 theme: minima
+sass:
+  sourcemap: never
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
