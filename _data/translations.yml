@@ -11,6 +11,7 @@ fr:
   hero:
     tagline: "La lecture, ça se mesure. (En girafes.)"
     title: "Vos lectures font quelle taille ?"
+    seoSubtitle: "Application de bibliothèque personnelle pour iOS et Android"
     subtitle: "Chaque livre terminé s'ajoute à votre pile. Dépassez un chihuahua, puis un flamant rose, puis… vous-même."
     app_store: "App Store"
     google_play: "Google Play"
@@ -832,6 +833,7 @@ en:
   hero:
     tagline: "Reading is measurable. (In giraffes.)"
     title: "How tall are your readings?"
+    seoSubtitle: "Personal library app for iOS and Android"
     subtitle: "Every finished book adds to your stack. Outgrow a chihuahua, then a flamingo, then… yourself."
     app_store: "App Store"
     google_play: "Google Play"
@@ -1652,6 +1654,7 @@ es:
   hero:
     tagline: "La lectura se mide. (En jirafas.)"
     title: "¿Cuánto miden tus lecturas?"
+    seoSubtitle: "Aplicación de biblioteca personal para iOS y Android"
     subtitle: "Cada libro terminado se suma a tu pila. Supera a un chihuahua, luego a un flamenco, luego… a ti mismo."
     app_store: "App Store"
     google_play: "Google Play"
