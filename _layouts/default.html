@@ -90,7 +90,14 @@
     "price": {{ site.app.price | default: '0' | jsonify }},
     "priceCurrency": {{ site.app.price_currency | default: 'EUR' | jsonify }},
     "url": {{ offer_url | jsonify }},
-    "availability": "https://schema.org/PreOrder"
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ site.data.ratings.app_store.rating | plus: site.data.ratings.google_play.rating | divided_by: 2.0 }}",
+    "reviewCount": "{{ site.data.ratings.app_store.count | plus: site.data.ratings.google_play.count }}",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 }
     {% endcapture %}
@@ -107,7 +114,7 @@
       "name": "Book Nova est-elle gratuite ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, Book Nova est disponible gratuitement avec certaines limitations.\n\n📱 VERSION GRATUITE :\n- Jusqu'à 4 livres ajoutés par jour\n- Maximum 100 livres TERMINÉS au total\n- Jusqu'à 3 prêts/emprunts simultanés\n- Statistiques de lecture de base (par mois/par an)\n- Accès aux badges de base\n\n💎 VERSION PREMIUM :\n- Ajout illimité de livres par jour\n- Livres terminés illimités\n- Prêts et emprunts illimités\n- Statistiques détaillées avancées\n- Calendrier de lecture\n- Accès à tous les badges et médailles premium\n\nToutes les fonctionnalités principales restent accessibles gratuitement !"
+        "text": "Oui, Book Nova est disponible gratuitement avec certaines limitations.\n\n📱 VERSION GRATUITE :\n- Jusqu'à 4 livres ajoutés par jour\n- Maximum 150 livres ajoutés au total\n- Jusqu'à 3 prêts/emprunts simultanés\n- Statistiques de lecture de base (par mois/par an)\n- Accès aux badges de base\n\n💎 VERSION PREMIUM :\n- Ajout illimité de livres par jour\n- Livres ajoutés illimités\n- Prêts et emprunts illimités\n- Statistiques détaillées avancées\n- Calendrier de lecture\n- Accès à tous les badges et médailles premium\n\nToutes les fonctionnalités principales restent accessibles gratuitement !"
       }
     },
     {
@@ -147,7 +154,7 @@
       "name": "Puis-je exporter ma bibliothèque ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "L'export complet n'est pas encore disponible.\nAujourd'hui, vous pouvez :\n- Partager vos badges de lecture sur les réseaux sociaux\n- Conserver toutes vos données localement sur votre appareil"
+        "text": "Oui, depuis la version 1.11.4 ! Vous pouvez exporter et importer toutes vos données.\n\n📦 Ce qui est exporté :\n- Tous vos livres\n- Vos badges\n- Vos prêts et emprunts\n\n💡 Comment faire :\n- Allez dans Paramètres\n- Cliquez sur \"Exporter mes données\"\n- Un fichier JSON sera créé\n\nVous pouvez aussi importer vos données sur un nouvel appareil."
       }
     },
     {
@@ -183,7 +190,10 @@
     "contactType": "customer support",
     "availableLanguage": ["French", "English", "Spanish"]
   },
-  "sameAs": []
+  "sameAs": [
+    {{ site.app.ios_url | jsonify }},
+    {{ site.app.android_url | jsonify }}
+  ]
 }
     {% endcapture %}
     <script type="application/ld+json">{{ org_json | strip_newlines }}</script>
