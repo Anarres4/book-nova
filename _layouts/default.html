@@ -29,15 +29,8 @@
 
     {% seo %}
     {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
-    {% assign page_path = page.url | default: '/' %}
-    {% for lang in site.languages %}
-        {% assign lang_href = page_path %}
-        {% if lang != site.default_lang %}
-            {% assign lang_href = lang_href | append: '?lang=' | append: lang %}
-        {% endif %}
-        <link rel="alternate" hreflang="{{ lang }}" href="{{ lang_href | absolute_url }}">
-    {% endfor %}
-    <link rel="alternate" hreflang="x-default" href="{{ canonical_url }}">
+    <!-- hreflang tags removed: current i18n is JS-only, Google sees French on all URLs.
+         Re-enable when jekyll-polyglot generates real /en/ and /es/ pages. -->
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
