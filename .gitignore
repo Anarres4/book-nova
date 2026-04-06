@@ -5,3 +5,10 @@ _site/
 vendor/
 .bundle/
 Gemfile.lock
+
+# SEO audit outputs
+audit-*.md
+FULL-AUDIT-REPORT.md
+ACTION-PLAN.md
+screenshots/*.png
+screenshots/*.json
