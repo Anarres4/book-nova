@@ -1,5 +1,8 @@
+{% assign t = site.data.translations[site.active_lang] %}
+{% if site.active_lang == 'en' %}{% assign store_region = 'us' %}{% elsif site.active_lang == 'es' %}{% assign store_region = 'es' %}{% else %}{% assign store_region = 'fr' %}{% endif %}
+{% assign app_store_url = 'https://apps.apple.com/' | append: store_region | append: '/app/book-nova/id6752571289' %}
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.default_lang | default: 'fr' }}">
+<html lang="{{ site.active_lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +31,12 @@
     <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
 
     {% seo %}
-    {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
-    <!-- hreflang tags removed: current i18n is JS-only, Google sees French on all URLs.
-         Re-enable when jekyll-polyglot generates real /en/ and /es/ pages. -->
+    {% assign page_path = page.permalink | default: "/" %}
+    <link rel="alternate" hreflang="fr" href="{{ site.url }}{{ page_path }}">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ page_path }}">
+    <link rel="alternate" hreflang="es" href="{{ site.url }}/es{{ page_path }}">
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page_path }}">
+    <link rel="canonical" href="{{ site.url }}{% if site.active_lang == 'en' %}/en{% elsif site.active_lang == 'es' %}/es{% endif %}{{ page_path }}">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -38,7 +44,7 @@
     <meta property="og:title" content="{{ page.title | default: site.title }}">
     <meta property="og:description" content="{{ page.description | default: site.description | strip_html | strip }}">
     <meta property="og:image" content="{{ site.hero_image | absolute_url }}">
-    <meta property="og:locale" content="{{ page.lang | default: site.default_lang | default: 'fr' }}_{{ page.lang | default: site.default_lang | default: 'fr' | upcase }}">
+    <meta property="og:locale" content="{% if site.active_lang == 'en' %}en_US{% elsif site.active_lang == 'es' %}es_ES{% else %}fr_FR{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
 
     <!-- Twitter Card -->
@@ -54,12 +60,11 @@
     <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="{{ canonical_url }}">
 
-    {% assign page_lang = page.lang | default: site.default_lang | default: 'fr' %}
-    {% assign app_name = page.app_name | default: site.app.name | default: site.title %}
-    {% assign description_text = page.seo_description | default: page.description | default: site.description %}
-    {% assign sanitized_description = description_text | strip_html | strip %}
+    {% assign page_lang = site.active_lang | default: 'fr' %}
+    {% assign app_name = site.app.name | default: site.title %}
+    {% assign sanitized_description = page.description | default: site.description | strip_html | strip %}
     {% assign app_logo = site.logo | default: site.hero_image %}
-    {% assign offer_url = page.ios_url | default: site.app.ios_url | default: canonical_url %}
+    {% assign offer_url = app_store_url | default: site.app.ios_url %}
     {% assign os_string = site.app.operating_systems | join: ', ' %}
     {% capture app_json %}
 {
@@ -104,58 +109,58 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Book Nova est-elle gratuite ?",
+      "name": {{ t.faq.q1 | jsonify }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, Book Nova est disponible gratuitement avec certaines limitations.\n\n📱 VERSION GRATUITE :\n- Jusqu'à 4 livres ajoutés par jour\n- Maximum 150 livres ajoutés au total\n- Jusqu'à 3 prêts/emprunts simultanés\n- Statistiques de lecture de base (par mois/par an)\n- Accès aux badges de base\n\n💎 VERSION PREMIUM :\n- Ajout illimité de livres par jour\n- Livres ajoutés illimités\n- Prêts et emprunts illimités\n- Statistiques détaillées avancées\n- Calendrier de lecture\n- Accès à tous les badges et médailles premium\n\nToutes les fonctionnalités principales restent accessibles gratuitement !"
+        "text": {{ t.faq.a1 | default: t.faq.q1_intro | jsonify }}
       }
     },
     {
       "@type": "Question",
-      "name": "Puis-je suivre mes prêts de livres ?",
+      "name": {{ t.faq.q2 | jsonify }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui ! Book Nova inclut un système complet de gestion de prêts :\n- Enregistrez à qui vous prêtez vos livres\n- Ajoutez les livres que vous empruntez\n- Recevez des notifications de rappel\n- Suivez les dates de retour prévues\n\nVersion gratuite : jusqu'à 3 prêts/emprunts simultanés.\nVersion Premium : prêts/emprunts illimités."
+        "text": {{ t.faq.a2 | jsonify }}
       }
     },
     {
       "@type": "Question",
-      "name": "Quels sont les badges disponibles ?",
+      "name": {{ t.faq.q3 | jsonify }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Débloquez plus de 100 badges différents :\n- Badges de lecture (1, 5, 10... jusqu'à 1000 livres !)\n- Badges d'objectifs (hauteur de pile : fourmi, chat, girafe...)\n- Badges de genres littéraires (fiction, biographie, science-fiction...)\n- Badges spéciaux (lecteur nocturne, lecteur matinal, marathonien...)\n- Défis légendaires (Solar, Galaxy, Universe)\n\nPartagez vos badges sur les réseaux sociaux !"
+        "text": {{ t.faq.a3 | jsonify }}
       }
     },
     {
       "@type": "Question",
-      "name": "L'application est-elle disponible en plusieurs langues ?",
+      "name": {{ t.faq.q4 | jsonify }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, Book Nova est proposée en 3 langues :\n- Français 🇫🇷\n- Anglais 🇬🇧\n- Espagnol 🇪🇸\n\nVous pouvez aussi définir la langue de chaque livre pour un meilleur suivi."
+        "text": {{ t.faq.a4 | jsonify }}
       }
     },
     {
       "@type": "Question",
-      "name": "Comment fonctionne la visualisation de la pile de livres ?",
+      "name": {{ t.faq.q5 | jsonify }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Book Nova calcule la hauteur cumulée de vos livres lus et la compare à des repères visuels :\n- 0,5 cm → hauteur d'une fourmi 🐜\n- 20 cm → un chat assis 🐈\n- Votre taille → aussi grand que vous ! 👤\n- 3 m → une girafe 🦒\n\nChaque palier débloque un badge unique : plus vous lisez, plus votre pile grandit !"
+        "text": {{ t.faq.a5 | jsonify }}
       }
     },
     {
       "@type": "Question",
-      "name": "Puis-je exporter ma bibliothèque ?",
+      "name": {{ t.faq.q6 | jsonify }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, depuis la version 1.11.4 ! Vous pouvez exporter et importer toutes vos données.\n\n📦 Ce qui est exporté :\n- Tous vos livres\n- Vos badges\n- Vos prêts et emprunts\n\n💡 Comment faire :\n- Allez dans Paramètres\n- Cliquez sur \"Exporter mes données\"\n- Un fichier JSON sera créé\n\nVous pouvez aussi importer vos données sur un nouvel appareil."
+        "text": {{ t.faq.a6 | jsonify }}
       }
     },
     {
       "@type": "Question",
-      "name": "Ai-je besoin d'une connexion internet ?",
+      "name": {{ t.faq.q7 | jsonify }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La connexion Internet n'est requise que pour :\n- Scanner des codes-barres ISBN (recherche automatique des informations)\n- Rechercher un livre manuellement via ISBNdb\n- Effectuer des achats Premium\n\nPour tout le reste (bibliothèque, stats, badges, prêts), Book Nova fonctionne hors ligne.\nAstuce : ajoutez un livre manuellement hors ligne si vous connaissez ses informations (titre, pages, etc.)."
+        "text": {{ t.faq.a7 | jsonify }}
       }
     }
   ]
@@ -232,51 +237,51 @@
                 <ul class="navbar-nav ms-auto gap-md-2 align-items-center">
                     <li class="nav-item dropdown d-none d-md-block">
                         <button class="language-switcher" id="languageButton">
-                            <span class="current-language" id="currentLang">Français</span>
+                            <span class="current-language" id="currentLang">{% if site.active_lang == 'en' %}English{% elsif site.active_lang == 'es' %}Español{% else %}Français{% endif %}</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                             </svg>
                         </button>
                         <ul class="language-dropdown" id="languageDropdown">
-                            <li><button type="button" data-lang="fr">Français</button></li>
-                            <li><button type="button" data-lang="en">English</button></li>
-                            <li><button type="button" data-lang="es">Español</button></li>
+                            <li><a href="#" data-lang-url="{{ page_path }}"{% if site.active_lang == 'fr' %} class="active"{% endif %}>Français</a></li>
+                            <li><a href="#" data-lang-url="/en{{ page_path }}"{% if site.active_lang == 'en' %} class="active"{% endif %}>English</a></li>
+                            <li><a href="#" data-lang-url="/es{{ page_path }}"{% if site.active_lang == 'es' %} class="active"{% endif %}>Español</a></li>
                         </ul>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}" data-i18n="nav.home">Accueil</a>
+                        <a class="nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}">{{ t.nav.home }}</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link{% if page.url == '/about.html' %} active{% endif %}" href="{{ '/about.html' | relative_url }}" data-i18n="nav.about">À propos</a>
+                        <a class="nav-link{% if page.url contains 'about' %} active{% endif %}" href="{{ '/about/' | relative_url }}">{{ t.nav.about }}</a>
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a class="nav-link{% if page.url == '/support.html' %} active{% endif %}" href="{{ '/support.html' | relative_url }}" data-i18n="nav.support">Support</a>
+                        <a class="nav-link{% if page.url contains 'support' %} active{% endif %}" href="{{ '/support/' | relative_url }}">{{ t.nav.support }}</a>
                     </li>
                     <li class="nav-item d-md-none w-100">
                         <div class="mobile-nav-panel">
-                            <a href="{{ '/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" data-i18n="nav.home">Accueil</a>
-                            <a href="{{ '/about.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/about.html' %} active{% endif %}" data-i18n="nav.about">À propos</a>
-                            <a href="{{ '/support.html' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/support.html' %} active{% endif %}" data-i18n="nav.support">Support</a>
+                            <a href="{{ '/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}">{{ t.nav.home }}</a>
+                            <a href="{{ '/about/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url contains 'about' %} active{% endif %}">{{ t.nav.about }}</a>
+                            <a href="{{ '/support/' | relative_url }}" class="mobile-nav-link touch-target{% if page.url contains 'support' %} active{% endif %}">{{ t.nav.support }}</a>
                             <div class="mobile-nav-divider"></div>
-                            <div class="mobile-nav-heading" data-i18n="languageSwitcher.change">Changer de langue</div>
-                            <button data-lang="en" class="mobile-language-option touch-target" aria-selected="false">
-                                <span>English</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark d-none" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </button>
-                            <button data-lang="fr" class="mobile-language-option touch-target" aria-selected="true">
+                            <div class="mobile-nav-heading">{{ t.languageSwitcher.change }}</div>
+                            <a href="#" data-lang-url="{{ page_path }}" class="mobile-language-option touch-target"{% if site.active_lang == 'fr' %} aria-selected="true"{% else %} aria-selected="false"{% endif %}>
                                 <span>Français</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark{% unless site.active_lang == 'fr' %} d-none{% endunless %}" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                                 </svg>
-                            </button>
-                            <button data-lang="es" class="mobile-language-option touch-target" aria-selected="false">
+                            </a>
+                            <a href="#" data-lang-url="/en{{ page_path }}" class="mobile-language-option touch-target"{% if site.active_lang == 'en' %} aria-selected="true"{% else %} aria-selected="false"{% endif %}>
+                                <span>English</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark{% unless site.active_lang == 'en' %} d-none{% endunless %}" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </a>
+                            <a href="#" data-lang-url="/es{{ page_path }}" class="mobile-language-option touch-target"{% if site.active_lang == 'es' %} aria-selected="true"{% else %} aria-selected="false"{% endif %}>
                                 <span>Español</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark d-none" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-lang-checkmark{% unless site.active_lang == 'es' %} d-none{% endunless %}" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                                 </svg>
-                            </button>
+                            </a>
                         </div>
                     </li>
                 </ul>
@@ -292,7 +297,7 @@
             <svg class="status-banner__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
             </svg>
-            <p class="status-banner__text" data-i18n="banner.message">Nous avons rencontré un souci avec la recherche de livres depuis le 18 février. Une mise à jour corrective a été déployée sur le Play Store et l'App Store — pensez à mettre l'app à jour ! Merci pour votre patience.</p>
+            <p class="status-banner__text">{{ t.banner.message }}</p>
             <button class="status-banner__close" id="dismissBanner" aria-label="Fermer" data-i18n-aria="banner.dismiss">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
@@ -310,11 +315,16 @@
     <!-- Scroll to top FAB -->
     <button type="button" class="scroll-top-fab" aria-label="Retour en haut">
         <i class="bi bi-arrow-up"></i>
-        <span data-i18n="scrollTop.label">Haut</span>
+        <span>{{ t.scrollTop.label }}</span>
     </button>
 
     <!-- Theme FAB -->
-    <button type="button" class="theme-fab" data-theme-toggle aria-pressed="false" aria-label="Activer le mode clair">
+    <button type="button" class="theme-fab" data-theme-toggle aria-pressed="false"
+            aria-label="{{ t.languageSwitcher.toLight }}"
+            data-to-light-label="{{ t.languageSwitcher.toLight }}"
+            data-to-dark-label="{{ t.languageSwitcher.toDark }}"
+            data-light-label="{{ t.languageSwitcher.modeLight }}"
+            data-dark-label="{{ t.languageSwitcher.modeDark }}">
         <i class="bi bi-moon-stars-fill" data-theme-icon aria-hidden="true"></i>
     </button>
 
@@ -324,13 +334,13 @@
             <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
                 <div class="mb-4 mb-sm-0">
                     <h5 class="font-marker">{{ site.title }}</h5>
-                    <p class="mt-1">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. <span data-i18n="footer.copyright">Tous droits réservés.</span></p>
+                    <p class="mt-1">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. <span>{{ t.footer.copyright }}</span></p>
                 </div>
 
                 <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-4 align-items-center">
-                    <a href="{{ '/support.html' | relative_url }}" data-i18n="footerLinks.contact">Nous contacter</a>
-                    <a href="{{ '/privacy.html' | relative_url }}" data-i18n="footerLinks.privacy">Politique de confidentialité</a>
-                    <a href="{{ '/terms.html' | relative_url }}" data-i18n="footerLinks.terms">Conditions d'utilisation</a>
+                    <a href="{{ '/support/' | relative_url }}">{{ t.footerLinks.contact }}</a>
+                    <a href="{{ '/privacy/' | relative_url }}">{{ t.footerLinks.privacy }}</a>
+                    <a href="{{ '/terms/' | relative_url }}">{{ t.footerLinks.terms }}</a>
                 </div>
             </div>
         </div>
@@ -341,18 +351,18 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="appStoreBetaModalLabel" data-i18n="storeModal.betaTitle">Application en bêta</h5>
+                    <h5 class="modal-title" id="appStoreBetaModalLabel">{{ t.storeModal.betaTitle }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="mb-3" data-i18n="storeModal.betaMessage">Book Nova est maintenant disponible sur l'App Store !</p>
-                    <a href="{{ site.app.ios_url }}" class="btn btn-primary w-100" target="_blank" rel="noopener noreferrer">
+                    <p class="mb-3">{{ t.storeModal.betaMessage }}</p>
+                    <a href="{{ app_store_url }}" class="btn btn-primary w-100" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-apple me-2"></i>
-                        <span data-i18n="storeModal.betaButton">Télécharger sur l'App Store</span>
+                        <span>{{ t.storeModal.betaButton }}</span>
                     </a>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="storeModal.close">Fermer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ t.storeModal.close }}</button>
                 </div>
             </div>
         </div>
@@ -363,14 +373,12 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="storeComingSoonModalLabel" data-i18n="storeModal.title">Disponible bientôt</h5>
+                    <h5 class="modal-title" id="storeComingSoonModalLabel">{{ t.storeModal.title }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" data-i18n="storeModal.message">
-                    La version iOS arrive très bientôt. Restez à l'écoute !
-                </div>
+                <div class="modal-body">{{ t.storeModal.message }}</div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-i18n="storeModal.close">Fermer</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{ t.storeModal.close }}</button>
                 </div>
             </div>
         </div>
@@ -381,151 +389,9 @@
 
     <!-- i18n Script -->
     {% assign current_page_url = page.url | default: '/' %}
-    {% assign is_home_template = false %}
-    {% if current_page_url == '/' or current_page_url == '/index.html' %}
-        {% assign is_home_template = true %}
-    {% endif %}
-    <script type="application/json" id="translationsData">
-{% if is_home_template %}
-{
-{% for lang in site.languages %}
-    {% assign lang_data = site.data.translations[lang] %}
-    "{{ lang }}": {
-        "nav": {{ lang_data.nav | jsonify }},
-        "hero": {{ lang_data.hero | jsonify }},
-        "features": {{ lang_data.features | jsonify }},
-        "screenshots": {{ lang_data.screenshots | jsonify }},
-        "reviews": {{ lang_data.reviews | jsonify }},
-        "story": {{ lang_data.story | jsonify }},
-        "cta": {{ lang_data.cta | jsonify }},
-        "storeModal": {{ lang_data.storeModal | jsonify }},
-        "footer": {{ lang_data.footer | jsonify }},
-        "footerLinks": {{ lang_data.footerLinks | jsonify }},
-        "languageSwitcher": {{ lang_data.languageSwitcher | jsonify }},
-        "faq": {
-            "title": {{ lang_data.faq.title | jsonify }},
-            "q1": {{ lang_data.faq.q1 | jsonify }},
-            "a1": {{ lang_data.faq.a1 | jsonify }},
-            "q1_intro": {{ lang_data.faq.q1_intro | jsonify }},
-            "q1_free_title": {{ lang_data.faq.q1_free_title | jsonify }},
-            "q1_free_limit1": {{ lang_data.faq.q1_free_limit1 | jsonify }},
-            "q1_free_limit2": {{ lang_data.faq.q1_free_limit2 | jsonify }},
-            "q1_free_limit3": {{ lang_data.faq.q1_free_limit3 | jsonify }},
-            "q1_free_limit4": {{ lang_data.faq.q1_free_limit4 | jsonify }},
-            "q1_free_limit5": {{ lang_data.faq.q1_free_limit5 | jsonify }},
-            "q1_premium_title": {{ lang_data.faq.q1_premium_title | jsonify }},
-            "q1_premium_limit1": {{ lang_data.faq.q1_premium_limit1 | jsonify }},
-            "q1_premium_limit2": {{ lang_data.faq.q1_premium_limit2 | jsonify }},
-            "q1_premium_limit3": {{ lang_data.faq.q1_premium_limit3 | jsonify }},
-            "q1_premium_limit4": {{ lang_data.faq.q1_premium_limit4 | jsonify }},
-            "q1_premium_limit5": {{ lang_data.faq.q1_premium_limit5 | jsonify }},
-            "q1_premium_limit6": {{ lang_data.faq.q1_premium_limit6 | jsonify }},
-            "q1_note": {{ lang_data.faq.q1_note | jsonify }},
-            "q6": {{ lang_data.faq.q6 | jsonify }},
-            "a6": {{ lang_data.faq.a6 | jsonify }},
-            "exportAvailable": {{ lang_data.faq.exportAvailable | jsonify }},
-            "exportAvailableDesc": {{ lang_data.faq.exportAvailableDesc | jsonify }},
-            "exportWhatTitle": {{ lang_data.faq.exportWhatTitle | jsonify }},
-            "exportBooks": {{ lang_data.faq.exportBooks | jsonify }},
-            "exportBadges": {{ lang_data.faq.exportBadges | jsonify }},
-            "exportLoans": {{ lang_data.faq.exportLoans | jsonify }},
-            "exportBorrows": {{ lang_data.faq.exportBorrows | jsonify }},
-            "exportExportTitle": {{ lang_data.faq.exportExportTitle | jsonify }},
-            "exportStep1": {{ lang_data.faq.exportStep1 | jsonify }},
-            "exportStep2": {{ lang_data.faq.exportStep2 | jsonify }},
-            "exportStep3": {{ lang_data.faq.exportStep3 | jsonify }},
-            "exportImportTitle": {{ lang_data.faq.exportImportTitle | jsonify }},
-            "importStep1": {{ lang_data.faq.importStep1 | jsonify }},
-            "importStep2": {{ lang_data.faq.importStep2 | jsonify }},
-            "importStep3": {{ lang_data.faq.importStep3 | jsonify }},
-            "importModesTitle": {{ lang_data.faq.importModesTitle | jsonify }},
-            "importReplace": {{ lang_data.faq.importReplace | jsonify }},
-            "importReplaceDesc": {{ lang_data.faq.importReplaceDesc | jsonify }},
-            "importMerge": {{ lang_data.faq.importMerge | jsonify }},
-            "importMergeDesc": {{ lang_data.faq.importMergeDesc | jsonify }},
-            "autoBackupTitle": {{ lang_data.faq.autoBackupTitle | jsonify }},
-            "autoBackupDesc": {{ lang_data.faq.autoBackupDesc | jsonify }},
-            "q7": {{ lang_data.faq.q7 | jsonify }},
-            "a7": {{ lang_data.faq.a7 | jsonify }},
-            "q8": {{ lang_data.faq.q8 | jsonify }},
-            "a8": {{ lang_data.faq.a8 | jsonify }},
-            "q8_intro": {{ lang_data.faq.q8_intro | jsonify }},
-            "q8_android_title": {{ lang_data.faq.q8_android_title | jsonify }},
-            "q8_android_step1": {{ lang_data.faq.q8_android_step1 | jsonify }},
-            "q8_android_step2": {{ lang_data.faq.q8_android_step2 | jsonify }},
-            "q8_android_step3": {{ lang_data.faq.q8_android_step3 | jsonify }},
-            "q8_android_step4": {{ lang_data.faq.q8_android_step4 | jsonify }},
-            "q8_android_step5": {{ lang_data.faq.q8_android_step5 | jsonify }},
-            "q8_android_step6": {{ lang_data.faq.q8_android_step6 | jsonify }},
-            "q8_ios_title": {{ lang_data.faq.q8_ios_title | jsonify }},
-            "q8_ios_step1": {{ lang_data.faq.q8_ios_step1 | jsonify }},
-            "q8_ios_step2": {{ lang_data.faq.q8_ios_step2 | jsonify }},
-            "q8_ios_step3": {{ lang_data.faq.q8_ios_step3 | jsonify }},
-            "q8_ios_step4": {{ lang_data.faq.q8_ios_step4 | jsonify }},
-            "q8_ios_step5": {{ lang_data.faq.q8_ios_step5 | jsonify }},
-            "q8_ios_step6": {{ lang_data.faq.q8_ios_step6 | jsonify }},
-            "q8_note_label": {{ lang_data.faq.q8_note_label | jsonify }},
-            "q8_note": {{ lang_data.faq.q8_note | jsonify }},
-            "q8_warning_label": {{ lang_data.faq.q8_warning_label | jsonify }},
-            "q8_warning": {{ lang_data.faq.q8_warning | jsonify }}
-        },
-        "faqHome": {
-            "more": {{ lang_data.supportPage.faq.seeDetailedFaq | jsonify }}
-        },
-        "banner": {{ lang_data.banner | jsonify }},
-        "scrollTop": {{ lang_data.scrollTop | jsonify }},
-        "medalEgg": {{ lang_data.medalEgg | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
-{% endfor %}
-}
-{% else %}
-{{ site.data.translations | jsonify }}
-{% endif %}
-    </script>
     <script>
-        const translations = JSON.parse(document.getElementById('translationsData').textContent);
-        const availableLangs = Object.keys(translations);
-
-        const storedLang = localStorage.getItem('language');
-
-        function isValidLang(lang) {
-            return availableLangs.includes(lang);
-        }
-
-        function getLangFromUrl() {
-            const params = new URLSearchParams(window.location.search);
-            const queryLang = params.get('lang');
-            if (isValidLang(queryLang)) {
-                return queryLang;
-            }
-
-            const hashMatch = window.location.hash.match(/lang=([a-z]{2})/i);
-            if (hashMatch && isValidLang(hashMatch[1])) {
-                return hashMatch[1];
-            }
-            return null;
-        }
-
-        function setLangInUrl(lang) {
-            const params = new URLSearchParams(window.location.search);
-            params.set('lang', lang);
-            const newUrl = `${window.location.pathname}?${params.toString()}${window.location.hash}`;
-            window.history.replaceState({}, '', newUrl);
-        }
-
-        let currentLang = getLangFromUrl() || storedLang || '{{ site.default_lang }}';
         const themeStorageKey = 'theme';
         let currentTheme = document.documentElement.classList.contains('theme-light') ? 'light' : 'dark';
-
-        if (!isValidLang(currentLang)) {
-            currentLang = '{{ site.default_lang }}';
-        }
-
-        if (storedLang !== currentLang) {
-            localStorage.setItem('language', currentLang);
-        }
-
-        setLangInUrl(currentLang);
 
         function getStoredTheme() {
             try {
@@ -538,12 +404,12 @@
         }
 
         function getThemeLabels() {
-            const switcher = translations[currentLang]?.languageSwitcher || {};
+            const btn = document.querySelector('[data-theme-toggle]');
             return {
-                toLight: switcher.toLight || 'Activer le mode clair',
-                toDark: switcher.toDark || 'Activer le mode nuit',
-                lightLabel: switcher.modeLight || 'Clair',
-                darkLabel: switcher.modeDark || 'Nuit'
+                toLight: btn?.dataset.toLightLabel || 'Activer le mode clair',
+                toDark: btn?.dataset.toDarkLabel || 'Activer le mode nuit',
+                lightLabel: btn?.dataset.lightLabel || 'Clair',
+                darkLabel: btn?.dataset.darkLabel || 'Nuit'
             };
         }
 
@@ -614,191 +480,20 @@
             });
         }
 
-        // Change language
-        function changeLanguage(lang) {
-            if (!isValidLang(lang)) {
-                return;
-            }
-            currentLang = lang;
-            localStorage.setItem('language', lang);
-            setLangInUrl(lang);
-            updateContent();
-            updateCurrentLanguage();
-            if (langDropdown) {
-                langDropdown.classList.remove('show');
-            }
+        // Language switching is now handled by polyglot URL navigation (links in the switcher)
 
-            // Fermer le menu burger mobile si ouvert
-            const navbarCollapse = document.getElementById('navbarNav');
-            const navbarToggler = document.querySelector('.navbar-toggler');
-
-            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                // Méthode 1: Cliquer sur le bouton toggle (le plus fiable)
-                if (navbarToggler && !navbarToggler.classList.contains('collapsed')) {
-                    navbarToggler.click();
-                } else {
-                    // Méthode 2: Utiliser l'API Bootstrap
-                    if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
-                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                        if (bsCollapse) {
-                            bsCollapse.hide();
-                        } else {
-                            // Créer une instance et fermer
-                            new bootstrap.Collapse(navbarCollapse, { toggle: false }).hide();
-                        }
-                    } else {
-                        // Méthode 3: Fallback manuel
-                        navbarCollapse.classList.remove('show');
-                    }
-                }
-            }
-        }
-
-        // Update content
-        function updateContent() {
-            const escapeHtml = (str) => str
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#39;');
-
-            const renderMultiline = (value) => {
-                const htmlParts = [];
-                const lines = value.split('\n');
-                let listBuffer = [];
-
-                const flushList = () => {
-                    if (!listBuffer.length) {
-                        return;
-                    }
-                    const items = listBuffer
-                        .map(item => `<li>${escapeHtml(item)}</li>`)
-                        .join('');
-                    htmlParts.push(`<ul>${items}</ul>`);
-                    listBuffer = [];
-                };
-
-                lines.forEach(line => {
-                    const trimmed = line.trim();
-
-                    if (!trimmed) {
-                        flushList();
-                        return;
-                    }
-
-                    if (trimmed.startsWith('- ')) {
-                        listBuffer.push(trimmed.slice(2));
-                        return;
-                    }
-
-                    flushList();
-                    htmlParts.push(`<p>${escapeHtml(trimmed)}</p>`);
-                });
-
-                flushList();
-                return htmlParts.join('');
-            };
-
-            document.querySelectorAll('[data-i18n]').forEach(elem => {
-                const key = elem.getAttribute('data-i18n');
-                const keys = key.split('.');
-                let value = translations[currentLang];
-
-                for (let k of keys) {
-                    if (value === undefined || value === null) {
-                        value = undefined;
-                        break;
-                    }
-                    value = value[k];
-                }
-
-                if (value) {
-                    if (elem.dataset.i18nHtml !== undefined) {
-                        elem.innerHTML = renderMultiline(value);
-                    } else {
-                        elem.textContent = value;
-                    }
-                }
-            });
-
-            // Update App Store links based on language
-            const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
-            appStoreLinks.forEach(link => {
-                const appId = 'id6752571289';
-                let langCode = currentLang;
-                // Map language codes to App Store regions
-                if (currentLang === 'en') {
-                    langCode = 'us';
-                } else if (currentLang === 'es') {
-                    langCode = 'es';
-                } else {
-                    langCode = 'fr';
-                }
-                link.href = `https://apps.apple.com/${langCode}/app/book-nova/${appId}`;
-            });
-
-            // Update screenshots based on language with responsive srcset
-            document.querySelectorAll('[data-screenshot]').forEach(node => {
-                const screenshotNum = node.getAttribute('data-screenshot');
-                if (!screenshotNum) {
-                    return;
-                }
-                const padded = screenshotNum.padStart(2, '0');
-                const basePath = `assets/screenshots/${currentLang}/${padded}`;
-                const webpSource = node.querySelector('source[type="image/webp"]');
-                const img = node.tagName.toLowerCase() === 'img' ? node : node.querySelector('img');
-
-                if (webpSource) {
-                    // Update srcset with responsive images
-                    webpSource.srcset = `${basePath}-small.webp 500w, ${basePath}-medium.webp 750w, ${basePath}.webp 1242w`;
-                }
-
-                if (img) {
-                    img.src = `${basePath}.png`;
-                    // S'assurer que les screenshots restent visibles après changement de langue
-                    if (!document.body.classList.contains('home-page') || img.classList.contains('visible')) {
-                        img.classList.add('visible');
-                    }
-                }
-            });
-
-            // Update active language in dropdown
-            document.querySelectorAll('.language-dropdown button').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('data-lang') === currentLang) {
-                    btn.classList.add('active');
-                }
-            });
-
-            // Update mobile language options state
-            document.querySelectorAll('.mobile-language-option').forEach(btn => {
-                const isActive = btn.getAttribute('data-lang') === currentLang;
-                btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-                const checkmark = btn.querySelector('.mobile-lang-checkmark');
-                if (checkmark) {
-                    checkmark.classList.toggle('d-none', !isActive);
-                }
-            });
-
-            syncThemeToggleButtons();
-        }
-
-        // Update current language display
-        function updateCurrentLanguage() {
-            const langNames = {
-                'fr': 'Français',
-                'en': 'English',
-                'es': 'Español'
-            };
-            const currentLangElem = document.getElementById('currentLang');
-            if (currentLangElem) {
-                currentLangElem.textContent = langNames[currentLang];
-            }
-        }
+        // Content is now server-rendered by jekyll-polyglot — no JS i18n needed
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
+            // Language switcher: navigate on click (polyglot rewrites href but not data-*)
+            document.querySelectorAll('[data-lang-url]').forEach(a => {
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = a.dataset.langUrl;
+                });
+            });
+
             // Status banner dismiss (désactivé — décommenter avec le HTML pour réactiver)
             // const statusBanner = document.getElementById('statusBanner');
             // const dismissBtn = document.getElementById('dismissBanner');
@@ -820,22 +515,7 @@
             }
             applyTheme(currentTheme, { persist: false });
 
-            updateContent();
-            updateCurrentLanguage();
-
-            document.querySelectorAll('.language-dropdown button[data-lang]').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const lang = btn.getAttribute('data-lang');
-                    changeLanguage(lang);
-                });
-            });
-
-            document.querySelectorAll('.mobile-language-option').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const lang = btn.getAttribute('data-lang');
-                    changeLanguage(lang);
-                });
-            });
+            // Language switching handled by polyglot URL navigation
 
             document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
                 btn.addEventListener('click', async (e) => {
@@ -929,22 +609,19 @@
                             // Show card after all medals vanish
                             const totalDelay = medals.length * 60 + 500;
                             setTimeout(() => {
-                                const egg = translations[currentLang]?.medalEgg || {};
-                                const eggTitle = egg.title || '35 médailles collectées !';
-                                const eggText = egg.text || 'Et toi, tes lectures font quelle taille ?';
-                                const eggCta = egg.cta || 'Télécharger l\'app';
-                                const closeLabel = translations[currentLang]?.storeModal?.close || 'Fermer';
-
-                                const appStoreRegion = currentLang === 'en' ? 'us' : currentLang === 'es' ? 'es' : 'fr';
-                                const appStoreUrl = 'https://apps.apple.com/' + appStoreRegion + '/app/book-nova/id6752571289';
+                                const eggTitle = medalRain?.dataset.eggTitle || '35 médailles collectées !';
+                                const eggText = medalRain?.dataset.eggText || 'Et toi, tes lectures font quelle taille ?';
+                                const eggCta = medalRain?.dataset.eggCta || 'Télécharger l\'app';
+                                const closeLabel = medalRain?.dataset.closeLabel || 'Fermer';
+                                const appStoreUrl = medalRain?.dataset.appStoreUrl || 'https://apps.apple.com/fr/app/book-nova/id6752571289';
 
                                 const card = document.createElement('div');
                                 card.className = 'medal-complete-card';
                                 card.innerHTML =
                                     '<button class="medal-complete-card__close" aria-label="' + closeLabel + '"><i class="bi bi-x-lg"></i></button>'
-                                    + '<p class="medal-complete-card__title" data-i18n="medalEgg.title">' + eggTitle + '</p>'
-                                    + '<p class="medal-complete-card__text" data-i18n="medalEgg.text">' + eggText + '</p>'
-                                    + '<p class="medal-complete-card__cta-label" data-i18n="medalEgg.cta">' + eggCta + '</p>'
+                                    + '<p class="medal-complete-card__title">' + eggTitle + '</p>'
+                                    + '<p class="medal-complete-card__text">' + eggText + '</p>'
+                                    + '<p class="medal-complete-card__cta-label">' + eggCta + '</p>'
                                     + '<div class="medal-complete-card__stores">'
                                     + '<a href="' + appStoreUrl + '" class="medal-complete-card__store" target="_blank" rel="noopener noreferrer">'
                                     + '<i class="bi bi-apple"></i> App Store</a>'
@@ -1019,7 +696,7 @@
 
             // Détecter si on est sur la page d'accueil et ajouter la classe
             const path = window.location.pathname;
-            const isHomePage = path === '/' || path === '/index.html' || path.endsWith('/');
+            const isHomePage = path === '/' || path === '/index.html' || path === '/en/' || path === '/es/';
 
             if (isHomePage) {
                 document.body.classList.add('home-page');

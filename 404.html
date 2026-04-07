@@ -3,14 +3,17 @@ layout: default
 permalink: /404.html
 title: 404
 ---
+{% assign t = site.data.translations[site.active_lang] %}
 
 <section class="privacy-section">
     <div class="privacy-wrapper">
         <div class="privacy-card text-center">
             <div class="mb-4" style="font-size: 4rem; font-weight: 700; color: var(--primary-color);">404</div>
-            <h1 class="privacy-title" data-i18n="notFound.title">Page introuvable</h1>
-            <p class="mt-3 mb-4" data-i18n="notFound.message">Nous n'avons pas pu trouver la page que vous cherchez.</p>
-            <a href="{{ '/' | relative_url }}" class="btn-download mx-auto" data-i18n="notFound.cta">Retour à l'accueil</a>
+            <h1 class="privacy-title">{{ t.notFound.title }}</h1>
+            <div class="privacy-section-content">
+                <p class="mt-3 mb-4">{{ t.notFound.message }}</p>
+            </div>
+            <a href="{{ '/' | relative_url }}" class="btn-download mx-auto">{{ t.notFound.cta }}</a>
         </div>
     </div>
 </section>

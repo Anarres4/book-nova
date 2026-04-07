@@ -2,15 +2,22 @@
 layout: default
 title: "Book Nova — Application mobile pour organiser vos lectures"
 description: "Book Nova vous aide à gérer votre bibliothèque, suivre votre progression et découvrir de nouveaux livres sur iOS et Android."
-lang: "fr"
 permalink: "/"
 last_modified_at: 2026-04-06
 ---
+{% assign t = site.data.translations[site.active_lang] %}
+{% if site.active_lang == 'en' %}{% assign store_region = 'us' %}{% elsif site.active_lang == 'es' %}{% assign store_region = 'es' %}{% else %}{% assign store_region = 'fr' %}{% endif %}
+{% assign app_store_url = 'https://apps.apple.com/' | append: store_region | append: '/app/book-nova/id6752571289' %}
 
 <!-- Hero Section -->
 <section class="hero-section" id="download">
     <div class="container">
-        <div class="medal-rain" aria-hidden="true"></div>
+        <div class="medal-rain" aria-hidden="true"
+             data-egg-title="{{ t.medalEgg.title }}"
+             data-egg-text="{{ t.medalEgg.text }}"
+             data-egg-cta="{{ t.medalEgg.cta }}"
+             data-close-label="{{ t.storeModal.close }}"
+             data-app-store-url="{{ app_store_url }}"></div>
         <div class="row align-items-center g-4 g-md-5">
             <!-- Left side with app logo -->
             <div class="col-md-6 d-flex justify-content-center justify-content-md-end order-md-2">
@@ -43,15 +50,15 @@ last_modified_at: 2026-04-06
 
             <!-- Right side with text -->
             <div class="col-md-6 text-center text-md-start order-md-1">
-                <p class="hero-tagline text-uppercase fw-bold tracking-wider mb-3" data-i18n="hero.tagline">La lecture, ça se mesure. (En girafes.)</p>
-                <h1 class="hero-title fw-bold mb-2" data-i18n="hero.title">Vos lectures font quelle taille ?</h1>
-                <p class="hero-seo-subtitle text-muted mb-3" data-i18n="hero.seoSubtitle">Application de bibliothèque personnelle pour iOS et Android</p>
-                <p class="hero-subtitle mb-4 mb-md-5" data-i18n="hero.subtitle">Chaque livre terminé s'ajoute à votre pile. Dépassez un chihuahua, puis un flamant rose, puis… vous-même.</p>
+                <p class="hero-tagline text-uppercase fw-bold tracking-wider mb-3">{{ t.hero.tagline }}</p>
+                <h1 class="hero-title fw-bold mb-2">{{ t.hero.title }}</h1>
+                <p class="hero-seo-subtitle text-muted mb-3">{{ t.hero.seoSubtitle }}</p>
+                <p class="hero-subtitle mb-4 mb-md-5">{{ t.hero.subtitle }}</p>
 
                 <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3 mb-4 mb-md-0" id="download-buttons">
-                    <a href="https://apps.apple.com/fr/app/book-nova/id6752571289" class="btn-download" target="_blank" rel="noopener noreferrer" role="button">
+                    <a href="{{ app_store_url }}" class="btn-download" target="_blank" rel="noopener noreferrer" role="button">
                         <i class="bi bi-apple me-2"></i>
-                        <span data-i18n="hero.app_store">App Store</span>
+                        <span>{{ t.hero.app_store }}</span>
                     </a>
                     <a href="https://play.google.com/store/apps/details?id=com.quantumash.bigbangbook.app" class="btn-download" target="_blank" rel="noopener noreferrer" role="button">
                         <svg class="google-play-icon me-2" viewBox="0 0 28.99 31.99" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
@@ -60,7 +67,7 @@ last_modified_at: 2026-04-06
                             <path d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z" fill="#4285f4"/>
                             <path d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z" fill="#34a853"/>
                         </svg>
-                        <span data-i18n="hero.google_play">Google Play</span>
+                        <span>{{ t.hero.google_play }}</span>
                     </a>
                 </div>
             </div>
@@ -73,7 +80,7 @@ last_modified_at: 2026-04-06
     <!-- Titre centré -->
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="section-title text-white" data-i18n="screenshots.title">Découvrez l'application</h2>
+            <h2 class="section-title text-white">{{ t.screenshots.title }}</h2>
         </div>
     </div>
 
@@ -82,57 +89,57 @@ last_modified_at: 2026-04-06
         <div class="screenshots-scroll d-flex gap-3 gap-md-4 pb-4" id="screenshotsContainer">
             <picture class="screenshot-picture" data-screenshot="1">
                 <source
-                    srcset="{{ 'assets/screenshots/fr/01-small.webp' | relative_url }} 500w,
-                            {{ 'assets/screenshots/fr/01-medium.webp' | relative_url }} 750w,
-                            {{ 'assets/screenshots/fr/01.webp' | relative_url }} 1242w"
+                    srcset="{{ "/assets/screenshots/" | append: site.active_lang | append: "/01-small.webp" | relative_url }} 500w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/01-medium.webp" | relative_url }} 750w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/01.webp" | relative_url }} 1242w"
                     sizes="(max-width: 768px) 180px, 231px"
                     type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/01.png' | relative_url }}" alt="Application de gestion de bibliothèque Book Nova - tableau de bord de lecture avec suivi de progression" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
+                <img src="{{ "/assets/screenshots/" | append: site.active_lang | append: "/01.png" | relative_url }}" alt="Application de gestion de bibliothèque Book Nova - tableau de bord de lecture avec suivi de progression" class="screenshot-item visible" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="2">
                 <source
-                    srcset="{{ 'assets/screenshots/fr/02-small.webp' | relative_url }} 500w,
-                            {{ 'assets/screenshots/fr/02-medium.webp' | relative_url }} 750w,
-                            {{ 'assets/screenshots/fr/02.webp' | relative_url }} 1242w"
+                    srcset="{{ "/assets/screenshots/" | append: site.active_lang | append: "/02-small.webp" | relative_url }} 500w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/02-medium.webp" | relative_url }} 750w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/02.webp" | relative_url }} 1242w"
                     sizes="(max-width: 768px) 180px, 231px"
                     type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/02.png' | relative_url }}" alt="Statistiques de lecture détaillées dans Book Nova - visualisez vos habitudes de lecture et objectifs" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
+                <img src="{{ "/assets/screenshots/" | append: site.active_lang | append: "/02.png" | relative_url }}" alt="Statistiques de lecture détaillées dans Book Nova - visualisez vos habitudes de lecture et objectifs" class="screenshot-item visible" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="3">
                 <source
-                    srcset="{{ 'assets/screenshots/fr/03-small.webp' | relative_url }} 500w,
-                            {{ 'assets/screenshots/fr/03-medium.webp' | relative_url }} 750w,
-                            {{ 'assets/screenshots/fr/03.webp' | relative_url }} 1242w"
+                    srcset="{{ "/assets/screenshots/" | append: site.active_lang | append: "/03-small.webp" | relative_url }} 500w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/03-medium.webp" | relative_url }} 750w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/03.webp" | relative_url }} 1242w"
                     sizes="(max-width: 768px) 180px, 231px"
                     type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/03.png' | relative_url }}" alt="Fiche livre complète Book Nova - organisez votre collection avec informations et notes" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
+                <img src="{{ "/assets/screenshots/" | append: site.active_lang | append: "/03.png" | relative_url }}" alt="Fiche livre complète Book Nova - organisez votre collection avec informations et notes" class="screenshot-item visible" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="4">
                 <source
-                    srcset="{{ 'assets/screenshots/fr/04-small.webp' | relative_url }} 500w,
-                            {{ 'assets/screenshots/fr/04-medium.webp' | relative_url }} 750w,
-                            {{ 'assets/screenshots/fr/04.webp' | relative_url }} 1242w"
+                    srcset="{{ "/assets/screenshots/" | append: site.active_lang | append: "/04-small.webp" | relative_url }} 500w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/04-medium.webp" | relative_url }} 750w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/04.webp" | relative_url }} 1242w"
                     sizes="(max-width: 768px) 180px, 231px"
                     type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/04.png' | relative_url }}" alt="Gestion des prêts de livres Book Nova - suivez vos livres prêtés avec rappels automatiques" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
+                <img src="{{ "/assets/screenshots/" | append: site.active_lang | append: "/04.png" | relative_url }}" alt="Gestion des prêts de livres Book Nova - suivez vos livres prêtés avec rappels automatiques" class="screenshot-item visible" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="5">
                 <source
-                    srcset="{{ 'assets/screenshots/fr/05-small.webp' | relative_url }} 500w,
-                            {{ 'assets/screenshots/fr/05-medium.webp' | relative_url }} 750w,
-                            {{ 'assets/screenshots/fr/05.webp' | relative_url }} 1242w"
+                    srcset="{{ "/assets/screenshots/" | append: site.active_lang | append: "/05-small.webp" | relative_url }} 500w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/05-medium.webp" | relative_url }} 750w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/05.webp" | relative_url }} 1242w"
                     sizes="(max-width: 768px) 180px, 231px"
                     type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/05.png' | relative_url }}" alt="Défis de lecture et badges Book Nova - gamification pour motiver vos lectures" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
+                <img src="{{ "/assets/screenshots/" | append: site.active_lang | append: "/05.png" | relative_url }}" alt="Défis de lecture et badges Book Nova - gamification pour motiver vos lectures" class="screenshot-item visible" loading="lazy" decoding="async" width="231" height="500">
             </picture>
             <picture class="screenshot-picture" data-screenshot="6">
                 <source
-                    srcset="{{ 'assets/screenshots/fr/06-small.webp' | relative_url }} 500w,
-                            {{ 'assets/screenshots/fr/06-medium.webp' | relative_url }} 750w,
-                            {{ 'assets/screenshots/fr/06.webp' | relative_url }} 1242w"
+                    srcset="{{ "/assets/screenshots/" | append: site.active_lang | append: "/06-small.webp" | relative_url }} 500w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/06-medium.webp" | relative_url }} 750w,
+                            {{ "/assets/screenshots/" | append: site.active_lang | append: "/06.webp" | relative_url }} 1242w"
                     sizes="(max-width: 768px) 180px, 231px"
                     type="image/webp">
-                <img src="{{ 'assets/screenshots/fr/06.png' | relative_url }}" alt="Paramètres multilingues Book Nova - application disponible en français, anglais et espagnol" class="screenshot-item" loading="lazy" decoding="async" width="231" height="500">
+                <img src="{{ "/assets/screenshots/" | append: site.active_lang | append: "/06.png" | relative_url }}" alt="Paramètres multilingues Book Nova - application disponible en français, anglais et espagnol" class="screenshot-item visible" loading="lazy" decoding="async" width="231" height="500">
             </picture>
         </div>
     </div>
@@ -142,9 +149,9 @@ last_modified_at: 2026-04-06
 <section class="reviews-section" id="reviews">
     <div class="container">
         <div class="text-center mb-5">
-            <p class="reviews-kicker text-uppercase fw-semibold mb-2" data-i18n="reviews.kicker">Avis vérifiés</p>
-            <h2 class="section-title text-white mb-3" data-i18n="reviews.title">Nos notes sur les stores</h2>
-            <p class="reviews-subtitle mb-0" data-i18n="reviews.subtitle">Notes officielles et extraits de vrais commentaires publiés sur App Store et Google Play.</p>
+            <p class="reviews-kicker text-uppercase fw-semibold mb-2">{{ t.reviews.kicker }}</p>
+            <h2 class="section-title text-white mb-3">{{ t.reviews.title }}</h2>
+            <p class="reviews-subtitle mb-0">{{ t.reviews.subtitle }}</p>
         </div>
 
         <div class="store-ratings-grid mb-4">
@@ -154,10 +161,10 @@ last_modified_at: 2026-04-06
                     <p class="store-score-value">{{ site.data.ratings.app_store.rating }}<span>/5</span></p>
                 </div>
                 <div class="store-score-right">
-                    <p class="store-score-label" data-i18n="reviews.appStore">App Store</p>
+                    <p class="store-score-label">{{ t.reviews.appStore }}</p>
                     <p class="store-score-stars" aria-hidden="true"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"></p>
-                    <p class="store-score-meta"><strong>{{ site.data.ratings.app_store.count }}</strong> <span data-i18n="reviews.ratingsLabel">avis</span></p>
-                    <a href="https://apps.apple.com/fr/app/book-nova/id6752571289" class="store-score-link" data-i18n="reviews.seeStore" target="_blank" rel="noopener noreferrer">Voir le store</a>
+                    <p class="store-score-meta"><strong>{{ site.data.ratings.app_store.count }}</strong> <span>{{ t.reviews.ratingsLabel }}</span></p>
+                    <a href="{{ app_store_url }}" class="store-score-link" target="_blank" rel="noopener noreferrer">{{ t.reviews.seeStore }}</a>
                 </div>
             </div>
 
@@ -174,10 +181,10 @@ last_modified_at: 2026-04-06
                     <p class="store-score-value">{{ site.data.ratings.google_play.rating }}<span>/5</span></p>
                 </div>
                 <div class="store-score-right">
-                    <p class="store-score-label" data-i18n="reviews.googlePlay">Google Play</p>
+                    <p class="store-score-label">{{ t.reviews.googlePlay }}</p>
                     <p class="store-score-stars" aria-hidden="true"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"><img src="{{ '/assets/images/star_full.svg' | relative_url }}" alt="" width="22" height="22"></p>
-                    <p class="store-score-meta"><strong>{{ site.data.ratings.google_play.count }}</strong> <span data-i18n="reviews.ratingsLabel">avis</span></p>
-                    <a href="https://play.google.com/store/apps/details?id=com.quantumash.bigbangbook.app" class="store-score-link" data-i18n="reviews.seeStore" target="_blank" rel="noopener noreferrer">Voir le store</a>
+                    <p class="store-score-meta"><strong>{{ site.data.ratings.google_play.count }}</strong> <span>{{ t.reviews.ratingsLabel }}</span></p>
+                    <a href="https://play.google.com/store/apps/details?id=com.quantumash.bigbangbook.app" class="store-score-link" target="_blank" rel="noopener noreferrer">{{ t.reviews.seeStore }}</a>
                 </div>
             </div>
         </div>
@@ -220,7 +227,7 @@ last_modified_at: 2026-04-06
             </article>
         </div>
 
-        <p class="reviews-disclaimer mb-0 mt-4" data-i18n="reviews.snapshot">Données relevées le 12 février 2026. Extraits raccourcis des commentaires publics.</p>
+        <p class="reviews-disclaimer mb-0 mt-4">{{ t.reviews.snapshot }}</p>
     </div>
 </section>
 
@@ -228,8 +235,8 @@ last_modified_at: 2026-04-06
 <section class="features-section" id="features">
     <div class="container">
         <div class="features-heading text-center">
-            <h2 class="section-title mb-0" data-i18n="features.title">Ta bibliothèque personnelle qui t'accompagne</h2>
-            <p class="features-subtitle mb-0" data-i18n="features.subtitle">Six fonctionnalités clés pour garder tes lectures motivantes, organisées et faciles à suivre.</p>
+            <h2 class="section-title mb-0">{{ t.features.title }}</h2>
+            <p class="features-subtitle mb-0">{{ t.features.subtitle }}</p>
         </div>
 
         <div class="features-grid">
@@ -240,8 +247,8 @@ last_modified_at: 2026-04-06
                     </span>
                     <span class="feature-chip" aria-hidden="true">01</span>
                 </div>
-                <h3 data-i18n="features.library.title">Gestion intelligente</h3>
-                <p data-i18n="features.library.description">Scanne, organise et visualise ta collection de livres avec une précision millimétrique.</p>
+                <h3>{{ t.features.library.title }}</h3>
+                <p>{{ t.features.library.description }}</p>
             </article>
 
             <article class="feature-card feature-card--badges" style="--feature-delay: 0.14s;">
@@ -251,8 +258,8 @@ last_modified_at: 2026-04-06
                     </span>
                     <span class="feature-chip" aria-hidden="true">02</span>
                 </div>
-                <h3 data-i18n="features.badges.title">Badges & progression</h3>
-                <p data-i18n="features.badges.description">Des défis qui t'encouragent à lire plus et à diversifier tes lectures.</p>
+                <h3>{{ t.features.badges.title }}</h3>
+                <p>{{ t.features.badges.description }}</p>
             </article>
 
             <article class="feature-card feature-card--tracking" style="--feature-delay: 0.22s;">
@@ -262,8 +269,8 @@ last_modified_at: 2026-04-06
                     </span>
                     <span class="feature-chip" aria-hidden="true">03</span>
                 </div>
-                <h3 data-i18n="features.tracking.title">Suivi de lecture</h3>
-                <p data-i18n="features.tracking.description">Garde une trace de ta progression et célèbre chaque page tournée.</p>
+                <h3>{{ t.features.tracking.title }}</h3>
+                <p>{{ t.features.tracking.description }}</p>
             </article>
 
             <article class="feature-card feature-card--loans" style="--feature-delay: 0.30s;">
@@ -273,8 +280,8 @@ last_modified_at: 2026-04-06
                     </span>
                     <span class="feature-chip" aria-hidden="true">04</span>
                 </div>
-                <h3 data-i18n="features.loans.title">Prêts simplifiés</h3>
-                <p data-i18n="features.loans.description">Ne perds plus jamais un livre : suis tes prêts et reçois des rappels automatiques.</p>
+                <h3>{{ t.features.loans.title }}</h3>
+                <p>{{ t.features.loans.description }}</p>
             </article>
 
             <article class="feature-card feature-card--discover" style="--feature-delay: 0.38s;">
@@ -284,8 +291,8 @@ last_modified_at: 2026-04-06
                     </span>
                     <span class="feature-chip" aria-hidden="true">05</span>
                 </div>
-                <h3 data-i18n="features.discover.title">Découvrir</h3>
-                <p data-i18n="features.discover.description">Découvre de nouveaux livres grâce aux recommandations de la communauté.</p>
+                <h3>{{ t.features.discover.title }}</h3>
+                <p>{{ t.features.discover.description }}</p>
             </article>
 
             <article class="feature-card feature-card--stats" style="--feature-delay: 0.46s;">
@@ -295,8 +302,8 @@ last_modified_at: 2026-04-06
                     </span>
                     <span class="feature-chip" aria-hidden="true">06</span>
                 </div>
-                <h3 data-i18n="features.stats.title">Statistiques détaillées</h3>
-                <p data-i18n="features.stats.description">Visualise ton évolution de lecteur et découvre tes habitudes de lecture.</p>
+                <h3>{{ t.features.stats.title }}</h3>
+                <p>{{ t.features.stats.description }}</p>
             </article>
         </div>
     </div>
@@ -309,15 +316,15 @@ last_modified_at: 2026-04-06
             <div class="story-heading text-center">
                 <span class="story-kicker">
                     <i class="bi bi-stars" aria-hidden="true"></i>
-                    <span data-i18n="nav.about">À propos</span>
+                    <span>{{ t.nav.about }}</span>
                 </span>
-                <h2 class="section-title" data-i18n="story.title">Derrière Book Nova</h2>
+                <h2 class="section-title">{{ t.story.title }}</h2>
             </div>
             <div class="story-card">
-                <p class="story-text" data-i18n="story.p1">Un couple. Une passion commune pour la lecture. Et une idée un peu folle : mesurer nos lectures en hauteur jusqu'à atteindre notre propre taille.</p>
-                <p class="story-text" data-i18n="story.p2">Pas de startup, pas d'investisseurs. Juste deux amoureux des livres qui ont créé l'app qu'ils auraient voulu avoir.</p>
-                <a href="{{ '/about.html' | relative_url }}" class="story-link">
-                    <span data-i18n="story.link">Découvrir notre histoire</span>
+                <p class="story-text">{{ t.story.p1 }}</p>
+                <p class="story-text">{{ t.story.p2 }}</p>
+                <a href="{{ '/about/' | relative_url }}" class="story-link">
+                    <span>{{ t.story.link }}</span>
                     <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                 </a>
             </div>
@@ -328,48 +335,48 @@ last_modified_at: 2026-04-06
 <!-- FAQ Section -->
 <section class="faq-section" id="faq">
     <div class="container">
-        <h2 class="section-title text-white" data-i18n="faq.title">Questions fréquentes</h2>
+        <h2 class="section-title text-white">{{ t.faq.title }}</h2>
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="accordion faq-compact" id="faqAccordion">
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="faqHeading1">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
-                                <span data-i18n="faq.q1">Book Nova est-elle gratuite ?</span>
+                                <span>{{ t.faq.q1 }}</span>
                             </button>
                         </h3>
                         <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 <div class="faq-explainer-block">
-                                    <p class="mb-0" data-i18n="faq.q1_intro">Oui, Book Nova est disponible gratuitement avec certaines limitations.</p>
+                                    <p class="mb-0">{{ t.faq.q1_intro }}</p>
                                 </div>
 
                                 <div class="faq-explainer-grid">
                                     <div class="faq-explainer-block">
-                                        <p class="faq-block-title" data-i18n="faq.q1_free_title">Version gratuite</p>
+                                        <p class="faq-block-title">{{ t.faq.q1_free_title }}</p>
                                         <ul class="mb-0">
-                                            <li data-i18n="faq.q1_free_limit1">Jusqu'à 4 livres ajoutés par jour</li>
-                                            <li data-i18n="faq.q1_free_limit2">Maximum 150 livres AJOUTÉS au total</li>
-                                            <li data-i18n="faq.q1_free_limit3">Jusqu'à 3 prêts/emprunts simultanés</li>
-                                            <li data-i18n="faq.q1_free_limit4">Calendrier de lecture</li>
-                                            <li data-i18n="faq.q1_free_limit5">Accès aux badges de base</li>
+                                            <li>{{ t.faq.q1_free_limit1 }}</li>
+                                            <li>{{ t.faq.q1_free_limit2 }}</li>
+                                            <li>{{ t.faq.q1_free_limit3 }}</li>
+                                            <li>{{ t.faq.q1_free_limit4 }}</li>
+                                            <li>{{ t.faq.q1_free_limit5 }}</li>
                                         </ul>
                                     </div>
                                     <div class="faq-explainer-block">
-                                        <p class="faq-block-title" data-i18n="faq.q1_premium_title">Version premium</p>
+                                        <p class="faq-block-title">{{ t.faq.q1_premium_title }}</p>
                                         <ul class="mb-0">
-                                            <li data-i18n="faq.q1_premium_limit1">Ajout illimité de livres par jour</li>
-                                            <li data-i18n="faq.q1_premium_limit2">Livres terminés illimités</li>
-                                            <li data-i18n="faq.q1_premium_limit3">Prêts et emprunts illimités</li>
-                                            <li data-i18n="faq.q1_premium_limit4">Statistiques de lecture de base (par mois/par an)</li>
-                                            <li data-i18n="faq.q1_premium_limit5">Statistiques détaillées avancées</li>
-                                            <li data-i18n="faq.q1_premium_limit6">Accès à tous les badges et médailles premium</li>
+                                            <li>{{ t.faq.q1_premium_limit1 }}</li>
+                                            <li>{{ t.faq.q1_premium_limit2 }}</li>
+                                            <li>{{ t.faq.q1_premium_limit3 }}</li>
+                                            <li>{{ t.faq.q1_premium_limit4 }}</li>
+                                            <li>{{ t.faq.q1_premium_limit5 }}</li>
+                                            <li>{{ t.faq.q1_premium_limit6 }}</li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div class="faq-explainer-block mb-0">
-                                    <p class="mb-0" data-i18n="faq.q1_note">Toutes les fonctionnalités principales restent accessibles gratuitement !</p>
+                                    <p class="mb-0">{{ t.faq.q1_note }}</p>
                                 </div>
                             </div>
                         </div>
@@ -378,12 +385,12 @@ last_modified_at: 2026-04-06
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="faqHeading7">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
-                                <span data-i18n="faq.q7">Ai-je besoin d'une connexion internet ?</span>
+                                <span>{{ t.faq.q7 }}</span>
                             </button>
                         </h3>
                         <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body" data-i18n="faq.a7" data-i18n-html>
-                                La connexion internet n'est requise que pour certaines fonctionnalités.
+                            <div class="accordion-body">
+                                {{ t.faq.a7 | markdownify }}
                             </div>
                         </div>
                     </div>
@@ -391,46 +398,46 @@ last_modified_at: 2026-04-06
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="faqHeading8">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
-                                <span data-i18n="faq.q8">Comment annuler ma période d'essai ?</span>
+                                <span>{{ t.faq.q8 }}</span>
                             </button>
                         </h3>
                         <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 <div class="faq-explainer-block">
-                                    <p class="mb-0" data-i18n="faq.q8_intro">Vous pouvez annuler votre période d'essai directement depuis votre store.</p>
+                                    <p class="mb-0">{{ t.faq.q8_intro }}</p>
                                 </div>
 
                                 <div class="faq-explainer-grid">
                                     <div class="faq-explainer-block">
-                                        <p class="faq-block-title" data-i18n="faq.q8_android_title">Sur Android</p>
+                                        <p class="faq-block-title">{{ t.faq.q8_android_title }}</p>
                                         <ol class="mb-0">
-                                            <li data-i18n="faq.q8_android_step1">Ouvrez l'application Google Play Store</li>
-                                            <li data-i18n="faq.q8_android_step2">Appuyez sur votre photo de profil en haut à droite</li>
-                                            <li data-i18n="faq.q8_android_step3">Sélectionnez Paiements et abonnements &gt; Abonnements</li>
-                                            <li data-i18n="faq.q8_android_step4">Trouvez BookNova dans la liste</li>
-                                            <li data-i18n="faq.q8_android_step5">Appuyez sur Annuler l'abonnement</li>
-                                            <li data-i18n="faq.q8_android_step6">Suivez les instructions pour confirmer</li>
+                                            <li>{{ t.faq.q8_android_step1 }}</li>
+                                            <li>{{ t.faq.q8_android_step2 }}</li>
+                                            <li>{{ t.faq.q8_android_step3 }}</li>
+                                            <li>{{ t.faq.q8_android_step4 }}</li>
+                                            <li>{{ t.faq.q8_android_step5 }}</li>
+                                            <li>{{ t.faq.q8_android_step6 }}</li>
                                         </ol>
                                     </div>
                                     <div class="faq-explainer-block">
-                                        <p class="faq-block-title" data-i18n="faq.q8_ios_title">Sur iOS (iPhone/iPad)</p>
+                                        <p class="faq-block-title">{{ t.faq.q8_ios_title }}</p>
                                         <ol class="mb-0">
-                                            <li data-i18n="faq.q8_ios_step1">Ouvrez l'application Réglages de votre appareil</li>
-                                            <li data-i18n="faq.q8_ios_step2">Appuyez sur votre nom en haut de l'écran</li>
-                                            <li data-i18n="faq.q8_ios_step3">Sélectionnez Abonnements</li>
-                                            <li data-i18n="faq.q8_ios_step4">Trouvez BookNova dans la liste</li>
-                                            <li data-i18n="faq.q8_ios_step5">Appuyez sur Annuler l'abonnement ou Annuler l'essai gratuit</li>
-                                            <li data-i18n="faq.q8_ios_step6">Confirmez l'annulation</li>
+                                            <li>{{ t.faq.q8_ios_step1 }}</li>
+                                            <li>{{ t.faq.q8_ios_step2 }}</li>
+                                            <li>{{ t.faq.q8_ios_step3 }}</li>
+                                            <li>{{ t.faq.q8_ios_step4 }}</li>
+                                            <li>{{ t.faq.q8_ios_step5 }}</li>
+                                            <li>{{ t.faq.q8_ios_step6 }}</li>
                                         </ol>
                                     </div>
                                 </div>
 
                                 <div class="faq-explainer-block">
-                                    <p class="mb-0"><strong data-i18n="faq.q8_note_label">Note :</strong> <span data-i18n="faq.q8_note">Vous conservez l'accès aux fonctionnalités premium jusqu'à la fin de votre période d'essai.</span></p>
+                                    <p class="mb-0"><strong>{{ t.faq.q8_note_label }}</strong> <span>{{ t.faq.q8_note }}</span></p>
                                 </div>
 
                                 <div class="faq-explainer-block faq-explainer-warning mb-0">
-                                    <p class="mb-0"><strong data-i18n="faq.q8_warning_label">Important :</strong> <span data-i18n="faq.q8_warning">L'annulation doit être effectuée au moins 24 heures avant la fin de la période d'essai pour éviter d'être facturé.</span></p>
+                                    <p class="mb-0"><strong>{{ t.faq.q8_warning_label }}</strong> <span>{{ t.faq.q8_warning }}</span></p>
                                 </div>
                             </div>
                         </div>
@@ -439,56 +446,56 @@ last_modified_at: 2026-04-06
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="faqHeading6">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
-                                <span data-i18n="faq.q6">Puis-je exporter ma bibliothèque ?</span>
+                                <span>{{ t.faq.q6 }}</span>
                             </button>
                         </h3>
                         <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 <div class="faq-explainer-block">
-                                    <p class="faq-block-title" data-i18n="faq.exportAvailable">Oui, depuis la version 1.11.4 !</p>
-                                    <p class="mb-0" data-i18n="faq.exportAvailableDesc">Vous pouvez exporter et importer toutes vos données.</p>
+                                    <p class="faq-block-title">{{ t.faq.exportAvailable }}</p>
+                                    <p class="mb-0">{{ t.faq.exportAvailableDesc }}</p>
                                 </div>
 
                                 <div class="faq-explainer-block">
-                                    <p class="faq-block-title" data-i18n="faq.exportWhatTitle">Ce qui est exporté :</p>
+                                    <p class="faq-block-title">{{ t.faq.exportWhatTitle }}</p>
                                     <ul>
-                                        <li data-i18n="faq.exportBooks">Tous vos livres</li>
-                                        <li data-i18n="faq.exportBadges">Vos badges</li>
-                                        <li data-i18n="faq.exportLoans">Vos prêts</li>
-                                        <li data-i18n="faq.exportBorrows">Vos emprunts</li>
+                                        <li>{{ t.faq.exportBooks }}</li>
+                                        <li>{{ t.faq.exportBadges }}</li>
+                                        <li>{{ t.faq.exportLoans }}</li>
+                                        <li>{{ t.faq.exportBorrows }}</li>
                                     </ul>
                                 </div>
 
                                 <div class="faq-explainer-grid">
                                     <div class="faq-explainer-block">
-                                        <p class="faq-block-title" data-i18n="faq.exportExportTitle">Exporter</p>
+                                        <p class="faq-block-title">{{ t.faq.exportExportTitle }}</p>
                                         <ol>
-                                            <li data-i18n="faq.exportStep1">Allez dans Paramètres</li>
-                                            <li data-i18n="faq.exportStep2">Cliquez sur "Exporter mes données"</li>
-                                            <li data-i18n="faq.exportStep3">Un fichier JSON sera créé</li>
+                                            <li>{{ t.faq.exportStep1 }}</li>
+                                            <li>{{ t.faq.exportStep2 }}</li>
+                                            <li>{{ t.faq.exportStep3 }}</li>
                                         </ol>
                                     </div>
                                     <div class="faq-explainer-block">
-                                        <p class="faq-block-title" data-i18n="faq.exportImportTitle">Importer</p>
+                                        <p class="faq-block-title">{{ t.faq.exportImportTitle }}</p>
                                         <ol>
-                                            <li data-i18n="faq.importStep1">Allez dans Paramètres</li>
-                                            <li data-i18n="faq.importStep2">Cliquez sur "Importer mes données"</li>
-                                            <li data-i18n="faq.importStep3">Sélectionnez votre fichier</li>
+                                            <li>{{ t.faq.importStep1 }}</li>
+                                            <li>{{ t.faq.importStep2 }}</li>
+                                            <li>{{ t.faq.importStep3 }}</li>
                                         </ol>
                                     </div>
                                 </div>
 
                                 <div class="faq-explainer-block">
-                                    <p class="faq-block-title" data-i18n="faq.importModesTitle">Modes d'import :</p>
+                                    <p class="faq-block-title">{{ t.faq.importModesTitle }}</p>
                                     <ul>
-                                        <li><strong data-i18n="faq.importReplace">Remplacer</strong> : <span data-i18n="faq.importReplaceDesc">efface les données existantes</span></li>
-                                        <li><strong data-i18n="faq.importMerge">Fusionner</strong> : <span data-i18n="faq.importMergeDesc">ajoute sans doublons</span></li>
+                                        <li><strong>{{ t.faq.importReplace }}</strong> : <span>{{ t.faq.importReplaceDesc }}</span></li>
+                                        <li><strong>{{ t.faq.importMerge }}</strong> : <span>{{ t.faq.importMergeDesc }}</span></li>
                                     </ul>
                                 </div>
 
                                 <div class="faq-explainer-block mb-0">
-                                    <p class="faq-block-title" data-i18n="faq.autoBackupTitle">Sauvegarde automatique</p>
-                                    <p class="mb-0" data-i18n="faq.autoBackupDesc">L'application effectue une sauvegarde automatique hebdomadaire sur votre appareil.</p>
+                                    <p class="faq-block-title">{{ t.faq.autoBackupTitle }}</p>
+                                    <p class="mb-0">{{ t.faq.autoBackupDesc }}</p>
                                 </div>
                             </div>
                         </div>
@@ -496,7 +503,7 @@ last_modified_at: 2026-04-06
                 </div>
 
                 <div class="text-center mt-4">
-                    <a href="{{ '/support.html#support-faq' | relative_url }}" class="btn btn-outline-light" data-i18n="faqHome.more">voir FAQ détaillée</a>
+                    <a href="{{ '/support/#support-faq' | relative_url }}" class="btn btn-outline-light">{{ t.supportPage.faq.seeDetailedFaq }}</a>
                 </div>
             </div>
         </div>
@@ -507,10 +514,10 @@ last_modified_at: 2026-04-06
 
 <section class="cta-section" id="contact">
     <div class="container text-center">
-        <h2 class="mb-4" data-i18n="cta.title">Prêt à commencer ?</h2>
-        <p class="lead mb-4" data-i18n="cta.subtitle">Téléchargez BookNova dès maintenant et transformez votre expérience de lecture</p>
+        <h2 class="mb-4">{{ t.cta.title }}</h2>
+        <p class="lead mb-4">{{ t.cta.subtitle }}</p>
         <div class="app-buttons">
-            <a href="https://apps.apple.com/fr/app/book-nova/id6752571289" class="store-badge" target="_blank" rel="noopener noreferrer" role="button">
+            <a href="{{ app_store_url }}" class="store-badge" target="_blank" rel="noopener noreferrer" role="button">
                 <i class="bi bi-apple"></i>
                 <div>
                     <small style="font-size: 0.7rem;">Télécharger sur</small><br>
@@ -531,8 +538,8 @@ last_modified_at: 2026-04-06
             </a>
         </div>
         <p class="mt-4 mb-0 text-white-50">
-            <span data-i18n="cta.contactPrompt">Besoin d'aide ?</span>
-            <a href="{{ '/support.html' | relative_url }}" class="text-white fw-semibold" data-i18n="cta.contactLink">Contactez-nous</a>
+            <span>{{ t.cta.contactPrompt }}</span>
+            <a href="{{ '/support/' | relative_url }}" class="text-white fw-semibold">{{ t.cta.contactLink }}</a>
         </p>
     </div>
 </section>

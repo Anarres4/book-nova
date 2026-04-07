@@ -18,6 +18,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag", "~> 2.8"
   gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-polyglot", "~> 1.8"
 end
 
 # Fix pour le warning logger dans Ruby 3.5+
