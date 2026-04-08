@@ -63,9 +63,9 @@ sass:
   sourcemap: never
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
   - jekyll-polyglot
+# jekyll-seo-tag removed: we generate our own meta tags with localized titles/descriptions
+# jekyll-sitemap removed: replaced by custom sitemap.xml with hreflang annotations
 
 # Defaults pour les metadata
 defaults:

@@ -1,0 +1,35 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% assign pages = site.pages | where_exp: "p", "p.sitemap != false" %}
+{% for p in pages %}{% if p.permalink and p.permalink != "/sitemap-page.html" and p.permalink != "/404.html" and p.url != "/feed.xml" and p.name contains ".html" %}
+  <url>
+    <loc>{{ site.url }}{{ p.permalink }}</loc>
+    {% if p.last_modified_at %}<lastmod>{{ p.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}{{ p.permalink }}" />
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ p.permalink }}" />
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}/es{{ p.permalink }}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ p.permalink }}" />
+  </url>
+  <url>
+    <loc>{{ site.url }}/en{{ p.permalink }}</loc>
+    {% if p.last_modified_at %}<lastmod>{{ p.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}{{ p.permalink }}" />
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ p.permalink }}" />
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}/es{{ p.permalink }}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ p.permalink }}" />
+  </url>
+  <url>
+    <loc>{{ site.url }}/es{{ p.permalink }}</loc>
+    {% if p.last_modified_at %}<lastmod>{{ p.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}{{ p.permalink }}" />
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ p.permalink }}" />
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}/es{{ p.permalink }}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ p.permalink }}" />
+  </url>
+{% endif %}{% endfor %}
+</urlset>
