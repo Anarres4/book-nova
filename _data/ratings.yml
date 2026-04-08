@@ -3,8 +3,8 @@
 
 app_store:
   rating: 4.7
-  count: 146
+  count: 184
 
 google_play:
-  rating: 4.6
-  count: 325
+  rating: 4.5
+  count: 404
