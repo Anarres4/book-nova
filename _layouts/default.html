@@ -68,7 +68,8 @@
     <link rel="alternate" hreflang="fr" href="{{ site.url }}{{ page_path }}">
     <link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ page_path }}">
     <link rel="alternate" hreflang="es" href="{{ site.url }}/es{{ page_path }}">
-    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page_path }}">
+    <link rel="alternate" hreflang="x-default" href="#" id="hreflang-x-default">
+    <script>document.getElementById('hreflang-x-default').href=document.querySelector('link[hreflang="fr"]').href;</script>
 
     <meta name="robots" content="index, follow">
 
@@ -78,6 +79,7 @@
     {% assign app_logo = site.logo | default: site.hero_image %}
     {% assign offer_url = app_store_url | default: site.app.ios_url %}
     {% assign os_string = site.app.operating_systems | join: ', ' %}
+    {% if page.url == "/" or page.url == "/index.html" %}
     {% capture app_json %}
 {
   "@context": "https://schema.org",
@@ -112,6 +114,7 @@
 }
     {% endcapture %}
     <script type="application/ld+json">{{ app_json | strip_newlines }}</script>
+    {% endif %}
 
     <script type="application/ld+json">
     {
