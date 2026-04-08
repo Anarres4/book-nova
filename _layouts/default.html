@@ -74,7 +74,7 @@
 
     {% assign page_lang = site.active_lang | default: 'fr' %}
     {% assign app_name = site.app.name | default: site.title %}
-    {% assign sanitized_description = page.description | default: site.description | strip_html | strip %}
+    {% assign sanitized_description = localized_description | strip_html | strip %}
     {% assign app_logo = site.logo | default: site.hero_image %}
     {% assign offer_url = app_store_url | default: site.app.ios_url %}
     {% assign os_string = site.app.operating_systems | join: ', ' %}
@@ -112,6 +112,21 @@
 }
     {% endcapture %}
     <script type="application/ld+json">{{ app_json | strip_newlines }}</script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ site.title | jsonify }},
+      "url": {{ site.url | jsonify }},
+      "inLanguage": {{ page_lang | jsonify }},
+      "description": {{ sanitized_description | jsonify }},
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ site.company_name | default: site.title | jsonify }}
+      }
+    }
+    </script>
 
     {% if page.url == "/" or page.url == "/index.html" %}
     {% capture faq_json %}
