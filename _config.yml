@@ -28,6 +28,7 @@ url: "https://book-nova.com" # Update with the production domain
 
 # Branding
 hero_image: "/assets/images/hero-logo.png"
+og_image: "/assets/images/og-preview.png"
 hero_image_webp: "/assets/images/hero-logo.webp"
 logo: "/assets/images/hero-logo.png"
 
