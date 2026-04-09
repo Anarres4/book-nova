@@ -806,14 +806,27 @@
         ttq.page();
         }(window, document, 'ttq');
 
-        // Track store button clicks
+        // Capture ttclid from URL for TikTok attribution
+        var params = new URLSearchParams(window.location.search);
+        var ttclid = params.get('ttclid');
+        if (ttclid) {
+            document.cookie = 'ttclid=' + ttclid + ';max-age=2592000;path=/;SameSite=Lax';
+        }
+
+        // ViewContent — signals page interest to TikTok funnel
+        ttq.track('ViewContent', {
+            content_type: 'product',
+            content_id: 'book_nova_app'
+        });
+
+        // AddToCart — store button clicks (vertical funnel event)
         document.addEventListener('click', function(e) {
             var link = e.target.closest('a[href*="apps.apple.com"], a[href*="play.google.com"]');
             if (!link) return;
             if (link.href.indexOf('apps.apple.com') !== -1) {
-                ttq.track('ClickButton', { content_type: 'App Store iOS', content_id: 'ios_store_button' });
+                ttq.track('AddToCart', { content_type: 'product', content_id: 'book_nova_ios', value: 0, currency: 'EUR' });
             } else if (link.href.indexOf('play.google.com') !== -1) {
-                ttq.track('ClickButton', { content_type: 'Google Play Android', content_id: 'android_store_button' });
+                ttq.track('AddToCart', { content_type: 'product', content_id: 'book_nova_android', value: 0, currency: 'EUR' });
             }
         });
     });
