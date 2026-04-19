@@ -67,6 +67,7 @@ fr:
     betaNote: "Cette version est encore en bêta : vos retours sont précieux."
   footer:
     copyright: "Tous droits réservés."
+    editor: "Édité par"
   footerLinks:
     contact: "Nous contacter"
     privacy: "Politique de confidentialité"
@@ -889,6 +890,7 @@ en:
     betaNote: "This build is still in beta—your feedback is invaluable."
   footer:
     copyright: "All rights reserved."
+    editor: "Published by"
   footerLinks:
     contact: "Contact Us"
     privacy: "Privacy Policy"
@@ -1710,6 +1712,7 @@ es:
     betaNote: "Esta versión aún está en beta; tus comentarios son muy valiosos."
   footer:
     copyright: "Todos los derechos reservados."
+    editor: "Editado por"
   footerLinks:
     contact: "Contáctenos"
     privacy: "Política de privacidad"
