@@ -3,6 +3,12 @@
 > Application mobile de gestion de bibliothèque personnelle pour iOS et Android.
 > Mesurez vos lectures en empilant vos livres — dépassez un chihuahua, puis un flamant rose, puis vous-même.
 
+## Versions linguistiques
+
+- Français (cette page) : https://book-nova.com/llms.txt
+- English : https://book-nova.com/en/llms.txt
+- Español : https://book-nova.com/es/llms.txt
+
 ## À propos
 
 Book Nova est une application de lecture créée par Ana et Florent, deux passionnés de lecture basés à Paris, France. L'application permet de scanner, organiser et suivre sa collection de livres avec un concept unique : chaque livre terminé s'ajoute à une pile virtuelle dont la hauteur est comparée à des repères amusants (animaux, objets, votre propre taille).
@@ -24,16 +30,16 @@ Book Nova est une application de lecture créée par Ana et Florent, deux passio
 
 ## Notes des stores
 
-- App Store : 4.7/5 (146 avis)
-- Google Play : 4.6/5 (325 avis)
+- App Store : 4.7/5 (184 avis)
+- Google Play : 4.5/5 (404 avis)
 
 ## Pages principales
 
 - Page d'accueil : https://book-nova.com/
-- À propos : https://book-nova.com/about.html
-- Support : https://book-nova.com/support.html
-- Politique de confidentialité : https://book-nova.com/privacy.html
-- Conditions d'utilisation : https://book-nova.com/terms.html
+- À propos : https://book-nova.com/about/
+- Support : https://book-nova.com/support/
+- Politique de confidentialité : https://book-nova.com/privacy/
+- Conditions d'utilisation : https://book-nova.com/terms/
 
 ## Téléchargement
 

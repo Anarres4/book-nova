@@ -86,8 +86,19 @@
     {% assign offer_url = app_store_url | default: site.app.ios_url %}
     {% assign os_string = site.app.operating_systems | join: ', ' %}
     {% assign is_home = false %}{% if page.url == "/" or page.url == "/index.html" %}{% assign is_home = true %}{% endif %}
-    {% assign about_path = '/about.html' %}
-    {% if site.active_lang == 'en' %}{% assign about_path = '/en/about.html' %}{% elsif site.active_lang == 'es' %}{% assign about_path = '/es/about.html' %}{% endif %}
+    {% assign about_path = '/about/' %}
+    {% if site.active_lang == 'en' %}{% assign about_path = '/en/about/' %}{% elsif site.active_lang == 'es' %}{% assign about_path = '/es/about/' %}{% endif %}
+
+    {% assign home_url = site.url | append: '/' %}
+    {% if site.active_lang == 'en' %}{% assign home_url = site.url | append: '/en/' %}{% elsif site.active_lang == 'es' %}{% assign home_url = site.url | append: '/es/' %}{% endif %}
+    {% assign breadcrumb_label = '' %}
+    {% if is_home == false %}
+      {% if page.url contains 'about' %}{% assign breadcrumb_label = t.nav.about %}
+      {% elsif page.url contains 'support' %}{% assign breadcrumb_label = t.nav.support %}
+      {% elsif page.url contains 'privacy' %}{% assign breadcrumb_label = t.footerLinks.privacy %}
+      {% elsif page.url contains 'terms' %}{% assign breadcrumb_label = t.footerLinks.terms %}
+      {% endif %}
+    {% endif %}
 
     {% capture graph_json %}
 {
@@ -231,6 +242,24 @@
             "@type": "Answer",
             "text": {{ t.faq.a7 | jsonify }}
           }
+        }
+      ]
+    }{% endif %}{% if breadcrumb_label != '' %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ canonical_url }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ t.nav.home | jsonify }},
+          "item": {{ home_url | jsonify }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ breadcrumb_label | jsonify }},
+          "item": {{ canonical_url | jsonify }}
         }
       ]
     }{% endif %}

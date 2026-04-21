@@ -1,0 +1,51 @@
+# Book Nova
+
+> Personal library management mobile app for iOS and Android.
+> Measure your reading by stacking your books — beat a chihuahua, then a flamingo, then your own height.
+
+## Language versions
+
+- English (this page): https://book-nova.com/en/llms.txt
+- Français: https://book-nova.com/llms.txt
+- Español: https://book-nova.com/es/llms.txt
+
+## About
+
+Book Nova is a reading app created by Ana and Florent, two reading enthusiasts based in Paris, France. The app lets you scan, organize and track your book collection with a unique concept: every finished book stacks into a virtual pile whose height is compared to fun benchmarks (animals, objects, your own height).
+
+## Key features
+
+- Smart library management (ISBN scan, manual entry)
+- Badge system and progression (100+ badges)
+- Reading tracking with detailed statistics
+- Book lending and borrowing management
+- Discover new books
+- Data export and import (since v1.11.4)
+- Available in French, English, and Spanish
+
+## Pricing
+
+- Free plan: 4 books added per day, 150 books total, 3 concurrent loans
+- Premium plan: unlimited
+
+## Store ratings
+
+- App Store: 4.7/5 (184 reviews)
+- Google Play: 4.5/5 (404 reviews)
+
+## Main pages
+
+- Home: https://book-nova.com/en/
+- About: https://book-nova.com/en/about/
+- Support: https://book-nova.com/en/support/
+- Privacy Policy: https://book-nova.com/en/privacy/
+- Terms of Use: https://book-nova.com/en/terms/
+
+## Download
+
+- App Store: https://apps.apple.com/us/app/book-nova/id6752571289
+- Google Play: https://play.google.com/store/apps/details?id=com.quantumash.bigbangbook.app
+
+## Contact
+
+- Email: book-nova@outlook.fr
