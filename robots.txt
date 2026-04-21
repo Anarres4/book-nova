@@ -1,4 +1,60 @@
+# robots.txt — book-nova.com
+# Default: all well-behaved crawlers welcome.
 User-agent: *
+Allow: /
+
+# ──────────────────────────────────────────────────────────────
+# AI search & training crawlers — explicitly allowed.
+# Redundant with "User-agent: *" above, but future-proofs against
+# bots that only respect their own named directives, and makes
+# the permission intent unambiguous for agent audits.
+# ──────────────────────────────────────────────────────────────
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI (Gemini training + AI Overviews corpus)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (feeds many LLM training corpora)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Amazon AI
+User-agent: Amazonbot
 Allow: /
 
 Sitemap: https://book-nova.com/sitemap.xml
