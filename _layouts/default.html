@@ -85,152 +85,159 @@
     {% assign app_logo = site.logo | default: site.hero_image %}
     {% assign offer_url = app_store_url | default: site.app.ios_url %}
     {% assign os_string = site.app.operating_systems | join: ', ' %}
-    {% if page.url == "/" or page.url == "/index.html" %}
-    {% capture app_json %}
+    {% assign is_home = false %}{% if page.url == "/" or page.url == "/index.html" %}{% assign is_home = true %}{% endif %}
+    {% assign about_path = '/about.html' %}
+    {% if site.active_lang == 'en' %}{% assign about_path = '/en/about.html' %}{% elsif site.active_lang == 'es' %}{% assign about_path = '/es/about.html' %}{% endif %}
+
+    {% capture graph_json %}
 {
   "@context": "https://schema.org",
-  "@type": "{{ site.app.category | default: 'SoftwareApplication' }}",
-  "name": {{ app_name | jsonify }},
-  "operatingSystem": {{ os_string | jsonify }},
-  "applicationCategory": "LifestyleApplication",
-  "inLanguage": {{ page_lang | jsonify }},
-  "description": {{ sanitized_description | jsonify }},
-  "url": {{ canonical_url | jsonify }},
-  "image": {{ app_logo | absolute_url | jsonify }},
-  "publisher": {
-    "@type": "Organization",
-    "name": {{ site.company_name | default: site.title | jsonify }},
-    "url": {{ site.url | default: canonical_url | jsonify }},
-    "email": {{ site.company_email | jsonify }}
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": {{ site.app.price | default: '0' | jsonify }},
-    "priceCurrency": {{ site.app.price_currency | default: 'EUR' | jsonify }},
-    "url": {{ offer_url | jsonify }},
-    "availability": "https://schema.org/InStock"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "{{ site.data.ratings.app_store.rating | plus: site.data.ratings.google_play.rating | divided_by: 2.0 }}",
-    "reviewCount": "{{ site.data.ratings.app_store.count | plus: site.data.ratings.google_play.count }}",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
-}
-    {% endcapture %}
-    <script type="application/ld+json">{{ app_json | strip_newlines }}</script>
-    {% endif %}
-
-    <script type="application/ld+json">
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": {{ site.title | jsonify }},
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": {{ site.company_name | default: site.title | jsonify }},
       "url": {{ site.url | jsonify }},
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "{{ site.url }}/#logo",
+        "url": {{ app_logo | absolute_url | jsonify }},
+        "caption": {{ site.title | jsonify }}
+      },
+      "image": { "@id": "{{ site.url }}/#logo" },
+      "email": {{ site.company_email | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": {{ site.company_email | jsonify }},
+        "contactType": "customer support",
+        "availableLanguage": ["French", "English", "Spanish"]
+      },
+      "sameAs": [
+        {{ site.app.ios_url | jsonify }},
+        {{ site.app.android_url | jsonify }}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": {{ site.url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ sanitized_description | jsonify }},
+      "inLanguage": {{ page_lang | jsonify }},
+      "publisher": { "@id": "{{ site.url }}/#organization" },
+      "copyrightHolder": { "@id": "{{ site.url }}/#organization" },
+      "copyrightYear": "{{ site.time | date: '%Y' }}",
+      "knowsAbout": [
+        "Reading tracker",
+        "Personal library management",
+        "ISBN scanner",
+        "Book lending tracker",
+        "Reading statistics",
+        "Mobile reading app"
+      ],
+      "publishingPrinciples": {{ site.url | append: about_path | jsonify }}
+    }{% if is_home %},
+    {
+      "@type": "{{ site.app.category | default: 'SoftwareApplication' }}",
+      "@id": "{{ canonical_url }}#app",
+      "name": {{ app_name | jsonify }},
+      "operatingSystem": {{ os_string | jsonify }},
+      "applicationCategory": "LifestyleApplication",
       "inLanguage": {{ page_lang | jsonify }},
       "description": {{ sanitized_description | jsonify }},
-      "publisher": {
-        "@type": "Organization",
-        "name": {{ site.company_name | default: site.title | jsonify }}
-      }
-    }
-    </script>
-
-    {% if page.url == "/" or page.url == "/index.html" %}
-    {% capture faq_json %}
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": {{ t.faq.q1 | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ t.faq.a1 | default: t.faq.q1_intro | jsonify }}
+      "url": {{ canonical_url | jsonify }},
+      "image": { "@id": "{{ site.url }}/#logo" },
+      "publisher": { "@id": "{{ site.url }}/#organization" },
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      "offers": {
+        "@type": "Offer",
+        "price": {{ site.app.price | default: '0' | jsonify }},
+        "priceCurrency": {{ site.app.price_currency | default: 'EUR' | jsonify }},
+        "url": {{ offer_url | jsonify }},
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ site.data.ratings.app_store.rating | plus: site.data.ratings.google_play.rating | divided_by: 2.0 }}",
+        "reviewCount": "{{ site.data.ratings.app_store.count | plus: site.data.ratings.google_play.count }}",
+        "bestRating": "5",
+        "worstRating": "1"
       }
     },
     {
-      "@type": "Question",
-      "name": {{ t.faq.q2 | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ t.faq.a2 | jsonify }}
-      }
-    },
-    {
-      "@type": "Question",
-      "name": {{ t.faq.q3 | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ t.faq.a3 | jsonify }}
-      }
-    },
-    {
-      "@type": "Question",
-      "name": {{ t.faq.q4 | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ t.faq.a4 | jsonify }}
-      }
-    },
-    {
-      "@type": "Question",
-      "name": {{ t.faq.q5 | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ t.faq.a5 | jsonify }}
-      }
-    },
-    {
-      "@type": "Question",
-      "name": {{ t.faq.q6 | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ t.faq.a6 | jsonify }}
-      }
-    },
-    {
-      "@type": "Question",
-      "name": {{ t.faq.q7 | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ t.faq.a7 | jsonify }}
-      }
-    }
+      "@type": "FAQPage",
+      "@id": "{{ canonical_url }}#faq",
+      "inLanguage": {{ page_lang | jsonify }},
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      "about": { "@id": "{{ canonical_url }}#app" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": {{ t.faq.q1 | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ t.faq.a1 | default: t.faq.q1_intro | jsonify }}
+          }
+        },
+        {
+          "@type": "Question",
+          "name": {{ t.faq.q2 | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ t.faq.a2 | jsonify }}
+          }
+        },
+        {
+          "@type": "Question",
+          "name": {{ t.faq.q3 | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ t.faq.a3 | jsonify }}
+          }
+        },
+        {
+          "@type": "Question",
+          "name": {{ t.faq.q4 | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ t.faq.a4 | jsonify }}
+          }
+        },
+        {
+          "@type": "Question",
+          "name": {{ t.faq.q5 | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ t.faq.a5 | jsonify }}
+          }
+        },
+        {
+          "@type": "Question",
+          "name": {{ t.faq.q6 | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ t.faq.a6 | jsonify }}
+          }
+        },
+        {
+          "@type": "Question",
+          "name": {{ t.faq.q7 | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ t.faq.a7 | jsonify }}
+          }
+        }
+      ]
+    }{% endif %}
   ]
 }
     {% endcapture %}
-    <script type="application/ld+json">{{ faq_json | strip_newlines }}</script>
-    {% endif %}
-
-    {% capture org_json %}
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": {{ site.company_name | default: site.title | jsonify }},
-  "url": {{ site.url | jsonify }},
-  "logo": {{ app_logo | absolute_url | jsonify }},
-  "email": {{ site.company_email | jsonify }},
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Paris",
-    "addressCountry": "FR"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": {{ site.company_email | jsonify }},
-    "contactType": "customer support",
-    "availableLanguage": ["French", "English", "Spanish"]
-  },
-  "sameAs": [
-    {{ site.app.ios_url | jsonify }},
-    {{ site.app.android_url | jsonify }}
-  ]
-}
-    {% endcapture %}
-    <script type="application/ld+json">{{ org_json | strip_newlines }}</script>
+    <script type="application/ld+json">{{ graph_json | strip_newlines }}</script>
 
     <!-- Preload critical font to prevent CLS -->
     <link rel="preload" href="{{ '/assets/fonts/permanent-marker-regular.ttf' | relative_url }}" as="font" type="font/ttf" crossorigin>
