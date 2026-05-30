@@ -18,6 +18,7 @@ Book Nova is a reading app created by Ana and Florent, two reading enthusiasts b
 - Smart library management (ISBN scan, manual entry)
 - Badge system and progression (100+ badges)
 - Reading tracking with detailed statistics
+- Custom collections and reading notes (unlimited final note on finished books)
 - Book lending and borrowing management
 - Discover new books
 - Data export and import (since v1.11.4)
@@ -25,8 +26,8 @@ Book Nova is a reading app created by Ana and Florent, two reading enthusiasts b
 
 ## Pricing
 
-- Free plan: 4 books added per day, 150 books total, 3 concurrent loans
-- Premium plan: unlimited
+- Free plan: 4 books added per day, 150 books total, 4 collections, 3 reading notes, 3 concurrent loans (unlimited final note)
+- Premium plan: unlimited (collections and reading notes included)
 
 ## Store ratings
 

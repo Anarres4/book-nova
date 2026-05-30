@@ -88,6 +88,9 @@ fr:
       📱 VERSION GRATUITE :
       - Jusqu'à 4 livres ajoutés par jour
       - Maximum 150 livres AJOUTÉS au total
+      - Jusqu'à 4 collections personnalisées
+      - Jusqu'à 3 notes de lecture
+      - Note finale illimitée sur les livres terminés
       - Jusqu'à 3 prêts/emprunts simultanés
       - Calendrier de lecture
       - Accès aux badges de base
@@ -95,6 +98,8 @@ fr:
       💎 VERSION PREMIUM :
       - Ajout illimité de livres par jour
       - Livres terminés illimités
+      - Collections personnalisées illimitées
+      - Notes de lecture illimitées
       - Prêts et emprunts illimités
       - Statistiques de lecture de base (par mois/par an)
       - Statistiques détaillées avancées
@@ -105,16 +110,21 @@ fr:
     q1_free_title: "Version gratuite"
     q1_free_limit1: "Jusqu'à 4 livres ajoutés par jour"
     q1_free_limit2: "Maximum 150 livres AJOUTÉS au total"
-    q1_free_limit3: "Jusqu'à 3 prêts/emprunts simultanés"
-    q1_free_limit4: "Calendrier de lecture"
-    q1_free_limit5: "Accès aux badges de base"
+    q1_free_limit3: "Jusqu'à 4 collections personnalisées"
+    q1_free_limit4: "Jusqu'à 3 notes de lecture"
+    q1_free_limit5: "Note finale illimitée sur les livres terminés"
+    q1_free_limit6: "Jusqu'à 3 prêts/emprunts simultanés"
+    q1_free_limit7: "Calendrier de lecture"
+    q1_free_limit8: "Accès aux badges de base"
     q1_premium_title: "Version premium"
     q1_premium_limit1: "Ajout illimité de livres par jour"
     q1_premium_limit2: "Livres terminés illimités"
-    q1_premium_limit3: "Prêts et emprunts illimités"
-    q1_premium_limit4: "Statistiques de lecture de base (par mois/par an)"
-    q1_premium_limit5: "Statistiques détaillées avancées"
-    q1_premium_limit6: "Accès à tous les badges et médailles premium"
+    q1_premium_limit3: "Collections personnalisées illimitées"
+    q1_premium_limit4: "Notes de lecture illimitées"
+    q1_premium_limit5: "Prêts et emprunts illimités"
+    q1_premium_limit6: "Statistiques de lecture de base (par mois/par an)"
+    q1_premium_limit7: "Statistiques détaillées avancées"
+    q1_premium_limit8: "Accès à tous les badges et médailles premium"
     q1_note: "Toutes les fonctionnalités principales restent accessibles gratuitement !"
     q2: "Puis-je suivre mes prêts de livres ?"
     a2: |-
@@ -558,6 +568,7 @@ fr:
           - "Visualiser la hauteur de votre pile de livres en fonction de votre taille"
           - "Scanner des codes-barres ISBN pour récupérer automatiquement les informations des livres"
           - "Suivre vos prêts et emprunts de livres"
+          - "Créer des collections personnalisées, prendre des notes de lecture et rédiger une note finale sur les livres terminés"
           - "Débloquer des badges et relever des défis de lecture"
           - "Consulter des statistiques personnalisées et recevoir des recommandations anonymes mises à jour régulièrement"
         note: "L'Application fonctionne hors ligne pour la plupart des actions. Une synchronisation hebdomadaire via Firebase (Google Cloud) envoie une copie chiffrée de vos livres, catégories et notes afin de générer ces recommandations."
@@ -608,7 +619,7 @@ fr:
             - "L'exactitude des données fournies par ISBNdb"
         limits:
           title: "5.2 Limitations de la Version Gratuite"
-          body: "Les utilisateurs de la version gratuite sont limités à 4 livres ajoutés par jour, un maximum de 150 livres ajoutés au total, et jusqu'à 3 prêts/emprunts simultanés. Les utilisateurs premium ne sont pas soumis à ces limites."
+          body: "Les utilisateurs de la version gratuite sont limités à 4 livres ajoutés par jour, un maximum de 150 livres ajoutés au total, 4 collections personnalisées, 3 notes de lecture et jusqu'à 3 prêts/emprunts simultanés. La note finale sur les livres terminés reste illimitée. Les utilisateurs premium ne sont pas soumis à ces limites (collections personnalisées et notes de lecture illimitées)."
       accounts:
         title: "6. Comptes et Authentification"
         noAccount:
@@ -630,6 +641,8 @@ fr:
           items:
             - "Validations illimitées avec métadonnées via ISBNdb"
             - "Ajout de livres sans limite quotidienne"
+            - "Collections personnalisées illimitées"
+            - "Notes de lecture illimitées"
             - "Statistiques de lecture de base (par mois/par an)"
             - "Statistiques détaillées avancées"
             - "Accès à des challenges et médailles exclusifs."
@@ -911,6 +924,9 @@ en:
       📱 FREE VERSION:
       - Up to 4 books added per day
       - Maximum 150 books ADDED in total
+      - Up to 4 custom collections
+      - Up to 3 reading notes
+      - Unlimited final note on finished books
       - Up to 3 simultaneous loans/borrows
       - Reading calendar
       - Access to core badges
@@ -918,6 +934,8 @@ en:
       💎 PREMIUM VERSION:
       - Unlimited book additions per day
       - Unlimited finished books
+      - Unlimited custom collections
+      - Unlimited reading notes
       - Unlimited loans and borrows
       - Basic reading stats (monthly/yearly)
       - Advanced detailed statistics
@@ -928,16 +946,21 @@ en:
     q1_free_title: "Free version"
     q1_free_limit1: "Up to 4 books added per day"
     q1_free_limit2: "Maximum 150 books ADDED in total"
-    q1_free_limit3: "Up to 3 simultaneous loans/borrows"
-    q1_free_limit4: "Reading calendar"
-    q1_free_limit5: "Access to core badges"
+    q1_free_limit3: "Up to 4 custom collections"
+    q1_free_limit4: "Up to 3 reading notes"
+    q1_free_limit5: "Unlimited final note on finished books"
+    q1_free_limit6: "Up to 3 simultaneous loans/borrows"
+    q1_free_limit7: "Reading calendar"
+    q1_free_limit8: "Access to core badges"
     q1_premium_title: "Premium version"
     q1_premium_limit1: "Unlimited book additions per day"
     q1_premium_limit2: "Unlimited finished books"
-    q1_premium_limit3: "Unlimited loans and borrows"
-    q1_premium_limit4: "Basic reading stats (monthly/yearly)"
-    q1_premium_limit5: "Advanced detailed statistics"
-    q1_premium_limit6: "Access to all premium badges and medals"
+    q1_premium_limit3: "Unlimited custom collections"
+    q1_premium_limit4: "Unlimited reading notes"
+    q1_premium_limit5: "Unlimited loans and borrows"
+    q1_premium_limit6: "Basic reading stats (monthly/yearly)"
+    q1_premium_limit7: "Advanced detailed statistics"
+    q1_premium_limit8: "Access to all premium badges and medals"
     q1_note: "All core features remain free to use!"
     q2: "Can I track my book loans?"
     a2: |-
@@ -1381,6 +1404,7 @@ en:
           - "Visualize the height of your book stack based on your own height"
           - "Scan ISBN barcodes to automatically retrieve book information"
           - "Track books you lend or borrow"
+          - "Create custom collections, take reading notes, and write a final note on finished books"
           - "Unlock badges and take on reading challenges"
           - "View personalized statistics and receive anonymous recommendations updated regularly"
         note: "The App works offline for most actions. A weekly synchronisation with Firebase (Google Cloud) sends an encrypted copy of your books, categories, and ratings to generate these recommendations."
@@ -1431,7 +1455,7 @@ en:
             - "The accuracy of the data provided by ISBNdb"
         limits:
           title: "5.2 Free Plan Limits"
-          body: "Free users are limited to 4 books added per day, a maximum of 150 books added in total, and up to 3 simultaneous loans/borrows. Premium subscribers are not subject to these limits."
+          body: "Free users are limited to 4 books added per day, a maximum of 150 books added in total, 4 custom collections, 3 reading notes, and up to 3 simultaneous loans/borrows. The final note on finished books remains unlimited. Premium subscribers are not subject to these limits (unlimited custom collections and reading notes)."
       accounts:
         title: "6. Accounts and Authentication"
         noAccount:
@@ -1453,6 +1477,8 @@ en:
           items:
             - "Unlimited metadata validations via ISBNdb"
             - "Unlimited book additions each day"
+            - "Unlimited custom collections"
+            - "Unlimited reading notes"
             - "Basic reading stats (monthly/yearly)"
             - "Advanced detailed statistics"
             - "Access to exclusive challenges and badges."
@@ -1733,6 +1759,9 @@ es:
       📱 VERSIÓN GRATUITA:
       - Hasta 4 libros añadidos por día
       - Máximo 150 libros AÑADIDOS en total
+      - Hasta 4 colecciones personalizadas
+      - Hasta 3 notas de lectura
+      - Nota final ilimitada en libros terminados
       - Hasta 3 préstamos simultáneos
       - Calendario de lectura
       - Acceso a insignias básicas
@@ -1740,6 +1769,8 @@ es:
       💎 VERSIÓN PREMIUM:
       - Añade libros sin límite cada día
       - Libros terminados ilimitados
+      - Colecciones personalizadas ilimitadas
+      - Notas de lectura ilimitadas
       - Préstamos ilimitados (prestar y recibir)
       - Estadísticas básicas de lectura (por mes/año)
       - Estadísticas detalladas avanzadas
@@ -1750,16 +1781,21 @@ es:
     q1_free_title: "Versión gratuita"
     q1_free_limit1: "Hasta 4 libros añadidos por día"
     q1_free_limit2: "Máximo 150 libros AÑADIDOS en total"
-    q1_free_limit3: "Hasta 3 préstamos simultáneos"
-    q1_free_limit4: "Calendario de lectura"
-    q1_free_limit5: "Acceso a insignias básicas"
+    q1_free_limit3: "Hasta 4 colecciones personalizadas"
+    q1_free_limit4: "Hasta 3 notas de lectura"
+    q1_free_limit5: "Nota final ilimitada en libros terminados"
+    q1_free_limit6: "Hasta 3 préstamos simultáneos"
+    q1_free_limit7: "Calendario de lectura"
+    q1_free_limit8: "Acceso a insignias básicas"
     q1_premium_title: "Versión premium"
     q1_premium_limit1: "Añade libros sin límite cada día"
     q1_premium_limit2: "Libros terminados ilimitados"
-    q1_premium_limit3: "Préstamos ilimitados (prestar y recibir)"
-    q1_premium_limit4: "Estadísticas básicas de lectura (por mes/año)"
-    q1_premium_limit5: "Estadísticas detalladas avanzadas"
-    q1_premium_limit6: "Acceso a todas las insignias y medallas premium"
+    q1_premium_limit3: "Colecciones personalizadas ilimitadas"
+    q1_premium_limit4: "Notas de lectura ilimitadas"
+    q1_premium_limit5: "Préstamos ilimitados (prestar y recibir)"
+    q1_premium_limit6: "Estadísticas básicas de lectura (por mes/año)"
+    q1_premium_limit7: "Estadísticas detalladas avanzadas"
+    q1_premium_limit8: "Acceso a todas las insignias y medallas premium"
     q1_note: "¡Todas las funciones principales siguen siendo gratuitas!"
     q2: "¿Puedo seguir mis préstamos de libros?"
     a2: |-
@@ -2285,6 +2321,7 @@ es:
           - "Visualizar la altura de tu pila de libros en función de tu estatura"
           - "Escanear códigos de barras ISBN para recuperar automáticamente la información de los libros"
           - "Gestionar tus préstamos y devoluciones de libros"
+          - "Crear colecciones personalizadas, tomar notas de lectura y escribir una nota final en libros terminados"
           - "Desbloquear insignias y completar desafíos de lectura"
           - "Consultar estadísticas personalizadas y recibir recomendaciones anónimas actualizadas regularmente"
         note: "La Aplicación funciona sin conexión para la mayoría de acciones. Una sincronización semanal con Firebase (Google Cloud) envía una copia cifrada de tus libros, categorías y valoraciones para generar estas recomendaciones."
@@ -2335,7 +2372,7 @@ es:
             - "La exactitud de los datos proporcionados por ISBNdb"
         limits:
           title: "5.2 Límites de la Versión Gratuita"
-          body: "Los usuarios de la versión gratuita están limitados a 4 libros añadidos por día, un máximo de 150 libros añadidos en total, y hasta 3 préstamos simultáneos. Los usuarios premium no tienen estas limitaciones."
+          body: "Los usuarios de la versión gratuita están limitados a 4 libros añadidos por día, un máximo de 150 libros añadidos en total, 4 colecciones personalizadas, 3 notas de lectura y hasta 3 préstamos simultáneos. La nota final en libros terminados es ilimitada. Los usuarios premium no tienen estas limitaciones (colecciones personalizadas y notas de lectura ilimitadas)."
       accounts:
         title: "6. Cuentas y Autenticación"
         noAccount:
@@ -2357,6 +2394,8 @@ es:
           items:
             - "Validaciones ilimitadas con metadatos a través de ISBNdb"
             - "Añadir libros sin límite diario"
+            - "Colecciones personalizadas ilimitadas"
+            - "Notas de lectura ilimitadas"
             - "Estadísticas básicas de lectura (por mes/año)"
             - "Estadísticas detalladas avanzadas"
             - "Acceso a desafíos e insignias exclusivos."
