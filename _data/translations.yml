@@ -740,7 +740,7 @@ fr:
         - "Achats via Apple/Google, remboursements via ces plateformes"
         - "Application fournie 'en l'état', responsabilité limitée"
         - "Pas de compte requis, UUID anonyme pour le premium et la synchronisation Firebase dédiée aux recommandations"
-    lastUpdated: "Dernière mise à jour : 19/03/2026"
+    lastUpdated: "Dernière mise à jour : 30/05/2026"
     backToHome: "Retour à l'accueil"
   supportPage:
     title: "Besoin d'un coup de main ?"
@@ -1576,7 +1576,7 @@ en:
         - "Purchases handled by Apple/Google; refunds handled by them"
         - "App provided 'as is' with limited liability"
         - "No account required; an anonymous UUID powers premium and the Firebase recommendation sync"
-    lastUpdated: "Last updated: 19/03/2026"
+    lastUpdated: "Last updated: 30/05/2026"
     backToHome: "Back to home"
   supportPage:
     title: "Need a hand?"
@@ -2493,7 +2493,7 @@ es:
         - "Compras gestionadas por Apple/Google; reembolsos a través de ellos"
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
         - "Sin cuenta obligatoria; un UUID anónimo gestiona el premium y la sincronización con Firebase dedicada a recomendaciones"
-    lastUpdated: "Última actualización: 19/03/2026"
+    lastUpdated: "Última actualización: 30/05/2026"
     backToHome: "Volver al inicio"
   medalEgg:
     title: "¡35 medallas coleccionadas!"
