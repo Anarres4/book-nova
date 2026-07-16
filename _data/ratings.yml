@@ -2,9 +2,9 @@
 # Pour mettre à jour : modifier les valeurs ci-dessous puis rebuild le site.
 
 app_store:
-  rating: 4.7
-  count: 184
+  rating: 4.8
+  count: 285
 
 google_play:
-  rating: 4.5
-  count: 404
+  rating: 4.8
+  count: 603
