@@ -26,7 +26,7 @@ Respect des données :
 
 Offre premium :
 - Validations illimitées avec métadonnées, ajouts sans limite quotidienne et exports avancés.
-- Limite actuelle en version gratuite : 8 livres ajoutés par jour, sans plafond de livres au total.
+- Limite actuelle en version gratuite : 4 livres ajoutés par jour, sans plafond de livres au total.
 
 ## Stack technique
 - `Jekyll` pour la génération statique et la configuration via `_config.yml`.
