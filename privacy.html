@@ -7,7 +7,7 @@ description: "Politique de confidentialité de Book Nova. Découvrez comment nou
 description_en: "Book Nova privacy policy. Learn how we protect your personal data."
 description_es: "Política de privacidad de Book Nova. Descubre cómo protegemos tus datos personales."
 permalink: /privacy/
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-31
 ---
 {% assign t = site.data.translations[site.active_lang] %}
 
@@ -62,7 +62,11 @@ last_modified_at: 2026-10-03
                     <ul class="privacy-list">
                         <li>{{ t.privacyPage.sync.purposes[0] }}</li>
                     </ul>
-                    <p class="privacy-note">{{ t.privacyPage.sync.note }}</p>
+                    <h3>{{ t.privacyPage.sync.retentionTitle }}</h3>
+                    <ul class="privacy-list">
+                        <li>{{ t.privacyPage.sync.retention[0] }}</li>
+                        <li>{{ t.privacyPage.sync.retention[1] }}</li>
+                    </ul>
                 </section>
 
                 <section class="privacy-block">
@@ -72,6 +76,12 @@ last_modified_at: 2026-10-03
                         <li>{{ t.privacyPage.api.items[0] }}</li>
                         <li>{{ t.privacyPage.api.items[1] }}</li>
                         <li>{{ t.privacyPage.api.items[2] }}</li>
+                    </ul>
+                    <h3>{{ t.privacyPage.api.routesTitle }}</h3>
+                    <ul class="privacy-list">
+                        <li>{{ t.privacyPage.api.routes[0] }}</li>
+                        <li>{{ t.privacyPage.api.routes[1] }}</li>
+                        <li>{{ t.privacyPage.api.routes[2] }}</li>
                     </ul>
                     <p>{{ t.privacyPage.api.data }}</p>
                     <p>{{ t.privacyPage.api.limits }}</p>
@@ -84,7 +94,10 @@ last_modified_at: 2026-10-03
                     <ul class="privacy-list">
                         <li>{{ t.privacyPage.notifications.items[0] }}</li>
                         <li>{{ t.privacyPage.notifications.items[1] }}</li>
+                        <li>{{ t.privacyPage.notifications.items[2] }}</li>
                     </ul>
+                    <h3>{{ t.privacyPage.notifications.remoteTitle }}</h3>
+                    <p>{{ t.privacyPage.notifications.remote }}</p>
                     <p class="privacy-note">{{ t.privacyPage.notifications.note }}</p>
                 </section>
 
@@ -100,6 +113,15 @@ last_modified_at: 2026-10-03
                 </section>
 
                 <section class="privacy-block">
+                    <h2>{{ t.privacyPage.messages.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.privacyPage.messages.items[0] }}</li>
+                        <li>{{ t.privacyPage.messages.items[1] }}</li>
+                        <li>{{ t.privacyPage.messages.items[2] }}</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-block">
                     <h2>{{ t.privacyPage.sharing.title }}</h2>
                     <p>{{ t.privacyPage.sharing.intro }}</p>
                     <ul class="privacy-list">
@@ -107,7 +129,16 @@ last_modified_at: 2026-10-03
                         <li>{{ t.privacyPage.sharing.items[1] }}</li>
                         <li>{{ t.privacyPage.sharing.items[2] }}</li>
                         <li>{{ t.privacyPage.sharing.items[3] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[4] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[5] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[6] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[7] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[8] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[9] }}</li>
+                        <li>{{ t.privacyPage.sharing.items[10] }}</li>
                     </ul>
+                    <p class="privacy-note">{{ t.privacyPage.sharing.independent }}</p>
+                    <p class="privacy-note">{{ t.privacyPage.sharing.outsideEu }}</p>
                 </section>
 
                 <section class="privacy-block">
@@ -117,12 +148,14 @@ last_modified_at: 2026-10-03
                         <li>{{ t.privacyPage.security.items[1] }}</li>
                         <li>{{ t.privacyPage.security.items[2] }}</li>
                         <li>{{ t.privacyPage.security.items[3] }}</li>
+                        <li>{{ t.privacyPage.security.items[4] }}</li>
                     </ul>
                     <p class="privacy-note">{{ t.privacyPage.security.warning }}</p>
                 </section>
 
                 <section class="privacy-block">
                     <h2>{{ t.privacyPage.rights.title }}</h2>
+                    <p>{{ t.privacyPage.rights.consent }}</p>
                     <p>{{ t.privacyPage.rights.intro }}</p>
                     <ul class="privacy-list">
                         <li>{{ t.privacyPage.rights.items[0] }}</li>
@@ -130,6 +163,7 @@ last_modified_at: 2026-10-03
                         <li>{{ t.privacyPage.rights.items[2] }}</li>
                         <li>{{ t.privacyPage.rights.items[3] }}</li>
                         <li>{{ t.privacyPage.rights.items[4] }}</li>
+                        <li>{{ t.privacyPage.rights.items[5] }}</li>
                     </ul>
                 </section>
 
@@ -164,6 +198,8 @@ last_modified_at: 2026-10-03
                         <li>{{ t.privacyPage.summary.items[3] }}</li>
                         <li>{{ t.privacyPage.summary.items[4] }}</li>
                         <li>{{ t.privacyPage.summary.items[5] }}</li>
+                        <li>{{ t.privacyPage.summary.items[6] }}</li>
+                        <li>{{ t.privacyPage.summary.items[7] }}</li>
                     </ul>
                 </section>
             </div>
