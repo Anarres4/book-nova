@@ -20,8 +20,8 @@ Fonctionnalités majeures :
 - Choisir la langue de l'interface (FR/EN/ES) et un thème clair ou sombre.
 
 Respect des données :
-- Stockage 100 % local (AsyncStorage + SecureStore) : aucune donnée personnelle n'est envoyée sur un serveur.
-- Notifications uniquement locales (rappel de prêts, encouragement mensuel optionnel).
+- Bibliothèque stockée sur le téléphone (AsyncStorage + SecureStore). Ce qui part sur un serveur ou chez un prestataire est détaillé dans la [politique de confidentialité](https://book-nova.com/privacy/).
+- Notifications locales (rappels de prêt et d'emprunt, encouragement mensuel, fin de l'essai gratuit) et à distance (rappels et annonces).
 - RevenueCat gère la synchronisation de l'abonnement premium sans que Book Nova accède à tes informations de paiement.
 
 Offre premium :

@@ -323,9 +323,9 @@ fr:
     a11_tip_conclusion: "Ta pile reflétera alors tes mesures exactes ! 📚"
     q12: "Comment supprimer mes données ?"
     deleteDataOwnership: "Vos données vous appartiennent"
-    deleteDataOwnershipDesc: "Book Nova ne nécessite pas de compte — toutes vos données personnelles (livres, préférences, badges) sont stockées uniquement sur votre téléphone."
+    deleteDataOwnershipDesc: "Book Nova ne nécessite pas de compte. Vos livres, préférences et badges sont enregistrés sur votre téléphone. Partent sur nos serveurs en Europe : ce que vous choisissez de partager (statistiques) et quelques données techniques (notifications, recherche de livres). Des mesures d'usage, des rapports d'erreur et des données d'attribution publicitaire partent aussi chez nos prestataires, quel que soit ce réglage : voir la politique de confidentialité."
     deleteHowTitle: "Pour supprimer vos données"
-    deleteHowIntro: "Désinstallez l'application. C'est tout ! La désinstallation de Book Nova supprime automatiquement et définitivement toutes vos données :"
+    deleteHowIntro: "Désinstaller l'application efface automatiquement et définitivement les données du téléphone, pas ce qui a déjà été partagé (voir ci-dessous) :"
     deleteBooks: "Vos livres"
     deleteBadges: "Vos badges"
     deleteLoans: "Prêts et emprunts"
@@ -339,9 +339,9 @@ fr:
     deleteNotLinked: "Identifiant aléatoire de l'appareil, aussi numéro de support"
     deleteForRecos: "Pour les recommandations"
     deleteStopSharing: "Pour arrêter le partage :"
-    deleteStopSharingDesc: "Désactivez \"Contribuer aux statistiques\" dans Paramètres > Données et confidentialité."
-    deleteRequestDeletion: "Pour supprimer vos statistiques partagées :"
-    deleteRequestDeletionDesc: "Contactez-nous à book-nova@outlook.fr avec votre identifiant support (disponible dans Paramètres → Support)."
+    deleteStopSharingDesc: "Désactivez \"Contribuer aux statistiques\" dans Paramètres > Données et confidentialité, avant de désinstaller : cela retire aussi vos statuts de lecture et vos favoris."
+    deleteRequestDeletion: "Pour supprimer les chiffres rattachés à votre appareil :"
+    deleteRequestDeletionDesc: "Contactez-nous à book-nova@outlook.fr avec votre numéro de support (disponible dans Paramètres → Support)."
     deleteBeforeUninstall: "Avant de désinstaller"
     deleteBeforeUninstallDesc: "Pensez à exporter vos données si vous souhaitez les conserver :"
     deleteKeepFile: "Conservez le fichier JSON pour une réimportation ultérieure."
@@ -468,41 +468,44 @@ fr:
       title: "Partage avec « Contribuer aux statistiques »"
       intro: "Ces données partent seulement si vous avez accepté le réglage « Contribuer aux statistiques » (Paramètres > Données et confidentialité). Elles sont partagées sans votre nom :"
       items:
-        - "Par livre, sans identifiant, visible par tous les utilisateurs sur la page Découvrir, au plus une fois par semaine : titre, auteur, ISBN, couverture, résumé, langue, nombre de pages, note (étoiles), catégories, hashtags, et les totaux de lecteurs et de notes."
+        - "Pour chaque livre terminé qui a un ISBN (hors photos de couverture personnelles), sans identifiant, visible par tous les utilisateurs sur la page Découvrir, au plus une fois par semaine : titre, auteur, ISBN, couverture, résumé, langue, nombre de pages, note (étoiles), catégories, hashtags, et les totaux de lecteurs et de notes."
         - "À partir de la version 1.39.0, par livre, sans identifiant, au plus une fois par jour : le nombre de lecteurs par statut (en cours, abandonné, à lire, à acheter) et le nombre de favoris."
         - "Par appareil, sous son identifiant : taille de la bibliothèque, nombre de livres terminés, nombre de livres par genre (toute la bibliothèque, relevé chaque mois), dernière activité, date de fin de l'accueil dans l'app."
       purposesTitle: "Finalités du traitement :"
       purposes:
         - "Créer des recommandations des livres les plus lus, populaires et les mieux notés"
+        - "Choisir à qui envoyer des rappels (accueil terminé sans livre ajouté, aucune activité depuis 7 jours ou plus), à partir de la taille de la bibliothèque, de la dernière activité et de la date de fin de l'accueil"
+        - "Comprendre les tendances de lecture par genre"
       retentionTitle: "Conservation :"
       retention:
         - "Tant que le partage reste actif, puis suppression sur demande. Il n'y a aucune suppression automatique."
-        - "Les totaux par livre sont conservés, car ils ne portent pas d'identifiant."
+        - "Les totaux de lecteurs et de notes par livre sont conservés, car ils ne portent pas d'identifiant. Votre part dans les nombres de lecteurs par statut et de favoris est retirée si vous coupez le réglage."
     api:
       title: "Recherche de livres : ISBNdb et Google Books"
       intro: "Book Nova récupère les métadonnées publiques des livres lorsque vous :"
       items:
         - "Scannez un code-barres ISBN"
-        - "Effectuez une recherche par titre ou auteur"
+        - "Effectuez une recherche par titre"
         - "Validez manuellement un ISBN"
+        - "Importez une bibliothèque depuis une autre application"
       routesTitle: "Par où passent ces recherches :"
       routes:
-        - "Une recherche par ISBN passe d'abord par un cache partagé et une fonction serveur à nous (Firebase, Union européenne), qui interroge ISBNdb si besoin."
+        - "Une recherche par ISBN passe d'abord par un cache partagé et une fonction serveur à nous (Firebase, Union européenne), qui interroge ISBNdb si besoin. Si ce chemin n'est pas disponible, ou si le code scanné n'est pas un ISBN valide, elle part directement vers ISBNdb."
         - "Une recherche par titre part directement vers ISBNdb."
         - "Si ISBNdb refuse ou ne répond pas, l'app se replie sur Google Books."
-      data: "Données envoyées à ISBNdb : ISBN, titre recherché, auteur recherché et langue de recherche."
+      data: "Données envoyées à ISBNdb : l'ISBN, ou le texte recherché et la langue de recherche."
       limits: "Utilisateurs gratuits : jusqu'à 4 livres enrichis par jour. Utilisateurs premium : aucune limite."
-      note: "Google Books reçoit aussi ces recherches lorsque l'app se replie sur ce service."
+      note: "Quand l'app se replie sur Google Books, il reçoit l'ISBN, ou le texte recherché et la langue de recherche."
     notifications:
       title: "Notifications"
       intro: "Notifications locales, programmées sur votre appareil, sans connexion Internet :"
       items:
         - "Rappeler les livres prêtés et empruntés"
-        - "Vous encourager à lire (rappel mensuel optionnel)"
+        - "Vous encourager à lire (rappel mensuel)"
         - "Vous prévenir avant la fin de l'essai gratuit"
       remoteTitle: "Notifications à distance"
-      remote: "Un jeton est enregistré chez nous dans Firebase, avec l'identifiant de l'appareil, la plateforme, la version de l'app et la langue. Il sert aux rappels et aux annonces, envoyés par le service Expo."
-      note: "Les notifications à distance se coupent dans les réglages de votre téléphone."
+      remote: "Dès que vous autorisez les notifications, un jeton est enregistré chez nous dans Firebase, avec l'identifiant de l'appareil, la plateforme, la version de l'app et la langue, que vous ayez accepté ou non « Contribuer aux statistiques ». Il sert aux rappels et aux annonces, envoyés par le service Expo. Pour ne pas envoyer trop de rappels, nous gardons aussi la trace de ceux déjà envoyés : identifiant de l'appareil, type de rappel, nombre d'envois et date du dernier."
+      note: "Les notifications, locales comme à distance, se coupent dans les réglages de votre téléphone."
     premium:
       title: "Version premium - RevenueCat"
       intro: "Lors d'achats in-app, RevenueCat gère vos abonnements. Nous lui transmettons uniquement :"
@@ -514,26 +517,32 @@ fr:
     messages:
       title: "Messages et suggestions"
       items:
-        - "Formulaire de contact, transmis par e-mail : message, e-mail et captures d'écran facultatifs, numéro de support, plateforme, version de l'app et du système."
-        - "Retours enregistrés dans Firebase, sans identifiant : texte, plateforme, version de l'app et du système, modèle du téléphone."
-        - "Suggestions d'icônes, sans identifiant : texte et plateforme."
+        - "Formulaire de contact, transmis par e-mail : type de message et texte, e-mail et captures d'écran si vous en ajoutez, numéro de support, plateforme, version et numéro de build de l'app, version du système."
+        - "Retours enregistrés dans Firebase, sans identifiant : texte, plateforme, version de l'app et du système, modèle du téléphone. Cela comprend le texte libre saisi dans certaines questions de l'accueil."
+        - "Suggestions d'icônes, enregistrées dans Firebase, sans identifiant : texte, plateforme et version de l'app."
     sharing:
       title: "Partage des données"
       intro: "Nous ne vendons ni n'échangeons vos données. Nous les transmettons uniquement dans les cas suivants :"
       items:
-        - "Firebase (Google Cloud) : hébergement, dans l'Union européenne, des données décrites sur cette page (statistiques partagées, recherche par ISBN, jetons de notification, retours)"
+        - "Firebase (Google Cloud) : hébergement, dans l'Union européenne, des données décrites sur cette page (statistiques partagées, recherche par ISBN, jetons de notification, suivi des rappels, retours, suggestions d'icônes)"
         - "ISBNdb : récupération des métadonnées publiques des livres lors de vos recherches"
         - "RevenueCat : gestion de la version premium"
-        - "Mixpanel : mesures d'usage sous l'identifiant de l'appareil, dont les réponses aux questions de l'accueil et le titre d'un livre terminé. Envoi vers ses serveurs européens."
-        - "Sentry : rapports de plantage et contexte technique de l'appareil, sous son identifiant. Envoi vers ses serveurs européens."
-        - "TikTok : attribution publicitaire, sous l'identifiant de l'appareil : installation, fin de l'accueil, genres favoris choisis, essai et achat."
+        - "Mixpanel : mesures d'usage sous l'identifiant de l'appareil, dont les réponses aux questions de l'accueil, les genres favoris, des titres de livres (par exemple un livre terminé ou partagé), des noms de collections et de catégories, et le contenu d'un code-barres qui n'est pas un ISBN. Envoi vers ses serveurs européens."
+        - "Sentry : rapports de plantage, mesures de performance et contexte technique de l'appareil, sous son identifiant. Envoi vers ses serveurs européens."
+        - "TikTok : attribution publicitaire, sous l'identifiant de l'appareil : installation, fin de l'accueil, genres favoris choisis, essai et achat (montant et devise). Sur Android, son SDK lit aussi l'identifiant publicitaire Google."
         - "Google Books : recherche de livres"
-        - "Expo : acheminement des notifications à distance"
+        - "Expo : acheminement des notifications à distance et mises à jour de l'application"
         - "Web3Forms : messages du formulaire de contact"
         - "ImgBB : captures d'écran jointes à ces messages, supprimées automatiquement après 30 jours"
         - "Obligations légales : si la loi l'exige"
       independent: "Mixpanel, Sentry et TikTok ne dépendent pas du réglage « Contribuer aux statistiques » : le couper ne les arrête pas."
       outsideEu: "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms et ImgBB peuvent traiter ces données hors de l'Union européenne."
+    website:
+      title: "Ce site web"
+      items:
+        - "Pixel TikTok : chaque page de ce site charge le pixel publicitaire de TikTok. Il enregistre la page vue et les clics vers l'App Store et Google Play, pour mesurer nos publicités."
+        - "Cookie : si vous arrivez depuis une publicité TikTok (lien avec « ttclid »), ce code est gardé 30 jours dans un cookie."
+        - "Bootstrap : des fichiers de mise en page sont chargés depuis jsDelivr."
     security:
       title: "Sécurité et stockage"
       items:
@@ -545,22 +554,25 @@ fr:
       warning: "Important : supprimer l'application sans sauvegarde système efface définitivement les données de votre appareil."
     rights:
       title: "Vos droits"
-      consent: "Le choix du partage à l'accueil de l'app est explicite : rien n'est pré-coché."
+      consent: "Le choix du partage à l'accueil de l'app est explicite : rien n'est pré-coché. Si vous aviez accepté le partage avant la version 1.39.0, l'app vous repose la question une fois : tant que vous n'avez pas confirmé, vos statuts et vos favoris ne sont pas comptés."
       intro: "Vous pouvez à tout moment :"
       items:
         - "Consulter vos données directement dans l'application"
         - "Modifier vos informations par l'interface"
         - "Retirer votre consentement aux notifications dans les réglages de votre appareil"
-        - "Couper « Contribuer aux statistiques » (Paramètres > Données et confidentialité) : cela arrête le partage et retire du décompte les statuts de lecture de l'appareil, au prochain lancement s'il est hors ligne"
-        - "Demander la suppression des chiffres rattachés à l'appareil en écrivant à book-nova@outlook.fr, avec votre numéro de support"
+        - "Couper « Contribuer aux statistiques » (Paramètres > Données et confidentialité) : cela arrête le partage et retire du décompte les statuts de lecture et les favoris de l'appareil, au prochain lancement s'il est hors ligne"
+        - "Demander la suppression des chiffres rattachés à l'appareil en écrivant à book-nova@outlook.fr, avec votre numéro de support (Paramètres > Support)"
         - "Déposer une réclamation auprès de la CNIL"
+      note: "Désinstaller l'application efface les données du téléphone, pas ce qui a déjà été partagé. Avant de désinstaller, coupez le partage."
     permissions:
       title: "Permissions demandées"
       items:
-        - "Caméra : scanner les codes-barres ISBN"
+        - "Caméra : scanner les codes-barres ISBN et prendre des photos (couverture, prêt, partage)"
+        - "Photos : choisir une image (couverture, capture jointe à un message)"
         - "Notifications : afficher les rappels locaux et recevoir les rappels et annonces à distance"
         - "Stockage local : enregistrer vos livres et paramètres"
         - "Accès réseau : rechercher des livres et échanger avec les services listés dans « Partage des données »"
+        - "Identifiant publicitaire (Android) : attribution publicitaire TikTok"
       note: "Ces permissions ne servent jamais à collecter des données à votre insu."
     changes:
       title: "Modifications de cette politique"
@@ -577,9 +589,10 @@ fr:
         - "Cet identifiant est un identifiant aléatoire créé par l'app sur l'appareil, qui sert aussi de numéro de support"
         - "Mixpanel, Sentry et TikTok ne dépendent pas de ce réglage et reçoivent des données sous l'identifiant de l'appareil"
         - "Les recherches de livres passent par ISBNdb, par notre fonction serveur pour les recherches par ISBN, et par Google Books en repli"
-        - "RevenueCat gère la version premium, Expo achemine les notifications à distance, Web3Forms et ImgBB traitent les messages de contact et leurs captures d'écran"
+        - "RevenueCat gère la version premium, Expo achemine les notifications à distance et les mises à jour, Web3Forms et ImgBB traitent les messages de contact et leurs captures d'écran"
         - "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms et ImgBB peuvent traiter ces données hors de l'Union européenne"
-        - "Couper le réglage arrête le partage et retire du décompte les statuts de lecture de l'appareil. Les chiffres rattachés à l'appareil se suppriment sur demande à book-nova@outlook.fr, avec le numéro de support. Vous pouvez déposer une réclamation auprès de la CNIL"
+        - "Couper le réglage arrête le partage et retire du décompte les statuts de lecture et les favoris de l'appareil. Les chiffres rattachés à l'appareil se suppriment sur demande à book-nova@outlook.fr, avec le numéro de support. Vous pouvez déposer une réclamation auprès de la CNIL"
+        - "Ce site charge le pixel publicitaire de TikTok"
     lastUpdated: "Dernière mise à jour : 31/10/2026"
     backToHome: "Retour à l'accueil"
   termsPage:
@@ -599,7 +612,7 @@ fr:
           - "Créer des collections personnalisées, prendre des notes de lecture et rédiger une note finale sur les livres terminés"
           - "Débloquer des badges et relever des défis de lecture"
           - "Consulter des statistiques personnalisées et recevoir des recommandations mises à jour régulièrement"
-        note: "L'Application fonctionne hors ligne pour la plupart des actions. Une synchronisation hebdomadaire via Firebase (Google Cloud) envoie une copie chiffrée de vos livres, catégories et notes afin de générer ces recommandations."
+        note: "L'Application fonctionne hors ligne pour la plupart des actions. Si vous avez accepté le réglage « Contribuer aux statistiques », elle partage certaines données via Firebase (Google Cloud), sans votre nom, notamment pour générer ces recommandations. Le détail figure dans la Politique de confidentialité."
       usage:
         title: "3. Utilisation de l'Application"
         allowed:
@@ -630,13 +643,13 @@ fr:
             - "Informations sur vos prêts et emprunts"
             - "Progression de lecture et statistiques personnalisées"
             - "Avatar et paramètres personnalisés"
-          note: "Vos données restent accessibles sur votre appareil. Une copie minimale (livres, catégories, notes et identifiant aléatoire de l'appareil) est synchronisée sur Firebase pour produire des recommandations."
+          note: "Vos données restent accessibles sur votre appareil. Ce qui est partagé, et avec qui, figure dans la Politique de confidentialité."
         responsibility:
           title: "4.2 Responsabilité du Contenu"
           body: "Vous êtes seul responsable de l'exactitude et de la légalité des informations saisies dans l'Application. Nous ne sommes pas responsables des erreurs de saisie ou des litiges liés aux prêts de livres entre utilisateurs."
         backup:
           title: "4.3 Sauvegarde de Vos Données"
-          body: "L'Application stocke vos données localement et synchronise une copie sur Firebase. Nous vous recommandons de conserver vos propres sauvegardes iCloud/Google Drive et de nous contacter pour supprimer la copie distante en cas de désinstallation."
+          body: "L'Application stocke vos données localement. Nous vous recommandons de conserver vos propres sauvegardes iCloud/Google Drive. Désinstaller l'application efface les données du téléphone, pas ce qui a déjà été partagé : avant de désinstaller, coupez « Contribuer aux statistiques », puis écrivez-nous avec votre numéro de support pour supprimer les chiffres rattachés à votre appareil."
       isbndb:
         title: "5. API ISBNdb et Métadonnées"
         thirdParty:
@@ -652,15 +665,15 @@ fr:
         title: "6. Comptes et Authentification"
         noAccount:
           title: "6.1 Pas de Compte Obligatoire"
-          body: "L'Application ne nécessite pas la création d'un compte. La synchronisation utilise un identifiant aléatoire créé par l'app sur l'appareil, qui sert aussi de numéro de support."
+          body: "L'Application ne nécessite pas la création d'un compte. Elle utilise un identifiant aléatoire créé par l'app sur l'appareil, qui sert aussi de numéro de support."
         uuid:
           title: "6.2 Identifiant de l'Appareil (UUID)"
-          body: "Un identifiant aléatoire (UUID) est généré localement et utilisé uniquement pour :"
+          body: "Cet identifiant aléatoire (UUID) est généré localement et sert notamment à :"
           items:
             - "Gérer votre statut d'abonnement premium via RevenueCat"
-            - "Associer votre synchronisation Firebase pour générer des recommandations"
-            - "Préparer de futures fonctionnalités de recommandations locales"
-          note: "Cet UUID ne contient aucune information personnelle et n'est jamais partagé à des fins publicitaires. Il vous permet également de demander la suppression de votre copie synchronisée."
+            - "Rattacher à votre appareil les statistiques partagées, si vous avez accepté « Contribuer aux statistiques »"
+            - "Envoyer les notifications à distance, mesurer l'usage (Mixpanel), recevoir les rapports de plantage (Sentry) et attribuer les installations aux publicités (TikTok), que ce réglage soit accepté ou non"
+          note: "Cet identifiant ne contient ni votre nom ni votre adresse e-mail. Il vous permet aussi de demander la suppression des chiffres rattachés à votre appareil."
       premium:
         title: "7. Abonnement Premium et Achats In-App"
         features:
@@ -693,11 +706,13 @@ fr:
           body: "Vous pouvez annuler votre abonnement à tout moment via vos paramètres Apple ou Google. L'annulation prend effet à la fin de la période en cours."
       notifications:
         title: "8. Notifications"
-        body: "L'Application peut envoyer des notifications locales pour :"
+        body: "L'Application peut envoyer des notifications locales et, via le service Expo, des notifications à distance pour :"
         items:
-          - "Rappeler les livres prêtés (30 jours après le prêt)"
-          - "Vous encourager à utiliser l'Application (rappel mensuel optionnel)"
-        note: "Vous pouvez désactiver ces notifications dans les paramètres de votre appareil ou de l'Application."
+          - "Rappeler les livres prêtés et empruntés"
+          - "Vous encourager à utiliser l'Application (rappel mensuel)"
+          - "Vous prévenir avant la fin de l'essai gratuit"
+          - "Vous envoyer des rappels et des annonces (notifications à distance)"
+        note: "Vous pouvez les désactiver dans les paramètres de votre appareil."
       intellectualProperty:
         title: "9. Propriété Intellectuelle"
         rights:
@@ -762,13 +777,13 @@ fr:
       title: "Résumé Simplifié"
       items:
         - "Usage personnel et légal uniquement"
-        - "Vos données restent consultables sur votre appareil et une copie minimale est synchronisée via Firebase pour les recommandations"
+        - "Vos données restent consultables sur votre appareil ; si vous acceptez « Contribuer aux statistiques », certaines sont partagées via Firebase, sans votre nom"
         - "Version gratuite : 4 livres ajoutés par jour, nombre total de livres illimité"
         - "Version premium : ajouts quotidiens illimités"
         - "Achats via Apple/Google, remboursements via ces plateformes"
         - "Application fournie 'en l'état', responsabilité limitée"
-        - "Pas de compte requis, identifiant aléatoire de l'appareil pour le premium et la synchronisation Firebase dédiée aux recommandations"
-    lastUpdated: "Dernière mise à jour : 03/10/2026"
+        - "Pas de compte requis ; un identifiant aléatoire de l'appareil sert au premium, aux statistiques partagées, aux notifications, à la mesure d'usage et à l'attribution publicitaire"
+    lastUpdated: "Dernière mise à jour : 31/10/2026"
     backToHome: "Retour à l'accueil"
   supportPage:
     title: "Besoin d'un coup de main ?"
@@ -1187,9 +1202,9 @@ en:
     a11_tip_conclusion: "Your stack will then reflect your exact measurements! 📚"
     q12: "How do I delete my data?"
     deleteDataOwnership: "Your data belongs to you"
-    deleteDataOwnershipDesc: "Book Nova doesn't require an account — all your personal data (books, preferences, badges) is stored only on your phone."
+    deleteDataOwnershipDesc: "Book Nova doesn't require an account. Your books, preferences and badges are saved on your phone. What goes to our servers in Europe: what you choose to share (statistics) and some technical data (notifications, book search). Usage measurements, error reports and advertising attribution data also go to our service providers, whatever this setting: see the privacy policy."
     deleteHowTitle: "To delete your data"
-    deleteHowIntro: "Uninstall the app. That's it! Uninstalling Book Nova automatically and permanently deletes all your data:"
+    deleteHowIntro: "Uninstalling the app automatically and permanently erases the data on your phone, not what has already been shared (see below):"
     deleteBooks: "Your books"
     deleteBadges: "Your badges"
     deleteLoans: "Loans and borrows"
@@ -1198,14 +1213,14 @@ en:
     deleteSharedTitle: "Shared data (statistics)"
     deleteSharedIntro: "If you enabled \"Contribute to statistics\" in settings, this data is shared without your name:"
     deleteShared1: "Per book, with no identifier: title, author, ISBN, cover, summary, language, page count, rating (stars), categories, hashtags, and total readers and ratings (for the Discover page). From version 1.39.0: number of readers by status and number of favourites"
-    deleteShared2: "Per device, under its identifier: library size, number of finished books, number of books per genre, last activity, date the app's welcome flow was completed"
+    deleteShared2: "Per device, under its identifier: library size, number of finished books, number of books per genre, last activity, date you finished the app's welcome steps"
     deleteAnonymous: "Without your name"
     deleteNotLinked: "Random device identifier, also your support number"
     deleteForRecos: "Used for recommendations"
     deleteStopSharing: "To stop sharing:"
-    deleteStopSharingDesc: "Disable \"Contribute to statistics\" in Settings > Data and Privacy."
-    deleteRequestDeletion: "To delete your shared statistics:"
-    deleteRequestDeletionDesc: "Contact us at book-nova@outlook.fr with your support ID (available in Settings → Support)."
+    deleteStopSharingDesc: "Disable \"Contribute to statistics\" in Settings > Data & Privacy, before uninstalling: this also removes your reading statuses and favourites."
+    deleteRequestDeletion: "To delete the figures tied to your device:"
+    deleteRequestDeletionDesc: "Contact us at book-nova@outlook.fr with your support number (available in Settings → Support)."
     deleteBeforeUninstall: "Before uninstalling"
     deleteBeforeUninstallDesc: "Consider exporting your data if you want to keep it:"
     deleteKeepFile: "Keep the JSON file for future reimport."
@@ -1310,7 +1325,7 @@ en:
     title: "Privacy Policy"
     intro:
       title: "Introduction"
-      content: "Welcome to Book Nova's privacy policy. Protecting your privacy is essential to us. The app keeps most of your data on your device. If you accepted the “Contribute to statistics” setting (Settings > Data and Privacy), some data is shared through Firebase (Google Cloud), without your name, in particular to power reading recommendations. Other services receive data regardless of this setting: they are listed under “Data sharing”."
+      content: "Welcome to Book Nova's privacy policy. Protecting your privacy is essential to us. The app keeps most of your data on your device. If you accepted the “Contribute to statistics” setting (Settings > Data & Privacy), some data is shared through Firebase (Google Cloud), without your name, in particular to power reading recommendations. Other services receive data regardless of this setting: they are listed under “Data sharing”."
     dataLocal:
       title: "Data stored locally on your device"
       intro: "The following information stays available offline on your device:"
@@ -1330,43 +1345,46 @@ en:
         - "Hosting: Firebase data (Firestore and server functions) is hosted in the European Union."
     sync:
       title: "Sharing with “Contribute to statistics”"
-      intro: "This data leaves your device only if you accepted the “Contribute to statistics” setting (Settings > Data and Privacy). It is shared without your name:"
+      intro: "This data leaves your device only if you accepted the “Contribute to statistics” setting (Settings > Data & Privacy). It is shared without your name:"
       items:
-        - "Per book, with no identifier, visible to all users on the Discover page, at most once a week: title, author, ISBN, cover, summary, language, page count, rating (stars), categories, hashtags, and the total readers and ratings."
+        - "For each finished book with an ISBN (excluding your own cover photos), with no identifier, visible to all users on the Discover page, at most once a week: title, author, ISBN, cover, summary, language, page count, rating (stars), categories, hashtags, and the total readers and ratings."
         - "From version 1.39.0, per book, with no identifier, at most once a day: the number of readers by status (in progress, abandoned, to read, to buy) and the number of favourites."
-        - "Per device, under its identifier: library size, number of finished books, number of books per genre (whole library, recorded every month), last activity, date the app's welcome flow was completed."
+        - "Per device, under its identifier: library size, number of finished books, number of books per genre (whole library, recorded every month), last activity, date you finished the app's welcome steps."
       purposesTitle: "Purpose of the processing:"
       purposes:
         - "Create recommendations of the most read, most popular, and best-rated books"
+        - "Choose who receives reminders (welcome steps finished with no book added, no activity for 7 days or more), using library size, last activity and the date the welcome steps were finished"
+        - "Understand reading trends by genre"
       retentionTitle: "Retention:"
       retention:
         - "As long as sharing stays active, then deletion on request. There is no automatic deletion."
-        - "Per-book totals are kept, because they carry no identifier."
+        - "Total readers and ratings per book are kept, because they carry no identifier. Your share of reader counts by status and of favourites is withdrawn if you turn the setting off."
     api:
       title: "Book search: ISBNdb and Google Books"
       intro: "Book Nova fetches public book metadata when you:"
       items:
         - "Scan an ISBN barcode"
-        - "Search by title or author"
+        - "Search by title"
         - "Enter an ISBN manually"
+        - "Import a library from another app"
       routesTitle: "Where these searches go:"
       routes:
-        - "An ISBN search goes first through a shared cache and a server function of our own (Firebase, European Union), which queries ISBNdb if needed."
+        - "An ISBN search goes first through a shared cache and a server function of our own (Firebase, European Union), which queries ISBNdb if needed. If that path is unavailable, or the scanned code is not a valid ISBN, it goes directly to ISBNdb."
         - "A title search goes directly to ISBNdb."
         - "If ISBNdb refuses or doesn't respond, the app falls back on Google Books."
-      data: "Data sent to ISBNdb: ISBN, searched title, searched author, and search language."
+      data: "Data sent to ISBNdb: the ISBN, or the searched text and the search language."
       limits: "Free users: up to 4 enriched books per day. Premium users: no limit."
-      note: "Google Books also receives these searches when the app falls back on it."
+      note: "When the app falls back on Google Books, it receives the ISBN, or the searched text and the search language."
     notifications:
       title: "Notifications"
       intro: "Local notifications, scheduled on your device, with no Internet connection:"
       items:
         - "Remind you of books lent and borrowed"
-        - "Encourage reading (optional monthly reminder)"
+        - "Encourage reading (monthly reminder)"
         - "Warn you before the free trial ends"
       remoteTitle: "Remote notifications"
-      remote: "A token is stored with us in Firebase, along with the device identifier, platform, app version, and language. It is used for reminders and announcements, sent through the Expo service."
-      note: "Remote notifications can be turned off in your phone's settings."
+      remote: "As soon as you allow notifications, a token is stored with us in Firebase, along with the device identifier, platform, app version, and language, whether or not you accepted “Contribute to statistics”. It is used for reminders and announcements, sent through the Expo service. To avoid sending too many reminders, we also keep a record of those already sent: device identifier, reminder type, number sent and date of the last one."
+      note: "Both local and remote notifications can be turned off in your phone's settings."
     premium:
       title: "Premium tier – RevenueCat"
       intro: "For in-app purchases, RevenueCat manages subscriptions. We only share with it:"
@@ -1378,26 +1396,32 @@ en:
     messages:
       title: "Messages and suggestions"
       items:
-        - "Contact form, sent by email: message, email address and screenshots (optional), support number, platform, app and system version."
-        - "Feedback saved in Firebase, with no identifier: text, platform, app and system version, phone model."
-        - "Icon suggestions, with no identifier: text and platform."
+        - "Contact form, sent by email: message type and text, email address and screenshots if you add them, support number, platform, app version and build number, system version."
+        - "Feedback saved in Firebase, with no identifier: text, platform, app and system version, phone model. This includes free text typed into some welcome-step questions."
+        - "Icon suggestions, saved in Firebase, with no identifier: text, platform, and app version."
     sharing:
       title: "Data sharing"
       intro: "We don't sell or trade your data. We only pass it on in these cases:"
       items:
-        - "Firebase (Google Cloud): hosting, in the European Union, of the data described on this page (shared statistics, ISBN search, notification tokens, feedback)"
+        - "Firebase (Google Cloud): hosting, in the European Union, of the data described on this page (shared statistics, ISBN search, notification tokens, reminder records, feedback, icon suggestions)"
         - "ISBNdb: fetch public book metadata when you search"
         - "RevenueCat: manage the premium tier"
-        - "Mixpanel: usage measurements under the device identifier, including answers to the welcome-flow questions and the title of a finished book. Sent to its European servers."
-        - "Sentry: crash reports and technical context of the device, under its identifier. Sent to its European servers."
-        - "TikTok: advertising attribution, under the device identifier: install, completion of the welcome flow, favourite genres chosen, trial and purchase."
+        - "Mixpanel: usage measurements under the device identifier, including answers to the welcome-step questions, favourite genres, book titles (for example a finished or shared book), collection and category names, and the content of a barcode that is not an ISBN. Sent to its European servers."
+        - "Sentry: crash reports, performance measurements and technical context of the device, under its identifier. Sent to its European servers."
+        - "TikTok: advertising attribution, under the device identifier: install, completion of the welcome steps, favourite genres chosen, trial and purchase (amount and currency). On Android, its SDK also reads the Google advertising ID."
         - "Google Books: book search"
-        - "Expo: delivery of remote notifications"
+        - "Expo: delivery of remote notifications and app updates"
         - "Web3Forms: contact form messages"
         - "ImgBB: screenshots attached to these messages, automatically deleted after 30 days"
         - "Legal obligations: when required by law"
       independent: "Mixpanel, Sentry, and TikTok do not depend on the “Contribute to statistics” setting: turning it off does not stop them."
       outsideEu: "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms, and ImgBB may process this data outside the European Union."
+    website:
+      title: "This website"
+      items:
+        - "TikTok pixel: every page of this site loads TikTok's advertising pixel. It records the page view and clicks towards the App Store and Google Play, to measure our ads."
+        - "Cookie: if you arrive from a TikTok ad (link containing “ttclid”), that code is kept for 30 days in a cookie."
+        - "Bootstrap: layout files are loaded from jsDelivr."
     security:
       title: "Security & storage"
       items:
@@ -1409,22 +1433,25 @@ en:
       warning: "Important: deleting the app without a system backup permanently erases the data on your device."
     rights:
       title: "Your rights"
-      consent: "The sharing choice in the app's welcome flow is explicit: nothing is pre-ticked."
+      consent: "The sharing choice in the app's welcome steps is explicit: nothing is pre-ticked. If you accepted sharing before version 1.39.0, the app asks you once again: until you confirm, your statuses and favourites are not counted."
       intro: "You can always:"
       items:
         - "View your data directly in the app"
         - "Edit information through the interface"
         - "Disable notifications via your device settings"
-        - "Turn off “Contribute to statistics” (Settings > Data and Privacy): this stops sharing and removes the device's reading statuses from the counts, at the next launch if it is offline"
-        - "Request deletion of the figures tied to the device by emailing book-nova@outlook.fr, with your support number"
+        - "Turn off “Contribute to statistics” (Settings > Data & Privacy): this stops sharing and removes the device's reading statuses and favourites from the counts, at the next launch if it is offline"
+        - "Request deletion of the figures tied to the device by emailing book-nova@outlook.fr, with your support number (Settings > Support)"
         - "File a complaint with the CNIL"
+      note: "Uninstalling the app erases the data on your phone, not what has already been shared. Before uninstalling, turn sharing off."
     permissions:
       title: "Requested permissions"
       items:
-        - "Camera: scan ISBN barcodes"
+        - "Camera: scan ISBN barcodes and take photos (cover, loan, sharing)"
+        - "Photos: pick an image (cover, screenshot attached to a message)"
         - "Notifications: show local reminders and receive remote reminders and announcements"
         - "Local storage: save books and preferences"
         - "Network access: search for books and exchange data with the services listed under “Data sharing”"
+        - "Advertising ID (Android): TikTok advertising attribution"
       note: "Permissions are never used to collect data without your knowledge."
     changes:
       title: "Changes to this policy"
@@ -1441,9 +1468,10 @@ en:
         - "This identifier is a random identifier created by the app on the device, which also serves as your support number"
         - "Mixpanel, Sentry, and TikTok do not depend on this setting and receive data under the device identifier"
         - "Book searches go through ISBNdb, through our server function for ISBN searches, and through Google Books as a fallback"
-        - "RevenueCat handles premium, Expo delivers remote notifications, Web3Forms and ImgBB handle contact messages and their screenshots"
+        - "RevenueCat handles premium, Expo delivers remote notifications and app updates, Web3Forms and ImgBB handle contact messages and their screenshots"
         - "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms, and ImgBB may process this data outside the European Union"
-        - "Turning off the setting stops sharing and removes the device's reading statuses from the counts. The figures tied to the device are deleted on request at book-nova@outlook.fr, with the support number. You can file a complaint with the CNIL"
+        - "Turning off the setting stops sharing and removes the device's reading statuses and favourites from the counts. The figures tied to the device are deleted on request at book-nova@outlook.fr, with the support number. You can file a complaint with the CNIL"
+        - "This website loads TikTok's advertising pixel"
     lastUpdated: "Last updated: 31/10/2026"
     backToHome: "Back to home"
   termsPage:
@@ -1463,7 +1491,7 @@ en:
           - "Create custom collections, take reading notes, and write a final note on finished books"
           - "Unlock badges and take on reading challenges"
           - "View personalized statistics and receive recommendations updated regularly"
-        note: "The App works offline for most actions. A weekly synchronisation with Firebase (Google Cloud) sends an encrypted copy of your books, categories, and ratings to generate these recommendations."
+        note: "The App works offline for most actions. If you accepted the “Contribute to statistics” setting, it shares some data through Firebase (Google Cloud), without your name, in particular to generate these recommendations. Details are in the Privacy Policy."
       usage:
         title: "3. Using the App"
         allowed:
@@ -1494,13 +1522,13 @@ en:
             - "Details about books you lend or borrow"
             - "Reading progress and personalized statistics"
             - "Avatar choices and personalized settings"
-          note: "Your data stays accessible on your device. A minimal copy (books, categories, ratings, and random device identifier) is synced to Firebase to produce recommendations."
+          note: "Your data stays accessible on your device. What is shared, and with whom, is set out in the Privacy Policy."
         responsibility:
           title: "4.2 Responsibility for Content"
           body: "You alone are responsible for the accuracy and legality of the information you enter. We are not liable for data-entry errors or disputes between users over lent books."
         backup:
           title: "4.3 Backing Up Your Data"
-          body: "The App stores your information locally and syncs a copy to Firebase. Please keep your own iCloud/Google Drive backups and contact us if you want the remote copy deleted."
+          body: "The App stores your information locally. Please keep your own iCloud/Google Drive backups. Uninstalling the app erases the data on your phone, not what has already been shared: before uninstalling, turn off “Contribute to statistics”, then write to us with your support number to delete the figures tied to your device."
       isbndb:
         title: "5. ISBNdb API and Metadata"
         thirdParty:
@@ -1516,15 +1544,15 @@ en:
         title: "6. Accounts and Authentication"
         noAccount:
           title: "6.1 No Account Required"
-          body: "The App does not require you to create an account. Synchronisation relies on a random identifier created by the app on the device, which also serves as your support number."
+          body: "The App does not require you to create an account. It uses a random identifier created by the app on the device, which also serves as your support number."
         uuid:
           title: "6.2 Device Identifier (UUID)"
-          body: "A random identifier (UUID) is generated locally and used only to:"
+          body: "This random identifier (UUID) is generated locally and is used in particular to:"
           items:
             - "Manage your premium subscription status through RevenueCat"
-            - "Link your Firebase synchronisation and generate recommendations"
-            - "Prepare future locally powered recommendation features"
-          note: "This UUID contains no personal information and is never shared for advertising purposes. It also lets you request deletion of your synced copy."
+            - "Tie shared statistics to your device, if you accepted “Contribute to statistics”"
+            - "Send remote notifications, measure usage (Mixpanel), receive crash reports (Sentry) and attribute installs to ads (TikTok), whether or not this setting is accepted"
+          note: "This identifier contains neither your name nor your email address. It also lets you request deletion of the figures tied to your device."
       premium:
         title: "7. Premium Subscription and In-App Purchases"
         features:
@@ -1557,11 +1585,13 @@ en:
           body: "You can cancel your premium subscription at any time through your Apple or Google account settings. Cancellation takes effect at the end of the current billing period."
       notifications:
         title: "8. Notifications"
-        body: "The App can send local notifications to:"
+        body: "The App can send local notifications and, through the Expo service, remote notifications to:"
         items:
-          - "Remind you about lent books (30 days after the loan)"
-          - "Encourage you to use the App (optional monthly reminder)"
-        note: "You can disable these notifications in your device settings or within the App."
+          - "Remind you of books lent and borrowed"
+          - "Encourage you to use the App (monthly reminder)"
+          - "Warn you before the free trial ends"
+          - "Send you reminders and announcements (remote notifications)"
+        note: "You can turn them off in your device settings."
       intellectualProperty:
         title: "9. Intellectual Property"
         rights:
@@ -1626,13 +1656,13 @@ en:
       title: "Quick Summary"
       items:
         - "Personal and lawful use only"
-        - "Your data stays accessible on your device and a minimal copy syncs through Firebase for recommendations"
+        - "Your data stays accessible on your device; if you accept “Contribute to statistics”, some of it is shared through Firebase, without your name"
         - "Free plan: 4 books added per day, unlimited total books"
         - "Premium plan: unlimited daily additions"
         - "Purchases handled by Apple/Google; refunds handled by them"
         - "App provided 'as is' with limited liability"
-        - "No account required; a random device identifier powers premium and the Firebase recommendation sync"
-    lastUpdated: "Last updated: 03/10/2026"
+        - "No account required; a random device identifier is used for premium, shared statistics, notifications, usage measurement and advertising attribution"
+    lastUpdated: "Last updated: 31/10/2026"
     backToHome: "Back to home"
   supportPage:
     title: "Need a hand?"
@@ -2050,9 +2080,9 @@ es:
     a11_tip_conclusion: "¡Tu pila reflejará entonces tus medidas exactas! 📚"
     q12: "¿Cómo elimino mis datos?"
     deleteDataOwnership: "Tus datos te pertenecen"
-    deleteDataOwnershipDesc: "Book Nova no requiere cuenta — todos tus datos personales (libros, preferencias, insignias) se almacenan únicamente en tu teléfono."
+    deleteDataOwnershipDesc: "Book Nova no requiere cuenta. Tus libros, preferencias e insignias se guardan en tu teléfono. A nuestros servidores en Europa va lo que eliges compartir (estadísticas) y algunos datos técnicos (notificaciones, búsqueda de libros). Las mediciones de uso, los informes de errores y los datos de atribución publicitaria también van a nuestros proveedores, sea cual sea este ajuste: consulta la política de privacidad."
     deleteHowTitle: "Para eliminar tus datos"
-    deleteHowIntro: "Desinstala la aplicación. ¡Eso es todo! La desinstalación de Book Nova elimina automática y permanentemente todos tus datos:"
+    deleteHowIntro: "Desinstalar la aplicación borra automática y permanentemente los datos del teléfono, no lo que ya se ha compartido (ver más abajo):"
     deleteBooks: "Tus libros"
     deleteBadges: "Tus insignias"
     deleteLoans: "Préstamos"
@@ -2066,9 +2096,9 @@ es:
     deleteNotLinked: "Identificador aleatorio del dispositivo, también número de soporte"
     deleteForRecos: "Para recomendaciones"
     deleteStopSharing: "Para dejar de compartir:"
-    deleteStopSharingDesc: "Desactiva \"Contribuir a estadísticas\" en Configuración > Datos y privacidad."
-    deleteRequestDeletion: "Para eliminar tus estadísticas compartidas:"
-    deleteRequestDeletionDesc: "Contáctanos en book-nova@outlook.fr con tu ID de soporte (disponible en Configuración → Soporte)."
+    deleteStopSharingDesc: "Desactiva \"Contribuir a estadísticas\" en Configuración > Datos y privacidad, antes de desinstalar: así también se retiran tus estados de lectura y favoritos."
+    deleteRequestDeletion: "Para eliminar las cifras vinculadas a tu dispositivo:"
+    deleteRequestDeletionDesc: "Contáctanos en book-nova@outlook.fr con tu número de soporte (disponible en Configuración → Soporte)."
     deleteBeforeUninstall: "Antes de desinstalar"
     deleteBeforeUninstallDesc: "Considera exportar tus datos si deseas conservarlos:"
     deleteKeepFile: "Guarda el archivo JSON para una futura reimportación."
@@ -2195,41 +2225,44 @@ es:
       title: "Compartir con «Contribuir a estadísticas»"
       intro: "Estos datos solo salen si has aceptado el ajuste «Contribuir a estadísticas» (Configuración > Datos y privacidad). Se comparten sin tu nombre:"
       items:
-        - "Por libro, sin identificador, visible para todos los usuarios en la página Descubrir, como máximo una vez por semana: título, autor, ISBN, portada, resumen, idioma, número de páginas, valoración (estrellas), categorías, hashtags y los totales de lectores y valoraciones."
+        - "Por cada libro terminado que tenga ISBN (salvo tus propias fotos de portada), sin identificador, visible para todos los usuarios en la página Descubrir, como máximo una vez por semana: título, autor, ISBN, portada, resumen, idioma, número de páginas, valoración (estrellas), categorías, hashtags y los totales de lectores y valoraciones."
         - "A partir de la versión 1.39.0, por libro, sin identificador, como máximo una vez al día: el número de lectores por estado (en curso, abandonado, por leer, por comprar) y el número de favoritos."
         - "Por dispositivo, bajo su identificador: tamaño de la biblioteca, número de libros terminados, número de libros por género (toda la biblioteca, registrado cada mes), última actividad, fecha de fin de la bienvenida en la app."
       purposesTitle: "Finalidades del tratamiento:"
       purposes:
         - "Crear recomendaciones de los libros más leídos, populares y mejor valorados"
+        - "Elegir a quién enviar recordatorios (bienvenida terminada sin libros añadidos, sin actividad desde hace 7 días o más), a partir del tamaño de la biblioteca, la última actividad y la fecha de fin de la bienvenida"
+        - "Entender las tendencias de lectura por género"
       retentionTitle: "Conservación:"
       retention:
         - "Mientras el uso compartido siga activo; después, eliminación a petición. No hay ninguna eliminación automática."
-        - "Los totales por libro se conservan, porque no llevan identificador."
+        - "Los totales de lectores y valoraciones por libro se conservan, porque no llevan identificador. Tu parte en los números de lectores por estado y de favoritos se retira si desactivas el ajuste."
     api:
       title: "Búsqueda de libros: ISBNdb y Google Books"
       intro: "Book Nova obtiene los metadatos públicos de los libros cuando tú:"
       items:
         - "Escaneas un código de barras ISBN"
-        - "Buscas por título o autor"
+        - "Buscas por título"
         - "Introduces un ISBN manualmente"
+        - "Importas una biblioteca desde otra aplicación"
       routesTitle: "Por dónde pasan estas búsquedas:"
       routes:
-        - "Una búsqueda por ISBN pasa primero por una caché compartida y una función de servidor propia (Firebase, Unión Europea), que consulta ISBNdb si hace falta."
+        - "Una búsqueda por ISBN pasa primero por una caché compartida y una función de servidor propia (Firebase, Unión Europea), que consulta ISBNdb si hace falta. Si esa vía no está disponible, o si el código escaneado no es un ISBN válido, va directamente a ISBNdb."
         - "Una búsqueda por título va directamente a ISBNdb."
         - "Si ISBNdb rechaza la consulta o no responde, la app recurre a Google Books."
-      data: "Datos enviados a ISBNdb: ISBN, título buscado, autor buscado e idioma de búsqueda."
+      data: "Datos enviados a ISBNdb: el ISBN, o el texto buscado y el idioma de búsqueda."
       limits: "Usuarios gratuitos: hasta 4 libros enriquecidos al día. Usuarios premium: sin límite."
-      note: "Google Books también recibe estas búsquedas cuando la app recurre a este servicio."
+      note: "Cuando la app recurre a Google Books, este recibe el ISBN, o el texto buscado y el idioma de búsqueda."
     notifications:
       title: "Notificaciones"
       intro: "Notificaciones locales, programadas en tu dispositivo, sin conexión a Internet:"
       items:
         - "Recordarte los libros prestados y recibidos en préstamo"
-        - "Motivarte a leer (recordatorio mensual opcional)"
+        - "Motivarte a leer (recordatorio mensual)"
         - "Avisarte antes de que termine la prueba gratuita"
       remoteTitle: "Notificaciones remotas"
-      remote: "Se guarda un token con nosotros en Firebase, junto con el identificador del dispositivo, la plataforma, la versión de la app y el idioma. Sirve para recordatorios y anuncios, enviados por el servicio Expo."
-      note: "Las notificaciones remotas se desactivan en los ajustes del teléfono."
+      remote: "En cuanto autorizas las notificaciones, se guarda un token con nosotros en Firebase, junto con el identificador del dispositivo, la plataforma, la versión de la app y el idioma, hayas aceptado o no «Contribuir a estadísticas». Sirve para recordatorios y anuncios, enviados por el servicio Expo. Para no enviar demasiados recordatorios, también guardamos un registro de los ya enviados: identificador del dispositivo, tipo de recordatorio, número de envíos y fecha del último."
+      note: "Las notificaciones, locales y remotas, se desactivan en los ajustes del teléfono."
     premium:
       title: "Versión premium - RevenueCat"
       intro: "Para las compras in-app, RevenueCat gestiona las suscripciones. Solo le transmitimos:"
@@ -2241,26 +2274,32 @@ es:
     messages:
       title: "Mensajes y sugerencias"
       items:
-        - "Formulario de contacto, enviado por correo electrónico: mensaje, correo electrónico y capturas de pantalla opcionales, número de soporte, plataforma, versión de la app y del sistema."
-        - "Comentarios guardados en Firebase, sin identificador: texto, plataforma, versión de la app y del sistema, modelo del teléfono."
-        - "Sugerencias de iconos, sin identificador: texto y plataforma."
+        - "Formulario de contacto, enviado por correo electrónico: tipo de mensaje y texto, correo electrónico y capturas de pantalla si las añades, número de soporte, plataforma, versión y número de compilación de la app, versión del sistema."
+        - "Comentarios guardados en Firebase, sin identificador: texto, plataforma, versión de la app y del sistema, modelo del teléfono. Esto incluye el texto libre escrito en algunas preguntas de la bienvenida."
+        - "Sugerencias de iconos, guardadas en Firebase, sin identificador: texto, plataforma y versión de la app."
     sharing:
       title: "Compartir datos"
       intro: "No vendemos ni intercambiamos tus datos. Solo los transmitimos en estos casos:"
       items:
-        - "Firebase (Google Cloud): alojamiento, en la Unión Europea, de los datos descritos en esta página (estadísticas compartidas, búsqueda por ISBN, tokens de notificación, comentarios)"
+        - "Firebase (Google Cloud): alojamiento, en la Unión Europea, de los datos descritos en esta página (estadísticas compartidas, búsqueda por ISBN, tokens de notificación, registro de recordatorios, comentarios, sugerencias de iconos)"
         - "ISBNdb: recuperar metadatos públicos durante tus búsquedas"
         - "RevenueCat: gestionar la versión premium"
-        - "Mixpanel: mediciones de uso bajo el identificador del dispositivo, incluidas las respuestas a las preguntas de la bienvenida y el título de un libro terminado. Envío a sus servidores europeos."
-        - "Sentry: informes de fallos y contexto técnico del dispositivo, bajo su identificador. Envío a sus servidores europeos."
-        - "TikTok: atribución publicitaria, bajo el identificador del dispositivo: instalación, fin de la bienvenida, géneros favoritos elegidos, prueba y compra."
+        - "Mixpanel: mediciones de uso bajo el identificador del dispositivo, incluidas las respuestas a las preguntas de la bienvenida, los géneros favoritos, títulos de libros (por ejemplo, un libro terminado o compartido), nombres de colecciones y categorías, y el contenido de un código de barras que no sea un ISBN. Envío a sus servidores europeos."
+        - "Sentry: informes de fallos, mediciones de rendimiento y contexto técnico del dispositivo, bajo su identificador. Envío a sus servidores europeos."
+        - "TikTok: atribución publicitaria, bajo el identificador del dispositivo: instalación, fin de la bienvenida, géneros favoritos elegidos, prueba y compra (importe y moneda). En Android, su SDK también lee el identificador publicitario de Google."
         - "Google Books: búsqueda de libros"
-        - "Expo: envío de las notificaciones remotas"
+        - "Expo: envío de las notificaciones remotas y actualizaciones de la app"
         - "Web3Forms: mensajes del formulario de contacto"
         - "ImgBB: capturas de pantalla adjuntas a esos mensajes, eliminadas automáticamente después de 30 días"
         - "Obligaciones legales: cuando la ley lo requiera"
       independent: "Mixpanel, Sentry y TikTok no dependen del ajuste «Contribuir a estadísticas»: desactivarlo no los detiene."
       outsideEu: "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms e ImgBB pueden tratar estos datos fuera de la Unión Europea."
+    website:
+      title: "Este sitio web"
+      items:
+        - "Píxel de TikTok: cada página de este sitio carga el píxel publicitario de TikTok. Registra la página vista y los clics hacia App Store y Google Play, para medir nuestros anuncios."
+        - "Cookie: si llegas desde un anuncio de TikTok (enlace con «ttclid»), ese código se guarda 30 días en una cookie."
+        - "Bootstrap: los archivos de diseño se cargan desde jsDelivr."
     security:
       title: "Seguridad y almacenamiento"
       items:
@@ -2272,22 +2311,25 @@ es:
       warning: "Importante: si eliminas la app sin una copia de seguridad del sistema, perderás definitivamente los datos de tu dispositivo."
     rights:
       title: "Tus derechos"
-      consent: "La elección de compartir en la bienvenida de la app es explícita: nada viene marcado de antemano."
+      consent: "La elección de compartir en la bienvenida de la app es explícita: nada viene marcado de antemano. Si habías aceptado compartir antes de la versión 1.39.0, la app te lo vuelve a preguntar una vez: hasta que confirmes, tus estados y favoritos no se cuentan."
       intro: "En cualquier momento puedes:"
       items:
         - "Consultar tus datos directamente en la app"
         - "Modificar la información desde la interfaz"
         - "Retirar el consentimiento para notificaciones en los ajustes del dispositivo"
-        - "Desactivar «Contribuir a estadísticas» (Configuración > Datos y privacidad): esto detiene el uso compartido y retira del recuento los estados de lectura del dispositivo, en el siguiente inicio si está sin conexión"
-        - "Solicitar la eliminación de las cifras vinculadas al dispositivo escribiendo a book-nova@outlook.fr, con tu número de soporte"
+        - "Desactivar «Contribuir a estadísticas» (Configuración > Datos y privacidad): esto detiene el uso compartido y retira del recuento los estados de lectura y los favoritos del dispositivo, en el siguiente inicio si está sin conexión"
+        - "Solicitar la eliminación de las cifras vinculadas al dispositivo escribiendo a book-nova@outlook.fr, con tu número de soporte (Configuración > Soporte)"
         - "Presentar una reclamación ante la CNIL"
+      note: "Desinstalar la aplicación borra los datos del teléfono, no lo que ya se ha compartido. Antes de desinstalar, deja de compartir."
     permissions:
       title: "Permisos solicitados"
       items:
-        - "Cámara: escanear códigos de barras ISBN"
+        - "Cámara: escanear códigos de barras ISBN y hacer fotos (portada, préstamo, compartir)"
+        - "Fotos: elegir una imagen (portada, captura adjunta a un mensaje)"
         - "Notificaciones: mostrar recordatorios locales y recibir recordatorios y anuncios remotos"
         - "Almacenamiento local: guardar libros y preferencias"
         - "Acceso a la red: buscar libros e intercambiar datos con los servicios indicados en «Compartir datos»"
+        - "Identificador publicitario (Android): atribución publicitaria de TikTok"
       note: "Estos permisos no se usan para recopilar datos sin tu conocimiento."
     changes:
       title: "Cambios en esta política"
@@ -2304,9 +2346,10 @@ es:
         - "Este identificador es un identificador aleatorio creado por la app en el dispositivo, que también sirve como número de soporte"
         - "Mixpanel, Sentry y TikTok no dependen de este ajuste y reciben datos bajo el identificador del dispositivo"
         - "Las búsquedas de libros pasan por ISBNdb, por nuestra función de servidor para las búsquedas por ISBN, y por Google Books como alternativa"
-        - "RevenueCat gestiona la versión premium, Expo envía las notificaciones remotas, Web3Forms e ImgBB tratan los mensajes de contacto y sus capturas de pantalla"
+        - "RevenueCat gestiona la versión premium, Expo envía las notificaciones remotas y las actualizaciones, Web3Forms e ImgBB tratan los mensajes de contacto y sus capturas de pantalla"
         - "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms e ImgBB pueden tratar estos datos fuera de la Unión Europea"
-        - "Desactivar el ajuste detiene el uso compartido y retira del recuento los estados de lectura del dispositivo. Las cifras vinculadas al dispositivo se eliminan a petición en book-nova@outlook.fr, con el número de soporte. Puedes presentar una reclamación ante la CNIL"
+        - "Desactivar el ajuste detiene el uso compartido y retira del recuento los estados de lectura y los favoritos del dispositivo. Las cifras vinculadas al dispositivo se eliminan a petición en book-nova@outlook.fr, con el número de soporte. Puedes presentar una reclamación ante la CNIL"
+        - "Este sitio carga el píxel publicitario de TikTok"
     lastUpdated: "Última actualización: 31/10/2026"
     backToHome: "Volver al inicio"
   supportPage:
@@ -2408,7 +2451,7 @@ es:
           - "Crear colecciones personalizadas, tomar notas de lectura y escribir una nota final en libros terminados"
           - "Desbloquear insignias y completar desafíos de lectura"
           - "Consultar estadísticas personalizadas y recibir recomendaciones actualizadas regularmente"
-        note: "La Aplicación funciona sin conexión para la mayoría de acciones. Una sincronización semanal con Firebase (Google Cloud) envía una copia cifrada de tus libros, categorías y valoraciones para generar estas recomendaciones."
+        note: "La Aplicación funciona sin conexión para la mayoría de acciones. Si has aceptado el ajuste «Contribuir a estadísticas», comparte algunos datos a través de Firebase (Google Cloud), sin tu nombre, en particular para generar estas recomendaciones. El detalle figura en la Política de Privacidad."
       usage:
         title: "3. Uso de la Aplicación"
         allowed:
@@ -2439,13 +2482,13 @@ es:
             - "Información sobre tus préstamos y préstamos recibidos"
             - "Progreso de lectura y estadísticas personalizadas"
             - "Avatar y ajustes personalizados"
-          note: "Tus datos permanecen accesibles en tu dispositivo. Se sincroniza una copia mínima (libros, categorías, valoraciones e identificador aleatorio del dispositivo) en Firebase para producir recomendaciones."
+          note: "Tus datos permanecen accesibles en tu dispositivo. Lo que se comparte, y con quién, figura en la Política de Privacidad."
         responsibility:
           title: "4.2 Responsabilidad sobre el Contenido"
           body: "Eres el único responsable de la exactitud y legalidad de la información que introduces. No nos hacemos responsables de errores de registro ni de conflictos entre usuarios por préstamos de libros."
         backup:
           title: "4.3 Copias de Seguridad"
-          body: "La Aplicación guarda tu información localmente y sincroniza una copia en Firebase. Te recomendamos mantener copias propias en iCloud/Google Drive y escribirnos si deseas eliminar la copia remota."
+          body: "La Aplicación guarda tu información localmente. Te recomendamos mantener copias propias en iCloud/Google Drive. Desinstalar la aplicación borra los datos del teléfono, no lo que ya se ha compartido: antes de desinstalar, desactiva «Contribuir a estadísticas» y escríbenos con tu número de soporte para eliminar las cifras vinculadas a tu dispositivo."
       isbndb:
         title: "5. API de ISBNdb y Metadatos"
         thirdParty:
@@ -2461,15 +2504,15 @@ es:
         title: "6. Cuentas y Autenticación"
         noAccount:
           title: "6.1 Sin Cuenta Obligatoria"
-          body: "La Aplicación no requiere crear una cuenta. La sincronización se basa en un identificador aleatorio creado por la app en el dispositivo, que también sirve como número de soporte."
+          body: "La Aplicación no requiere crear una cuenta. Utiliza un identificador aleatorio creado por la app en el dispositivo, que también sirve como número de soporte."
         uuid:
           title: "6.2 Identificador del Dispositivo (UUID)"
-          body: "Se genera localmente un identificador aleatorio (UUID) que solo se utiliza para:"
+          body: "Este identificador aleatorio (UUID) se genera localmente y sirve en particular para:"
           items:
             - "Gestionar tu estado de suscripción premium mediante RevenueCat"
-            - "Vincular tu sincronización con Firebase y generar recomendaciones"
-            - "Preparar futuras funciones de recomendaciones locales"
-          note: "Este UUID no contiene datos personales y nunca se comparte con fines publicitarios. También te permite solicitar la eliminación de tu copia sincronizada."
+            - "Vincular a tu dispositivo las estadísticas compartidas, si has aceptado «Contribuir a estadísticas»"
+            - "Enviar notificaciones remotas, medir el uso (Mixpanel), recibir informes de fallos (Sentry) y atribuir las instalaciones a los anuncios (TikTok), se haya aceptado o no este ajuste"
+          note: "Este identificador no contiene ni tu nombre ni tu correo electrónico. También te permite solicitar la eliminación de las cifras vinculadas a tu dispositivo."
       premium:
         title: "7. Suscripción Premium y Compras In-App"
         features:
@@ -2502,11 +2545,13 @@ es:
           body: "Puedes cancelar tu suscripción premium en cualquier momento desde tus ajustes de Apple o Google. La cancelación entra en vigor al final del período en curso."
       notifications:
         title: "8. Notificaciones"
-        body: "La Aplicación puede enviar notificaciones locales para:"
+        body: "La Aplicación puede enviar notificaciones locales y, a través del servicio Expo, notificaciones remotas para:"
         items:
-          - "Recordarte los libros prestados (30 días después del préstamo)"
-          - "Animarte a usar la Aplicación (recordatorio mensual opcional)"
-        note: "Puedes desactivar estas notificaciones en los ajustes de tu dispositivo o de la Aplicación."
+          - "Recordarte los libros prestados y recibidos en préstamo"
+          - "Animarte a usar la Aplicación (recordatorio mensual)"
+          - "Avisarte antes de que termine la prueba gratuita"
+          - "Enviarte recordatorios y anuncios (notificaciones remotas)"
+        note: "Puedes desactivarlas en los ajustes de tu dispositivo."
       intellectualProperty:
         title: "9. Propiedad Intelectual"
         rights:
@@ -2571,13 +2616,13 @@ es:
       title: "Resumen rápido"
       items:
         - "Uso personal y legal únicamente"
-        - "Tus datos siguen accesibles en tu dispositivo y se sincroniza una copia mínima mediante Firebase solo para recomendaciones"
+        - "Tus datos siguen accesibles en tu dispositivo; si aceptas «Contribuir a estadísticas», algunos se comparten a través de Firebase, sin tu nombre"
         - "Versión gratuita: 4 libros añadidos por día, número total de libros ilimitado"
         - "Versión premium: añadidos diarios ilimitados"
         - "Compras gestionadas por Apple/Google; reembolsos a través de ellos"
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
-        - "Sin cuenta obligatoria; un identificador aleatorio del dispositivo gestiona el premium y la sincronización con Firebase dedicada a recomendaciones"
-    lastUpdated: "Última actualización: 03/10/2026"
+        - "Sin cuenta obligatoria; un identificador aleatorio del dispositivo sirve para el premium, las estadísticas compartidas, las notificaciones, la medición del uso y la atribución publicitaria"
+    lastUpdated: "Última actualización: 31/10/2026"
     backToHome: "Volver al inicio"
   medalEgg:
     title: "¡35 medallas coleccionadas!"
