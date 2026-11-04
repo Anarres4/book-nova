@@ -7,7 +7,7 @@ description: "Conditions d'utilisation de l'application Book Nova."
 description_en: "Terms of use for the Book Nova application."
 description_es: "Condiciones de uso de la aplicación Book Nova."
 permalink: /terms/
-last_modified_at: 2026-10-31
+last_modified_at: 2026-11-04
 ---
 {% assign t = site.data.translations[site.active_lang] %}
 
@@ -79,6 +79,17 @@ last_modified_at: 2026-10-31
                     <p>{{ t.termsPage.sections.userData.responsibility.body }}</p>
                     <h3>{{ t.termsPage.sections.userData.backup.title }}</h3>
                     <p>{{ t.termsPage.sections.userData.backup.body }}</p>
+                    <h3>{{ t.termsPage.sections.userData.reviews.title }}</h3>
+                    <p>{{ t.termsPage.sections.userData.reviews.body }}</p>
+                    <ul>
+                        <li>{{ t.termsPage.sections.userData.reviews.items[0] }}</li>
+                        <li>{{ t.termsPage.sections.userData.reviews.items[1] }}</li>
+                        <li>{{ t.termsPage.sections.userData.reviews.items[2] }}</li>
+                        <li>{{ t.termsPage.sections.userData.reviews.items[3] }}</li>
+                        <li>{{ t.termsPage.sections.userData.reviews.items[4] }}</li>
+                        <li>{{ t.termsPage.sections.userData.reviews.items[5] }}</li>
+                    </ul>
+                    <p>{{ t.termsPage.sections.userData.reviews.note }} <a href="{{ '/reviews/' | relative_url }}">{{ t.reviewsPage.title }}</a></p>
                 </section>
 
                 <section class="privacy-block">
@@ -228,6 +239,7 @@ last_modified_at: 2026-10-31
                         <li>{{ t.termsPage.summary.items[4] }}</li>
                         <li>{{ t.termsPage.summary.items[5] }}</li>
                         <li>{{ t.termsPage.summary.items[6] }}</li>
+                        <li>{{ t.termsPage.summary.items[7] }}</li>
                     </ul>
                 </section>
             </div>
