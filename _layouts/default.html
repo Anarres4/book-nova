@@ -97,6 +97,7 @@
       {% elsif page.url contains 'support' %}{% assign breadcrumb_label = t.nav.support %}
       {% elsif page.url contains 'privacy' %}{% assign breadcrumb_label = t.footerLinks.privacy %}
       {% elsif page.url contains 'terms' %}{% assign breadcrumb_label = t.footerLinks.terms %}
+      {% elsif page.url contains 'reviews' %}{% assign breadcrumb_label = t.reviewsPage.title %}
       {% endif %}
     {% endif %}
 

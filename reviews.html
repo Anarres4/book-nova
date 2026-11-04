@@ -1,0 +1,146 @@
+---
+layout: default
+title: "Comment fonctionnent les avis"
+title_en: "How reviews work"
+title_es: "Cómo funcionan las reseñas"
+description: "Comment fonctionnent les avis publics de Book Nova : provenance, contrôle, tri, délais, modification, signalement et contestation."
+description_en: "How Book Nova's public reviews work: origin, checks, order, timing, editing, reporting and disputes."
+description_es: "Cómo funcionan las reseñas públicas de Book Nova: origen, revisión, orden, plazos, modificación, denuncias e impugnación."
+permalink: /reviews/
+last_modified_at: 2026-11-04
+---
+{% assign t = site.data.translations[site.active_lang] %}
+
+<section class="privacy-section">
+    <div class="privacy-wrapper">
+        <div class="privacy-card">
+            <header class="privacy-header">
+                <h1 class="privacy-title">
+                    <span>{{ t.reviewsPage.title }}</span>
+                    <span class="privacy-brand font-marker">- {{ site.title }}</span>
+                </h1>
+            </header>
+
+            <div class="privacy-section-content">
+                <section class="privacy-block">
+                    <p>{{ t.reviewsPage.intro }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.origin.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.reviewsPage.origin.items[0] }}</li>
+                        <li>{{ t.reviewsPage.origin.items[1] }}</li>
+                        <li>{{ t.reviewsPage.origin.items[2] }}</li>
+                        <li>{{ t.reviewsPage.origin.items[3] }}</li>
+                    </ul>
+                    <p class="privacy-note">{{ t.reviewsPage.origin.note }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.display.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.reviewsPage.display.items[0] }}</li>
+                        <li>{{ t.reviewsPage.display.items[1] }}</li>
+                        <li>{{ t.reviewsPage.display.items[2] }}</li>
+                        <li>{{ t.reviewsPage.display.items[3] }}</li>
+                        <li>{{ t.reviewsPage.display.items[4] }}</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.control.title }}</h2>
+                    <p>{{ t.reviewsPage.control.intro }}</p>
+                    <ul class="privacy-list">
+                        <li>{{ t.reviewsPage.control.items[0] }}</li>
+                        <li>{{ t.reviewsPage.control.items[1] }}</li>
+                        <li>{{ t.reviewsPage.control.items[2] }}</li>
+                        <li>{{ t.reviewsPage.control.items[3] }}</li>
+                    </ul>
+                    <p class="privacy-note">{{ t.reviewsPage.control.note }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.delays.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.reviewsPage.delays.items[0] }}</li>
+                        <li>{{ t.reviewsPage.delays.items[1] }}</li>
+                        <li>{{ t.reviewsPage.delays.items[2] }}</li>
+                        <li>{{ t.reviewsPage.delays.items[3] }}</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.edit.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.reviewsPage.edit.items[0] }}</li>
+                        <li>{{ t.reviewsPage.edit.items[1] }}</li>
+                        <li>{{ t.reviewsPage.edit.items[2] }}</li>
+                        <li>{{ t.reviewsPage.edit.items[3] }}</li>
+                        <li>{{ t.reviewsPage.edit.items[4] }}</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.reports.title }}</h2>
+                    <p>{{ t.reviewsPage.reports.intro }}</p>
+                    <ul class="privacy-list">
+                        <li>{{ t.reviewsPage.reports.items[0] }}</li>
+                        <li>{{ t.reviewsPage.reports.items[1] }}</li>
+                        <li>{{ t.reviewsPage.reports.items[2] }}</li>
+                        <li>{{ t.reviewsPage.reports.items[3] }}</li>
+                        <li>{{ t.reviewsPage.reports.items[4] }}</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.decisions.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.reviewsPage.decisions.items[0] }}</li>
+                        <li>{{ t.reviewsPage.decisions.items[1] }}</li>
+                        <li>{{ t.reviewsPage.decisions.items[2] }}</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.rules.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.reviewsPage.rules.items[0] }}</li>
+                        <li>{{ t.reviewsPage.rules.items[1] }}</li>
+                        <li>{{ t.reviewsPage.rules.items[2] }}</li>
+                    </ul>
+                    <p class="privacy-note">{{ t.reviewsPage.rules.note }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.ratings.title }}</h2>
+                    <p>{{ t.reviewsPage.ratings.content }}</p>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.contact.title }}</h2>
+                    <ul class="privacy-list">
+                        <li>{{ t.reviewsPage.contact.items[0] }}</li>
+                        <li>{{ t.reviewsPage.contact.items[1] }}</li>
+                        <li>{{ t.reviewsPage.contact.items[2] }}</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-block">
+                    <h2>{{ t.reviewsPage.links.title }}</h2>
+                    <ul class="privacy-list">
+                        <li><a href="{{ '/terms/' | relative_url }}">{{ t.footerLinks.terms }}</a></li>
+                        <li><a href="{{ '/privacy/' | relative_url }}">{{ t.footerLinks.privacy }}</a></li>
+                        <li><a href="{{ '/support/' | relative_url }}">{{ t.footerLinks.contact }}</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <p class="privacy-meta">{{ t.reviewsPage.lastUpdated }}</p>
+
+            <div class="privacy-back-link">
+                <a href="{{ '/' | relative_url }}">{{ t.reviewsPage.backToHome }}</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -595,6 +595,84 @@ fr:
         - "Ce site charge le pixel publicitaire de TikTok"
     lastUpdated: "Dernière mise à jour : 31/10/2026"
     backToHome: "Retour à l'accueil"
+  reviewsPage:
+    title: "Comment fonctionnent les avis"
+    intro: "Les avis publics arrivent avec la version 1.40.0 de Book Nova. Cette page explique d'où ils viennent, comment ils sont contrôlés et affichés, combien de temps ils restent en ligne, et comment les signaler."
+    origin:
+      title: "D'où viennent les avis"
+      items:
+        - "Un avis est la Note finale d'un livre que son auteur a classé « Lu », et qu'il a choisi de partager, livre par livre, avec « Partager mon avis avec la communauté »."
+        - "Pour partager, le livre doit avoir un ISBN et une date de fin de lecture, et l'avis au moins 20 caractères. Il faut accepter les règles ci-dessous et avoir 15 ans ou plus, ou l'accord d'un parent."
+        - "Un lecteur publie au plus un avis par livre. Les avis sont rattachés au titre et à l'auteur du livre : toutes ses éditions partagent les mêmes avis."
+        - "Partager un avis est gratuit, en version gratuite comme en premium."
+      note: "Ni la lecture ni l'achat du livre ne sont vérifiés. Aucun avis n'est rémunéré ni récompensé, et nous n'écrivons pas d'avis à la place des lecteurs."
+    display:
+      title: "Ce qui est affiché"
+      items:
+        - "Sur la fiche d'un livre, dans Découvrir, sous « Avis des lecteurs » : le texte, la note sur 5 si l'auteur en a donné une, le mois de lecture, la date de publication, la mention « modifié » si le texte ou la note a changé, et le pseudonyme de l'auteur."
+        - "Le pseudonyme est tiré au hasard, comme « Hibou 4271 », et reste le même pour tous les avis d'un lecteur. Il ne contient ni son nom ni son numéro de support."
+        - "Tri : votre avis d'abord, puis les autres, du plus récent au plus ancien. « Masquer les spoilers » retire de la liste les avis qui en contiennent."
+        - "Un avis marqué comme spoiler, par son auteur ou après un signalement, reste en ligne, mais son texte ne s'affiche qu'après « Afficher quand même »."
+        - "Il n'est pas possible de contacter l'auteur d'un avis depuis Book Nova."
+    control:
+      title: "Le contrôle avant publication"
+      intro: "Chaque avis passe un contrôle automatique au moment de sa publication, sans relecture préalable par une personne. Il est refusé s'il :"
+      items:
+        - "fait moins de 20 caractères ou plus de 2 000 ;"
+        - "contient un lien, une adresse e-mail, un @pseudo, un numéro de téléphone, un numéro de support ou une suite de 9 chiffres ou plus, ISBN compris ;"
+        - "contient des propos insultants ou haineux, repérés par un filtre automatique (Google Cloud Natural Language, en Europe) ;"
+        - "n'a pas de date de fin de lecture, ou porte sur un livre qui ne peut pas recevoir d'avis."
+      note: "Un refus n'est jamais silencieux : l'app en affiche le motif, et votre texte n'est jamais modifié. Le filtre ne distingue pas une insulte à un personnage d'une insulte à une personne : les deux sont refusées. Pour éviter les abus, un même compte peut publier au plus 5 avis par heure et 20 par jour, et un compte suspendu ne peut plus publier."
+    delays:
+      title: "Délais de publication et de conservation"
+      items:
+        - "Publication : dès que l'avis passe le contrôle automatique. Sans réseau, il part au retour de la connexion ; si le contrôle est momentanément indisponible, l'app réessaie plus tard."
+        - "Conservation : un avis publié reste en ligne jusqu'à ce que son auteur le retire, sans limite de durée. Désinstaller l'app ne le supprime pas."
+        - "Un avis signalé, masqué ou retiré par la modération est gardé dans notre file de modération jusqu'à 12 mois après sa dernière activité, pour permettre une contestation."
+        - "Un journal de chaque publication, modification et suppression (adresse IP, date, nature de l'opération, identifiant du compte, sans le texte) est conservé un an."
+    edit:
+      title: "Modifier ou retirer son avis"
+      items:
+        - "Modifier : changez votre Note finale, puis enregistrez. L'avis en ligne est remplacé après un nouveau contrôle automatique."
+        - "Un avis masqué par la modération reste masqué après une modification : il repasse en vérification."
+        - "Retirer : touchez de nouveau le bouton de partage de la Note finale, puis enregistrez ; videz la Note finale ; supprimez le livre ; ou passez par Paramètres › Données et confidentialité › Mes avis publics, qui permet aussi de supprimer tous vos avis d'un coup."
+        - "Votre Note finale reste toujours sur votre téléphone."
+        - "Après une réinstallation ou sur un nouveau téléphone, l'app peut ne plus pouvoir retirer vos anciens avis : écrivez-nous et nous les retirerons."
+    reports:
+      title: "Signaler un avis ou un lecteur"
+      intro: "Depuis le menu « … » d'un avis, vous pouvez signaler l'avis, signaler son auteur, ou masquer ses avis pour vous seul."
+      items:
+        - "Motifs : spoiler, haine ou harcèlement, insulte ou contenu offensant, informations personnelles, spam ou publicité, faux avis, autre contenu illicite, autre."
+        - "Vous pouvez ajouter des détails, obligatoires pour « autre contenu illicite », ainsi que votre nom et votre adresse e-mail, facultatifs. Si vous laissez une adresse, nous vous répondons avec notre décision."
+        - "Chaque signalement est examiné par une personne de notre équipe, sous 24 heures."
+        - "En attendant, certains signalements masquent l'avis à titre provisoire : un spoiler signalé cache son texte ; des informations personnelles signalées le retirent du public ; un autre abus le retire après les signalements de deux lecteurs différents. Seuls les comptes créés depuis plus de 24 heures déclenchent ce masquage."
+        - "Signaler un lecteur ne masque rien : le signalement nous est transmis."
+    decisions:
+      title: "Décisions et contestation"
+      items:
+        - "Après vérification, nous rétablissons l'avis, le retirons, ou suspendons son auteur pour une durée donnée. Un avis rétabli ne peut plus être masqué automatiquement."
+        - "L'auteur voit dans l'app pourquoi son avis est refusé, masqué ou retiré, et si la décision est automatique et provisoire."
+        - "Il peut la contester avec le bouton « Contester », qui prépare un e-mail, ou en nous écrivant avec la référence de l'avis."
+    rules:
+      title: "Les règles"
+      items:
+        - "Pas d'insultes ni de propos haineux, envers qui que ce soit, personnages compris."
+        - "Pas d'informations personnelles, ni les vôtres ni celles des autres : ni nom, ni coordonnées, ni lien."
+        - "Prévenez les lecteurs quand votre avis dévoile l'intrigue."
+      note: "Ce sont les règles acceptées au premier partage. Les conditions d'utilisation de Book Nova s'appliquent aussi."
+    ratings:
+      title: "Les notes des livres"
+      content: "La note moyenne et la répartition des notes d'une fiche Découvrir viennent des lecteurs qui ont terminé le livre et accepté « Contribuer aux statistiques ». Chaque appareil compte une fois par livre, sans votre nom. Ces notes ne sont pas vérifiées non plus, et sont mises à jour au plus une fois par semaine."
+    contact:
+      title: "Contenu illicite, urgences et contact"
+      items:
+        - "Pour signaler un contenu illicite, contester une décision, ou pour les autorités : book-nova@outlook.fr."
+        - "En cas de menace pour la vie ou la sécurité de quelqu'un, appelez le 17 ou le 112."
+        - "Pour signaler un contenu illicite aux autorités françaises : Pharos, sur internet-signalement.gouv.fr."
+    links:
+      title: "Pour aller plus loin"
+    lastUpdated: "Dernière mise à jour : 04/11/2026"
+    backToHome: "Retour à l'accueil"
   termsPage:
     title: "Conditions d'Utilisation"
     sections:
@@ -1474,6 +1552,84 @@ en:
         - "This website loads TikTok's advertising pixel"
     lastUpdated: "Last updated: 31/10/2026"
     backToHome: "Back to home"
+  reviewsPage:
+    title: "How reviews work"
+    intro: "Public reviews arrive with version 1.40.0 of Book Nova. This page explains where they come from, how they are checked and displayed, how long they stay online, and how to report them."
+    origin:
+      title: "Where reviews come from"
+      items:
+        - "A review is the Final review of a book its author marked as “Read”, which they chose to share, book by book, with “Share my review with the community”."
+        - "To share, the book needs an ISBN and a finish date, and the review at least 20 characters. You must accept the rules below and be 15 or older, or have a parent's permission."
+        - "A reader publishes at most one review per book. Reviews are tied to the book's title and author: all its editions share the same reviews."
+        - "Sharing a review is free, on the free version as on premium."
+      note: "Neither the reading nor the purchase of the book is verified. No review is paid for or rewarded, and we do not write reviews in readers' place."
+    display:
+      title: "What is displayed"
+      items:
+        - "On a book's sheet, in Discover, under “Readers’ reviews”: the text, the rating out of 5 if the author gave one, the month of reading, the publication date, the “edited” mention if the text or rating changed, and the author's pseudonym."
+        - "The pseudonym is drawn at random, like “Owl 4271”, and stays the same for all of a reader's reviews. It contains neither their name nor their support number."
+        - "Order: your review first, then the others, from newest to oldest. “Hide spoilers” removes reviews that contain them from the list."
+        - "A review marked as a spoiler, by its author or after a report, stays online, but its text only appears after “Show anyway”."
+        - "You cannot contact the author of a review through Book Nova."
+    control:
+      title: "Checks before publication"
+      intro: "Each review goes through an automatic check when it is published, with no prior reading by a person. It is refused if it:"
+      items:
+        - "is shorter than 20 characters or longer than 2,000;"
+        - "contains a link, an email address, an @name, a phone number, a support number or a run of 9 digits or more, ISBNs included;"
+        - "contains insulting or hateful remarks, detected by an automatic filter (Google Cloud Natural Language, in Europe);"
+        - "has no finish date, or concerns a book that cannot receive reviews."
+      note: "A refusal is never silent: the app shows its reason, and your text is never altered. The filter cannot tell an insult to a character from an insult to a person: both are refused. To prevent abuse, one account can publish at most 5 reviews an hour and 20 a day, and a suspended account can no longer publish."
+    delays:
+      title: "Publication and retention times"
+      items:
+        - "Publication: as soon as the review passes the automatic check. Without a network, it is sent when the connection returns; if the check is briefly unavailable, the app tries again later."
+        - "Retention: a published review stays online until its author withdraws it, with no time limit. Uninstalling the app does not delete it."
+        - "A review that was reported, hidden or removed by moderation is kept in our moderation queue for up to 12 months after its last activity, so that a decision can be disputed."
+        - "A log of each publication, edit and deletion (IP address, date, type of operation, account identifier, without the text) is kept for one year."
+    edit:
+      title: "Editing or withdrawing your review"
+      items:
+        - "Edit: change your Final review, then save. The online review is replaced after a new automatic check."
+        - "A review hidden by moderation stays hidden after an edit: it goes back for review."
+        - "Withdraw: tap the Final review's share button again, then save; clear the Final review; delete the book; or go to Settings › Data & Privacy › My public reviews, which also lets you delete all your reviews at once."
+        - "Your Final review always stays on your phone."
+        - "After a reinstall or on a new phone, the app may no longer be able to withdraw your old reviews: write to us and we will remove them."
+    reports:
+      title: "Reporting a review or a reader"
+      intro: "From a review's “…” menu, you can report the review, report its author, or hide their reviews for yourself only."
+      items:
+        - "Reasons: spoiler, hate or harassment, insult or offensive content, personal information, spam or advertising, fake review, other illegal content, other."
+        - "You can add details, required for “other illegal content”, as well as your name and email address, both optional. If you leave an address, we reply with our decision."
+        - "Each report is examined by a person from our team within 24 hours."
+        - "Meanwhile, some reports hide the review provisionally: a reported spoiler hides its text; reported personal information removes it from public view; another kind of abuse removes it after reports from two different readers. Only accounts created more than 24 hours ago trigger this hiding."
+        - "Reporting a reader hides nothing: the report is passed on to us."
+    decisions:
+      title: "Decisions and disputes"
+      items:
+        - "After checking, we restore the review, remove it, or suspend its author for a set time. A restored review can no longer be hidden automatically."
+        - "The author sees in the app why their review is refused, hidden or removed, and whether the decision is automatic and provisional."
+        - "They can dispute it with the “Dispute” button, which prepares an email, or by writing to us with the review's reference."
+    rules:
+      title: "The rules"
+      items:
+        - "No insults or hateful remarks, about anyone, characters included."
+        - "No personal information, yours or anyone else's: no names, contact details or links."
+        - "Let readers know when your review reveals the plot."
+      note: "These are the rules accepted at the first share. Book Nova's Terms of Use also apply."
+    ratings:
+      title: "Book ratings"
+      content: "The average rating and the rating breakdown on a Discover sheet come from readers who finished the book and accepted “Contribute to statistics”. Each device counts once per book, without your name. These ratings are not verified either, and are updated at most once a week."
+    contact:
+      title: "Illegal content, emergencies and contact"
+      items:
+        - "To report illegal content, dispute a decision, or for the authorities: book-nova@outlook.fr."
+        - "If someone's life or safety is under threat, call 112 (or 17 in France)."
+        - "To report illegal content to the French authorities: Pharos, at internet-signalement.gouv.fr."
+    links:
+      title: "Learn more"
+    lastUpdated: "Last updated: 04/11/2026"
+    backToHome: "Back to home"
   termsPage:
     title: "Terms of Use"
     sections:
@@ -2351,6 +2507,84 @@ es:
         - "Desactivar el ajuste detiene el uso compartido y retira del recuento los estados de lectura y los favoritos del dispositivo. Las cifras vinculadas al dispositivo se eliminan a petición en book-nova@outlook.fr, con el número de soporte. Puedes presentar una reclamación ante la CNIL"
         - "Este sitio carga el píxel publicitario de TikTok"
     lastUpdated: "Última actualización: 31/10/2026"
+    backToHome: "Volver al inicio"
+  reviewsPage:
+    title: "Cómo funcionan las reseñas"
+    intro: "Las reseñas públicas llegan con la versión 1.40.0 de Book Nova. Esta página explica de dónde vienen, cómo se revisan y se muestran, cuánto tiempo permanecen en línea y cómo denunciarlas."
+    origin:
+      title: "De dónde vienen las reseñas"
+      items:
+        - "Una reseña es la Reseña final de un libro que su autor marcó como «Leído» y que decidió compartir, libro por libro, con «Compartir mi reseña con la comunidad»."
+        - "Para compartir, el libro necesita un ISBN y una fecha de fin de lectura, y la reseña al menos 20 caracteres. Hay que aceptar las normas de abajo y tener 15 años o más, o el permiso de tu madre, padre o tutor."
+        - "Un lector publica como máximo una reseña por libro. Las reseñas van unidas al título y al autor del libro: todas sus ediciones comparten las mismas reseñas."
+        - "Compartir una reseña es gratis, en la versión gratuita como en la premium."
+      note: "Ni la lectura ni la compra del libro se verifican. Ninguna reseña se paga ni se recompensa, y no escribimos reseñas en lugar de los lectores."
+    display:
+      title: "Qué se muestra"
+      items:
+        - "En la ficha de un libro, en Descubrir, bajo «Reseñas de lectores»: el texto, la valoración sobre 5 si el autor dio una, el mes de lectura, la fecha de publicación, la mención «editada» si el texto o la valoración cambiaron, y el seudónimo del autor."
+        - "El seudónimo se elige al azar, como «Búho 4271», y es el mismo para todas las reseñas de un lector. No contiene ni su nombre ni su número de soporte."
+        - "Orden: tu reseña primero, luego las demás, de la más reciente a la más antigua. «Ocultar spoilers» quita de la lista las reseñas que los contienen."
+        - "Una reseña marcada como spoiler, por su autor o tras una denuncia, sigue en línea, pero su texto solo se muestra tras «Mostrar de todos modos»."
+        - "No es posible contactar con el autor de una reseña desde Book Nova."
+    control:
+      title: "La revisión antes de publicar"
+      intro: "Cada reseña pasa una revisión automática al publicarse, sin lectura previa por una persona. Se rechaza si:"
+      items:
+        - "tiene menos de 20 caracteres o más de 2000;"
+        - "contiene un enlace, un correo electrónico, un @usuario, un número de teléfono, un número de soporte o una serie de 9 cifras o más, ISBN incluidos;"
+        - "contiene comentarios insultantes u odiosos, detectados por un filtro automático (Google Cloud Natural Language, en Europa);"
+        - "no tiene fecha de fin de lectura, o trata de un libro que no puede recibir reseñas."
+      note: "Un rechazo nunca es silencioso: la app muestra el motivo, y tu texto nunca se modifica. El filtro no distingue un insulto a un personaje de un insulto a una persona: ambos se rechazan. Para evitar abusos, una misma cuenta puede publicar como máximo 5 reseñas por hora y 20 al día, y una cuenta suspendida ya no puede publicar."
+    delays:
+      title: "Plazos de publicación y conservación"
+      items:
+        - "Publicación: en cuanto la reseña pasa la revisión automática. Sin red, se envía al volver la conexión; si la revisión no está disponible por un momento, la app lo vuelve a intentar más tarde."
+        - "Conservación: una reseña publicada sigue en línea hasta que su autor la retire, sin límite de tiempo. Desinstalar la app no la borra."
+        - "Una reseña denunciada, ocultada o retirada por la moderación se guarda en nuestra cola de moderación hasta 12 meses después de su última actividad, para permitir impugnar la decisión."
+        - "Un registro de cada publicación, modificación y eliminación (dirección IP, fecha, tipo de operación, identificador de la cuenta, sin el texto) se conserva un año."
+    edit:
+      title: "Modificar o retirar tu reseña"
+      items:
+        - "Modificar: cambia tu Reseña final y guarda. La reseña en línea se sustituye tras una nueva revisión automática."
+        - "Una reseña ocultada por la moderación sigue oculta tras una modificación: vuelve a revisión."
+        - "Retirar: vuelve a tocar el botón para compartir de la Reseña final y guarda; vacía la Reseña final; borra el libro; o ve a Configuración › Datos y privacidad › Mis reseñas públicas, donde también puedes borrar todas tus reseñas de una vez."
+        - "Tu Reseña final siempre se queda en tu teléfono."
+        - "Tras reinstalar la app o en un teléfono nuevo, puede que la app ya no pueda retirar tus reseñas antiguas: escríbenos y las retiraremos."
+    reports:
+      title: "Denunciar una reseña o a un lector"
+      intro: "Desde el menú «…» de una reseña, puedes denunciar la reseña, denunciar a su autor u ocultar sus reseñas solo para ti."
+      items:
+        - "Motivos: spoiler, odio o acoso, insulto o contenido ofensivo, información personal, spam o publicidad, reseña falsa, otro contenido ilegal, otro."
+        - "Puedes añadir detalles, obligatorios para «otro contenido ilegal», así como tu nombre y tu correo electrónico, opcionales. Si dejas un correo, te respondemos con nuestra decisión."
+        - "Cada denuncia la examina una persona de nuestro equipo en un plazo de 24 horas."
+        - "Mientras tanto, algunas denuncias ocultan la reseña de forma provisional: un spoiler denunciado oculta su texto; la información personal denunciada la retira de la vista pública; otro abuso la retira tras las denuncias de dos lectores distintos. Solo las cuentas creadas hace más de 24 horas activan esta ocultación."
+        - "Denunciar a un lector no oculta nada: la denuncia nos llega a nosotros."
+    decisions:
+      title: "Decisiones e impugnación"
+      items:
+        - "Tras revisarla, restablecemos la reseña, la retiramos o suspendemos a su autor durante un tiempo determinado. Una reseña restablecida ya no puede ocultarse automáticamente."
+        - "El autor ve en la app por qué su reseña se rechaza, se oculta o se retira, y si la decisión es automática y provisional."
+        - "Puede impugnarla con el botón «Impugnar», que prepara un correo, o escribiéndonos con la referencia de la reseña."
+    rules:
+      title: "Las normas"
+      items:
+        - "Nada de insultos ni comentarios de odio, hacia nadie, personajes incluidos."
+        - "Nada de información personal, ni tuya ni de otros: ni nombres, ni datos de contacto, ni enlaces."
+        - "Avisa a los lectores cuando tu reseña revele la trama."
+      note: "Son las normas aceptadas al compartir por primera vez. También se aplican las condiciones de uso de Book Nova."
+    ratings:
+      title: "Las valoraciones de los libros"
+      content: "La valoración media y el reparto de valoraciones de una ficha de Descubrir vienen de los lectores que terminaron el libro y aceptaron «Contribuir a estadísticas». Cada dispositivo cuenta una vez por libro, sin tu nombre. Estas valoraciones tampoco se verifican, y se actualizan como máximo una vez por semana."
+    contact:
+      title: "Contenido ilegal, urgencias y contacto"
+      items:
+        - "Para denunciar un contenido ilegal, impugnar una decisión o para las autoridades: book-nova@outlook.fr."
+        - "Si la vida o la seguridad de alguien está amenazada, llama al 112 (o al 17 en Francia)."
+        - "Para denunciar un contenido ilegal ante las autoridades francesas: Pharos, en internet-signalement.gouv.fr."
+    links:
+      title: "Para saber más"
+    lastUpdated: "Última actualización: 04/11/2026"
     backToHome: "Volver al inicio"
   supportPage:
     title: "¿Necesitas ayuda?"
