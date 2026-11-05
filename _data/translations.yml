@@ -613,7 +613,7 @@ fr:
         - "Couper le réglage arrête le partage et retire du décompte les statuts de lecture et les favoris de l'appareil. Les chiffres rattachés à l'appareil se suppriment sur demande à book-nova@outlook.fr, avec le numéro de support. Vous pouvez déposer une réclamation auprès de la CNIL"
         - "Ce site charge le pixel publicitaire de TikTok"
         - "Un avis n'est publié que si vous le partagez : il est public, signé d'un pseudonyme, et son compte est géré par Firebase Authentication aux États-Unis"
-    lastUpdated: "Dernière mise à jour : 04/11/2026"
+    lastUpdated: "Dernière mise à jour : 05/11/2026"
     backToHome: "Retour à l'accueil"
   reviewsPage:
     title: "Comment fonctionnent les avis"
@@ -896,7 +896,7 @@ fr:
         - "Application fournie 'en l'état', responsabilité limitée"
         - "Pas de compte requis ; un identifiant aléatoire de l'appareil sert au premium, aux statistiques partagées, aux notifications, à la mesure d'usage et à l'attribution publicitaire"
         - "Avis publics : partagés seulement si vous le demandez, livre par livre, soumis aux règles des avis et retirables à tout moment"
-    lastUpdated: "Dernière mise à jour : 04/11/2026"
+    lastUpdated: "Dernière mise à jour : 05/11/2026"
     backToHome: "Retour à l'accueil"
   supportPage:
     title: "Besoin d'un coup de main ?"
@@ -1605,7 +1605,7 @@ en:
         - "Turning off the setting stops sharing and removes the device's reading statuses and favourites from the counts. The figures tied to the device are deleted on request at book-nova@outlook.fr, with the support number. You can file a complaint with the CNIL"
         - "This website loads TikTok's advertising pixel"
         - "A review is only published if you share it: it is public, signed with a pseudonym, and its account is managed by Firebase Authentication in the United States"
-    lastUpdated: "Last updated: 04/11/2026"
+    lastUpdated: "Last updated: 05/11/2026"
     backToHome: "Back to home"
   reviewsPage:
     title: "How reviews work"
@@ -1888,7 +1888,7 @@ en:
         - "App provided 'as is' with limited liability"
         - "No account required; a random device identifier is used for premium, shared statistics, notifications, usage measurement and advertising attribution"
         - "Public reviews: shared only if you ask, book by book, subject to the review rules and withdrawable at any time"
-    lastUpdated: "Last updated: 04/11/2026"
+    lastUpdated: "Last updated: 05/11/2026"
     backToHome: "Back to home"
   supportPage:
     title: "Need a hand?"
@@ -2596,7 +2596,7 @@ es:
         - "Desactivar el ajuste detiene el uso compartido y retira del recuento los estados de lectura y los favoritos del dispositivo. Las cifras vinculadas al dispositivo se eliminan a petición en book-nova@outlook.fr, con el número de soporte. Puedes presentar una reclamación ante la CNIL"
         - "Este sitio carga el píxel publicitario de TikTok"
         - "Una reseña solo se publica si la compartes: es pública, firmada con un seudónimo, y su cuenta la gestiona Firebase Authentication en Estados Unidos"
-    lastUpdated: "Última actualización: 04/11/2026"
+    lastUpdated: "Última actualización: 05/11/2026"
     backToHome: "Volver al inicio"
   reviewsPage:
     title: "Cómo funcionan las reseñas"
@@ -2961,7 +2961,7 @@ es:
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
         - "Sin cuenta obligatoria; un identificador aleatorio del dispositivo sirve para el premium, las estadísticas compartidas, las notificaciones, la medición del uso y la atribución publicitaria"
         - "Reseñas públicas: solo se comparten si lo pides, libro por libro, sujetas a las normas de las reseñas y se pueden retirar en cualquier momento"
-    lastUpdated: "Última actualización: 04/11/2026"
+    lastUpdated: "Última actualización: 05/11/2026"
     backToHome: "Volver al inicio"
   medalEgg:
     title: "¡35 medallas coleccionadas!"
