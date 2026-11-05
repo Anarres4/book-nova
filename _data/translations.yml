@@ -620,6 +620,7 @@ fr:
       items:
         - "fait moins de 20 caractères ou plus de 2 000 ;"
         - "contient un lien, une adresse e-mail, un @pseudo, un numéro de téléphone, un numéro de support ou une suite de 9 chiffres ou plus, ISBN compris ;"
+        - "contient un caractère invisible qui inverse le sens du texte ;"
         - "contient des propos insultants ou haineux, repérés par un filtre automatique (Google Cloud Natural Language, en Europe) ;"
         - "n'a pas de date de fin de lecture, ou porte sur un livre qui ne peut pas recevoir d'avis."
       note: "Un refus n'est jamais silencieux : l'app en affiche le motif, et votre texte n'est jamais modifié. Le filtre ne distingue pas une insulte à un personnage d'une insulte à une personne : les deux sont refusées. Pour éviter les abus, un même compte peut publier ou modifier au plus 5 avis par heure et 20 par jour, et un compte suspendu ne peut plus publier."
@@ -673,7 +674,7 @@ fr:
         - "Nous répondons en français, en anglais et en espagnol."
     links:
       title: "Pour aller plus loin"
-    lastUpdated: "Dernière mise à jour : 04/11/2026"
+    lastUpdated: "Dernière mise à jour : 05/11/2026"
     backToHome: "Retour à l'accueil"
   termsPage:
     title: "Conditions d'Utilisation"
@@ -1579,6 +1580,7 @@ en:
       items:
         - "is shorter than 20 characters or longer than 2,000;"
         - "contains a link, an email address, an @name, a phone number, a support number or a run of 9 digits or more, ISBNs included;"
+        - "contains an invisible character that reverses the text direction;"
         - "contains insulting or hateful remarks, detected by an automatic filter (Google Cloud Natural Language, in Europe);"
         - "has no finish date, or concerns a book that cannot receive reviews."
       note: "A refusal is never silent: the app shows its reason, and your text is never altered. The filter cannot tell an insult to a character from an insult to a person: both are refused. To prevent abuse, one account can publish or edit at most 5 reviews an hour and 20 a day, and a suspended account can no longer publish."
@@ -1632,7 +1634,7 @@ en:
         - "We reply in French, English and Spanish."
     links:
       title: "Learn more"
-    lastUpdated: "Last updated: 04/11/2026"
+    lastUpdated: "Last updated: 05/11/2026"
     backToHome: "Back to home"
   termsPage:
     title: "Terms of Use"
@@ -2537,6 +2539,7 @@ es:
       items:
         - "tiene menos de 20 caracteres o más de 2000;"
         - "contiene un enlace, un correo electrónico, un @usuario, un número de teléfono, un número de soporte o una serie de 9 cifras o más, ISBN incluidos;"
+        - "contiene un carácter invisible que invierte el sentido del texto;"
         - "contiene comentarios insultantes u odiosos, detectados por un filtro automático (Google Cloud Natural Language, en Europa);"
         - "no tiene fecha de fin de lectura, o trata de un libro que no puede recibir reseñas."
       note: "Un rechazo nunca es silencioso: la app muestra el motivo, y tu texto nunca se modifica. El filtro no distingue un insulto a un personaje de un insulto a una persona: ambos se rechazan. Para evitar abusos, una misma cuenta puede publicar o modificar como máximo 5 reseñas por hora y 20 al día, y una cuenta suspendida ya no puede publicar."
@@ -2590,7 +2593,7 @@ es:
         - "Respondemos en francés, inglés y español."
     links:
       title: "Para saber más"
-    lastUpdated: "Última actualización: 04/11/2026"
+    lastUpdated: "Última actualización: 05/11/2026"
     backToHome: "Volver al inicio"
   supportPage:
     title: "¿Necesitas ayuda?"
