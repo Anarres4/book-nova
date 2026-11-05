@@ -446,7 +446,7 @@ fr:
     title: "Politique de Confidentialité"
     intro:
       title: "Introduction"
-      content: "Bienvenue dans la politique de confidentialité de Book Nova. Nous accordons une grande importance à la protection de votre vie privée. L'application conserve la majorité de vos données sur votre appareil. Si vous avez accepté le réglage « Contribuer aux statistiques » (Paramètres > Données et confidentialité), certaines données sont partagées via Firebase (Google Cloud), sans votre nom, notamment pour proposer des recommandations de lecture. D'autres services reçoivent des données sans dépendre de ce réglage : ils sont listés dans « Partage des données »."
+      content: "Bienvenue dans la politique de confidentialité de Book Nova. Nous accordons une grande importance à la protection de votre vie privée. L'application conserve la majorité de vos données sur votre appareil. Si vous avez accepté le réglage « Contribuer aux statistiques » (Paramètres > Données et confidentialité), certaines données sont partagées via Firebase (Google Cloud), sans votre nom, notamment pour proposer des recommandations de lecture. D'autres services reçoivent des données sans dépendre de ce réglage : ils sont listés dans « Partage des données ». Un avis n'est publié que si vous le partagez, livre par livre : voir « Avis publics et compte des avis »."
     dataLocal:
       title: "Données stockées localement sur votre appareil"
       intro: "Les informations suivantes restent accessibles hors ligne sur votre appareil :"
@@ -520,11 +520,29 @@ fr:
         - "Formulaire de contact, transmis par e-mail : type de message et texte, e-mail et captures d'écran si vous en ajoutez, numéro de support, plateforme, version et numéro de build de l'app, version du système."
         - "Retours enregistrés dans Firebase, sans identifiant : texte, plateforme, version de l'app et du système, modèle du téléphone. Cela comprend le texte libre saisi dans certaines questions de l'accueil."
         - "Suggestions d'icônes, enregistrées dans Firebase, sans identifiant : texte, plateforme et version de l'app."
+    reviews:
+      title: "Avis publics et compte des avis"
+      intro: "Partager un avis est facultatif et se fait livre par livre : rien n'est publié sans que vous touchiez « Partager mon avis avec la communauté ». Il faut avoir 15 ans ou plus, ou l'accord d'un parent."
+      items:
+        - "Ce qui est publié, visible par tous les utilisateurs de Book Nova : le texte de l'avis, la note sur 5 si vous en avez donné une, le mois de lecture, la mention spoiler, les dates de publication et de modification, et un pseudonyme tiré au hasard (comme « Hibou 4271 »). Ni votre nom, ni votre numéro de support, ni votre adresse IP ne sont publiés."
+        - "Le compte des avis : partager un premier avis, ou faire un premier signalement, crée un compte sans nom, sans e-mail et sans mot de passe. Il est géré par Firebase Authentication (Google), qui traite son identifiant, ses dates de création et de connexion et l'adresse IP de connexion aux États-Unis."
+        - "À chaque publication, l'app envoie aussi votre numéro de support : nous n'en gardons qu'une empreinte, qui nous sert à reconnaître votre compte quand vous nous écrivez avec ce numéro."
+        - "Le contrôle automatique : au moment de sa publication, le texte de chaque avis est envoyé à Google Cloud Natural Language, en Europe, qui repère les propos insultants ou haineux."
+        - "Le dossier de l'auteur, sur nos serveurs : votre pseudonyme, la version des règles que vous avez acceptée, l'état et le motif de chacun de vos avis et, le cas échéant, une suspension et le nombre de signalements reçus. Il n'est pas supprimé automatiquement."
+        - "Les signalements : le motif, les précisions, et le nom et l'e-mail si la personne qui signale les donne, avec l'âge de son compte et une empreinte du début de son adresse IP. Un avis signalé ou masqué est gardé avec ces signalements dans notre file de modération jusqu'à 12 mois après sa dernière activité."
+        - "Le journal des avis : pour chaque publication, modification, suppression ou rétablissement, l'adresse IP, le protocole, la date, la nature de l'opération, la référence de l'avis et l'identifiant du compte, sans le texte. Il est conservé un an."
+        - "Les limites contre les abus comptent les publications et les signalements par compte et par empreinte du début de l'adresse IP. Ces compteurs sont effacés après deux jours."
+        - "Sur votre téléphone : la Note finale et son réglage de partage, la liste des lecteurs que vous avez masqués, celle des spoilers que vous avez signalés, et le suivi de vos avis partagés. Ces listes ne sont ni envoyées ni exportées."
+        - "Mixpanel reçoit des mesures sur les avis (longueur du texte, mention spoiler, motif d'un refus ou d'un signalement), jamais leur texte."
+      note: "Un avis reste en ligne jusqu'à ce que vous le retiriez. Désinstaller l'app ne le supprime pas : retirez vos avis dans Paramètres › Données et confidentialité › Mes avis publics, un par un ou tous à la fois, ou écrivez-nous. Le compte des avis n'est pas supprimé automatiquement : écrivez-nous pour le faire supprimer."
+      linkText: "Le fonctionnement complet des avis :"
     sharing:
       title: "Partage des données"
       intro: "Nous ne vendons ni n'échangeons vos données. Nous les transmettons uniquement dans les cas suivants :"
       items:
-        - "Firebase (Google Cloud) : hébergement, dans l'Union européenne, des données décrites sur cette page (statistiques partagées, recherche par ISBN, jetons de notification, suivi des rappels, retours, suggestions d'icônes)"
+        - "Firebase (Google Cloud) : hébergement, dans l'Union européenne, des données décrites sur cette page (statistiques partagées, avis publics et modération, recherche par ISBN, jetons de notification, suivi des rappels, retours, suggestions d'icônes)"
+        - "Firebase Authentication (Google) : compte des avis, traité aux États-Unis"
+        - "Google Cloud Natural Language : contrôle automatique du texte des avis, en Europe"
         - "ISBNdb : récupération des métadonnées publiques des livres lors de vos recherches"
         - "RevenueCat : gestion de la version premium"
         - "Mixpanel : mesures d'usage sous l'identifiant de l'appareil, dont les réponses aux questions de l'accueil, les genres favoris, des titres de livres (par exemple un livre terminé ou partagé), des noms de collections et de catégories, et le contenu d'un code-barres qui n'est pas un ISBN. Envoi vers ses serveurs européens."
@@ -536,7 +554,7 @@ fr:
         - "ImgBB : captures d'écran jointes à ces messages, supprimées automatiquement après 30 jours"
         - "Obligations légales : si la loi l'exige"
       independent: "Mixpanel, Sentry et TikTok ne dépendent pas du réglage « Contribuer aux statistiques » : le couper ne les arrête pas."
-      outsideEu: "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms et ImgBB peuvent traiter ces données hors de l'Union européenne."
+      outsideEu: "Firebase Authentication traite le compte des avis aux États-Unis. TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms et ImgBB peuvent traiter ces données hors de l'Union européenne."
     website:
       title: "Ce site web"
       items:
@@ -562,6 +580,7 @@ fr:
         - "Retirer votre consentement aux notifications dans les réglages de votre appareil"
         - "Couper « Contribuer aux statistiques » (Paramètres > Données et confidentialité) : cela arrête le partage et retire du décompte les statuts de lecture et les favoris de l'appareil, au prochain lancement s'il est hors ligne"
         - "Demander la suppression des chiffres rattachés à l'appareil en écrivant à book-nova@outlook.fr, avec votre numéro de support (Paramètres > Support)"
+        - "Retirer vos avis publics, un par un ou tous à la fois, dans Paramètres › Données et confidentialité › Mes avis publics"
         - "Déposer une réclamation auprès de la CNIL"
       note: "Désinstaller l'application efface les données du téléphone, pas ce qui a déjà été partagé. Avant de désinstaller, coupez le partage."
     permissions:
@@ -593,7 +612,8 @@ fr:
         - "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms et ImgBB peuvent traiter ces données hors de l'Union européenne"
         - "Couper le réglage arrête le partage et retire du décompte les statuts de lecture et les favoris de l'appareil. Les chiffres rattachés à l'appareil se suppriment sur demande à book-nova@outlook.fr, avec le numéro de support. Vous pouvez déposer une réclamation auprès de la CNIL"
         - "Ce site charge le pixel publicitaire de TikTok"
-    lastUpdated: "Dernière mise à jour : 31/10/2026"
+        - "Un avis n'est publié que si vous le partagez : il est public, signé d'un pseudonyme, et son compte est géré par Firebase Authentication aux États-Unis"
+    lastUpdated: "Dernière mise à jour : 04/11/2026"
     backToHome: "Retour à l'accueil"
   reviewsPage:
     title: "Comment fonctionnent les avis"
@@ -731,6 +751,17 @@ fr:
         backup:
           title: "4.3 Sauvegarde de Vos Données"
           body: "L'Application stocke vos données localement. Nous vous recommandons de conserver vos propres sauvegardes iCloud/Google Drive. Désinstaller l'application efface les données du téléphone, pas ce qui a déjà été partagé : avant de désinstaller, coupez « Contribuer aux statistiques », puis écrivez-nous avec votre numéro de support pour supprimer les chiffres rattachés à votre appareil."
+        reviews:
+          title: "4.4 Avis Publics"
+          body: "Vous pouvez partager la Note finale d'un livre terminé sous forme d'avis public, livre par livre. Partager un avis demande d'avoir 15 ans ou plus, ou l'accord d'un parent, et d'accepter les règles des avis."
+          items:
+            - "Licence : vous restez propriétaire de vos avis. En partageant un avis, vous autorisez Book Nova à l'afficher dans l'Application, gratuitement et sans exclusivité, tant qu'il est en ligne. Toute autre utilisation, hors de l'Application, demandera votre accord."
+            - "Règles : pas d'insultes ni de propos haineux, envers qui que ce soit, personnages compris ; pas d'informations personnelles, ni les vôtres ni celles des autres ; prévenir les lecteurs quand l'avis dévoile l'intrigue. Sont aussi interdits les faux avis, la publicité et tout contenu illicite."
+            - "Tolérance zéro : nous ne tolérons aucun contenu répréhensible ni aucun comportement abusif."
+            - "Modération : un filtre automatique contrôle chaque avis avant sa publication, et les lecteurs peuvent signaler un avis ou son auteur. Nous pouvons masquer ou retirer un avis qui enfreint ces règles, et suspendre la publication d'un compte pour une durée donnée."
+            - "Responsabilité : vous êtes responsable du contenu de vos avis."
+            - "Retrait : vous pouvez retirer vos avis à tout moment. Désinstaller l'Application ne les supprime pas."
+          note: "Le contrôle, les signalements, les délais et la contestation sont détaillés sur la page « Comment fonctionnent les avis »."
       isbndb:
         title: "5. API ISBNdb et Métadonnées"
         thirdParty:
@@ -746,7 +777,7 @@ fr:
         title: "6. Comptes et Authentification"
         noAccount:
           title: "6.1 Pas de Compte Obligatoire"
-          body: "L'Application ne nécessite pas la création d'un compte. Elle utilise un identifiant aléatoire créé par l'app sur l'appareil, qui sert aussi de numéro de support."
+          body: "L'Application ne nécessite pas la création d'un compte. Elle utilise un identifiant aléatoire créé par l'app sur l'appareil, qui sert aussi de numéro de support. Partager ou signaler un avis crée un compte des avis, sans nom, sans e-mail ni mot de passe, géré par Firebase Authentication."
         uuid:
           title: "6.2 Identifiant de l'Appareil (UUID)"
           body: "Cet identifiant aléatoire (UUID) est généré localement et sert notamment à :"
@@ -864,7 +895,8 @@ fr:
         - "Achats via Apple/Google, remboursements via ces plateformes"
         - "Application fournie 'en l'état', responsabilité limitée"
         - "Pas de compte requis ; un identifiant aléatoire de l'appareil sert au premium, aux statistiques partagées, aux notifications, à la mesure d'usage et à l'attribution publicitaire"
-    lastUpdated: "Dernière mise à jour : 31/10/2026"
+        - "Avis publics : partagés seulement si vous le demandez, livre par livre, soumis aux règles des avis et retirables à tout moment"
+    lastUpdated: "Dernière mise à jour : 04/11/2026"
     backToHome: "Retour à l'accueil"
   supportPage:
     title: "Besoin d'un coup de main ?"
@@ -1406,7 +1438,7 @@ en:
     title: "Privacy Policy"
     intro:
       title: "Introduction"
-      content: "Welcome to Book Nova's privacy policy. Protecting your privacy is essential to us. The app keeps most of your data on your device. If you accepted the “Contribute to statistics” setting (Settings > Data & Privacy), some data is shared through Firebase (Google Cloud), without your name, in particular to power reading recommendations. Other services receive data regardless of this setting: they are listed under “Data sharing”."
+      content: "Welcome to Book Nova's privacy policy. Protecting your privacy is essential to us. The app keeps most of your data on your device. If you accepted the “Contribute to statistics” setting (Settings > Data & Privacy), some data is shared through Firebase (Google Cloud), without your name, in particular to power reading recommendations. Other services receive data regardless of this setting: they are listed under “Data sharing”. A review is only published if you share it, book by book: see “Public reviews and the reviews account”."
     dataLocal:
       title: "Data stored locally on your device"
       intro: "The following information stays available offline on your device:"
@@ -1480,11 +1512,29 @@ en:
         - "Contact form, sent by email: message type and text, email address and screenshots if you add them, support number, platform, app version and build number, system version."
         - "Feedback saved in Firebase, with no identifier: text, platform, app and system version, phone model. This includes free text typed into some welcome-step questions."
         - "Icon suggestions, saved in Firebase, with no identifier: text, platform, and app version."
+    reviews:
+      title: "Public reviews and the reviews account"
+      intro: "Sharing a review is optional and done book by book: nothing is published unless you tap “Share my review with the community”. You must be 15 or older, or have a parent's permission."
+      items:
+        - "What is published, visible to all Book Nova users: the review's text, the rating out of 5 if you gave one, the month of reading, the spoiler mention, the publication and edit dates, and a pseudonym drawn at random (like “Owl 4271”). Neither your name, your support number nor your IP address is published."
+        - "The reviews account: sharing a first review, or making a first report, creates an account with no name, no email and no password. It is managed by Firebase Authentication (Google), which processes its identifier, its creation and sign-in dates and the sign-in IP address in the United States."
+        - "With each publication, the app also sends your support number: we only keep a fingerprint of it, which helps us recognise your account when you write to us with that number."
+        - "Automatic check: when a review is published, its text is sent to Google Cloud Natural Language, in Europe, which detects insulting or hateful remarks."
+        - "The author record, on our servers: your pseudonym, the version of the rules you accepted, the status and reason of each of your reviews and, where relevant, a suspension and the number of reports received. It is not deleted automatically."
+        - "Reports: the reason, the details, and the name and email if the person reporting gives them, with the age of their account and a fingerprint of the start of their IP address. A reported or hidden review is kept with these reports in our moderation queue for up to 12 months after its last activity."
+        - "The reviews log: for each publication, edit, deletion or restoration, the IP address, protocol, date, type of operation, review reference and account identifier, without the text. It is kept for one year."
+        - "Anti-abuse limits count publications and reports per account and per fingerprint of the start of the IP address. These counters are deleted after two days."
+        - "On your phone: the Final review and its sharing setting, the list of readers you hid, the list of spoilers you reported, and the tracking of your shared reviews. These lists are neither sent nor exported."
+        - "Mixpanel receives measurements about reviews (text length, spoiler mention, reason for a refusal or a report), never their text."
+      note: "A review stays online until you withdraw it. Uninstalling the app does not delete it: withdraw your reviews in Settings › Data & Privacy › My public reviews, one by one or all at once, or write to us. The reviews account is not deleted automatically: write to us to have it deleted."
+      linkText: "How reviews work, in full:"
     sharing:
       title: "Data sharing"
       intro: "We don't sell or trade your data. We only pass it on in these cases:"
       items:
-        - "Firebase (Google Cloud): hosting, in the European Union, of the data described on this page (shared statistics, ISBN search, notification tokens, reminder records, feedback, icon suggestions)"
+        - "Firebase (Google Cloud): hosting, in the European Union, of the data described on this page (shared statistics, public reviews and moderation, ISBN search, notification tokens, reminder records, feedback, icon suggestions)"
+        - "Firebase Authentication (Google): the reviews account, processed in the United States"
+        - "Google Cloud Natural Language: automatic check of review text, in Europe"
         - "ISBNdb: fetch public book metadata when you search"
         - "RevenueCat: manage the premium tier"
         - "Mixpanel: usage measurements under the device identifier, including answers to the welcome-step questions, favourite genres, book titles (for example a finished or shared book), collection and category names, and the content of a barcode that is not an ISBN. Sent to its European servers."
@@ -1496,7 +1546,7 @@ en:
         - "ImgBB: screenshots attached to these messages, automatically deleted after 30 days"
         - "Legal obligations: when required by law"
       independent: "Mixpanel, Sentry, and TikTok do not depend on the “Contribute to statistics” setting: turning it off does not stop them."
-      outsideEu: "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms, and ImgBB may process this data outside the European Union."
+      outsideEu: "Firebase Authentication processes the reviews account in the United States. TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms, and ImgBB may process this data outside the European Union."
     website:
       title: "This website"
       items:
@@ -1522,6 +1572,7 @@ en:
         - "Disable notifications via your device settings"
         - "Turn off “Contribute to statistics” (Settings > Data & Privacy): this stops sharing and removes the device's reading statuses and favourites from the counts, at the next launch if it is offline"
         - "Request deletion of the figures tied to the device by emailing book-nova@outlook.fr, with your support number (Settings > Support)"
+        - "Withdraw your public reviews, one by one or all at once, in Settings › Data & Privacy › My public reviews"
         - "File a complaint with the CNIL"
       note: "Uninstalling the app erases the data on your phone, not what has already been shared. Before uninstalling, turn sharing off."
     permissions:
@@ -1553,7 +1604,8 @@ en:
         - "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms, and ImgBB may process this data outside the European Union"
         - "Turning off the setting stops sharing and removes the device's reading statuses and favourites from the counts. The figures tied to the device are deleted on request at book-nova@outlook.fr, with the support number. You can file a complaint with the CNIL"
         - "This website loads TikTok's advertising pixel"
-    lastUpdated: "Last updated: 31/10/2026"
+        - "A review is only published if you share it: it is public, signed with a pseudonym, and its account is managed by Firebase Authentication in the United States"
+    lastUpdated: "Last updated: 04/11/2026"
     backToHome: "Back to home"
   reviewsPage:
     title: "How reviews work"
@@ -1691,6 +1743,17 @@ en:
         backup:
           title: "4.3 Backing Up Your Data"
           body: "The App stores your information locally. Please keep your own iCloud/Google Drive backups. Uninstalling the app erases the data on your phone, not what has already been shared: before uninstalling, turn off “Contribute to statistics”, then write to us with your support number to delete the figures tied to your device."
+        reviews:
+          title: "4.4 Public Reviews"
+          body: "You can share the Final review of a finished book as a public review, book by book. Sharing a review requires being 15 or older, or having a parent's permission, and accepting the review rules."
+          items:
+            - "Licence: you remain the owner of your reviews. By sharing a review, you allow Book Nova to display it in the App, free of charge and non-exclusively, for as long as it is online. Any other use, outside the App, will require your consent."
+            - "Rules: no insults or hateful remarks, about anyone, characters included; no personal information, yours or anyone else's; let readers know when a review reveals the plot. Fake reviews, advertising and any illegal content are also forbidden."
+            - "Zero tolerance: we do not tolerate any objectionable content or abusive behaviour."
+            - "Moderation: an automatic filter checks each review before it is published, and readers can report a review or its author. We may hide or remove a review that breaks these rules, and suspend an account's ability to publish for a set time."
+            - "Responsibility: you are responsible for the content of your reviews."
+            - "Withdrawal: you can withdraw your reviews at any time. Uninstalling the App does not delete them."
+          note: "Checks, reports, timing and disputes are detailed on the page “How reviews work”."
       isbndb:
         title: "5. ISBNdb API and Metadata"
         thirdParty:
@@ -1706,7 +1769,7 @@ en:
         title: "6. Accounts and Authentication"
         noAccount:
           title: "6.1 No Account Required"
-          body: "The App does not require you to create an account. It uses a random identifier created by the app on the device, which also serves as your support number."
+          body: "The App does not require you to create an account. It uses a random identifier created by the app on the device, which also serves as your support number. Sharing or reporting a review creates a reviews account, with no name, email or password, managed by Firebase Authentication."
         uuid:
           title: "6.2 Device Identifier (UUID)"
           body: "This random identifier (UUID) is generated locally and is used in particular to:"
@@ -1824,7 +1887,8 @@ en:
         - "Purchases handled by Apple/Google; refunds handled by them"
         - "App provided 'as is' with limited liability"
         - "No account required; a random device identifier is used for premium, shared statistics, notifications, usage measurement and advertising attribution"
-    lastUpdated: "Last updated: 31/10/2026"
+        - "Public reviews: shared only if you ask, book by book, subject to the review rules and withdrawable at any time"
+    lastUpdated: "Last updated: 04/11/2026"
     backToHome: "Back to home"
   supportPage:
     title: "Need a hand?"
@@ -2365,7 +2429,7 @@ es:
     title: "Política de Privacidad"
     intro:
       title: "Introducción"
-      content: "Bienvenido a la política de privacidad de Book Nova. Valoramos tu privacidad. La aplicación guarda la mayor parte de tus datos en tu dispositivo. Si has aceptado el ajuste «Contribuir a estadísticas» (Configuración > Datos y privacidad), algunos datos se comparten a través de Firebase (Google Cloud), sin tu nombre, en particular para generar recomendaciones de lectura. Otros servicios reciben datos sin depender de este ajuste: aparecen en «Compartir datos»."
+      content: "Bienvenido a la política de privacidad de Book Nova. Valoramos tu privacidad. La aplicación guarda la mayor parte de tus datos en tu dispositivo. Si has aceptado el ajuste «Contribuir a estadísticas» (Configuración > Datos y privacidad), algunos datos se comparten a través de Firebase (Google Cloud), sin tu nombre, en particular para generar recomendaciones de lectura. Otros servicios reciben datos sin depender de este ajuste: aparecen en «Compartir datos». Una reseña solo se publica si la compartes, libro por libro: consulta «Reseñas públicas y cuenta de reseñas»."
     dataLocal:
       title: "Datos almacenados en tu dispositivo"
       intro: "La siguiente información permanece disponible sin conexión en tu dispositivo:"
@@ -2439,11 +2503,29 @@ es:
         - "Formulario de contacto, enviado por correo electrónico: tipo de mensaje y texto, correo electrónico y capturas de pantalla si las añades, número de soporte, plataforma, versión y número de compilación de la app, versión del sistema."
         - "Comentarios guardados en Firebase, sin identificador: texto, plataforma, versión de la app y del sistema, modelo del teléfono. Esto incluye el texto libre escrito en algunas preguntas de la bienvenida."
         - "Sugerencias de iconos, guardadas en Firebase, sin identificador: texto, plataforma y versión de la app."
+    reviews:
+      title: "Reseñas públicas y cuenta de reseñas"
+      intro: "Compartir una reseña es opcional y se hace libro por libro: no se publica nada si no tocas «Compartir mi reseña con la comunidad». Hay que tener 15 años o más, o el permiso de tu madre, padre o tutor."
+      items:
+        - "Lo que se publica, visible para todos los usuarios de Book Nova: el texto de la reseña, la valoración sobre 5 si diste una, el mes de lectura, la mención spoiler, las fechas de publicación y de modificación, y un seudónimo elegido al azar (como «Búho 4271»). No se publican ni tu nombre, ni tu número de soporte, ni tu dirección IP."
+        - "La cuenta de reseñas: compartir una primera reseña, o hacer una primera denuncia, crea una cuenta sin nombre, sin correo y sin contraseña. La gestiona Firebase Authentication (Google), que trata su identificador, sus fechas de creación y de conexión y la dirección IP de conexión en Estados Unidos."
+        - "Con cada publicación, la app envía también tu número de soporte: solo guardamos una huella de él, que nos sirve para reconocer tu cuenta cuando nos escribes con ese número."
+        - "Revisión automática: al publicarse, el texto de cada reseña se envía a Google Cloud Natural Language, en Europa, que detecta comentarios insultantes u odiosos."
+        - "El expediente del autor, en nuestros servidores: tu seudónimo, la versión de las normas que aceptaste, el estado y el motivo de cada una de tus reseñas y, si corresponde, una suspensión y el número de denuncias recibidas. No se borra automáticamente."
+        - "Las denuncias: el motivo, los detalles, y el nombre y el correo si quien denuncia los da, con la antigüedad de su cuenta y una huella del inicio de su dirección IP. Una reseña denunciada u ocultada se guarda con esas denuncias en nuestra cola de moderación hasta 12 meses después de su última actividad."
+        - "El registro de reseñas: por cada publicación, modificación, eliminación o restablecimiento, la dirección IP, el protocolo, la fecha, el tipo de operación, la referencia de la reseña y el identificador de la cuenta, sin el texto. Se conserva un año."
+        - "Los límites contra abusos cuentan las publicaciones y las denuncias por cuenta y por huella del inicio de la dirección IP. Estos contadores se borran a los dos días."
+        - "En tu teléfono: la Reseña final y su ajuste para compartir, la lista de lectores que ocultaste, la de spoilers que denunciaste y el seguimiento de tus reseñas compartidas. Estas listas no se envían ni se exportan."
+        - "Mixpanel recibe mediciones sobre las reseñas (longitud del texto, mención spoiler, motivo de un rechazo o de una denuncia), nunca su texto."
+      note: "Una reseña sigue en línea hasta que la retires. Desinstalar la app no la borra: retira tus reseñas en Configuración › Datos y privacidad › Mis reseñas públicas, una a una o todas a la vez, o escríbenos. La cuenta de reseñas no se borra automáticamente: escríbenos para que la borremos."
+      linkText: "El funcionamiento completo de las reseñas:"
     sharing:
       title: "Compartir datos"
       intro: "No vendemos ni intercambiamos tus datos. Solo los transmitimos en estos casos:"
       items:
-        - "Firebase (Google Cloud): alojamiento, en la Unión Europea, de los datos descritos en esta página (estadísticas compartidas, búsqueda por ISBN, tokens de notificación, registro de recordatorios, comentarios, sugerencias de iconos)"
+        - "Firebase (Google Cloud): alojamiento, en la Unión Europea, de los datos descritos en esta página (estadísticas compartidas, reseñas públicas y moderación, búsqueda por ISBN, tokens de notificación, registro de recordatorios, comentarios, sugerencias de iconos)"
+        - "Firebase Authentication (Google): la cuenta de reseñas, tratada en Estados Unidos"
+        - "Google Cloud Natural Language: revisión automática del texto de las reseñas, en Europa"
         - "ISBNdb: recuperar metadatos públicos durante tus búsquedas"
         - "RevenueCat: gestionar la versión premium"
         - "Mixpanel: mediciones de uso bajo el identificador del dispositivo, incluidas las respuestas a las preguntas de la bienvenida, los géneros favoritos, títulos de libros (por ejemplo, un libro terminado o compartido), nombres de colecciones y categorías, y el contenido de un código de barras que no sea un ISBN. Envío a sus servidores europeos."
@@ -2455,7 +2537,7 @@ es:
         - "ImgBB: capturas de pantalla adjuntas a esos mensajes, eliminadas automáticamente después de 30 días"
         - "Obligaciones legales: cuando la ley lo requiera"
       independent: "Mixpanel, Sentry y TikTok no dependen del ajuste «Contribuir a estadísticas»: desactivarlo no los detiene."
-      outsideEu: "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms e ImgBB pueden tratar estos datos fuera de la Unión Europea."
+      outsideEu: "Firebase Authentication trata la cuenta de reseñas en Estados Unidos. TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms e ImgBB pueden tratar estos datos fuera de la Unión Europea."
     website:
       title: "Este sitio web"
       items:
@@ -2481,6 +2563,7 @@ es:
         - "Retirar el consentimiento para notificaciones en los ajustes del dispositivo"
         - "Desactivar «Contribuir a estadísticas» (Configuración > Datos y privacidad): esto detiene el uso compartido y retira del recuento los estados de lectura y los favoritos del dispositivo, en el siguiente inicio si está sin conexión"
         - "Solicitar la eliminación de las cifras vinculadas al dispositivo escribiendo a book-nova@outlook.fr, con tu número de soporte (Configuración > Soporte)"
+        - "Retirar tus reseñas públicas, una a una o todas a la vez, en Configuración › Datos y privacidad › Mis reseñas públicas"
         - "Presentar una reclamación ante la CNIL"
       note: "Desinstalar la aplicación borra los datos del teléfono, no lo que ya se ha compartido. Antes de desinstalar, deja de compartir."
     permissions:
@@ -2512,7 +2595,8 @@ es:
         - "TikTok, RevenueCat, ISBNdb, Google Books, Expo, Web3Forms e ImgBB pueden tratar estos datos fuera de la Unión Europea"
         - "Desactivar el ajuste detiene el uso compartido y retira del recuento los estados de lectura y los favoritos del dispositivo. Las cifras vinculadas al dispositivo se eliminan a petición en book-nova@outlook.fr, con el número de soporte. Puedes presentar una reclamación ante la CNIL"
         - "Este sitio carga el píxel publicitario de TikTok"
-    lastUpdated: "Última actualización: 31/10/2026"
+        - "Una reseña solo se publica si la compartes: es pública, firmada con un seudónimo, y su cuenta la gestiona Firebase Authentication en Estados Unidos"
+    lastUpdated: "Última actualización: 04/11/2026"
     backToHome: "Volver al inicio"
   reviewsPage:
     title: "Cómo funcionan las reseñas"
@@ -2732,6 +2816,17 @@ es:
         backup:
           title: "4.3 Copias de Seguridad"
           body: "La Aplicación guarda tu información localmente. Te recomendamos mantener copias propias en iCloud/Google Drive. Desinstalar la aplicación borra los datos del teléfono, no lo que ya se ha compartido: antes de desinstalar, desactiva «Contribuir a estadísticas» y escríbenos con tu número de soporte para eliminar las cifras vinculadas a tu dispositivo."
+        reviews:
+          title: "4.4 Reseñas Públicas"
+          body: "Puedes compartir la Reseña final de un libro terminado como reseña pública, libro por libro. Compartir una reseña requiere tener 15 años o más, o el permiso de tu madre, padre o tutor, y aceptar las normas de las reseñas."
+          items:
+            - "Licencia: sigues siendo titular de tus reseñas. Al compartir una reseña, autorizas a Book Nova a mostrarla en la Aplicación, de forma gratuita y no exclusiva, mientras esté en línea. Cualquier otro uso, fuera de la Aplicación, requerirá tu consentimiento."
+            - "Normas: nada de insultos ni comentarios de odio, hacia nadie, personajes incluidos; nada de información personal, ni tuya ni de otros; avisar a los lectores cuando una reseña revele la trama. También están prohibidas las reseñas falsas, la publicidad y cualquier contenido ilegal."
+            - "Tolerancia cero: no toleramos ningún contenido inaceptable ni ningún comportamiento abusivo."
+            - "Moderación: un filtro automático revisa cada reseña antes de publicarla, y los lectores pueden denunciar una reseña o a su autor. Podemos ocultar o retirar una reseña que incumpla estas normas, y suspender la publicación de una cuenta durante un tiempo determinado."
+            - "Responsabilidad: eres responsable del contenido de tus reseñas."
+            - "Retirada: puedes retirar tus reseñas en cualquier momento. Desinstalar la Aplicación no las borra."
+          note: "La revisión, las denuncias, los plazos y la impugnación se detallan en la página «Cómo funcionan las reseñas»."
       isbndb:
         title: "5. API de ISBNdb y Metadatos"
         thirdParty:
@@ -2747,7 +2842,7 @@ es:
         title: "6. Cuentas y Autenticación"
         noAccount:
           title: "6.1 Sin Cuenta Obligatoria"
-          body: "La Aplicación no requiere crear una cuenta. Utiliza un identificador aleatorio creado por la app en el dispositivo, que también sirve como número de soporte."
+          body: "La Aplicación no requiere crear una cuenta. Utiliza un identificador aleatorio creado por la app en el dispositivo, que también sirve como número de soporte. Compartir o denunciar una reseña crea una cuenta de reseñas, sin nombre, correo ni contraseña, gestionada por Firebase Authentication."
         uuid:
           title: "6.2 Identificador del Dispositivo (UUID)"
           body: "Este identificador aleatorio (UUID) se genera localmente y sirve en particular para:"
@@ -2865,7 +2960,8 @@ es:
         - "Compras gestionadas por Apple/Google; reembolsos a través de ellos"
         - "Aplicación proporcionada 'tal cual', responsabilidad limitada"
         - "Sin cuenta obligatoria; un identificador aleatorio del dispositivo sirve para el premium, las estadísticas compartidas, las notificaciones, la medición del uso y la atribución publicitaria"
-    lastUpdated: "Última actualización: 31/10/2026"
+        - "Reseñas públicas: solo se comparten si lo pides, libro por libro, sujetas a las normas de las reseñas y se pueden retirar en cualquier momento"
+    lastUpdated: "Última actualización: 04/11/2026"
     backToHome: "Volver al inicio"
   medalEgg:
     title: "¡35 medallas coleccionadas!"
