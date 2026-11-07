@@ -534,7 +534,7 @@ fr:
         - "Les limites contre les abus comptent les publications et les signalements par compte et par empreinte du début de l'adresse IP. Ces compteurs sont effacés après deux jours."
         - "Sur votre téléphone : la Note finale et son réglage de partage, la liste des lecteurs que vous avez masqués, celle des spoilers que vous avez signalés, et le suivi de vos avis partagés. Ces listes ne sont ni envoyées ni exportées."
         - "Mixpanel reçoit des mesures sur les avis (longueur du texte, mention spoiler, motif d'un refus ou d'un signalement), jamais leur texte."
-      note: "Un avis reste en ligne jusqu'à ce que vous le retiriez. Désinstaller l'app ne le supprime pas : retirez vos avis dans Paramètres › Données et confidentialité › Mes avis publics, un par un ou tous à la fois, ou écrivez-nous. Le compte des avis n'est pas supprimé automatiquement : écrivez-nous pour le faire supprimer."
+      note: "Un avis reste en ligne jusqu'à ce que vous le retiriez. Désinstaller l'app ne le supprime pas : retirez vos avis dans Paramètres › Données et confidentialité › Mes avis, un par un ou tous à la fois avec « Rendre mes avis privés », ou écrivez-nous. Le compte des avis n'est pas supprimé automatiquement : écrivez-nous pour le faire supprimer."
       linkText: "Le fonctionnement complet des avis :"
     sharing:
       title: "Partage des données"
@@ -580,7 +580,7 @@ fr:
         - "Retirer votre consentement aux notifications dans les réglages de votre appareil"
         - "Couper « Contribuer aux statistiques » (Paramètres > Données et confidentialité) : cela arrête le partage et retire du décompte les statuts de lecture et les favoris de l'appareil, au prochain lancement s'il est hors ligne"
         - "Demander la suppression des chiffres rattachés à l'appareil en écrivant à book-nova@outlook.fr, avec votre numéro de support (Paramètres > Support)"
-        - "Retirer vos avis publics, un par un ou tous à la fois, dans Paramètres › Données et confidentialité › Mes avis publics"
+        - "Retirer vos avis publics, un par un ou tous à la fois avec « Rendre mes avis privés », dans Paramètres › Données et confidentialité › Mes avis"
         - "Déposer une réclamation auprès de la CNIL"
       note: "Désinstaller l'application efface les données du téléphone, pas ce qui a déjà été partagé. Avant de désinstaller, coupez le partage."
     permissions:
@@ -613,7 +613,7 @@ fr:
         - "Couper le réglage arrête le partage et retire du décompte les statuts de lecture et les favoris de l'appareil. Les chiffres rattachés à l'appareil se suppriment sur demande à book-nova@outlook.fr, avec le numéro de support. Vous pouvez déposer une réclamation auprès de la CNIL"
         - "Ce site charge le pixel publicitaire de TikTok"
         - "Un avis n'est publié que si vous le partagez : il est public, signé d'un pseudonyme, et son compte est géré par Firebase Authentication aux États-Unis"
-    lastUpdated: "Dernière mise à jour : 05/11/2026"
+    lastUpdated: "Dernière mise à jour : 07/11/2026"
     backToHome: "Retour à l'accueil"
   reviewsPage:
     title: "Comment fonctionnent les avis"
@@ -656,12 +656,12 @@ fr:
       items:
         - "Modifier : changez votre Note finale ou les étoiles du livre, puis enregistrez. Sur la fiche, le menu « … » de votre avis propose aussi « Modifier » et « Marquer comme spoiler ». L'avis en ligne est remplacé après un nouveau contrôle automatique."
         - "Un avis masqué par la modération reste masqué après une modification : il repasse en vérification."
-        - "Retirer : « Retirer » dans le menu « … » de votre avis ; touchez de nouveau le bouton de partage de la Note finale, puis enregistrez ; videz la Note finale ; supprimez le livre ; ou passez par Paramètres › Données et confidentialité › Mes avis publics, qui permet aussi de supprimer tous vos avis d'un coup."
+        - "Retirer : « Retirer » dans le menu « … » de votre avis ; touchez de nouveau le bouton de partage de la Note finale, puis enregistrez ; videz la Note finale ; supprimez le livre ; ou passez par Paramètres › Données et confidentialité › Mes avis, qui permet aussi de retirer tous vos avis d'un coup avec « Rendre mes avis privés »."
         - "Votre Note finale reste toujours sur votre téléphone."
         - "Après une réinstallation ou sur un nouveau téléphone, l'app peut ne plus pouvoir retirer vos anciens avis, et votre numéro de support peut avoir changé : écrivez-nous avec votre pseudonyme et les livres concernés, et nous les retirerons."
     reports:
       title: "Signaler un avis ou un lecteur"
-      intro: "Depuis le menu « … » d'un avis, vous pouvez signaler l'avis, signaler son auteur, ou masquer ses avis pour vous seul. Un lecteur masqué se rétablit dans Mes avis publics › Lecteurs masqués › « Ne plus masquer »."
+      intro: "Depuis le menu « … » d'un avis, vous pouvez signaler l'avis, signaler son auteur, ou masquer ses avis pour vous seul. Un lecteur masqué se rétablit dans Mes avis › Lecteurs masqués › « Ne plus masquer »."
       items:
         - "Motifs : spoiler, haine ou harcèlement, insulte ou contenu offensant, informations personnelles, spam ou publicité, faux avis, autre contenu illicite, autre."
         - "Vous pouvez ajouter des précisions, obligatoires pour « autre contenu illicite », ainsi que votre nom et votre adresse e-mail, facultatifs. Une case vous fait confirmer que vous signalez de bonne foi. Si vous laissez une adresse, nous vous répondons avec notre décision."
@@ -1526,7 +1526,7 @@ en:
         - "Anti-abuse limits count publications and reports per account and per fingerprint of the start of the IP address. These counters are deleted after two days."
         - "On your phone: the Final review and its sharing setting, the list of readers you hid, the list of spoilers you reported, and the tracking of your shared reviews. These lists are neither sent nor exported."
         - "Mixpanel receives measurements about reviews (text length, spoiler mention, reason for a refusal or a report), never their text."
-      note: "A review stays online until you withdraw it. Uninstalling the app does not delete it: withdraw your reviews in Settings › Data & Privacy › My public reviews, one by one or all at once, or write to us. The reviews account is not deleted automatically: write to us to have it deleted."
+      note: "A review stays online until you withdraw it. Uninstalling the app does not delete it: withdraw your reviews in Settings › Data & Privacy › My reviews, one by one or all at once with “Make my reviews private”, or write to us. The reviews account is not deleted automatically: write to us to have it deleted."
       linkText: "How reviews work, in full:"
     sharing:
       title: "Data sharing"
@@ -1572,7 +1572,7 @@ en:
         - "Disable notifications via your device settings"
         - "Turn off “Contribute to statistics” (Settings > Data & Privacy): this stops sharing and removes the device's reading statuses and favourites from the counts, at the next launch if it is offline"
         - "Request deletion of the figures tied to the device by emailing book-nova@outlook.fr, with your support number (Settings > Support)"
-        - "Withdraw your public reviews, one by one or all at once, in Settings › Data & Privacy › My public reviews"
+        - "Withdraw your public reviews, one by one or all at once with “Make my reviews private”, in Settings › Data & Privacy › My reviews"
         - "File a complaint with the CNIL"
       note: "Uninstalling the app erases the data on your phone, not what has already been shared. Before uninstalling, turn sharing off."
     permissions:
@@ -1605,7 +1605,7 @@ en:
         - "Turning off the setting stops sharing and removes the device's reading statuses and favourites from the counts. The figures tied to the device are deleted on request at book-nova@outlook.fr, with the support number. You can file a complaint with the CNIL"
         - "This website loads TikTok's advertising pixel"
         - "A review is only published if you share it: it is public, signed with a pseudonym, and its account is managed by Firebase Authentication in the United States"
-    lastUpdated: "Last updated: 05/11/2026"
+    lastUpdated: "Last updated: 07/11/2026"
     backToHome: "Back to home"
   reviewsPage:
     title: "How reviews work"
@@ -1648,12 +1648,12 @@ en:
       items:
         - "Edit: change your Final review or the book's stars, then save. On the sheet, your review's “…” menu also offers “Edit” and “Mark as a spoiler”. The online review is replaced after a new automatic check."
         - "A review hidden by moderation stays hidden after an edit: it goes back for review."
-        - "Withdraw: “Withdraw” in your review's “…” menu; tap the Final review's share button again, then save; clear the Final review; delete the book; or go to Settings › Data & Privacy › My public reviews, which also lets you delete all your reviews at once."
+        - "Withdraw: “Withdraw” in your review's “…” menu; tap the Final review's share button again, then save; clear the Final review; delete the book; or go to Settings › Data & Privacy › My reviews, which also lets you withdraw all your reviews at once with “Make my reviews private”."
         - "Your Final review always stays on your phone."
         - "After a reinstall or on a new phone, the app may no longer be able to withdraw your old reviews, and your support number may have changed: write to us with your pseudonym and the books concerned, and we will remove them."
     reports:
       title: "Reporting a review or a reader"
-      intro: "From a review's “…” menu, you can report the review, report its author, or hide their reviews for yourself only. A hidden reader can be restored in My public reviews › Hidden readers › “Unhide”."
+      intro: "From a review's “…” menu, you can report the review, report its author, or hide their reviews for yourself only. A hidden reader can be restored in My reviews › Hidden readers › “Unhide”."
       items:
         - "Reasons: spoiler, hate or harassment, insult or offensive content, personal information, spam or advertising, fake review, other illegal content, other."
         - "You can add details, required for “other illegal content”, as well as your name and email address, both optional. A box asks you to confirm that you are reporting in good faith. If you leave an address, we reply with our decision."
@@ -2517,7 +2517,7 @@ es:
         - "Los límites contra abusos cuentan las publicaciones y las denuncias por cuenta y por huella del inicio de la dirección IP. Estos contadores se borran a los dos días."
         - "En tu teléfono: la Reseña final y su ajuste para compartir, la lista de lectores que ocultaste, la de spoilers que denunciaste y el seguimiento de tus reseñas compartidas. Estas listas no se envían ni se exportan."
         - "Mixpanel recibe mediciones sobre las reseñas (longitud del texto, mención spoiler, motivo de un rechazo o de una denuncia), nunca su texto."
-      note: "Una reseña sigue en línea hasta que la retires. Desinstalar la app no la borra: retira tus reseñas en Configuración › Datos y privacidad › Mis reseñas públicas, una a una o todas a la vez, o escríbenos. La cuenta de reseñas no se borra automáticamente: escríbenos para que la borremos."
+      note: "Una reseña sigue en línea hasta que la retires. Desinstalar la app no la borra: retira tus reseñas en Configuración › Datos y privacidad › Mis reseñas, una a una o todas a la vez con «Hacer privadas mis reseñas», o escríbenos. La cuenta de reseñas no se borra automáticamente: escríbenos para que la borremos."
       linkText: "El funcionamiento completo de las reseñas:"
     sharing:
       title: "Compartir datos"
@@ -2563,7 +2563,7 @@ es:
         - "Retirar el consentimiento para notificaciones en los ajustes del dispositivo"
         - "Desactivar «Contribuir a estadísticas» (Configuración > Datos y privacidad): esto detiene el uso compartido y retira del recuento los estados de lectura y los favoritos del dispositivo, en el siguiente inicio si está sin conexión"
         - "Solicitar la eliminación de las cifras vinculadas al dispositivo escribiendo a book-nova@outlook.fr, con tu número de soporte (Configuración > Soporte)"
-        - "Retirar tus reseñas públicas, una a una o todas a la vez, en Configuración › Datos y privacidad › Mis reseñas públicas"
+        - "Retirar tus reseñas públicas, una a una o todas a la vez con «Hacer privadas mis reseñas», en Configuración › Datos y privacidad › Mis reseñas"
         - "Presentar una reclamación ante la CNIL"
       note: "Desinstalar la aplicación borra los datos del teléfono, no lo que ya se ha compartido. Antes de desinstalar, deja de compartir."
     permissions:
@@ -2596,7 +2596,7 @@ es:
         - "Desactivar el ajuste detiene el uso compartido y retira del recuento los estados de lectura y los favoritos del dispositivo. Las cifras vinculadas al dispositivo se eliminan a petición en book-nova@outlook.fr, con el número de soporte. Puedes presentar una reclamación ante la CNIL"
         - "Este sitio carga el píxel publicitario de TikTok"
         - "Una reseña solo se publica si la compartes: es pública, firmada con un seudónimo, y su cuenta la gestiona Firebase Authentication en Estados Unidos"
-    lastUpdated: "Última actualización: 05/11/2026"
+    lastUpdated: "Última actualización: 07/11/2026"
     backToHome: "Volver al inicio"
   reviewsPage:
     title: "Cómo funcionan las reseñas"
@@ -2639,12 +2639,12 @@ es:
       items:
         - "Modificar: cambia tu Reseña final o las estrellas del libro y guarda. En la ficha, el menú «…» de tu reseña también ofrece «Editar» y «Marcar como spoiler». La reseña en línea se sustituye tras una nueva revisión automática."
         - "Una reseña ocultada por la moderación sigue oculta tras una modificación: vuelve a revisión."
-        - "Retirar: «Retirar» en el menú «…» de tu reseña; vuelve a tocar el botón para compartir de la Reseña final y guarda; vacía la Reseña final; borra el libro; o ve a Configuración › Datos y privacidad › Mis reseñas públicas, donde también puedes borrar todas tus reseñas de una vez."
+        - "Retirar: «Retirar» en el menú «…» de tu reseña; vuelve a tocar el botón para compartir de la Reseña final y guarda; vacía la Reseña final; borra el libro; o ve a Configuración › Datos y privacidad › Mis reseñas, donde también puedes retirar todas tus reseñas de una vez con «Hacer privadas mis reseñas»."
         - "Tu Reseña final siempre se queda en tu teléfono."
         - "Tras reinstalar la app o en un teléfono nuevo, puede que la app ya no pueda retirar tus reseñas antiguas, y tu número de soporte puede haber cambiado: escríbenos con tu seudónimo y los libros afectados, y las retiraremos."
     reports:
       title: "Denunciar una reseña o a un lector"
-      intro: "Desde el menú «…» de una reseña, puedes denunciar la reseña, denunciar a su autor u ocultar sus reseñas solo para ti. Un lector oculto se recupera en Mis reseñas públicas › Lectores ocultos › «Dejar de ocultar»."
+      intro: "Desde el menú «…» de una reseña, puedes denunciar la reseña, denunciar a su autor u ocultar sus reseñas solo para ti. Un lector oculto se recupera en Mis reseñas › Lectores ocultos › «Dejar de ocultar»."
       items:
         - "Motivos: spoiler, odio o acoso, insulto o contenido ofensivo, información personal, spam o publicidad, reseña falsa, otro contenido ilegal, otro."
         - "Puedes añadir detalles, obligatorios para «otro contenido ilegal», así como tu nombre y tu correo electrónico, opcionales. Una casilla te pide confirmar que denuncias de buena fe. Si dejas un correo, te respondemos con nuestra decisión."
