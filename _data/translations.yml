@@ -643,7 +643,7 @@ fr:
         - "contient un caractère invisible qui inverse le sens du texte ;"
         - "contient des propos insultants ou haineux, repérés par un filtre automatique (Google Cloud Natural Language, en Europe) ;"
         - "n'a pas de date de fin de lecture, ou porte sur un livre qui ne peut pas recevoir d'avis."
-      note: "Un refus n'est jamais silencieux : l'app en affiche le motif, et votre texte n'est jamais modifié. Le filtre ne distingue pas une insulte à un personnage d'une insulte à une personne : les deux sont refusées. Pour éviter les abus, un même compte peut publier ou modifier au plus 5 avis par heure et 20 par jour, et un compte suspendu ne peut plus publier."
+      note: "Un refus n'est jamais silencieux : l'app en affiche le motif, et votre texte n'est jamais modifié. Le filtre ne distingue pas une insulte à un personnage d'une insulte à une personne : les deux sont refusées. Pour éviter les abus, un même compte peut publier ou modifier au plus 20 avis par jour, et un compte suspendu ne peut plus publier."
     delays:
       title: "Délais de publication et de conservation"
       items:
@@ -694,7 +694,7 @@ fr:
         - "Nous répondons en français, en anglais et en espagnol."
     links:
       title: "Pour aller plus loin"
-    lastUpdated: "Dernière mise à jour : 05/11/2026"
+    lastUpdated: "Dernière mise à jour : 07/11/2026"
     backToHome: "Retour à l'accueil"
   termsPage:
     title: "Conditions d'Utilisation"
@@ -1635,7 +1635,7 @@ en:
         - "contains an invisible character that reverses the text direction;"
         - "contains insulting or hateful remarks, detected by an automatic filter (Google Cloud Natural Language, in Europe);"
         - "has no finish date, or concerns a book that cannot receive reviews."
-      note: "A refusal is never silent: the app shows its reason, and your text is never altered. The filter cannot tell an insult to a character from an insult to a person: both are refused. To prevent abuse, one account can publish or edit at most 5 reviews an hour and 20 a day, and a suspended account can no longer publish."
+      note: "A refusal is never silent: the app shows its reason, and your text is never altered. The filter cannot tell an insult to a character from an insult to a person: both are refused. To prevent abuse, one account can publish or edit at most 20 reviews a day, and a suspended account can no longer publish."
     delays:
       title: "Publication and retention times"
       items:
@@ -1686,7 +1686,7 @@ en:
         - "We reply in French, English and Spanish."
     links:
       title: "Learn more"
-    lastUpdated: "Last updated: 05/11/2026"
+    lastUpdated: "Last updated: 07/11/2026"
     backToHome: "Back to home"
   termsPage:
     title: "Terms of Use"
@@ -2626,7 +2626,7 @@ es:
         - "contiene un carácter invisible que invierte el sentido del texto;"
         - "contiene comentarios insultantes u odiosos, detectados por un filtro automático (Google Cloud Natural Language, en Europa);"
         - "no tiene fecha de fin de lectura, o trata de un libro que no puede recibir reseñas."
-      note: "Un rechazo nunca es silencioso: la app muestra el motivo, y tu texto nunca se modifica. El filtro no distingue un insulto a un personaje de un insulto a una persona: ambos se rechazan. Para evitar abusos, una misma cuenta puede publicar o modificar como máximo 5 reseñas por hora y 20 al día, y una cuenta suspendida ya no puede publicar."
+      note: "Un rechazo nunca es silencioso: la app muestra el motivo, y tu texto nunca se modifica. El filtro no distingue un insulto a un personaje de un insulto a una persona: ambos se rechazan. Para evitar abusos, una misma cuenta puede publicar o modificar como máximo 20 reseñas al día, y una cuenta suspendida ya no puede publicar."
     delays:
       title: "Plazos de publicación y conservación"
       items:
@@ -2677,7 +2677,7 @@ es:
         - "Respondemos en francés, inglés y español."
     links:
       title: "Para saber más"
-    lastUpdated: "Última actualización: 05/11/2026"
+    lastUpdated: "Última actualización: 07/11/2026"
     backToHome: "Volver al inicio"
   supportPage:
     title: "¿Necesitas ayuda?"
