@@ -6,7 +6,7 @@
  *   node _tools/sync-moderation-logic.mjs --check
  *
  * Sources (dernier commit de chaque fichier, dépôt de l’app) :
- *   app/i18n/fr.ts                             0c0a44cc39
+ *   app/i18n/fr.ts                             ec34cc449f
  *   app/i18n/index.ts                          bd67b1ba77
  *   lib/services/review-moderation-service.ts  42d533647b
  *   utils/bookKey.ts                           758489a05f
@@ -14,7 +14,7 @@
  *   utils/communityStatus.ts                   328970223b
  *   utils/reviewDates.ts                       8afd4208fd
  *   utils/reviewLabels.ts                      ecbdb84fe4
- *   utils/reviewModeration.ts                  2f343efc02
+ *   utils/reviewModeration.ts                  9fae4748a2
  *   utils/reviewModerationLabels.ts            2f343efc02
  *   utils/untrustedValues.ts                   afbc778469
  *
@@ -194,9 +194,24 @@ var parseCursor = (raw) => {
   const id = asString(raw.id);
   return updatedAt !== void 0 && id ? { updatedAt, id } : null;
 };
+var asCount = (value) => {
+  const count = asFiniteNumber(value);
+  return count !== void 0 && Number.isInteger(count) && count >= 0 ? count : void 0;
+};
+var parseStats = (raw) => {
+  if (!isPlainObject(raw)) return null;
+  const onlineReviews = asCount(raw.onlineReviews);
+  const sharesLastYear = asCount(raw.sharesLastYear);
+  return onlineReviews !== void 0 && sharesLastYear !== void 0 ? { onlineReviews, sharesLastYear } : null;
+};
 var parseModerationPage = (raw) => {
   if (!isPlainObject(raw) || !Array.isArray(raw.items)) return null;
-  return { cases: listOf(raw.items, parseModerationCase), nextCursor: parseCursor(raw.nextCursor), invalid: raw.invalid === true };
+  return {
+    cases: listOf(raw.items, parseModerationCase),
+    nextCursor: parseCursor(raw.nextCursor),
+    invalid: raw.invalid === true,
+    stats: parseStats(raw.stats)
+  };
 };
 var OUTCOMES = ["stale", "not_found", "not_applicable", "invalid_input"];
 var parseModerationOutcome = (raw) => {

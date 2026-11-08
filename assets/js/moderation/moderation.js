@@ -15,7 +15,8 @@
  *
  * Ce qui n'existe que sur le web : la connexion Google, la déconnexion, le refus de s'afficher dans
  * un cadre ou d'être ouverte par une autre page, le contrôle du projet Firebase visé, le bandeau
- * DEV/PROD en local, et les correctifs de la relecture du 2026-11-08 (marqués « web : ») :
+ * DEV/PROD en local, les chiffres des avis sous le titre (l'app les lit sans les afficher), et les
+ * correctifs de la relecture du 2026-11-08 (marqués « web : ») :
  * - un double-clic ne prend jamais une décision que le modérateur n'a pas vue ;
  * - une décision à la fois, et pas de retour à la liste pendant qu'elle part ;
  * - une liste relue en échec ne ferme pas la fiche, une recherche dépassée n'écrase pas la suivante ;
@@ -91,6 +92,10 @@ const WEB = {
   wrongProject: 'Cette page ne sert que la PROD, et sa configuration vise {{project}}.',
   openedByPage: 'Ouvre cette page directement, depuis un favori ou la barre d’adresse : ouverte par une autre page, elle ne démarre pas.',
   envBanner: '{{env}} · {{project}}',
+  /** Les chiffres de la première page de « À traiter » ; « avis » est invariable, « partage » non. */
+  statsOnline: '{{count}} avis en ligne',
+  statsShares: '{{count}} partages sur 12 mois',
+  statsSharesOne: '{{count}} partage sur 12 mois',
 };
 
 // ── Textes ───────────────────────────────────────────────────────────────────────────────────────
@@ -109,6 +114,15 @@ const t = (key, params) => {
 };
 
 const fill = (template, params) => Object.entries(params).reduce((text, [key, value]) => text.replace(`{{${key}}}`, () => String(value)), template);
+
+/**
+ * Web : « 34 avis en ligne · 41 partages sur 12 mois ». Le français met le singulier à 0 et à 1 ;
+ * les milliers prennent l'espace de la locale.
+ */
+const statsLine = ({ onlineReviews, sharesLastYear }) => [
+  fill(WEB.statsOnline, { count: onlineReviews.toLocaleString(LOCALE) }),
+  fill(sharesLastYear <= 1 ? WEB.statsSharesOne : WEB.statsShares, { count: sharesLastYear.toLocaleString(LOCALE) }),
+].join(' · ');
 
 /** ModerationRow : « 5 nov. » ; ModerationDetail : « 5 nov., 14:02 » ; ModerationMoreSheet : « 5 novembre ». */
 const dateShort = (ms) => new Date(ms).toLocaleDateString(LOCALE, { day: 'numeric', month: 'short' });
@@ -209,6 +223,8 @@ const initialToolState = () => ({
   busy: false,
   historyOpen: false,
   noteOpen: false,
+  /** Web : les chiffres des avis, gardés d'un onglet à l'autre jusqu'au prochain « À traiter ». */
+  stats: null,
 });
 
 const state = {
@@ -361,7 +377,11 @@ async function loadQueue(status, after = null) {
     if (current !== generation) return null;
     const next = status === 'open' ? sortOpenCases(page.cases) : page.cases;
     state.cases = after ? [...state.cases, ...next] : next;
-    if (status === 'open' && !after) state.openCount = page.cases.length;
+    if (status === 'open' && !after) {
+      state.openCount = page.cases.length;
+      // Web : les chiffres viennent avec cette page seulement (absents d'un serveur plus ancien).
+      state.stats = page.stats ?? null;
+    }
     state.cursor = page.nextCursor;
     state.loadState = 'ready';
     render();
@@ -638,6 +658,7 @@ function renderHeader() {
       h('div', { class: 'header-content' },
         h('h1', { class: 'header-title', id: 'view-title', tabindex: '-1' }, headerTitle),
         view === 'list' ? h('p', { class: 'header-subtitle' }, t('reviews.moderation.subtitle')) : null,
+        view === 'list' && state.stats ? h('p', { class: 'header-subtitle', id: 'review-stats' }, statsLine(state.stats)) : null,
         subtitle ? h('p', { class: 'header-subtitle is-single-line' }, subtitle) : null),
       view === 'list'
         ? h('button', {

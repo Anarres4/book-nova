@@ -36,7 +36,7 @@ Offre premium :
 - Bootstrap 5.3 + Bootstrap Icons chargés depuis JSDelivr pour éviter une pipeline front lourde.
 
 ## Outil de modération
-La version web de l'outil de modération des avis publics de l'app (lot C7), pour modérer depuis un ordinateur : la boîte de réception « À traiter » et « Traités », une fiche par cas avec sa question et ses deux réponses, « ⋯ » pour les autres décisions, le bandeau de 6 secondes avec « Annuler », la fenêtre « Ce cas a changé » et la recherche d'un avis par titre, auteur et quelques mots. En français seulement.
+La version web de l'outil de modération des avis publics de l'app (lot C7), pour modérer depuis un ordinateur : la boîte de réception « À traiter » et « Traités », une fiche par cas avec sa question et ses deux réponses, « ⋯ » pour les autres décisions, le bandeau de 6 secondes avec « Annuler », la fenêtre « Ce cas a changé » et la recherche d'un avis par titre, auteur et quelques mots. Sous le titre, les avis en ligne et les partages des 12 derniers mois, renvoyés par le serveur avec la première page de « À traiter » (le web seul les affiche). En français seulement.
 
 Les fichiers :
 - `moderation.html` : la page. Son adresse, improbable, est dans son front matter ; le dépôt étant public, elle ne protège rien.
