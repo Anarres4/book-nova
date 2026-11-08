@@ -1,0 +1,38 @@
+---
+# L'outil de modération des avis publics (README, « Outil de modération »).
+# - Sans layout : celui du site charge le pixel TikTok et Bootstrap depuis jsDelivr, et cette page
+#   affiche des données personnelles (nom, e-mail et précisions des signaleurs).
+# - Une adresse improbable, hors du sitemap, en noindex, en français seulement (lang-exclusive :
+#   jekyll-polyglot n'en fait pas de copie /en/ ni /es/). Surtout pas dans robots.txt, qui la
+#   publierait. Le dépôt est public : l'adresse ne protège rien, le serveur décide qui modère.
+layout: null
+permalink: /8e40b5233d332a67fd94981e/
+sitemap: false
+lang-exclusive: [fr]
+---
+{%- assign moderation = site.moderation -%}
+{%- assign firebase = moderation.firebase -%}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://www.gstatic.com/firebasejs/{{ moderation.sdkVersion }}/ https://apis.google.com; style-src 'self'; img-src 'self' data:{% for host in moderation.coverHosts %} https://{{ host }}{% endfor %}; connect-src https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://{{ moderation.functionsRegion }}-{{ firebase.projectId }}.cloudfunctions.net; frame-src https://{{ firebase.authDomain }}; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <title>Modération · Book Nova</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="{{ '/assets/css/moderation.css' | relative_url }}">
+  <script type="application/json" id="moderation-config">{{ moderation | jsonify }}</script>
+  <script type="module" src="{{ '/assets/js/moderation/moderation.js' | relative_url }}"></script>
+</head>
+<body>
+  <div id="app" class="app"></div>
+  <dialog id="sheet" class="sheet" aria-labelledby="sheet-title"></dialog>
+  <dialog id="stale" class="stale" aria-labelledby="stale-title"></dialog>
+  <div id="toast-root" class="toast-root"></div>
+  <p id="announcer" class="visually-hidden" aria-live="polite"></p>
+  <noscript><p class="noscript">Cette page a besoin de JavaScript.</p></noscript>
+</body>
+</html>
