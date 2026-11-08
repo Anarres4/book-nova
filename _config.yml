@@ -50,6 +50,28 @@ app:
   ios_url: "https://apps.apple.com/fr/app/book-nova/id6752571289"
   android_url: "https://play.google.com/store/apps/details?id=com.quantumash.bigbangbook.app"
 
+# Outil de modération des avis (moderation.html, README « Outil de modération ») : la configuration
+# web Firebase de la PROD, celle de l'app, publique par nature. Aucune restriction d'application sur
+# cette clé : elle couperait Firestore pour toute l'app. La configuration DEV n'est que dans
+# _config.dev.yml, ignoré par git ; la CI refuse de publier un site qui la contiendrait.
+moderation:
+  sdkVersion: "12.4.0" # le SDK web Firebase de l'app ; la CSP de la page n'autorise que lui
+  functionsRegion: "europe-west1" # functions/src/reviews/callables.ts
+  # Les seuls hôtes de couverture chargés (CSP et script) : ceux que produit l'app (ISBNdb, Google
+  # Books, Open Library). books_analytics s'écrit sans compte : une autre adresse apprendrait à son
+  # serveur quand un modérateur ouvre la file. Un autre hôte affiche l'initiale du titre.
+  coverHosts:
+    - "images.isbndb.com"
+    - "books.google.com"
+    - "books.googleusercontent.com"
+    - "covers.openlibrary.org"
+  firebase:
+    apiKey: "AIzaSyDQsUU-N0S7SIW9INxeVUO5uzvWTeMtUVQ"
+    authDomain: "book-nova-prod.firebaseapp.com"
+    projectId: "book-nova-prod"
+    messagingSenderId: "176379837545"
+    appId: "1:176379837545:web:3f27a636c2a621edd5b6f8"
+
 # Languages
 languages: ["fr", "en", "es"]
 default_lang: "fr"

@@ -12,3 +12,6 @@ FULL-AUDIT-REPORT.md
 ACTION-PLAN.md
 screenshots/*.png
 screenshots/*.json
+
+# Configuration DEV de l’outil de modération : jamais publiée (README, « Outil de modération »)
+_config.dev.yml

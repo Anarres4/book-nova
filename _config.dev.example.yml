@@ -1,0 +1,19 @@
+# Modèle de la configuration DEV de l'outil de modération (moderation.html).
+#
+# Copier en _config.dev.yml (ignoré par git), remplir avec la configuration web du projet Firebase de
+# DEV, puis servir la page en local :
+#   bundle exec jekyll serve --config _config.yml,_config.dev.yml
+#
+# Les valeurs : console Firebase du projet DEV › Paramètres du projet › Vos applications › Book Nova
+# Web, ou `firebase apps:sdkconfig WEB --project <projet DEV>`. Les cinq clés sont nécessaires : la
+# page refuse une configuration qui mélangerait DEV et PROD.
+#
+# Ne jamais commiter _config.dev.yml : la CI refuse de publier un site où figure un identifiant
+# Firebase autre que ceux de la PROD, et la page publiée refuse de démarrer sur un autre projet.
+moderation:
+  firebase:
+    apiKey: "CLE-WEB-DU-PROJET-DEV"
+    authDomain: "ID-DU-PROJET-DEV.firebaseapp.com"
+    projectId: "ID-DU-PROJET-DEV"
+    messagingSenderId: "NUMERO-DU-PROJET-DEV"
+    appId: "1:NUMERO-DU-PROJET-DEV:web:IDENTIFIANT-DE-L-APPLI"
