@@ -49,6 +49,37 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Refuse to publish a Firebase config other than PROD
+        # The moderation page must only ever name the PROD Firebase project (README, « Outil de
+        # modération »); its DEV config lives in the gitignored _config.dev.yml. Every Firebase
+        # identifier found in _site must be one of the PROD values below, which are public (they
+        # are in _config.yml and in the app). The DEV values are never written here, and a failure
+        # prints only file names: the logs of a public repository are public.
+        shell: bash
+        env:
+          PROD_FIREBASE_IDS: |
+            "projectId":"book-nova-prod"
+            book-nova-prod.firebaseapp.com
+            europe-west1-book-nova-prod.cloudfunctions.net
+            AIzaSyDQsUU-N0S7SIW9INxeVUO5uzvWTeMtUVQ
+            1:176379837545:web:3f27a636c2a621edd5b6f8
+        run: |
+          pattern='"projectId":"[^"]*"|[A-Za-z0-9.-]+\.firebaseapp\.com|[A-Za-z0-9.-]+\.cloudfunctions\.net|AIza[0-9A-Za-z_-]{35}|1:[0-9]+:web:[0-9a-f]+'
+          found="$RUNNER_TEMP/firebase-ids.txt"
+          # -a: binary files are searched too. Status 1 means no match; 2 or more is an error.
+          status=0
+          grep -rahoE -- "$pattern" _site > "$found" || status=$?
+          if [ "$status" -gt 1 ]; then
+            echo "::error::Could not search _site for Firebase identifiers (grep status $status): refusing to publish."
+            exit 1
+          fi
+          printf '%s\n' "$PROD_FIREBASE_IDS" | sed '/^$/d' > "$RUNNER_TEMP/prod-ids.txt"
+          unexpected=$(sort -u "$found" | grep -vxF -f "$RUNNER_TEMP/prod-ids.txt" || true)
+          if [ -n "$unexpected" ]; then
+            echo "::error::_site names a Firebase project other than PROD: refusing to publish. Files:"
+            while IFS= read -r id; do grep -rlaF -- "$id" _site; done <<< "$unexpected" | sort -u
+            exit 1
+          fi
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
