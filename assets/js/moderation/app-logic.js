@@ -6,15 +6,15 @@
  *   node _tools/sync-moderation-logic.mjs --check
  *
  * Sources (dernier commit de chaque fichier, dépôt de l’app) :
- *   app/i18n/fr.ts                             ec34cc449f
+ *   app/i18n/fr.ts                             23325e75a9
  *   app/i18n/index.ts                          bd67b1ba77
  *   lib/services/review-moderation-service.ts  42d533647b
- *   utils/bookKey.ts                           758489a05f
- *   utils/communityReviews.ts                  ad35abf999
- *   utils/communityStatus.ts                   328970223b
+ *   utils/bookKey.ts                           e285662cd2
+ *   utils/communityReviews.ts                  e285662cd2
+ *   utils/communityStatus.ts                   e285662cd2
  *   utils/reviewDates.ts                       8afd4208fd
  *   utils/reviewLabels.ts                      ecbdb84fe4
- *   utils/reviewModeration.ts                  9fae4748a2
+ *   utils/reviewModeration.ts                  e285662cd2
  *   utils/reviewModerationLabels.ts            2f343efc02
  *   utils/untrustedValues.ts                   afbc778469
  *
@@ -51,6 +51,110 @@ var isUsableBookKey = (book) => {
   if (hasNonLatinLetter(rawAuthor) || hasNonLatinLetter(rawTitle)) return false;
   return !createBookKey(book).endsWith("-");
 };
+var stripAccents = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+var NAME_SUFFIXES = /* @__PURE__ */ new Set(["jr", "sr", "ii", "iii", "iv", "dr", "phd", "mr", "mrs", "ms"]);
+var familyAuthor = (author) => {
+  const lower = stripAccents((author ?? "").toLowerCase()).trim();
+  const comma = lower.indexOf(",");
+  const surname = comma > 0 ? lower.slice(0, comma) : lower;
+  const words = surname.split(/[\s.]+/).map(normalizeString).filter(Boolean);
+  const significant = words.filter((word) => word.length >= 2 && !NAME_SUFFIXES.has(word));
+  return significant[significant.length - 1] ?? words[words.length - 1] ?? "unknown";
+};
+var MARKER_START = String.raw`(^|[\s,.:;(\[/-])`;
+var VOLUME_WORD = "(?:tome|t|vol|volume|livre|book|episode|ep)";
+var VOLUME_NUMBER = String.raw`(\d{1,3}(?:[.,]\d{1,2})?)(?!\d)`;
+var VOLUME_BY_WORD = new RegExp(String.raw`${MARKER_START}${VOLUME_WORD}\.?\s*(?:n\s*[\u00b0\u00ba]\s*|no\.?\s*|#\s*)?${VOLUME_NUMBER}`, "g");
+var VOLUME_BY_ROMAN = new RegExp(String.raw`${MARKER_START}${VOLUME_WORD}\.?\s+([ivx]{1,5})(?=\s*(?:$|[:,.()\[\]/-]))`, "g");
+var VOLUME_BY_SIGN = new RegExp(String.raw`${MARKER_START}(?:#|n\s*[\u00b0\u00ba])\s*${VOLUME_NUMBER}`, "g");
+var BARE_VOLUME = /(^|[\s,.#(-])0*([1-9])\)?(?=$|\s[:-]\s)/;
+var ROMAN_VOLUMES = new Map(
+  ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi", "xii", "xiii", "xiv", "xv", "xvi", "xvii", "xviii", "xix", "xx"].map((numeral, index) => [numeral, String(index + 1)])
+);
+var decimalVolume = (raw) => {
+  const [whole, decimal] = raw.split(/[.,]/);
+  const fraction = decimal ? `p${decimal}` : "";
+  return `${Number(whole)}${fraction}`;
+};
+var romanVolume = (raw) => ROMAN_VOLUMES.get(raw);
+var markersOf = (pattern, title, bySign, toVolume) => {
+  const markers = [];
+  const search = new RegExp(pattern.source, "g");
+  for (let match = search.exec(title); match !== null; match = search.exec(title)) {
+    const volume = toVolume(match[2]);
+    if (volume !== void 0) {
+      const hash = bySign && match[0].includes("#");
+      markers.push({ start: match.index, seriesEnd: match.index + match[1].length, end: match.index + match[0].length, volume, bySign, hash });
+    }
+  }
+  return markers;
+};
+var pickVolumeMarker = (title) => {
+  const markers = [
+    ...markersOf(VOLUME_BY_WORD, title, false, decimalVolume),
+    ...markersOf(VOLUME_BY_ROMAN, title, false, romanVolume),
+    ...markersOf(VOLUME_BY_SIGN, title, true, decimalVolume)
+  ].sort((a, b) => a.start - b.start);
+  const [first] = markers;
+  const byWord = markers.find((marker) => !marker.bySign);
+  if (!first || !byWord) return first;
+  return first.hash && first.volume === byWord.volume ? first : byWord;
+};
+var splitVolume = (title) => {
+  const marker = pickVolumeMarker(title);
+  if (marker) return { series: title.slice(0, marker.seriesEnd), volume: marker.volume, rest: title.slice(marker.end) };
+  const bare = BARE_VOLUME.exec(title);
+  if (bare && normalizeString(title.slice(0, bare.index))) {
+    return { series: title.slice(0, bare.index), volume: bare[2], rest: title.slice(bare.index + bare[0].length) };
+  }
+  return { series: title, volume: null, rest: "" };
+};
+var EDITION_SUFFIX = /[-:,]\s*(?:roman|a novel|edition collector|collector|edition limitee|edition speciale|edition francaise|french edition|version francaise|poche|format poche|grand format|broche|nouvelle edition|illustre|illustree)\s*$/;
+var OTHER_PART = /\b(?:episode|ep|partie|part|bonus|extrait|integrale|coffret|omnibus|hors[- ]?serie|novella|prequel|bd|manga|comics?|adaptation)\b/;
+var BRACKETED = /(?!^)[([]([^()[\]]*)[)\]]/g;
+var LEADING_ARTICLE = /^(?:le|la|les|l'|un|une|des|the|a|an|el|los|las)\s+/;
+var AUTHOR_SEPARATORS = [" - ", " | ", " par ", " by "];
+var withoutBrackets = (text) => text.replace(BRACKETED, (whole, inner) => OTHER_PART.test(inner) ? whole : " ");
+var keyPart = (text) => {
+  const trimmed = withoutBrackets(text).replace(EDITION_SUFFIX, "").replace(/^[\s,.:;()-]+/, "");
+  return normalizeString(trimmed.trim().replace(LEADING_ARTICLE, ""));
+};
+var withoutAuthorSuffix = (title, surname) => {
+  if (surname.length < 3 || surname === "unknown") return title;
+  let cut = -1;
+  let separator = "";
+  for (const candidate of AUTHOR_SEPARATORS) {
+    const at = title.lastIndexOf(candidate);
+    if (at > cut) {
+      cut = at;
+      separator = candidate;
+    }
+  }
+  if (cut <= 0) return title;
+  const head = title.slice(0, cut);
+  const tail = title.slice(cut + separator.length);
+  return tail.split(/[^a-z0-9]+/).includes(surname) && normalizeString(head) ? head : title;
+};
+var familyTitle = (rawTitle, surname) => {
+  const cleaned = stripAccents((rawTitle || "unknown").toLowerCase()).replace(/[\u2013\u2014]/g, "-").replace(/[\u2019`]/g, "'").replace(/\s+/g, " ").trim();
+  const { series, volume, rest } = splitVolume(withoutAuthorSuffix(cleaned, surname));
+  const restKey = keyPart(rest);
+  const seriesKey = keyPart(series) || restKey;
+  const keepRest = OTHER_PART.test(rest) && restKey !== seriesKey;
+  const dropsTomeOne = volume === "1" && !keepRest && seriesKey !== "";
+  const volumePart = volume === null || dropsTomeOne ? "" : `tome${volume}`;
+  return `${seriesKey}${volumePart}${keepRest ? restKey : ""}` || "unknown";
+};
+var familyKeyCache = /* @__PURE__ */ new Map();
+var createBookFamilyKey = (book) => {
+  const cacheKey = JSON.stringify([book.title, book.authors?.[0]]);
+  const cached = familyKeyCache.get(cacheKey);
+  if (cached !== void 0) return cached;
+  const surname = familyAuthor(book.authors?.[0]);
+  const key = joinKey(surname, familyTitle(book.title, surname));
+  familyKeyCache.set(cacheKey, key);
+  return key;
+};
 
 // utils/untrustedValues.ts
 var NUMERIC_STRING = /^\s*-?\d+(\.\d+)?\s*$/;
@@ -82,22 +186,8 @@ var HOUR_MS = 60 * MINUTE_MS;
 var MAX_BACKOFF_MS = 6 * HOUR_MS;
 var asWant = asEnum({ published: true, withdrawn: true });
 var asState = asEnum({ published: true, hidden: true });
-var asSurface = asEnum({
-  final_review_modal: true,
-  edit_completed: true,
-  notes: true,
-  discover_sheet: true,
-  notes_card: true,
-  my_reviews: true
-});
-var asPath = asEnum({
-  button: true,
-  settings: true,
-  note_cleared: true,
-  book_deleted: true,
-  sheet: true,
-  notes_card: true
-});
+var asSurface = asEnum({ after_completion: true, discover_sheet: true, my_reviews: true });
+var asPath = asEnum({ sheet: true, settings: true });
 var asPseudonym = (value) => {
   if (!isPlainObject(value)) return null;
   const animal = asString(value.animal);
@@ -348,7 +438,7 @@ var searchBookKey = (title, author) => {
   const cleanAuthor = author.trim();
   if (!cleanAuthor && BOOK_KEY_SHAPE.test(cleanTitle)) return cleanTitle;
   const book = { title: cleanTitle, authors: [cleanAuthor] };
-  return isUsableBookKey(book) ? createBookKey(book) : null;
+  return isUsableBookKey(book) ? createBookFamilyKey(book) : null;
 };
 
 // utils/reviewLabels.ts
