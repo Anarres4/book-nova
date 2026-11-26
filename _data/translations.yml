@@ -430,7 +430,7 @@ fr:
     trialImportant: "Important :"
     trialWarning: "L'annulation doit être effectuée au moins 24 heures avant la fin de la période d'essai pour éviter d'être facturé."
     trialOnceTitle: "Bon à savoir :"
-    trialOnceDesc: "L'essai gratuit de 14 jours n'est disponible qu'une seule fois par compte."
+    trialOnceDesc: "L'essai gratuit de 7 jours n'est disponible qu'une seule fois par compte."
     # FAQ #10 - Discover page translations
     discoverIntro: "La page Découvrir vous propose des recommandations de livres personnalisées basées sur vos lectures et préférences."
     discoverFree1: "20 recommandations par genre"
@@ -802,7 +802,7 @@ fr:
             - "Accès illimité aux recommandations de la page Découvrir."
         trial:
           title: "7.2 Période d'essai"
-          body: "La période d'essai gratuite de 14 jours n'est disponible qu'une seule fois par compte. Une fois utilisée, elle ne peut pas être réactivée."
+          body: "La période d'essai gratuite de 7 jours n'est disponible qu'une seule fois par compte. Une fois utilisée, elle ne peut pas être réactivée."
         processing:
           title: "7.3 Traitement des Achats"
           body: "Les achats in-app sont traités par :"
@@ -1422,7 +1422,7 @@ en:
     trialImportant: "Important:"
     trialWarning: "Cancellation must be made at least 24 hours before the end of the trial period to avoid being charged."
     trialOnceTitle: "Good to know:"
-    trialOnceDesc: "The 14-day free trial is only available once per account."
+    trialOnceDesc: "The 7-day free trial is only available once per account."
     # FAQ #10 - Discover page translations
     discoverIntro: "The Discover page offers personalized book recommendations based on your reading history and preferences."
     discoverFree1: "20 recommendations per genre"
@@ -1794,7 +1794,7 @@ en:
             - "Unlimited access to Discover page recommendations."
         trial:
           title: "7.2 Trial Period"
-          body: "The 14-day free trial is only available once per account. Once used, it cannot be reactivated."
+          body: "The 7-day free trial is only available once per account. Once used, it cannot be reactivated."
         processing:
           title: "7.3 Purchase Processing"
           body: "In-app purchases are processed by:"
@@ -2413,7 +2413,7 @@ es:
     trialImportant: "Importante:"
     trialWarning: "La cancelación debe realizarse al menos 24 horas antes del final del período de prueba para evitar ser cobrado."
     trialOnceTitle: "Bueno saber:"
-    trialOnceDesc: "La prueba gratuita de 14 días solo está disponible una vez por cuenta."
+    trialOnceDesc: "La prueba gratuita de 7 días solo está disponible una vez por cuenta."
     # FAQ #10 - Discover page translations
     discoverIntro: "La página Descubrir te ofrece recomendaciones de libros personalizadas basadas en tus lecturas y preferencias."
     discoverFree1: "20 recomendaciones por género"
@@ -2867,7 +2867,7 @@ es:
             - "Acceso ilimitado a las recomendaciones de la página Descubrir."
         trial:
           title: "7.2 Período de prueba"
-          body: "El período de prueba gratuito de 14 días solo está disponible una vez por cuenta. Una vez utilizado, no se puede reactivar."
+          body: "El período de prueba gratuito de 7 días solo está disponible una vez por cuenta. Una vez utilizado, no se puede reactivar."
         processing:
           title: "7.3 Procesamiento de Compras"
           body: "Las compras in-app se procesan por:"
